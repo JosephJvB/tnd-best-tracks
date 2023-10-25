@@ -6,6 +6,7 @@ describe('extractBestTracks.ts', () => {
     // const consoleErrorSpy = jest
     //   .spyOn(console, 'error')
     //   .mockImplementation(jest.fn())
+
     it('skips non-needledrop videos', () => {
       const item = {
         snippet: {
@@ -42,6 +43,9 @@ describe('extractBestTracks.ts', () => {
           videoOwnerChannelId: 'tony',
           title: 'Gucci Mane & Metro Boomin - Drop Top Wop MIXTAPE REVIEW',
         },
+        status: {
+          privacyStatus: 'public',
+        },
       } as PlaylistItem
 
       const result = extractTrackList_v2(item)
@@ -50,9 +54,11 @@ describe('extractBestTracks.ts', () => {
     })
 
     it('can parse last item', () => {
-      const lastItem = {
-        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy5EM0QyMDFGNzQ4ODk3MjhB',
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
         snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
           publishedAt: '2023-10-23T04:48:40Z',
           title:
             'Danny Brown, Sampha, The Kid LAROI, Charli XCX | Weekly Track Roundup: 10/22/23',
@@ -64,7 +70,7 @@ describe('extractBestTracks.ts', () => {
         },
       } as PlaylistItem
 
-      const result = extractTrackList_v2(lastItem)
+      const result = extractTrackList_v2(item)
 
       expect(result.length).toBeGreaterThan(0)
     })
@@ -73,8 +79,9 @@ describe('extractBestTracks.ts', () => {
       const item = {
         id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
         snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
           publishedAt: '2020-07-27T03:59:17Z',
-          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
           title:
             'Weekly Track Roundup: 7/26 (Taylor Swift, J. Cole, Gorillaz, Kero Kero Bonito)',
           description:
@@ -95,8 +102,9 @@ describe('extractBestTracks.ts', () => {
       const item = {
         id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
         snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
           publishedAt: '2020-07-27T03:59:17Z',
-          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
           title:
             'Travis Scott, Phoebe Bridgers, Chance the Rapper, Kelela | Weekly Track Roundup: 11/21/22',
           description:
@@ -132,8 +140,9 @@ describe('extractBestTracks.ts', () => {
       const item = {
         id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
         snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
           publishedAt: '2020-07-27T03:59:17Z',
-          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
           title:
             'Lil Yachty, blink-182, Queen, Poppy | Weekly Track Roundup: 10/16/22',
           description:
@@ -154,8 +163,9 @@ describe('extractBestTracks.ts', () => {
       const item = {
         id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
         snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
           publishedAt: '2020-07-27T03:59:17Z',
-          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
           title:
             'Weekly Track Roundup: 11/11 (Earl Sweatshirt, K/DA, J.I.D & J. Cole, Anderson .Paak)',
           description:
@@ -176,8 +186,9 @@ describe('extractBestTracks.ts', () => {
       const item = {
         id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
         snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
           publishedAt: '2020-07-27T03:59:17Z',
-          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
           title:
             'King Gizzard, NF, Denzel Curry, Iceage | Weekly Track Roundup: 2/22/21',
           description:
@@ -197,8 +208,9 @@ describe('extractBestTracks.ts', () => {
       const item = {
         id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
         snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
           publishedAt: '2020-07-27T03:59:17Z',
-          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
           title:
             'FAV & WORST TRACKS: 8/21 (Danny Brown, Metallica, Crystal Castles, Isaiah Rashad)',
           description:
@@ -218,8 +230,9 @@ describe('extractBestTracks.ts', () => {
       const item = {
         id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
         snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
           publishedAt: '2020-07-27T03:59:17Z',
-          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
           title:
             'FAV & WORST TRACKS: 7/24 (Desiigner, Skrillex & Rick Ross, and Street Sects)',
           description:
@@ -250,8 +263,9 @@ describe('extractBestTracks.ts', () => {
       const item = {
         id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
         snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
           publishedAt: '2020-07-27T03:59:17Z',
-          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
           title:
             'FAV & WORST TRACKS: 7/17 (Justice, Good Charlotte, Migos, Katy Perry)',
           description:
@@ -271,8 +285,9 @@ describe('extractBestTracks.ts', () => {
       const item = {
         id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
         snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
           publishedAt: '2020-07-27T03:59:17Z',
-          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
           title: 'FAV TRACKS: 7/10 (Gucci Mane, Lil Yachty, Arca, Iglooghost)',
           description:
             'Amazon link:\nhttp://amzn.to/1KZmdWI\n\nDefiled - "Fear from Above"\nhttp://www.theneedledrop.com/articles/2016/7/defiled-fear-from-above\n\nGucci Mane - "First Day out tha Feds"\nhttp://www.theneedledrop.com/articles/2016/7/gucci-mane-first-day-out-tha-feds\n\nCarnage - "Mase in \'97" ft. Lil Yachty\nhttp://www.theneedledrop.com/articles/2016/7/carnage-mase-in-97-ft-lil-yachty\n\nIGLOOGHOST - ᴗ ˳ ᴗ Snoring (Music to Sleep To)\nhttp://www.theneedledrop.com/articles/2016/7/iglooghost-snoring-music-to-sleep-to\n\nArca - Entrañas\nhttp://www.theneedledrop.com/articles/2016/7/arca-entranas\n\nScHoolboy Q - "THat Part" (Black Hippy Remix)\nhttp://www.theneedledrop.com/articles/2016/7/schoolboy-q-that-part-black-hippy-remix\n\nFactory Floor - "Ya"\nhttp://www.theneedledrop.com/articles/2016/7/factory-floor-ya\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================\n\nY\'all know this is just my opinion, right?',
