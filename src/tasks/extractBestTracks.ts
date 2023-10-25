@@ -2,6 +2,17 @@ import { readFileSync, writeFileSync } from 'fs'
 import { PlaylistItem } from '../youtubeApi'
 import { PLAYLISTS_JSON_DIR, PLAYLIST_ITEMS_JSON_PATH } from '../constants'
 
+// TODO: refactor - don't just push logic down
+
+const BEST_TRACK_PREFIXES = [
+  '!!!BEST TRACK',
+  '!!BEST TRACK',
+  '!!!BEST SONG',
+  '!!!FAV TRACK',
+]
+const REVIEW_TITLES = ['MIXTAPE', 'EP', 'ALBUM', 'TRACK', 'COMPILATION']
+const TRACK_DIVIDERS = [' - ', ' – ']
+
 export default function () {
   const allItems: PlaylistItem[] = JSON.parse(
     readFileSync(PLAYLIST_ITEMS_JSON_PATH, 'utf-8')
@@ -21,6 +32,21 @@ export default function () {
   )
 
   const bestTracksByYear = allItems.reduce((acc, item) => {
+    // cases to skip parsing tracks
+    // dont like logic at this level, cos it's outside of my tests
+    if (item.snippet.channelId !== item.snippet.videoOwnerChannelId) {
+      return acc
+    }
+    if (item.status.privacyStatus === 'private') {
+      return acc
+    }
+    const reviewTitle = REVIEW_TITLES.find((rt) =>
+      item.snippet.title.includes(rt)
+    )
+    if (!!reviewTitle) {
+      return acc
+    }
+
     const year = item.snippet.publishedAt.split('-')[0]
     const yearsTracks = acc.get(year) ?? []
 
@@ -39,16 +65,15 @@ export default function () {
   })
 }
 export const extractTrackList_v2 = (item: PlaylistItem) => {
-  if (item.status.privacyStatus === 'private') {
-    return []
-  }
-
   const trackList: string[] = []
   const lines = item.snippet.description.split('\n\n')
   let foundBestSection = false
   for (const line of lines) {
     const lt = line.trim()
-    if (lt.startsWith('!!!BEST TRACK') || lt.startsWith('!!!BEST SONG')) {
+    const bestTrackPrefix = BEST_TRACK_PREFIXES.find((pref) =>
+      lt.startsWith(pref)
+    )
+    if (!!bestTrackPrefix) {
       foundBestSection = true
       continue
     }
@@ -66,6 +91,10 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
   }
 
   if (trackList.length === 0) {
+    trackList.push(...extractTrackList_fallback(item))
+  }
+
+  if (trackList.length === 0) {
     console.error('failed to extract bestTrackList for', item.snippet.title, {
       foundBestSection,
     })
@@ -74,24 +103,24 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
   return trackList
 }
 
-// not working properly, inconsistent description format
-export const extractTrackList_v1 = (item: PlaylistItem) => {
-  if (item.status.privacyStatus === 'private') {
-    return null
+export const extractTrackList_fallback = (item: PlaylistItem) => {
+  const trackList: string[] = []
+  if (!item.snippet.title.startsWith('FAV & WORST TRACKS:')) {
+    return trackList
   }
 
-  const sections = item.snippet.description.replace(/\r/, '').split('\n\n\n')
+  item.snippet.description.split('\n\n').forEach((line) => {
+    const lt = line.trim()
+    if (lt.toLowerCase().startsWith('amazon link')) {
+      return
+    }
 
-  const bestTracksSection = sections.find((s) => s.trim().startsWith('!!!BEST'))
-  if (!bestTracksSection) {
-    console.error('unable to find bestTracksSection for', item.snippet.title)
-    return null
-  }
-
-  const trackList = bestTracksSection
-    .split('\n\n')
-    // each track is `${artist} - ${trackName}\n${linkToTrack}`
-    .map((track) => track.split('\n')[0])
+    const ls = lt.split('\n')
+    const trackDivider = TRACK_DIVIDERS.find((td) => ls[0].includes(td))
+    if (!!trackDivider && ls[1]?.startsWith('http')) {
+      trackList.push(ls[0])
+    }
+  })
 
   return trackList
 }

@@ -3,21 +3,9 @@ import { PlaylistItem } from '../youtubeApi'
 
 describe('extractBestTracks.ts', () => {
   describe('#extractTrackList_v2', () => {
-    const consoleErrorSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(jest.fn())
-
-    it('skips private items', () => {
-      const item = {
-        status: {
-          privacyStatus: 'private',
-        },
-      } as PlaylistItem
-
-      const result = extractTrackList_v2(item)
-
-      expect(result.length).toBe(0)
-    })
+    // const consoleErrorSpy = jest
+    //   .spyOn(console, 'error')
+    //   .mockImplementation(jest.fn())
 
     it('can parse last item', () => {
       const lastItem = {
@@ -80,10 +68,25 @@ describe('extractBestTracks.ts', () => {
       const result = extractTrackList_v2(item)
 
       expect(result.length).toBeGreaterThan(0)
-      expect(result.length).toBe(16)
+      expect(result).toEqual([
+        'Yard Act vs. Mad Professor - Pour More',
+        'Chat Pile - Tenkiller',
+        'Gucci Mane - Letter to Takeoff',
+        'Phoebe Bridgers - So Much Wine',
+        "Ab-Soul - Gang'Nem ft. Fre$h",
+        "Saweetie - DON'T SAY NOTHIN'",
+        'Black Belt Eagle Scout - My Blood Runs Through This Land',
+        'Fousheé - Spend the Money ft. Lil Uzi Vert',
+        'Christian Lee Hutson - Silent Night',
+        'Jane Remover - Contingency Song',
+        'Fatoumata Diawara - Nsera ft. Daman Albarn',
+        'Shame - Fingers of Steel',
+        'Kelela - On the Run',
+        'Tkay Maidza - Nights in December',
+      ])
     })
 
-    it.only('can parse Weekly Track Roundup: 10/16/22', () => {
+    it('can parse Weekly Track Roundup: 10/16/22', () => {
       const item = {
         id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
         snippet: {
@@ -106,7 +109,6 @@ describe('extractBestTracks.ts', () => {
     })
 
     it('can parse Weekly Track Roundup: 11/11', () => {
-      consoleErrorSpy.mockRestore()
       const item = {
         id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
         snippet: {
@@ -126,6 +128,101 @@ describe('extractBestTracks.ts', () => {
 
       expect(result.length).toBeGreaterThan(0)
       expect(result.length).toBe(9)
+    })
+
+    it('can parse Weekly Track Roundup: 2/22/21', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          publishedAt: '2020-07-27T03:59:17Z',
+          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
+          title:
+            'King Gizzard, NF, Denzel Curry, Iceage | Weekly Track Roundup: 2/22/21',
+          description:
+            '2021 FAV TRACKS PLAYLIST: https://open.spotify.com/playlist/7hXc9PnNqJtnV4hMmsqgIR?si=BDDSbBnoQzS1KPhndqwfkg\n\nTND Patreon: https://www.patreon.com/theneedledrop\n\nTurntable Lab link: http://turntablelab.com/theneedledrop\n\nTND NEWSLETTER: https://www.theneedledrop.com/newsletter\n\n\n\n!!BEST TRACKS THIS WEEK!!!\n\nGenesis Owusu - Gold Chains\nhttps://open.spotify.com/track/0T7PAJKN2k6k7kBSWIcw34?si=hhE2Uw5HQQWeoO_omF3gdA\n\nStill Woozy - Rocky\nhttps://open.spotify.com/track/5uDohC8URXwbGiHAMuKGoa?si=IQOGi6HKR_CQkDtO6nlOyA\n\nLord Huron - Not Dead Yet\nhttps://open.spotify.com/track/5NRbNXwXHM9mYgxMhzVWTP?si=ed8bQ8i7SG-DZx2pTigU-g\n\nMahalia - Jealous ft. Rico Nasty\nhttps://open.spotify.com/track/0IIn18QlxCeUpLPRaR6a7K?si=3iZziHKuSH-gGlIgKBRA-Q\n\nTash Sultana - Greed\nhttps://open.spotify.com/track/1c9NFMnYVnU8J56Ccj9BFo?si=Uo2Vey4vQP-t-Z4QYwO0SQ\n\nDenzel Curry & Kenny Beats - So.Incredible.pkg [Robert Glasper Version] ft. Smino\nhttps://open.spotify.com/track/4eOtmXtgxmzDsZcdc0lwiz?si=wJHtDqnASwO4GDCntuszdA\n\nNick Hakim - QADIR (BBNG Remix)\nhttps://open.spotify.com/track/5x41LqlyowJ4ng2VbhwlX2?si=uq8UxNsNTxShxrO3Koeqxw\n\nAlice Phoebe Lou - Dirty Mouth\nhttps://open.spotify.com/track/6zX3RXmaMLY28wlLRCrT7Q?si=ku-2QCX-SSW2YYeFzFMWyQ\n\nIceage - Vendetta\nhttps://open.spotify.com/track/6HQRRt7mkkwuJxbJxgbnpf?si=FDOwTHdYRe2gqkSURDd3kw\n\nGojira - Born for One Thing\nhttps://open.spotify.com/track/3imV0hhAWp4YQGP9gdm8xe?si=uIF91YzPQ0iuded9z8TRmQ\n\nGalen Tipton - pixie ring\nhttps://open.spotify.com/track/1dpUCzuT5fFQRxhTuTiTjI?si=9koCnnMfQEe2QcURwK6APA\n\nAndrew W.K. - Babalon\nhttps://open.spotify.com/track/6eNl8oAig5rYUJS62zt91P?si=V3UawV6KT1qArG0UQMRxJg\n\nVegyn - I See You Sometimes ft. Jeshi\nhttps://youtu.be/5LuyydVBfos\n\nBill Callahan & Bonnie "Prince" Billy - The Wild Kindness ft. Cassie Berman\nhttps://youtu.be/-Xug9Ty0FD0\n\n\n...meh...\n\nMyd - Born a Loser\nhttps://open.spotify.com/track/1jwfn6MIDfs7BczMX2bS5J?si=R0wYsNgeQdSjFlNuHi8IZQ\n\nNF - Clouds\nhttps://www.youtube.com/watch?v=fibYknUCIU4\n\nLost Girls - Menneskekollektivet\nhttps://youtu.be/1Ah7o9sxpHk\n\n24kGoldn - 3, 2, 1\nhttps://www.youtube.com/watch?v=WbHfQgVi1GA\n\nKing Gizzard & the Lizard Wizard - Pleura\nhttps://open.spotify.com/track/6nmufQUcWf9MTXTKXoGLzI?si=cV1n3EfuSa623nv4PNDY0Q\n\nKaytranada - Caution\nhttps://open.spotify.com/album/4JOlhEazXmlErhrnmABjYZ?si=-ZjaepeZS4yOOWVxtM5S6Q\n\nStereolab - The Super It\nhttps://open.spotify.com/track/0BrBwqdNQaEh7On0GlYvxp?si=hYEE6k4yQTCzHnnyelcmnQ\n\nAndy Morin - Dolphin (Remix) ft. Payday\nhttps://www.youtube.com/watch?v=goBSafAZQ0I\n\nserpentwithfeet - Same Size Shoe\nhttps://open.spotify.com/track/0dedT0AfVJO8ebgLee0prY?si=i0azPYJJRPaMtDe9ZlcHjw\n\nELIO - Charger ft. Charli XCX\nhttps://open.spotify.com/track/0WDjZuWS4Z0ATgR8eL5cr1?si=CnHCHeyJS8OdeFiRoIOPxg\n\nManchester Orchestra - Bed Head\nhttps://open.spotify.com/track/7oeyJeknYRMuD9ufVzyglS?si=W-YOWOp3RNyGt9SjQ2f7UA\n\n\n!!!WORST TRACKS THIS WEEK!!!\n\nLil Yachty - Hit Bout It\nhttps://open.spotify.com/album/5TD1ySNZ2lB0UfuMUMWjq0?si=JwnaO5FPRn2jBGv6vPhyvA\n\nTory Lanez - Feels ft. Chris Brown\n\nPapa Roach - Broken As Me ft. Danny Worsnop of Asking Alexandria\nhttps://open.spotify.com/track/5ndiViQR5pAE1WPWTINHQb?si=9oLQAhOzRbG3Vu0cvdAaPw\n\nThe Blossom - Hardcore Happy\nhttps://www.youtube.com/watch?v=y-wR41tIZKQ\n\n6ix9ine - ZAZA\nhttps://youtu.be/EZcYZ5eDpu0\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nPatreon: https://www.patreon.com/theneedledrop\n\nOfficial site: http://theneedledrop.com\n\nTwitter: http://twitter.com/theneedledrop\n\nInstagram: https://www.instagram.com/afantano\n\nTND Twitch: https://www.twitch.tv/theneedledrop\n===================================\n\nY\'all know this is just my opinion, right?',
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+    })
+
+    it('can parse FAV & WORST TRACKS: 8/21', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          publishedAt: '2020-07-27T03:59:17Z',
+          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
+          title:
+            'FAV & WORST TRACKS: 8/21 (Danny Brown, Metallica, Crystal Castles, Isaiah Rashad)',
+          description:
+            'Amazon link:\nhttp://amzn.to/1KZmdWI\n\n!!!FAV TRACKS THIS WEEK!!!\n\nWrekmeister Harmonies - "Some Were Saved Some Drowned"\nhttp://www.theneedledrop.com/articles/2016/8/wrekmeister-harmonies-some-were-saved-some-drowned\n\nIsaiah Rashad - "i mean"\nhttp://www.theneedledrop.com/articles/2016/8/isaiah-rashad-i-mean\n\nSun Kil Moon - "I Love Portugal"\nhttp://www.theneedledrop.com/articles/2016/8/sun-kil-moon-i-love-portugal\n\nDanny Brown - "Pneumonia"\nhttp://www.theneedledrop.com/articles/2016/8/danny-brown-pneumonia\n\nDumbfoundead - "Harambe"\nhttp://www.theneedledrop.com/articles/2016/8/dumbfoundead-harambe\n\nKa - "Just"\nhttp://www.theneedledrop.com/articles/2016/8/ka-just\n\nKool Keith - "Super Hero" ft. MF DOOM\nhttp://www.theneedledrop.com/articles/2016/8/kool-keith-super-hero-ft-mf-doom\n\nMEH...\n\nEarl Sweatshirt ft. Knxwledge - Balance\n\nMetallica - Hardwired\n\nPixies - Talent\n\n!!!WORST TRACKS THIS WEEK!!!\n\nTouche Amore - Skyscraper ft. Julien Baker\n\nCrystal Castles - Sadist\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================\n\nY\'all know this is just my opinion, right?',
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+    })
+
+    it('can parse FAV & WORST TRACKS: 7/24', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          publishedAt: '2020-07-27T03:59:17Z',
+          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
+          title:
+            'FAV & WORST TRACKS: 7/24 (Desiigner, Skrillex & Rick Ross, and Street Sects)',
+          description:
+            'Amazon link:\nhttp://amzn.to/1KZmdWI\n\nWorst Track: Major Lazer - Cold Water ft. Bieber and Mo\n\nChris Farren - "Say U Want Me"\nhttp://www.theneedledrop.com/articles/2016/7/chris-farren-say-u-want-me\n\nScreaming Females – “Skeleton”\nhttp://www.theneedledrop.com/articles/2016/7/screaming-females-skeleton\n\nDenzel Curry - "Today" ft. Boogie & Allan Kingdom\nhttp://www.theneedledrop.com/articles/2016/7/denzel-curry-today-ft-boogie-allan-kingdom\n\nA. G. Cook - "Superstar"\nhttp://www.theneedledrop.com/articles/2016/7/a-g-cook-superstar\n\nDabbla - "Randeer"\nhttp://www.theneedledrop.com/articles/2016/7/dabbla-randeer\n\nSkrillex & Rick Ross - "Purple Lamborghini"\nhttp://www.theneedledrop.com/articles/2016/7/skrillex-rick-ross-purple-lamborghini\n\nStreet Sects - "And I Grew into Ribbons"\nhttp://www.theneedledrop.com/articles/2016/7/street-sects-and-i-grew-into-ribbons\n\nDJ Windows 98 (Win Butler) – “K33p Ur Dr34ms” (Suicide Remix)\nhttp://www.theneedledrop.com/articles/2016/7/dj-windows-98-win-butler-k33p-ur-dr34ms-suicide-remix\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================\n\nY\'all know this is just my opinion, right?',
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(8)
+      expect(result).toEqual([
+        'Chris Farren - "Say U Want Me"',
+        'Screaming Females – “Skeleton”',
+        'Denzel Curry - "Today" ft. Boogie & Allan Kingdom',
+        'A. G. Cook - "Superstar"',
+        'Dabbla - "Randeer"',
+        'Skrillex & Rick Ross - "Purple Lamborghini"',
+        'Street Sects - "And I Grew into Ribbons"',
+        'DJ Windows 98 (Win Butler) – “K33p Ur Dr34ms” (Suicide Remix)',
+      ])
+    })
+
+    it('can parse FAV & WORST TRACKS: 7/17', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          publishedAt: '2020-07-27T03:59:17Z',
+          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
+          title:
+            'FAV & WORST TRACKS: 7/17 (Justice, Good Charlotte, Migos, Katy Perry)',
+          description:
+            'Amazon link:\nhttp://amzn.to/1KZmdWI\n\nJustice - "Safe and Sound"\nhttp://www.theneedledrop.com/articles/2016/7/justice-safe-and-sound\n\nQuays - "Your Side" ft. Nancy Andersen\nhttp://www.theneedledrop.com/articles/2016/7/quays-your-side-ft-nancy-andersen\n\nTobacco - "Human Om"\nhttp://www.theneedledrop.com/articles/2016/7/tobacco-human-om\n\nSwain - "Hold My Head"\nhttp://www.theneedledrop.com/articles/2016/7/swain-hold-my-head\n\nJagwar Ma - "O B 1"\nhttp://www.theneedledrop.com/articles/2016/7/jagwar-ma-o-b-1\n\nJeff Rosenstock - "Festival Song"\nhttp://www.theneedledrop.com/articles/2016/7/jeff-rosenstock-festival-song\n\nMigos - "Now" ft. Gucci Mane\nhttp://www.theneedledrop.com/articles/2016/7/migos-now-ft-gucci-mane\n\nPreoccupations - "Degraded"\nhttp://www.theneedledrop.com/articles/2016/7/preoccupations-degraded\n\nWorst track:\nGood Charlotte’s “Life Can’t Get Much Better”\n\nRunner-ups:\nKaty Perry’s “Rise”\nBritney Spears’ “Make Me” ft. G-Eazy\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================\n\nY\'all know this is just my opinion, right?',
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
     })
   })
 })

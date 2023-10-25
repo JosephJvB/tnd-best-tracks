@@ -8,6 +8,8 @@ export type PlaylistItem = {
     publishedAt: string
     title: string
     description: string
+    channelId: string
+    videoOwnerChannelId: string
   }
   status: {
     privacyStatus: 'public' | 'private'
