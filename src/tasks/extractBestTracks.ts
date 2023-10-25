@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from 'fs'
 import { PlaylistItem } from '../youtubeApi'
-import { PLAYLISTS_JSON_DIR, PLAYLIST_ITEMS_JSON_PATH } from '../constants'
+import { TRACKLISTS_JSON_DIR, PLAYLIST_ITEMS_JSON_PATH } from '../constants'
 
 // TODO: refactor - don't just push logic down
 
@@ -46,7 +46,7 @@ export default function () {
   bestTracksByYear.forEach((trackList, year) => {
     console.log(' > write', trackList.length, 'tracks for', year)
     writeFileSync(
-      `${PLAYLISTS_JSON_DIR}/${year}.json`,
+      `${TRACKLISTS_JSON_DIR}/${year}.json`,
       JSON.stringify(trackList, null, 2)
     )
   })

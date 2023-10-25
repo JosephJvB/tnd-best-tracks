@@ -4,4 +4,4 @@ export const WEEKLY_TRACK_REVIEW_PLAYLIST_ID =
 export const PLAYLIST_ITEMS_JSON_PATH =
   __dirname + '/../data/tnd-playlist-items.json'
 
-export const PLAYLISTS_JSON_DIR = __dirname + '/../data/playlists'
+export const TRACKLISTS_JSON_DIR = __dirname + '/../data/tracklists'
