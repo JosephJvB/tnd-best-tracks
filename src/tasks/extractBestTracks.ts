@@ -10,7 +10,7 @@ const BEST_TRACK_PREFIXES = [
   '!!!BEST SONG',
   '!!!FAV TRACK',
 ]
-const REVIEW_TITLES = ['MIXTAPE', 'EP', 'ALBUM', 'TRACK', 'COMPILATION']
+const RAW_REVIEW_TITLES = ['MIXTAPE', 'EP', 'ALBUM', 'TRACK', 'COMPILATION']
 const TRACK_DIVIDERS = [' - ', ' – ']
 const OLD_TITLE_PREFIXES = ['FAV TRACKS:', 'FAV & WORST TRACKS:']
 
@@ -33,26 +33,12 @@ export default function () {
   )
 
   const bestTracksByYear = allItems.reduce((acc, item) => {
-    // cases to skip parsing tracks
-    // dont like logic at this level, cos it's outside of my tests
-    if (item.snippet.channelId !== item.snippet.videoOwnerChannelId) {
-      return acc
-    }
-    if (item.status.privacyStatus === 'private') {
-      return acc
-    }
-    const reviewTitle = REVIEW_TITLES.find((rt) =>
-      item.snippet.title.includes(`${rt} REVIEW`)
-    )
-    if (!!reviewTitle) {
-      return acc
-    }
-
-    const year = item.snippet.publishedAt.split('-')[0]
-    const yearsTracks = acc.get(year) ?? []
-
     const nextBatch = extractTrackList_v2(item)
-    acc.set(year, [...yearsTracks, ...nextBatch])
+    if (nextBatch.length) {
+      const year = item.snippet.publishedAt.split('-')[0]
+      const yearsTracks = acc.get(year) ?? []
+      acc.set(year, [...yearsTracks, ...nextBatch])
+    }
 
     return acc
   }, new Map<string, string[]>())
@@ -67,6 +53,22 @@ export default function () {
 }
 export const extractTrackList_v2 = (item: PlaylistItem) => {
   const trackList: string[] = []
+  // early return cases
+  if (item.snippet.channelId !== item.snippet.videoOwnerChannelId) {
+    return trackList
+  }
+  if (item.status.privacyStatus === 'private') {
+    return trackList
+  }
+  // playlist is "Weekly Track Roundup / Raw Reviews"
+  // skip raw reviews
+  const reviewTitle = RAW_REVIEW_TITLES.find((rt) =>
+    item.snippet.title.includes(`${rt} REVIEW`)
+  )
+  if (!!reviewTitle) {
+    return trackList
+  }
+
   const lines = item.snippet.description.split('\n\n')
   let foundBestSection = false
   for (const line of lines) {
@@ -109,6 +111,7 @@ export const extractTrackList_fallback = (item: PlaylistItem) => {
   const oldPrefix = OLD_TITLE_PREFIXES.find((p) =>
     item.snippet.title.startsWith(p)
   )
+  // only handle old videos
   if (!oldPrefix) {
     return trackList
   }

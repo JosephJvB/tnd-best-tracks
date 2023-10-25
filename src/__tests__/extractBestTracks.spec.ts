@@ -6,6 +6,48 @@ describe('extractBestTracks.ts', () => {
     // const consoleErrorSpy = jest
     //   .spyOn(console, 'error')
     //   .mockImplementation(jest.fn())
+    it('skips non-needledrop videos', () => {
+      const item = {
+        snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'not-tony',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBe(0)
+    })
+
+    it('skips private videos', () => {
+      const item = {
+        snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
+        },
+        status: {
+          privacyStatus: 'private',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBe(0)
+    })
+
+    it('skips raw review videos', () => {
+      const item = {
+        snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
+          title: 'Gucci Mane & Metro Boomin - Drop Top Wop MIXTAPE REVIEW',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBe(0)
+    })
 
     it('can parse last item', () => {
       const lastItem = {
