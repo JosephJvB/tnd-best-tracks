@@ -1,0 +1,131 @@
+import { extractTrackList_v2 } from '../tasks/extractBestTracks'
+import { PlaylistItem } from '../youtubeApi'
+
+describe('extractBestTracks.ts', () => {
+  describe('#extractTrackList_v2', () => {
+    const consoleErrorSpy = jest
+      .spyOn(console, 'error')
+      .mockImplementation(jest.fn())
+
+    it('skips private items', () => {
+      const item = {
+        status: {
+          privacyStatus: 'private',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBe(0)
+    })
+
+    it('can parse last item', () => {
+      const lastItem = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy5EM0QyMDFGNzQ4ODk3MjhB',
+        snippet: {
+          publishedAt: '2023-10-23T04:48:40Z',
+          title:
+            'Danny Brown, Sampha, The Kid LAROI, Charli XCX | Weekly Track Roundup: 10/22/23',
+          description:
+            "2023 FAV TRACKS PLAYLIST: https://music.apple.com/us/playlist/my-fav-singles-of-2023/pl.u-mJjJTyKgxEy\n\nTND Patreon: https://www.patreon.com/theneedledrop\n\nTurntable Lab link: http://turntablelab.com/theneedledrop\n\n\n!!!BEST TRACKS THIS WEEK!!!\n\nKali Uchis - Te Mata\nhttps://www.youtube.com/watch?v=PVx4TQoIc-o&pp=ygUUS2FsaSBVY2hpcyAtIFRlIE1hdGE%3D\n\nDanny Brown - Tantor\nhttps://youtu.be/r9n7-22clP0?si=C2Cx1xRQ7NSDqXhw\nReview: https://www.youtube.com/watch?v=4MnmUWDx2b0\n\nNicolas Jaar & Ali Sethi - Nazar Se\nhttps://www.youtube.com/watch?v=AWh9mC3l-m0&pp=ygUjTmljb2xhcyBKYWFyICYgQWxpIFNldGhpIC0gTmF6YXIgU2U%3D\n\nIDLES - Dancer ft. LCD Soundsystem\nhttps://www.youtube.com/watch?v=A3ZZj5y6Qt4&pp=ygUgSWRsZXMgJiBMQ0QgU291bmRzeXN0ZW0gLSBEYW5jZXI%3D\n\nCaroline Polachek - Dang\nhttps://www.youtube.com/watch?v=UX5ahM24o8A&pp=ygUYQ2Fyb2xpbmUgUG9sYWNoZWsgLSBEYW5n\n\nAna Frango Elétrico - Boy of Stranger Things\nhttps://www.youtube.com/watch?v=cyOgrfXRaMo&pp=ygUtQW5hIEZyYW5nbyBFbMOpdHJpY28gLSBCb3kgb2YgU3RyYW5nZXIgVGhpbmdz\n\nbeabadoobee & Laufey - A Night to Remember\nhttps://www.youtube.com/watch?v=k0optPS9qrA&pp=ygUqYmVhYmFkb29iZWUgJiBMYXVmZXkgLSBBIE5pZ2h0IHRvIFJlbWVtYmVy\n\nJockstrap & Taylor Skye - Good Girl\nhttps://www.youtube.com/watch?v=AraqJiF6ozM&pp=ygUVSm9ja3N0cmFwIC0gR29vZCBHaXJs\n\nSampha - Dancing Circles\nhttps://www.youtube.com/watch?v=UhE5io7Nyk4&pp=ygUYU2FtcGhhIC0gRGFuY2luZyBDaXJjbGVz\n\nMaruja - One Hand Behind the Devil\nhttps://www.youtube.com/watch?v=WuGuXBPvvmQ&pp=ygUiTWFydWphIC0gT25lIEhhbmQgQmVoaW5kIHRoZSBEZXZpbA%3D%3D\n\nImperial Triumphant - Motorbreath (Metallica Cover)\nhttps://www.youtube.com/watch?v=D31DHDeGtaU&pp=ygUhSW1wZXJpYWwgVHJpdW1waGFudCAtIE1vdG9yYnJlYXRo\n\nFloating Points - Birth4000\nhttps://www.youtube.com/watch?v=MWLpR6Fsc6Q&pp=ygUbRmxvYXRpbmcgUG9pbnRzIC0gQmlydGg0MDAw\n\nKurt Vile - Another good year for the roses\nhttps://www.youtube.com/watch?v=c7ICRtoiFrw&pp=ygUrS3VydCBWaWxlIC0gQW5vdGhlciBnb29kIHllYXIgZm9yIHRoZSByb3Nlcw%3D%3D\n\nclairo - Lavender\nhttps://clairecottrill.bandcamp.com/track/lavender\n\nFrost Children - Stare at the Sun\nhttps://youtu.be/DM4WkKDWlaE\n\n\n…meh…\n\nMannequin Pussy - I Don’t Know You\nhttps://www.youtube.com/watch?v=A4OYERIEpYA&pp=ygUkTWFubmVxdWluIFB1c3N5IC0gSSBEb27igJl0IEtub3cgWW91\n\nBADBADNOTGOOD & Charlotte Day Wilson - Sleeper\nhttps://youtu.be/7iS0fawNZZ0\n\nThe Kid LAROI, Jung Kook, Central Cee - Too Much\nhttps://www.youtube.com/watch?v=83Lv790h79k&pp=ygUwVGhlIEtpZCBMQVJPSSwgSnVuZyBLb29rLCBDZW50cmFsIENlZSAtIFRvbyBNdWNo\n\nEvian Christ - Yxguden ft. Bladee\nhttps://www.youtube.com/watch?v=xSV3M3lFv58&pp=ygUhRXZpYW4gQ2hyaXN0IC0gWXhndWRlbiBmdC4gQmxhZGVl\n\nKevin Abstract - What Should I Do?\nhttps://www.youtube.com/watch?v=eKXC_6h4XXo&pp=ygUiS2V2aW4gQWJzdHJhY3QgLSBXaGF0IFNob3VsZCBJIERvPw%3D%3D\n\nRachel Chinouriri - The Hills\nhttps://www.youtube.com/watch?v=G5lKmUw_Vxs&pp=ygUdUmFjaGVsIENoaW5vdXJpcmkgLSBUaGUgSGlsbHM%3D\n\n2 Chainz & Lil Wayne - Presha\nhttps://www.youtube.com/watch?v=0Mmv28qrObA&pp=ygUdMiBDaGFpbnogJiBMaWwgV2F5bmUgLSBQcmVzaGE%3D\n\nWu-Tang Clan - Claudine ft Ghostface Killah, Mathematics & Nicole Bus\nhttps://www.youtube.com/watch?v=QcStXEtngz8&pp=ygVFV3UtVGFuZyBDbGFuIC0gQ2xhd2RpbmUgZnQgR2hvc3RmYWNlIEtpbGxhaCwgTWF0aGVtYXRpY3MgJiBOaWNvbGUgQnVz\n\nRick Ross & Meek Mill - Lyrical Eazy\nhttps://www.youtube.com/watch?v=hwsn7V2bdzA&pp=ygUrUmljayBSb3NzICYgTWVlayBNaWxsIC0gVG9vIEdvb2QgdG8gQmUgVHJ1ZQ%3D%3D\n\nJay Rock & Ab-Soul - Blowfly\nhttps://www.youtube.com/watch?v=fJ6BEH0iMpc&pp=ygUcSmF5IFJvY2sgJiBBYi1Tb3VsIC0gQmxvd2ZseQ%3D%3D\n\nCharli XCX - In the City ft. Sam Smith\nhttps://www.youtube.com/watch?v=kmvi8wsHzDU&pp=ygUmQ2hhcmxpIFhDWCAtIEluIHRoZSBDaXR5IGZ0LiBTYW0gU21pdGg%3D\n\n\n!!!WORST TRACKS THIS WEEK!!!\n\nLil Tracy, Corbin, Black Kray - Hello There\nhttps://www.youtube.com/watch?v=PCJ8iLsYIoY\n\nCORPSE - DISDAIN\nhttps://www.youtube.com/watch?v=qD_Sygcsabk&pp=ygUQQ09SUFNFIC0gRGlzZGFpbg%3D%3D\n\nSteve Aoki & Paris Hilton - Lighter\nhttps://www.youtube.com/watch?v=r9qMc02a0_M\n\n21 Savage - Call Me Revenge ft. D4vd\nhttps://www.youtube.com/watch?v=7uxEA0mjQO0&pp=ygUkMjEgU2F2YWdlIC0gQ2FsbCBNZSBSZXZlbmdlIGZ0LiBENHZk\n\nPoppy - Hard\nhttps://www.youtube.com/watch?v=_a75VfQC2s8&pp=ygUMUG9wcHkgLSBIYXJk\n\nYungblud, Oli Sykes of Bring Me the Horizon - Happier\nhttps://www.youtube.com/watch?v=bshhAYyrR6g&pp=ygUzWXVuZ2JsdWQsIE9saSBTeWtlcywgQnJpbmcgTWUgdGhlIEhvcml6b24gLSBIYXBwaWVy\n\nDolly Parton - Wrecking Ball ft. Miley Cyrus\nhttps://www.youtube.com/watch?v=nQMr3VV1u48\n\nwill.i.am & J Balvin - Let’s Go\nhttps://youtu.be/y242XIPPykg?si=WIb5hfd-Ukebgwn3\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nPatreon: https://www.patreon.com/theneedledrop\n\nOfficial site: http://theneedledrop.com\n\nTwitter: http://twitter.com/theneedledrop\n\nInstagram: https://www.instagram.com/afantano\n\nTikTok: https://www.tiktok.com/@theneedletok\n\nTND Twitch: https://www.twitch.tv/theneedledrop\n\nShorts channel: https://www.youtube.com/@FantanoShorts\n===================================\n\nY'all know this is just my opinion, right?",
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(lastItem)
+
+      expect(result.length).toBeGreaterThan(0)
+    })
+
+    it('can parse 7/26 (Taylor Swift, J. Cole, Gorillaz, Kero Kero Bonito)', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          publishedAt: '2020-07-27T03:59:17Z',
+          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
+          title:
+            'Weekly Track Roundup: 7/26 (Taylor Swift, J. Cole, Gorillaz, Kero Kero Bonito)',
+          description:
+            "FAV TRACKS Spotify playlist:\nhttps://open.spotify.com/playlist/34mJ2w9MY78Bz0Pd5h4P5o?si=44VxevVRTXydLgmRq1btew\n\nTND Patreon: https://www.patreon.com/theneedledrop\n\nTurntable Lab link: http://turntablelab.com/theneedledrop\n\n\r\n!!!BEST TRACKS THIS WEEK!!!\n\nJ. Cole - The Climb Back\nhttps://www.youtube.com/watch?v=oVaBgcJwkI4\nReview: https://youtu.be/fc4NCzoFFEU\n\nGorillaz - PAC-MAN ft. ScHoolboy Q\nhttps://youtu.be/G-7U-FDql1A\nReview: https://www.youtube.com/watch?v=QzJUr2zuPiA\n\nTaylor Swift - Exile ft. Bon Iver\nhttps://youtu.be/osdoLjUNFnA\n\nThe Rolling Stones - Scarlet ft. Jimmy Page\nhttps://youtu.be/Fl0COtEG-TM\n\nBackxwash - Stigmata ft. DeathIrl & Ada Rook\nhttps://backxwash.bandcamp.com/track/stigmata-produced-by-backxwash-3\n\nJ Balvin, Dua Lipa, Bad Bunny & Tainy - Un Dia\nhttps://www.youtube.com/watch?v=BjhW3vBA1QU\n\nPorter Robinson - Get Your Wish (DJ NOT PORTER ROBINSON Remix)\nhttps://www.youtube.com/watch?v=CwZtyJeLbq0\n\nSki Mask the Slump God - Burn the Hoods\nhttps://www.youtube.com/watch?v=9AGAeGsBCvc\n\nThe Flaming Lips - You n Me Sellin' Weed\nhttps://www.youtube.com/watch?v=HvJZw2jwKNo\n\nKero Kero Bonito - It's Bugsnax!\nhttps://www.youtube.com/watch?v=sQTk4eK2fP4\n\nUniform - Dispatches from the Gutter\nhttps://www.youtube.com/watch?v=T7K61Pdvnd8\n\nNathan Dawe x KSI - Lighter\nhttps://www.youtube.com/watch?v=Di0nAk2_Tpw\n\nOliver Tree - Let Me Down ft. Blink-182\nhttps://www.youtube.com/watch?v=_tKaMsrODVo\n\n\n...meh...\n\nNapalm Death - Backlash Just Because\nhttps://www.youtube.com/watch?v=FFDHuCeaM_Y\n\nJaden - Cabin Fever\nhttps://www.youtube.com/watch?v=rXQWaYFsyHs\n\nJaga Jazzist - Tomita (Edit)\nhttps://www.youtube.com/watch?v=_fAgA8RLGbs\n\nThe Avalanches - Wherever You Go ft. Jamie xx, Neneh Cherry & CLYPSO\nhttps://www.youtube.com/watch?v=939w8RwaLSY\n\nBree Runway & Maliibu Miitch - Gucci\nhttps://www.youtube.com/watch?v=W4xzeXjxaS8\n\nDorian Electra - Give Great Thanks\nhttps://www.youtube.com/watch?v=AbhE8sEqKqc\n\nKylie Minogue - Say Something\nhttps://www.youtube.com/watch?v=pRzwD2LLXSI\n\nSmino, JID & Kenny Beats - Baguetti\nhttps://www.youtube.com/watch?v=-IdbbH_OWhc\n\nChronixx - Cool as the Breeze / Friday\nhttps://www.youtube.com/watch?v=qsCV2LBoAG0\n\nChase B & Don Toliver - Cafeteria ft. Gunna\nhttps://www.youtube.com/watch?v=GlwcRpOUe6s\n\n\n!!!WORST TRACKS THIS WEEK!!!\n\n070 Shake - Guilty Conscience (Tame Impala Remix)\nhttps://www.youtube.com/watch?v=4Nsq7ft9bjs\n\nMaroon 5 - Nobody's Love\nhttps://www.youtube.com/watch?v=7ghhRHRP6t4\n\nEarl Sweatshirt - Ghost ft. Navy Blue\nhttps://www.youtube.com/watch?v=Mjb_xnJ-Y0U  \n\nHeadie One x Drake - Only You Freestyle\nhttps://www.youtube.com/watch?v=znQriFAMBRs\n\nJ. Cole - Lion King on Ice\nhttps://www.youtube.com/watch?v=MxiSSSa5K2s\nReview: https://youtu.be/fc4NCzoFFEU \r\n\r\n===================================\r\nSubscribe: http://bit.ly/1pBqGCN\r\n\r\nPatreon: https://www.patreon.com/theneedledrop\r\n\r\nOfficial site: http://theneedledrop.com\r\n\r\nTND Twitter: http://twitter.com/theneedledrop\r\n\r\nTND Facebook: http://facebook.com/theneedledrop\r\n\r\nSupport TND: http://theneedledrop.com/support\r\n===================================\r\n\r\nY'all know this is just my opinion, right?",
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(13)
+    })
+
+    it('can parse Weekly Track Roundup: 11/21/22', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          publishedAt: '2020-07-27T03:59:17Z',
+          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
+          title:
+            'Travis Scott, Phoebe Bridgers, Chance the Rapper, Kelela | Weekly Track Roundup: 11/21/22',
+          description:
+            "2022 FAV TRACKS PLAYLIST: https://music.apple.com/us/playlist/my-fav-singles-of-2022/pl.u-e92LIK9VM5K\n\nTND Patreon: https://www.patreon.com/theneedledrop\n\nTurntable Lab link: http://turntablelab.com/theneedledrop\n\nAUSTEN SHOUTOUT\nKali Malone w/ Stephen O'Malley & Lucy Railton - Does Spring Hide Its Joy v2.3\nhttps://kalimalone.bandcamp.com/album/does-spring-hide-its-joy\n\n!!!BEST TRACKS THIS WEEK!!!\n\nYard Act vs. Mad Professor - Pour More\nhttps://youtu.be/Pc2dZbz87-8\n\nChat Pile - Tenkiller\nhttps://youtu.be/U-5FKTNFz1E\n\nGucci Mane - Letter to Takeoff\nhttps://www.youtube.com/watch?v=n-9F1B_OPAM\n\nPhoebe Bridgers - So Much Wine\nhttps://www.youtube.com/watch?v=4SBhPYhI-XA\n\nAb-Soul - Gang'Nem ft. Fre$h\nhttps://youtu.be/605sWoD5qxU\n\nSaweetie - DON'T SAY NOTHIN'\nhttps://www.youtube.com/watch?v=hDgG0_CK_jU\n\nBlack Belt Eagle Scout - My Blood Runs Through This Land\nhttps://www.youtube.com/watch?v=ntg4az1AsdM\n\nFousheé - Spend the Money ft. Lil Uzi Vert\nhttps://youtu.be/ybiy_2NQ9ik\n\nChristian Lee Hutson - Silent Night\nhttps://youtu.be/RHWAlvhiAKY\n\nJane Remover - Contingency Song\nhttps://youtu.be/cLM7xB3UDKc\n\nFatoumata Diawara - Nsera ft. Daman Albarn\nhttps://youtu.be/VfMDqUSgbck\n\nShame - Fingers of Steel\nhttps://youtu.be/ULLsuL0y-Fk\n\nKelela - On the Run\nhttps://youtu.be/getdc1zzvnc\n\nTkay Maidza - Nights in December\nhttps://youtu.be/2d4FTBml1Pw\n\n\n...meh...\n\nRomy & Fred again.. - Strong\nhttps://youtu.be/3aFF09jjZwk\n\nRosie Thomas - We Should Be Together ft. Sufjan Stevens\nhttps://youtu.be/xRxdaa0GBbE\n\nKorn - Worst Is on Its Way (HEALTH Remix) ft. Danny Brown & Meechy Darko\nhttps://youtu.be/HbtYiLaVzj8\n\nLil Ugly Mane - Redacted Fog\nhttps://liluglymane.bandcamp.com/album/redacted-fog\n\nCrosses - Sensation\nhttps://youtu.be/UuxALeNE96g\n\nDon Toliver - Do It Right\nhttps://www.youtube.com/watch?v=kcr3NC7fsKY\n\nRoddy Ricch - Twin ft. Lil Durk\nhttps://www.youtube.com/watch?v=wIgAmimmz8Q\n\nPharrell Williams & Travis Scott - Down in Atlanta\nhttps://www.youtube.com/watch?v=t_Jhj-gBYCs\n\n\n!!!WORST TRACKS THIS WEEK!!!\n\nChance the Rapper - YAH Know ft. King Promise\nhttps://youtu.be/bcZsfqcBiog\n\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nPatreon: https://www.patreon.com/theneedledrop\n\nOfficial site: http://theneedledrop.com\n\nTwitter: http://twitter.com/theneedledrop\n\nInstagram: https://www.instagram.com/afantano\n\nTikTok: https://www.tiktok.com/@theneedletok\n\nTND Twitch: https://www.twitch.tv/theneedledrop\n===================================\n\nY'all know this is just my opinion, right?",
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(16)
+    })
+
+    it.only('can parse Weekly Track Roundup: 10/16/22', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          publishedAt: '2020-07-27T03:59:17Z',
+          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
+          title:
+            'Lil Yachty, blink-182, Queen, Poppy | Weekly Track Roundup: 10/16/22',
+          description:
+            "2022 FAV TRACKS PLAYLIST: https://music.apple.com/us/playlist/my-fav-singles-of-2022/pl.u-e92LIK9VM5K\n\nTND Patreon: https://www.patreon.com/theneedledrop\n\nTurntable Lab link: http://turntablelab.com/theneedledrop\n\nShorts channel: https://www.youtube.com/channel/UCfpcfju9rBs5o_xQLXmLQHQ/featured\n\n\n!!!BEST TRACK THIS WEEK!!!\n\nMen I Trust - Girl\nhttps://www.youtube.com/watch?v=6Y9gxXsFoI8\n\nTkay Maidza - High Beams (JPEGMAFIA Remix)\nhttps://www.youtube.com/watch?v=J9diGjY4o6s\n\nWeyes Blood - Grapevine\nhttps://youtu.be/uzKQP141Vuw\n\nG Jones & Eprom - R.A.V.E.\nhttps://www.youtube.com/watch?v=ux6FpKi_khE\n\nPlains - Hurricane\nhttps://youtu.be/0OBxqFV1Fq4\n\nLil Yachty - Poland\nhttps://www.youtube.com/watch?v=s9PzYuVwCSE\n\n\n...meh...\n\nDry Cleaning - No Decent Shoes for Rain\nhttps://www.youtube.com/watch?v=XyfYFznhyJI\n\nKelela - Washed Away\nhttps://www.youtube.com/watch?v=A45gzN0cgow\n\nShow Me the Body - WW4\nhttps://www.youtube.com/watch?v=fwh-SKn1HrE\n\nDoechii - Stressed\nhttps://www.youtube.com/watch?v=3hSbGHfAbqM\n\nQueen - Face It Alone\nhttps://www.youtube.com/watch?v=ijj_hheGEi0\n\ngirl in red - October Passed Me By\nhttps://www.youtube.com/watch?v=c8W4WRNz3gM\n\nPoppy - Shapes\nhttps://www.youtube.com/watch?v=lvlOBN-eQVA\n\nbbno$ - i see london i see france\nhttps://www.youtube.com/watch?v=LXyV5hKqA98\n\n\n!!!WORST TRACKS THIS WEEK!!!\n\nblink-182 - Edging\nhttps://www.youtube.com/watch?v=7MI3buZedOw\n\nStormzy - Hide & Seek\nhttps://www.youtube.com/watch?v=BXd62mMu1UY\n \n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nPatreon: https://www.patreon.com/theneedledrop\n\nOfficial site: http://theneedledrop.com\n\nTwitter: http://twitter.com/theneedledrop\n\nInstagram: https://www.instagram.com/afantano\n\nTikTok: https://www.tiktok.com/@theneedletok\n\nTND Twitch: https://www.twitch.tv/theneedledrop\n===================================\n\nY'all know this is just my opinion, right?",
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(6)
+    })
+
+    it('can parse Weekly Track Roundup: 11/11', () => {
+      consoleErrorSpy.mockRestore()
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          publishedAt: '2020-07-27T03:59:17Z',
+          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
+          title:
+            'Weekly Track Roundup: 11/11 (Earl Sweatshirt, K/DA, J.I.D & J. Cole, Anderson .Paak)',
+          description:
+            "Get a shirt: http://theneedledrop.com/support\n\nFAV TRACKS Spotify playlist: https://open.spotify.com/user/tndausten/playlist/6eJIhC4KhMXDWrmheBW74m\n\nTurntable Lab link: http://turntablelab.com/theneedledrop\nBrockhampton Vinyl Pre-Order: http://turntablelab.com/iridescence-tnd\n\nAmazon link: http://amzn.to/1KZmdWI\n\nSHOUTOUTS:\n\nChief Keef's Drill Symphony\nhttps://www.youtube.com/watch?v=bSuhFHw5epk\nhttps://www.youtube.com/watch?v=YOO8oyQ1Hug\nhttps://www.youtube.com/watch?v=l37Tx8GDSLg\n\nIntegrity - Bark At the Moon (Ozzy Cover)\nhttps://integrity.bandcamp.com/album/bark-at-the-moon-ozzy-osbourne-cover\n\nGuerilla Toss - Jay Glass Dubs vs Guerilla Toss: https://guerillatoss.bandcamp.com/album/jay-glass-dubs-vs-guerilla-toss\n\n!!!BEST SONGS THIS WEEK!!!\n\nEarl Sweatshirt - Nowhere2go\nhttps://www.youtube.com/watch?v=UCceUo94X1g\nReview: https://youtu.be/cgdIw6PGFnI\n\nJPEGMAFIA & Kenny Beats - Puff Daddy\nhttps://soundcloud.com/jpegmafia/puff-daddy\nReview: https://www.youtube.com/watch?v=dxVcRdCrE4s\n\nSaba - Stay Right Here ft. Mick Jenkins & Xavier Omär\nhttps://soundcloud.com/sabapivot/stay-right-here-ft-xavier-omar-and-mick-jenkins\n\nJ.I.D, J. Cole - Off Deez\nhttps://youtu.be/CzY9Pjorkxs\n\nAnderson .Paak - Who R U?\nhttps://youtu.be/bWBg_g43WB8\n\nHealth X Youth Code - Innocence\nhttps://youtu.be/gW5R59e_z-c\n\nLil Wayne - In This House ft. Gucci Mane\nhttps://itunes.apple.com/us/album/in-this-house-feat-gucci-mane/1441839390?i=1441839391\n\nConor Oberst - No One Changes\nhttps://conoroberst.bandcamp.com/album/no-one-changes-the-rockaways\n\nK/DA - POP/STARS (ft. Madison Beer, (G)I-DLE, Jaira Burns)\nhttps://youtu.be/UOxkGD8qRB4\n\n...meh...\n\nSmino - Klink\nhttps://www.youtube.com/watch?v=EnH_1wPTQ9Q\n\nIceage - Balm of Gilead\nhttps://youtu.be/nqY2SPZ4H9s\n\nSmashing Pumpkins - Knights of Malta\nhttps://youtu.be/O80Kwt4zcxs\n\nMineral - Aurora\nhttps://youtu.be/X3kOyzJL7SY\n\n\n!!!WORST SONGS THIS WEEK!!!\n\nXXXTENTACION - BAD\nhttps://www.youtube.com/watch?v=P1t9T1TAOBI\nReview: https://www.youtube.com/watch?v=nyzpFetVUrQ\n\nPanda Bear - Dolphin\nhttps://youtu.be/Eo6Sf80Uco8\n\nIbibio Sound Machine - Basquiat\nhttps://youtu.be/qGoDbhnFnSM\n\nTyler, The Creator - I Am the Grinch\nhttps://youtu.be/8CKEcOBCSQg\n\nIce Cube - Arrest the President\nhttps://www.youtube.com/watch?v=y9oUnC8JtXY\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================\n\nY'all know this is just my opinion, right?",
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(9)
+    })
+  })
+})
