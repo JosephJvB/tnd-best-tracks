@@ -224,5 +224,26 @@ describe('extractBestTracks.ts', () => {
 
       expect(result.length).toBeGreaterThan(0)
     })
+
+    it('can parse FAV TRACKS: 7/10', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          publishedAt: '2020-07-27T03:59:17Z',
+          channelId: 'UCt7fwAhXDy3oNFTAzF2o8Pw',
+          title: 'FAV TRACKS: 7/10 (Gucci Mane, Lil Yachty, Arca, Iglooghost)',
+          description:
+            'Amazon link:\nhttp://amzn.to/1KZmdWI\n\nDefiled - "Fear from Above"\nhttp://www.theneedledrop.com/articles/2016/7/defiled-fear-from-above\n\nGucci Mane - "First Day out tha Feds"\nhttp://www.theneedledrop.com/articles/2016/7/gucci-mane-first-day-out-tha-feds\n\nCarnage - "Mase in \'97" ft. Lil Yachty\nhttp://www.theneedledrop.com/articles/2016/7/carnage-mase-in-97-ft-lil-yachty\n\nIGLOOGHOST - ᴗ ˳ ᴗ Snoring (Music to Sleep To)\nhttp://www.theneedledrop.com/articles/2016/7/iglooghost-snoring-music-to-sleep-to\n\nArca - Entrañas\nhttp://www.theneedledrop.com/articles/2016/7/arca-entranas\n\nScHoolboy Q - "THat Part" (Black Hippy Remix)\nhttp://www.theneedledrop.com/articles/2016/7/schoolboy-q-that-part-black-hippy-remix\n\nFactory Floor - "Ya"\nhttp://www.theneedledrop.com/articles/2016/7/factory-floor-ya\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================\n\nY\'all know this is just my opinion, right?',
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(7)
+    })
   })
 })

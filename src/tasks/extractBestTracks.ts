@@ -12,6 +12,7 @@ const BEST_TRACK_PREFIXES = [
 ]
 const REVIEW_TITLES = ['MIXTAPE', 'EP', 'ALBUM', 'TRACK', 'COMPILATION']
 const TRACK_DIVIDERS = [' - ', ' – ']
+const OLD_TITLE_PREFIXES = ['FAV TRACKS:', 'FAV & WORST TRACKS:']
 
 export default function () {
   const allItems: PlaylistItem[] = JSON.parse(
@@ -105,7 +106,10 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
 
 export const extractTrackList_fallback = (item: PlaylistItem) => {
   const trackList: string[] = []
-  if (!item.snippet.title.startsWith('FAV & WORST TRACKS:')) {
+  const oldPrefix = OLD_TITLE_PREFIXES.find((p) =>
+    item.snippet.title.startsWith(p)
+  )
+  if (!oldPrefix) {
     return trackList
   }
 
