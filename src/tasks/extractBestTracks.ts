@@ -41,7 +41,7 @@ export default function () {
       return acc
     }
     const reviewTitle = REVIEW_TITLES.find((rt) =>
-      item.snippet.title.includes(rt)
+      item.snippet.title.includes(`${rt} REVIEW`)
     )
     if (!!reviewTitle) {
       return acc
