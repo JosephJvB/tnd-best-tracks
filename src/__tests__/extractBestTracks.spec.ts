@@ -119,20 +119,76 @@ describe('extractBestTracks.ts', () => {
 
       expect(result.length).toBeGreaterThan(0)
       expect(result).toEqual([
-        'Yard Act vs. Mad Professor - Pour More',
-        'Chat Pile - Tenkiller',
-        'Gucci Mane - Letter to Takeoff',
-        'Phoebe Bridgers - So Much Wine',
-        "Ab-Soul - Gang'Nem ft. Fre$h",
-        "Saweetie - DON'T SAY NOTHIN'",
-        'Black Belt Eagle Scout - My Blood Runs Through This Land',
-        'Fousheé - Spend the Money ft. Lil Uzi Vert',
-        'Christian Lee Hutson - Silent Night',
-        'Jane Remover - Contingency Song',
-        'Fatoumata Diawara - Nsera ft. Daman Albarn',
-        'Shame - Fingers of Steel',
-        'Kelela - On the Run',
-        'Tkay Maidza - Nights in December',
+        {
+          artist: 'Pour More',
+          link: 'https://youtu.be/Pc2dZbz87-8',
+          track: 'Yard Act vs. Mad Professor',
+        },
+        {
+          artist: 'Tenkiller',
+          link: 'https://youtu.be/U-5FKTNFz1E',
+          track: 'Chat Pile',
+        },
+        {
+          artist: 'Letter to Takeoff',
+          link: 'https://www.youtube.com/watch?v=n-9F1B_OPAM',
+          track: 'Gucci Mane',
+        },
+        {
+          artist: 'So Much Wine',
+          link: 'https://www.youtube.com/watch?v=4SBhPYhI-XA',
+          track: 'Phoebe Bridgers',
+        },
+        {
+          artist: "Gang'Nem ft. Fre$h",
+          link: 'https://youtu.be/605sWoD5qxU',
+          track: 'Ab-Soul',
+        },
+        {
+          artist: "DON'T SAY NOTHIN'",
+          link: 'https://www.youtube.com/watch?v=hDgG0_CK_jU',
+          track: 'Saweetie',
+        },
+        {
+          artist: 'My Blood Runs Through This Land',
+          link: 'https://www.youtube.com/watch?v=ntg4az1AsdM',
+          track: 'Black Belt Eagle Scout',
+        },
+        {
+          artist: 'Spend the Money ft. Lil Uzi Vert',
+          link: 'https://youtu.be/ybiy_2NQ9ik',
+          track: 'Fousheé',
+        },
+        {
+          artist: 'Silent Night',
+          link: 'https://youtu.be/RHWAlvhiAKY',
+          track: 'Christian Lee Hutson',
+        },
+        {
+          artist: 'Contingency Song',
+          link: 'https://youtu.be/cLM7xB3UDKc',
+          track: 'Jane Remover',
+        },
+        {
+          artist: 'Nsera ft. Daman Albarn',
+          link: 'https://youtu.be/VfMDqUSgbck',
+          track: 'Fatoumata Diawara',
+        },
+        {
+          artist: 'Fingers of Steel',
+          link: 'https://youtu.be/ULLsuL0y-Fk',
+          track: 'Shame',
+        },
+        {
+          artist: 'On the Run',
+          link: 'https://youtu.be/getdc1zzvnc',
+          track: 'Kelela',
+        },
+        {
+          artist: 'Nights in December',
+          link: 'https://youtu.be/2d4FTBml1Pw',
+          track: 'Tkay Maidza',
+        },
       ])
     })
 
@@ -248,14 +304,46 @@ describe('extractBestTracks.ts', () => {
       expect(result.length).toBeGreaterThan(0)
       expect(result.length).toBe(8)
       expect(result).toEqual([
-        'Chris Farren - "Say U Want Me"',
-        'Screaming Females - “Skeleton”',
-        'Denzel Curry - "Today" ft. Boogie & Allan Kingdom',
-        'A. G. Cook - "Superstar"',
-        'Dabbla - "Randeer"',
-        'Skrillex & Rick Ross - "Purple Lamborghini"',
-        'Street Sects - "And I Grew into Ribbons"',
-        'DJ Windows 98 (Win Butler) - “K33p Ur Dr34ms” (Suicide Remix)',
+        {
+          artist: '"Say U Want Me"',
+          link: 'http://www.theneedledrop.com/articles/2016/7/chris-farren-say-u-want-me',
+          track: 'Chris Farren',
+        },
+        {
+          artist: '“Skeleton”',
+          link: 'http://www.theneedledrop.com/articles/2016/7/screaming-females-skeleton',
+          track: 'Screaming Females',
+        },
+        {
+          artist: '"Today" ft. Boogie & Allan Kingdom',
+          link: 'http://www.theneedledrop.com/articles/2016/7/denzel-curry-today-ft-boogie-allan-kingdom',
+          track: 'Denzel Curry',
+        },
+        {
+          artist: '"Superstar"',
+          link: 'http://www.theneedledrop.com/articles/2016/7/a-g-cook-superstar',
+          track: 'A. G. Cook',
+        },
+        {
+          artist: '"Randeer"',
+          link: 'http://www.theneedledrop.com/articles/2016/7/dabbla-randeer',
+          track: 'Dabbla',
+        },
+        {
+          artist: '"Purple Lamborghini"',
+          link: 'http://www.theneedledrop.com/articles/2016/7/skrillex-rick-ross-purple-lamborghini',
+          track: 'Skrillex & Rick Ross',
+        },
+        {
+          artist: '"And I Grew into Ribbons"',
+          link: 'http://www.theneedledrop.com/articles/2016/7/street-sects-and-i-grew-into-ribbons',
+          track: 'Street Sects',
+        },
+        {
+          artist: '“K33p Ur Dr34ms” (Suicide Remix)',
+          link: 'http://www.theneedledrop.com/articles/2016/7/dj-windows-98-win-butler-k33p-ur-dr34ms-suicide-remix',
+          track: 'DJ Windows 98 (Win Butler)',
+        },
       ])
     })
 
