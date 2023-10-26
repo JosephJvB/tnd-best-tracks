@@ -302,5 +302,28 @@ describe('extractBestTracks.ts', () => {
       expect(result.length).toBeGreaterThan(0)
       expect(result.length).toBe(7)
     })
+
+    it('can parse FAV & WORST TRACKS: 7/31', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
+          publishedAt: '2020-07-27T03:59:17Z',
+          title:
+            'FAV & WORST TRACKS: 7/31 (Mac Miller, clipping. and DJ Khaled)',
+          description:
+            'Amazon link:\nhttp://amzn.to/1KZmdWI\n\n!!!FAV TRACKS THIS WEEK!!!\n\nTravis Scott & Young Thug - "Pick Up The Phone" ft. Quavo\nhttps://www.youtube.com/watch?v=__Wt9Rg-M8E\n\nAlunaGeorge, Leikeli47, Dreezy - "Mean What I Mean"\nhttps://youtu.be/NbtEy1Wdqj0\n\nBrain Tentacles -"The Sadist"\nhttp://www.theneedledrop.com/articles/2016/7/brain-tentacles-the-sadist\n\nclipping. - "Baby Don\'t Sleep"\nhttp://www.theneedledrop.com/articles/2016/7/clipping-baby-dont-sleep\n\nInjury Reserve - "Oh Shit!!!"\nhttp://www.theneedledrop.com/articles/2016/7/injury-reserve-oh-shit\n\nHot Dad - "Pokémon Go (Poké Don\'t Stop)"\nhttp://www.theneedledrop.com/articles/2016/7/hot-dad-pokmon-go-pok-dont-stop\n\nDJ Khaled - "Holy Key" ft. Kendrick Lamar, Big Sean & Betty Wright\nhttp://www.theneedledrop.com/articles/2016/7/dj-khaled-holy-key-ft-kendrick-lamar-big-sean-betty-wright\n\nThe Garden - "Call This # Now"\nhttp://www.theneedledrop.com/articles/2016/7/the-garden-call-this-now\n\nCommunions - "Don\'t Hold Anything Back"\nhttp://www.theneedledrop.com/articles/2016/7/communions-dont-hold-anything-back\n\nMac Miller - "Dang" ft. Anderson . Paak\nhttps://youtu.be/HbDOdFRLV0U\n\nDefiant III - "Crossfire"\nhttps://soundcloud.com/cjmhiphop/defiant-iii-crossfire\n\nKoreatown Oddity - "Fuck Dinosaurs"\nhttps://youtu.be/-QN6gtU0I9g\n\nSpace Candy - "Elastic Spring"\nhttps://soundcloud.com/deskpopmusic/space-candy-elastic-spring?in=deskpopmusic/sets/space-candy-forest-ep\n\nSun Kil Moon - "God Bless Ohio"\nhttp://www.theneedledrop.com/articles/2016/7/sun-kil-moon-god-bless-ohio\n\n!!!WORST TRACKS THIS WEEK!!!\nSnooki - Young Mommy\nhttps://youtu.be/zp5pW-27tJU\n\nDemocratic National Conventional - Our Fight Song\nhttps://youtu.be/YttscNOoAjA\n\nSpecter vs. Smash Mouth - Love Is A Soldier\nhttps://youtu.be/7LSBrccSbBI\n\nYG - FDT Pt. 2 ft. G-Eazy & Macklemore \nhttps://soundcloud.com/4hunnidrecords/fdt-part-2-feat-g-eazy-macklemore\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================\n\nY\'all know this is just my opinion, right?',
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(14)
+    })
   })
 })

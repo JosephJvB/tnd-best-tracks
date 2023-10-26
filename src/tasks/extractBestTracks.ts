@@ -68,14 +68,11 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
     return trackList
   }
 
-  item.snippet.description = item.snippet.description.replace(/–/g, '-')
-
-  const lines = item.snippet.description.split('\n\n')
+  const lines = descriptionToLines(item.snippet.description)
   let foundBestSection = false
   for (const line of lines) {
-    const lt = line.trim()
     const bestTrackPrefix = BEST_TRACK_PREFIXES.find((pref) =>
-      lt.startsWith(pref)
+      line.startsWith(pref)
     )
     if (!!bestTrackPrefix) {
       foundBestSection = true
@@ -85,9 +82,9 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
       continue
     }
 
-    const s = lt.split('\n')
-    if (s.length === 1) {
-      break // at the end of best tracks
+    const s = line.split('\n')
+    if (!isTrackLine(s)) {
+      break // assume best tracks section has ended
     }
 
     const trackName = s[0].trim()
@@ -95,7 +92,7 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
   }
 
   if (trackList.length === 0) {
-    trackList.push(...extractTrackList_fallback(item))
+    trackList.push(...extractTrackList_fallback(item, lines))
   }
 
   if (trackList.length === 0) {
@@ -107,7 +104,10 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
   return trackList
 }
 
-export const extractTrackList_fallback = (item: PlaylistItem) => {
+export const extractTrackList_fallback = (
+  item: PlaylistItem,
+  lines: string[]
+) => {
   const trackList: string[] = []
   const oldPrefix = OLD_TITLE_PREFIXES.find((p) =>
     item.snippet.title.startsWith(p)
@@ -117,17 +117,50 @@ export const extractTrackList_fallback = (item: PlaylistItem) => {
     return trackList
   }
 
-  item.snippet.description.split('\n\n').forEach((line) => {
-    const lt = line.trim()
-    if (lt.toLowerCase().startsWith('amazon link')) {
+  lines.forEach((line) => {
+    if (line.toLowerCase().startsWith('amazon link')) {
       return
     }
 
-    const ls = lt.split('\n')
-    if (ls[0].includes(' - ') && ls[1]?.startsWith('http')) {
+    const ls = line.split('\n')
+    if (isTrackLine(ls)) {
       trackList.push(ls[0])
     }
   })
 
   return trackList
+}
+
+export const isTrackLine = (lineSplit: string[]) => {
+  return (
+    [2, 3].includes(lineSplit.length) &&
+    lineSplit[0].includes(' - ') &&
+    lineSplit[1].startsWith('http')
+  )
+}
+
+export const getBestTrackStr = (line: string) => {
+  const lineSplit = line.split('\n')
+
+  if (![2, 3].includes(lineSplit.length)) {
+    return null
+  }
+
+  if (lineSplit[0].includes(' - ')) {
+    return null
+  }
+
+  if (lineSplit[1].startsWith('http')) {
+    return null
+  }
+
+  return lineSplit[0]
+}
+
+export const descriptionToLines = (description: string) => {
+  return description
+    .replace(/–/g, '-')
+    .replace('Brain Tentacles -"The Sadist"', 'Brain Tentacles - "The Sadist"')
+    .split('\n\n')
+    .map((l) => l.trim())
 }
