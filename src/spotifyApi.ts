@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
-import { YoutubeTrack } from './tasks/extractBestTracks'
+import { YoutubeTrack } from './tasks/extractYoutubeTracks'
 import { SPOTIFY_DOMAIN, SPOTIFY_ID_LENGTH } from './constants'
 
 const API_BASE_URL = 'https://api.spotify.com/v1'
@@ -40,13 +40,18 @@ export const getToken = async () => {
   return TOKEN
 }
 
-export const getTrack = async (trackId: string) => {
+export const getTracks = async (trackIds: string[]) => {
   try {
-    const res: AxiosResponse<SpotifyTrack> = await axios({
+    const res: AxiosResponse<{
+      tracks: SpotifyTrack[]
+    }> = await axios({
       method: 'get',
-      url: `${API_BASE_URL}/tracks/${trackId}`,
+      url: `${API_BASE_URL}/tracks`,
       headers: {
         Authorization: `Bearer ${TOKEN}`,
+      },
+      params: {
+        ids: trackIds.join(','),
       },
     })
     await new Promise((r) => setTimeout(r, 300))
@@ -61,7 +66,7 @@ export const getTrack = async (trackId: string) => {
     } else {
       console.error(e)
     }
-    console.error('getTrack failed')
+    console.error('getTracks failed')
     process.exit()
   }
 }
@@ -139,7 +144,16 @@ export const setToken = async () => {
 // https://open.spotify.com/track/1nxudYVyc5RLm8LrSMzeTa?si=-G3WGzRgTDq8OuRa688FMg
 // https://open.spotify.com/album/3BFHembK3fNseQR5kAEE2I
 export const extractSpotifyId = (link: string, type: 'album' | 'track') => {
-  const url = new URL(link)
+  let url: URL | null = null
+
+  try {
+    url = new URL(link)
+  } catch {}
+
+  if (url === null) {
+    return null
+  }
+
   if (url.host !== SPOTIFY_DOMAIN) {
     return null
   }

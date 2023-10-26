@@ -23,9 +23,16 @@ contentDetails,id,snippet,status
 ```
 
 3. lookup each song on spotify and save ids to json
+  - if tony included a trackId, get song by trackId
+    - considered batching the getById requests, but of 3.4k tracks, >300 of them have a spotify trackId
+    - is it really worth it? Probably not but I am doing it
+  - if not - search song by name/artist/(album if albumId)
   - gonna need spotify search api
   - https://developer.spotify.com/documentation/web-api/reference/search
-  - resolve not found
+
+4. Review youtube / spotify pairs
+  - case where spotifyTrack is not found
+  - case where match is bad
 
 4. Do user auth, callback url stuff
 

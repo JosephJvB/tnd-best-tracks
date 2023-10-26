@@ -3,6 +3,14 @@ import { extractSpotifyId } from '../spotifyApi'
 
 describe('spotifyApi.ts', () => {
   describe('#extractSpotifyId', () => {
+    it('returns null for invalid url', () => {
+      const link = 'invalid url here'
+
+      const id = extractSpotifyId(link, 'track')
+
+      expect(id).toBeNull()
+    })
+
     it('returns null for non-spotify links', () => {
       const link = 'https://www.youtube.com/watch?v=DJs_thSFreI'
 

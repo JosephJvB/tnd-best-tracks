@@ -1,4 +1,4 @@
-import { extractTrackList_v2 } from '../tasks/extractBestTracks'
+import { extractTrackList_v2 } from '../tasks/extractYoutubeTracks'
 import { PlaylistItem } from '../youtubeApi'
 
 describe('extractBestTracks.ts', () => {
