@@ -325,5 +325,51 @@ describe('extractBestTracks.ts', () => {
       expect(result.length).toBeGreaterThan(0)
       expect(result.length).toBe(14)
     })
+
+    it('can parse Weekly Track Roundup: 4/3/23', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
+          publishedAt: '2020-07-27T03:59:17Z',
+          title:
+            'Tyler the Creator, Metallica, Marshmello, Wiz Khalifa | Weekly Track Roundup: 4/3/23',
+          description:
+            "2023 FAV TRACKS PLAYLIST: https://music.apple.com/us/playlist/my-fav-singles-of-2023/pl.u-mJjJTyKgxEy\n\nTND Patreon: https://www.patreon.com/theneedledrop\n\nTurntable Lab link: http://turntablelab.com/theneedledrop\n\n\n!!!BEST TRACKS THIS WEEK!!!\n\nTyler, the Creator - DOGTOOTH / SORRY NOT SORRY\nDogtooth: https://www.youtube.com/watch?v=2TVXi_9Bvlg\nDogtooth Track Review: https://www.youtube.com/watch?v=ms4MXpBlmPU\nSorry Not Sorry: https://www.youtube.com/watch?v=LSIOcCcEVaE\n\nMetallica - 72 Seasons\nhttps://www.youtube.com/watch?v=1OeC9CGtWcM\n\nDaniel Caesar - Valentina\nhttps://www.youtube.com/watch?v=m6TYnXfG7w4\n\nCheekface - Popular 2\nhttps://cheekface.bandcamp.com/track/popular-2\n\nAlex Lahey - They Wouldn't Let Me In\nhttps://www.youtube.com/watch?v=5mAwggDtAK0\n\nboygenius - Cool About It\nhttps://youtu.be/G-XICfi4j3Q\n\nThe Beths - Watching the Credits\nhttps://youtu.be/HEO3vmxjoa0\n\nBody Type - Holding On\nhttps://youtu.be/frXyauUYFT4\n\nSBTRKT - Days Go By ft. Toro y Moi\nhttps://youtu.be/ImsmM3NGVVM\n\nIcona Pop - Faster\nhttps://www.youtube.com/watch?v=lRdNcUVR968\n\n\n...meh...\n\nClairo - For Now\nhttps://clairecottrill.bandcamp.com/track/for-now\n\nThe Drums - I Want It All\nhttps://youtu.be/mhn8MtWqKw4\n\nGodflesh - Nero\nhttps://godflesh1.bandcamp.com/album/nero\n\nKhalid - Softest Touch\nhttps://www.youtube.com/watch?v=aGMM_OuYHkM\n\nClark - Dismissive\nhttps://youtu.be/5wyjMNMzG6s\n\nGucci Mane - 06 Gucci ft. 21 Savage & Dababy\nhttps://www.youtube.com/watch?v=43t7U_9AVaI\n\nChlöe, Future - Cheatback\nhttps://www.youtube.com/watch?v=X74-jw2qkRM\n\n\n!!!WORST TRACKS THIS WEEK!!!\n\nSmashing Pumpkins - Spellbinding\nhttps://youtu.be/MtT46ScAgVY\n\nCharlie Puth - That's Not How This Works\nhttps://www.youtube.com/watch?v=PAKFzFqJa58\n\nWiz Khalifa - Peace and Love\nhttps://www.youtube.com/watch?v=hVBoT5c0QdQ\n\nMarshmello, Polo G, Southside - Grown Man\nhttps://www.youtube.com/watch?v=KWyvYbfsWMA\n\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nPatreon: https://www.patreon.com/theneedledrop\n\nOfficial site: http://theneedledrop.com\n\nTwitter: http://twitter.com/theneedledrop\n\nInstagram: https://www.instagram.com/afantano\n\nTikTok: https://www.tiktok.com/@theneedletok\n\nTND Twitch: https://www.twitch.tv/theneedledrop\n===================================\n\nY'all know this is just my opinion, right?",
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(10)
+    })
+
+    it('can parse Weekly Track Roundup: 10/18', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
+          publishedAt: '2020-07-27T03:59:17Z',
+          title:
+            'Weekly Track Roundup: 10/18 (Kanye West, Lana Del Rey, Jake Paul)',
+          description:
+            "FAV TRACKS Spotify playlist:\nhttps://open.spotify.com/playlist/34mJ2w9MY78Bz0Pd5h4P5o?si=44VxevVRTXydLgmRq1btew\n\nOur sponsor: http://ridgewallet.com/fantano\nUSE PROMO CODE \"MELON\" FOR 10% OFF\n\nTND Patreon: https://www.patreon.com/theneedledrop\n\nTurntable Lab link: http://turntablelab.com/theneedledrop\n\n\n!!!BEST TRACKS THIS WEEK!!!\n\nJeff Rosenstock - Fox in the Snow (Belle & Sebastian Cover)\nhttps://jeffrosenstock.bandcamp.com/track/fox-in-the-snow-belle-and-sebastian\n\nDuck Sauce - Mesmerize\nhttps://www.youtube.com/watch?v=_gduUeX0N4Q\n\nBill Callahan & Bonnie Prince Billy \"I've Made Up My Mind (feat. Alasdair Roberts)\nhttps://www.youtube.com/watch?v=mTjVOe0Vcnc\n\nViagra Boys - Ain't Nice\nhttps://www.youtube.com/watch?v=vzWds5gWS6c\n\nclipping. - Pain Everyday\nhttps://www.youtube.com/watch?v=c0RYIIzsvFw\n\nClaud - Gold\nhttps://www.youtube.com/watch?v=SiXQyIbaPa0\n\nZeal & Ardor - Wake of a Nation\nhttps://www.youtube.com/watch?v=wjiVKfrHge0\n\nWar on Women - White Lies\nhttps://www.youtube.com/watch?v=JQ6rACAhXo0\n\nOG Maco - Commas ft. B La B, Jimmy Edgar\nhttps://www.youtube.com/watch?v=MRl-SoBerjI\n\nCakes Da Killa x Proper Villains - Don Dada\nhttps://www.youtube.com/watch?v=2MxT6PePWZQ\n\n\n...meh...\n\nStatik Selektah - Keep It Moving ft. Joey Bada$$, Nas & Gary Clark Jr.\nhttps://www.youtube.com/watch?v=V_jfamNbOuo\n\nStevie Wonder - Can't Put It in the Hands of Fate ft. Rapsody, Cordae, Chika & Busta Rhymes\nhttps://www.youtube.com/watch?v=Kgdfxeh0WtE\n\nJulia Holter - So Humble the Afternoon\nhttps://www.youtube.com/watch?v=fl0fabVJsq8\n\nIDK - King Alfred\nhttps://www.youtube.com/watch?v=NnzBzRo-hfA\n\nRejjie Snow, Snoh Aalegra, Cam O'bi - Mirrors\nhttps://www.youtube.com/watch?v=TtzXXl_derY\n\nAmeer Vann - Keep Your Distance\nhttps://www.youtube.com/watch?v=NiJzoEoLC2c\n\nAesop Rock - Pizza Alley\nhttps://www.youtube.com/watch?v=PzSlOuR0RYk\n\nThe Body - A Lament\nhttps://www.youtube.com/watch?v=zac9OIGy1Sc\n\nPortugal. The Man - Who's Gonna Stop Me ft. \"Weird Al\" Yankovic\nhttps://www.youtube.com/watch?v=qTdgxhQwaVQ\n\nSada Baby - Whole Lotta Choppas (Remix) ft. Nicki Minaj\nhttps://www.youtube.com/watch?v=KV3fVY0nHw4\n\nKelly Moran - Helix III & Prurient - Tokyo Exorcist\nhttps://hospitalproductions.bandcamp.com/album/chain-reaction-at-dusk\n\nLana Del Rey - Let Me Love You Like a Woman\nhttps://www.youtube.com/watch?v=Nj9QqP-ce4E\n\nRapsody - Pray Momma Don't Cry ft. Bilal\nhttps://www.youtube.com/watch?v=fjBVi-UByEg\n\nJustin Bieber & Benny Blanco - Lonely\nhttps://www.youtube.com/watch?v=xQOO2xGQ1Pc\n\nBenny Sings - Rolled Up ft. Mac DeMarco\nhttps://www.youtube.com/watch?v=rcd_qIYg10s\n\nThe Mountain Goats - Picture My Dress\nhttps://www.youtube.com/watch?v=hiStvHJV8hg\n\n\n!!!WORST TRACKS THIS WEEK!!!\n\nLupe Fiasco & Soundtrakk - Tape Tape\nhttps://www.youtube.com/watch?v=ex9EMNoo2uA\n\nTy Dollar $ign - By Yourself ft. Jhené Aiko & Mustard\nhttps://www.youtube.com/watch?v=vEnW8rLMJlc\n\nNF - Chasing__(Demo) ft. Mikayla Sippel\nhttps://www.youtube.com/watch?v=aqrr3Dj_Jn8\n\nDemi Lovato - Commander in Chief\nhttps://www.youtube.com/watch?v=n9Y-lS1trhw\n\nJake Paul - Dummy ft. TVGUCCI\nhttps://www.youtube.com/watch?v=LJaWc6EZj08\n\nKanye West - Nah Nah Nah\nhttps://www.youtube.com/watch?v=LTx1wsYL9Io\nReview: https://www.youtube.com/watch?v=oqmBR7IzP4A\n\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nPatreon: https://www.patreon.com/theneedledrop\n\nOfficial site: http://theneedledrop.com\n\nTwitter: http://twitter.com/theneedledrop\n\nInstagram: https://www.instagram.com/afantano\n\nTND Twitch: https://www.twitch.tv/theneedledrop\n===================================\n\nY'all know this is just my opinion, right?",
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(10)
+    })
   })
 })

@@ -85,6 +85,7 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
 
     const bestTrack = getBestTrackStr(line)
     if (!bestTrack) {
+      // console.log('exit', line)
       break // assume best tracks section has ended
     }
 
@@ -134,7 +135,7 @@ export const extractTrackList_fallback = (
 export const getBestTrackStr = (line: string) => {
   const lineSplit = line.split('\n').map((s) => s.trim())
 
-  if (![2, 3].includes(lineSplit.length)) {
+  if (![2, 3, 4].includes(lineSplit.length)) {
     return null
   }
 
@@ -155,6 +156,12 @@ export const descriptionToLines = (description: string) => {
   return description
     .replace(/–/g, '-')
     .replace('Brain Tentacles -"The Sadist"', 'Brain Tentacles - "The Sadist"')
+    .replace('SORRY NOT SORRY\nDogtooth: https', 'SORRY NOT SORRY\nhttps')
+    .replace('Model/Actriz- Damocles', 'Model/Actriz - Damocles')
+    .replace(
+      `Bonnie Prince Billy \"I've Made Up My Mind`,
+      `Bonnie Prince Billy - \"I've Made Up My Mind`
+    )
     .split('\n\n')
     .map((l) => l.trim())
 }
