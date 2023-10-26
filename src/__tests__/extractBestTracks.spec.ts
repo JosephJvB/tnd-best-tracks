@@ -371,5 +371,142 @@ describe('extractBestTracks.ts', () => {
       expect(result.length).toBeGreaterThan(0)
       expect(result.length).toBe(10)
     })
+
+    it('can parse Weekly Track Roundup: 7/7', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
+          publishedAt: '2020-07-27T03:59:17Z',
+          title:
+            'Weekly Track Roundup: 7/7 (Kanye West, Post Malone, Ed Sheeran, Brooke Candy)',
+          description:
+            "TND tour tix: https://soundrink.com/#/tour/the-needle-drop\n\nFAV TRACKS Spotify playlist: https://open.spotify.com/user/tndausten/playlist/2zderg88f9HbH54RJBTp1m?si=W8oXCAHvRnSJun4x6VHhdQ\n\nTurntable Lab link: http://turntablelab.com/theneedledrop\n\nAmazon link: http://amzn.to/1KZmdWI\n\nSHOUTOUTS:\n\nMARC REBILLET\nhttps://youtu.be/cp6Apmi_rmQ\n\nRIFFS FOR REPRODUCTIVE JUSTICE\nhttps://blackflagsoverbrooklyn.bandcamp.com/album/riffs-for-reproductive-justice\n\n\n!!!BEST TRACKS THIS WEEK!!!\n\nBrooke Candy - XXXTC ft. Charli XCX & Maliibu Miitch\nhttps://www.youtube.com/watch?v=nfmoel0oy_8\n\nKanye West - Brothers ft. Charlie Wilson\nReview: https://www.youtube.com/watch?v=QD-nnlvBESY\nUnofficial cover art from here: https://www.reddit.com/r/freshalbumart/comments/c89erx/kanye_west_brothers_feat_charlie_wilson/\n\nPost Malone - Goodbyes ft. Young Thug\nhttps://www.youtube.com/watch?v=ba7mB8oueCY\nReview: https://www.youtube.com/watch?v=xs9opEpZXHo\n\nAsagraum - Abomination's Altar\nhttps://youtu.be/Zl0FlmgcT1s\n\nTommie Phoenix - Bianca\nhttps://soundcloud.com/tommiephoenix/bianca-1\n\n\n...meh...\n\nCupcakKe - Ayesha\nhttps://open.spotify.com/track/0BUSEzAyJ9UJSGdA3SMCrd\n\nTy Segall - Radio\nhttps://tysegall.bandcamp.com/track/radio\n\nTyler Childers - All Your'n\nhttps://youtu.be/NfbEuyMAstg\n\nDominic Fike - Phone Numbers (prod. Kenny Beats)\nhttps://www.youtube.com/watch?v=ETxuFyAL1RU\n\nRosalía - Milionària\nhttps://www.youtube.com/watch?v=eQCpjOBJ5UQ\n\n\n!!!WORST TRACKS THIS WEEK!!!\n\nEd Sheeran - Blow ft. Chris Stapleton & Bruno Mars\nhttps://youtu.be/42SM_TeWE5s\n\nblink-182 - Happy Days\nhttps://www.youtube.com/watch?v=ahgkSf8qCd4\n\nThe Bird and the Bee - Hot for Teacher\nhttps://www.youtube.com/watch?v=HgZnxGU4XLE\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================\n\nY'all know this is just my opinion, right?",
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(5)
+    })
+
+    it('can parse Weekly Track Roundup: 9/8', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
+          publishedAt: '2020-07-27T03:59:17Z',
+          title:
+            'Weekly Track Roundup: 9/8 (Danny Brown, Grimes, Swans, EarthGang)',
+          description:
+            "Our sponsor: http://ridgewallet.com/fantano\nUSE PROMO CODE \"MELON\" FOR 10% OFF\n\nFAV TRACKS Spotify playlist: https://open.spotify.com/user/tndausten/playlist/2zderg88f9HbH54RJBTp1m?si=W8oXCAHvRnSJun4x6VHhdQ\n\nTurntable Lab link: http://turntablelab.com/theneedledrop\n\nAmazon link: http://amzn.to/1KZmdWI\n\n\n!!!BEST TRACKS THIS WEEK!!!\n\nThe Comet Is Coming - Lifeforce Part II\nhttps://youtu.be/gVf0Wfcr6Pk\n\nCharli XCX - February 2017 ft. Clairo & Yaeji\nhttps://youtu.be/8Zg3ZOn1pHc\n\nSwans - It's Coming It's Real\nhttps://www.youtube.com/watch?v=3ZVZo30M8Lc\nReview: https://www.youtube.com/watch?v=TMJry1DpmfA\n\nChelsea Wolfe - Deranged for Rock & Roll\nhttps://youtu.be/z9s11MlRWVM\n\nBjörk / Fever Ray co-remixes:\nhttp://bjork.lnk.to/fctheknife \nhttp://bjork.lnk.to/fcfeverray \nhttp://bjork.lnk.to/bjorkremix\n\nLunchMoney Lewis - Make That Cake ft. Doja Cat\nhttps://youtu.be/UI2XVGDEMEk\n\nRoy Blair - I Don't Know About Him\nhttps://youtu.be/Zv7RivY0-iA\n\nEarthGang - Top Down\nhttps://www.youtube.com/watch?v=55CEliYIYNw\n\nFat Joe, Cardi B & Anuel AA - YES\nhttps://www.youtube.com/watch?v=o65b92M5-yQ\n\n\n...meh...\n\nSpoon - Shake It Off\nhttps://youtu.be/X7xQWP9fm-w\n\nFrancis and the Lights - Take Me to the Light ft. Bon Iver & Kanye West\nhttps://youtu.be/P22Dk6Mjb3E\n\nM83 - Temple of Sorrow\nhttps://youtu.be/jF_MZ5ytykg\n\nMetronomy - Wedding Bells\nhttps://youtu.be/PGegxTLe-DY\n\nInjury Reserve - HPNGC ft. JPEGMAFIA & Code Orange\nhttps://www.youtube.com/watch?v=Z4oDe3mdCiQ\n\nHomeboy Sandman - Far Out\nhttps://homeboysandman-mmg.bandcamp.com/track/far-out\n\nDanny Brown - Dirty Laundry\nhttps://www.youtube.com/watch?v=1okqvhq7ZaI\nReview: https://www.youtube.com/watch?v=8ydptnPPW58\n\nGrimes & i_o - Violence\nhttps://www.youtube.com/watch?v=M9SGYBHY0qs\n\n\n!!!WORST TRACKS THIS WEEK!!!\n\nTegan & Sara - Hey, I'm Just Like You\nhttps://youtu.be/ME_X7h912rU\n\nCamila Cabello - Liar\nhttps://www.youtube.com/watch?v=6-OvO8ZuW98\n\nKorn - Can You Hear Me\nhttps://www.youtube.com/watch?v=XC59-CHjkfU\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nPatreon: https://www.patreon.com/theneedledrop\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================e\n\nY'all know this is just my opinion, right?",
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(11)
+    })
+
+    it('can parse BEST & WORST TRACKS: 11/14', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
+          publishedAt: '2020-07-27T03:59:17Z',
+          title:
+            'BEST & WORST TRACKS: 11/14 (Childish Gambino, Run the Jewels, The xx, Okilly Dokilly)',
+          description:
+            'Amazon link:\nhttp://amzn.to/1KZmdWI\n\n!!!BEST TRACK THIS WEEK!!!\n\nNails / Full of Hell split:\nhttp://www.theneedledrop.com/articles/2016/11/nails-full-of-hell-split-7\n\nChildish Gambino - "Me & Your Mama"\nhttp://www.theneedledrop.com/articles/2016/11/childish-gambino-me-and-your-mama\n\nHudson Mohawke - "Play N Go"\nhttps://youtu.be/nHXRMIwpW_Y\n\nHMLTD - "Stained"\nhttps://youtu.be/syfZU4kGiSE\n\nOvO - "Zombie Stomp"\nhttp://www.stereogum.com/1910191/ovo-zombie-stomp/premiere/\n\nRun the Jewels - "2100" ft. BOOTS\nhttps://soundcloud.com/runthejewels/2100-feat-boots\n\nBlack Lips - "Deaf Dumb and Blind"\nhttps://soundcloud.com/cole-alexander-6/election-night-r1\n\nLos Campesinos! - "I Broke Up In Amarante"\nhttps://www.youtube.com/watch?v=1z0PJV5fVcY&ab_channel=LosCampesinos%21\n\nKing Gizzard - "Rattlesnake"\nhttps://youtu.be/Q-i1XZc8ZwA\n\nCzarface - "Machine, Man & Moster" ft. Conway\nhttps://youtu.be/2-sG2aZ72wk\n\nClarence Clarity - "Vapid Feels Are Vapid"\nhttp://www.theneedledrop.com/articles/2016/11/clarence-clarity-vapid-feels-are-vapid\n\nA Tribe Called Quest - "We the People...." (forgot to mention, but also gonna be dropping this review soon after returning)\nhttp://www.theneedledrop.com/articles/2016/11/a-tribe-called-quest-we-the-people\n\n...MEH...\n\nThe Flaming Lips - "How??"\nhttps://youtu.be/unLnJvzf-So\n\nCharly Bliss - "Turd"\nhttps://charlybliss.bandcamp.com/track/turd\n\nNathan Fake - "Degreelessness" ft. Prurient\nhttps://youtu.be/FFUUhKtLamY\n\nModern Baseball - "Bart to the Future pt. 2 the Musical"\nhttps://youtu.be/jgsftCKZGls\n\nThe xx - "On Hold"\nhttps://youtu.be/1_oA9UmRd4I\n\nRecondite - "Corvus"\nhttps://www.youtube.com/watch?v=08YORBnkvv0\n\n!!!WORST TRACK THIS WEEK!!!\n\nOkilly Dokilly - "White Wine Spritzer"\nhttps://youtu.be/2BEvh6HSQc0\n\n!SHOUTOUT!\nMarilyn Manson\'s "Say10" trailer: \nhttp://content.jwplatform.com/previews/sr8LLVFX-zVW2T6Gg\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================\n\nY\'all know this is just my opinion, right?',
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+    })
+
+    it('can parse Weekly Track Roundup: 8/26', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
+          publishedAt: '2020-07-27T03:59:17Z',
+          title:
+            'Weekly Track Roundup: 8/26 (Logic, YBN Cordae, Disclosure, Haru Nemuri)',
+          description:
+            "Thanks SeatGeek for sponsoring the video. Get $20 off tix w/ code DROP: https://sg.app.link/DROP\n\nFAV TRACKS Spotify playlist: https://open.spotify.com/user/tndausten/playlist/6eJIhC4KhMXDWrmheBW74m\n\nTurntable Lab link: http://turntablelab.com/theneedledrop\n\nAmazon link: http://amzn.to/1KZmdWI\n\n!!!BEST TRACKS THIS WEEK!!!\n\nKAMI & Smoko Ono - Reboot ft. Chance the Rapper & Joey Purp\nhttps://open.spotify.com/track/4ZOfP8FvP1BW6in6cEXjr6\n\nThe Skiffle Players - Local Boy\nhttps://theskiffleplayers.bandcamp.com/track/local-boy\n\nDÖDSRIT - Aura\nhttps://youtu.be/zj5bb2cd8ys\n\nHaru Nemuri - Kick In The World\nhttps://www.youtube.com/watch?v=eAy9RMy1Igk\n\nDisclosure - Where You Come From (Extended Mix) / Love Can Be So Hard / Where Angels Fear To Tread / Moonlight\nhttps://youtu.be/wslO7YNg3S0\nhttps://youtu.be/4CCfYi1u8Y4\nhttps://youtu.be/stixXyfsJfE\nhttps://youtu.be/yTF7LwR9YEc\n\nZillaKami x SosMula - TrainSpotting\nhttps://soundcloud.com/hikariultra/zillakami-x-sosmula-trainspotting-prod-by-ghosta?in=hikariultra/sets/be-patient\n\nYBN Cordae - Scotty Pippen\nhttps://youtu.be/ClKrkO456fY\n\nHissing - Eulogy In Squalor\nhttps://youtu.be/9zflJ0Psj7I\n\nIDLES - GREAT\nhttps://youtu.be/3CzNOD7ukMA\n\nAtmosphere - Virgo\nhttps://youtu.be/U4PSdVCBl0c\n\nEmpress Of - When I'm With Him\nhttps://www.youtube.com/watch?v=6AEpH5noGqU\n\n\n...MEH...\n\nJoey Purp - Bag Talk\nhttps://youtu.be/6qTWGqjMb5o\n\nJ Mascis - See You At The Movies\nhttps://youtu.be/2vzaHiJ9oWY\n\nCrippled Black Phoenix - Hunok Csatája\nhttps://youtu.be/CV07GXCsQGg\n\nJulien Baker, Phoebe Bridgers, Lucy Dacus - Bite the Hand\nhttps://open.spotify.com/album/2WzybRE5n1lgRAckI3dWpL\n\nArmand Hammer - Rehearse With Ornette\nhttps://armandhammer.bandcamp.com/track/rehearse-with-ornette\n\nAsh Koosha - Return 0\nhttps://www.youtube.com/watch?v=WhLhVS4MJqM\n\nStreet Sects - In For A World of Hurt\nhttps://youtu.be/visholplU94\n\nLogic - The Return\nhttps://itunes.apple.com/us/album/the-return/1432877912?i=1432878682\n\n\n!!!WORST TRACKS THIS WEEK!!!\n\nConverge - Disintegration (The Cure Cover)\nhttps://convergecult.bandcamp.com/track/disintegration-the-cure-cover\n\nLiam Payne & French Montana - First Time\nhttps://www.youtube.com/watch?v=0PBqvpGG0DE\n\nKyle - Moment ft. Wiz Khalifa\nhttps://www.youtube.com/watch?v=CKvs6S43-X8\n\nThe Chainsmokers & NGHTMRE - Save Yourself\nhttps://www.youtube.com/watch?v=chIfoZ-Y-2k\n\nCal Chuchesta - I'm In The Club (Lookin' For Some Love)\nhttps://youtu.be/mIJgP_Wmb98\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================\n\nY'all know this is just my opinion, right?",
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(14)
+    })
+
+    it('can parse FAV & WORST TRACKS: 8/7', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
+          publishedAt: '2020-07-27T03:59:17Z',
+          title:
+            'FAV & WORST TRACKS: 8/7 (Suicide Squad OST, Alcest, Norah Jones, E-40)',
+          description:
+            'Amazon link:\nhttp://amzn.to/1KZmdWI\n\n!!!FAV TRACKS THIS WEEK!!!\n\nMithras - "Between Scylla and Charybdis"\nhttp://www.theneedledrop.com/articles/2016/8/mithras-between-scylla-and-charybdis\n\nAlcest - "Oiseaux de Proie"\nhttp://www.theneedledrop.com/articles/2016/8/alcest-oiseaux-de-proie\n\nJP Moregun Mixtape\nhttp://www.jpmoregun.com/\n\nE-40 - "Petty" ft. Kamaiyah\nhttps://soundcloud.com/e40/e-40-petty-feat-kamaiyah\n \nNorah Jones - "Carry On"\nhttp://www.theneedledrop.com/articles/2016/8/norah-jones-carry-on\n \nyndi halda - "Golden Threads from the Sun"\nhttp://www.theneedledrop.com/articles/2016/8/yndi-halda-golden-threads-from-the-sun\n \nProtomartyr - "Born to Be Wine"\nhttp://www.theneedledrop.com/articles/2016/8/protomartyr-born-to-be-wine\n \nJPEGMAFIA x Freaky - "I Might Vote 4 Donald Trump"\nhttp://www.theneedledrop.com/articles/2016/8/jpegmafia-x-freaky-i-might-vote-4-donald-trump\n \nStreet Sects - "Featherweight Hate"\nhttp://www.theneedledrop.com/articles/2016/8/street-sects-featherweight-hate\n \nBeach Slang - "Punks in a Disco Bar"\nhttp://www.theneedledrop.com/articles/2016/8/beach-slang-punks-in-a-disco-bar\n\n!!!WORST TRACKS THIS WEEK!!!\n\ngrimes - medieval warfare\n\nchainsmokers - closer ft. halsey\n\ntove lo - cool girl\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================\n\nY\'all know this is just my opinion, right?',
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(10)
+    })
+
+    it('can parse BEST & WORST TRACKS: 10/2', () => {
+      const item = {
+        id: 'UExQNENTZ2w3Szdvcjg0QUFocjd6bExOcGdoRW5LV3UyYy4xNEMzREYwQzc3REUwNDY0',
+        snippet: {
+          channelId: 'tony',
+          videoOwnerChannelId: 'tony',
+          publishedAt: '2020-07-27T03:59:17Z',
+          title:
+            'BEST & WORST TRACKS: 10/2 (Kid Cudi, Korn, The Weeknd, Captain Murphy)',
+          description:
+            'Amazon link:\nhttp://amzn.to/1KZmdWI\n\n!!!BEST TRACKS THIS WEEK!!!\n\nKid Cudi - "Surfin" ft. Pharrell Williams\nhttps://www.youtube.com/watch?v=y8GMktNXku8\n\nAesop Rock / Homeboy Sandman EP\nhttp://www.theneedledrop.com/articles/2016/10/aesop-rock-homeboy-sandman-lice-two-still-buggin\n\nCaptain Murphy - "Crowned"\nhttp://www.theneedledrop.com/articles/2016/10/captain-murphy-crowned\n\nDillinger Escape Plan - "Symptom of Terminal Illness"\nhttp://www.theneedledrop.com/articles/2016/10/the-dillinger-escape-plan-symptom-of-terminal-illness\n\nThe Wytches - "Crest of Death"\nhttps://soundcloud.com/thewytches/crest-of-death\n\n...MEH...\n\nAlex Frankel - "Negative Space"\nhttps://youtu.be/gMMIT-d6WI8\n\nJagwar Ma - "Slipping"\nhttps://soundcloud.com/jagwar-ma/slipping-every-now-and-then\n\nThe Weeknd - "False Alarm"\nhttps://www.youtube.com/watch?v=q24MOFOscH4\n\nCIVIL CIVIC - "The Mirror"\nhttps://youtu.be/YehkWOl4CDk\n\nKings of Leon - "Around the World"\nhttps://youtu.be/fIdRddiaPKo\n\n!!!WORST TRACKS THIS WEEK!!!\n\nJuicy J - "Ballin" ft. Kanye West\n\nThe Chainsmokers - "All We Know" ft. Phoebe Ryan\nhttps://www.youtube.com/watch?v=lEi_XBg2Fpk\n\nKorn - "A Different World" ft. Corey Taylor\nhttps://www.youtube.com/watch?v=JAmszB9UE_4\n\nNiall Horan - "This Town"\n\nGoat - "Alarms"\nhttps://www.youtube.com/watch?v=BALbQsCGfTo\n\n===================================\nSubscribe: http://bit.ly/1pBqGCN\n\nOfficial site: http://theneedledrop.com\n\nTND Twitter: http://twitter.com/theneedledrop\n\nTND Facebook: http://facebook.com/theneedledrop\n\nSupport TND: http://theneedledrop.com/support\n===================================\n\nY\'all know this is just my opinion, right?',
+        },
+        status: {
+          privacyStatus: 'public',
+        },
+      } as PlaylistItem
+
+      const result = extractTrackList_v2(item)
+
+      expect(result.length).toBeGreaterThan(0)
+      expect(result.length).toBe(5)
+    })
   })
 })
