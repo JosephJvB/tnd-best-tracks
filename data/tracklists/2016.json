@@ -1,201 +1,997 @@
 [
-  "Hot Dad - \"R.I.P. Meme\" ft. FrankJavCee (Video)",
-  "The Avalanches - \"Colours\" ft. Jonathan Donahue",
-  "Danny Brown - \"When It Rain\" (Video)",
-  "clipping. - Wriggle EP",
-  "Eric Copeland - \"Rip It\"",
-  "BADBADNOTGOOD - \"Lavender\" ft. Kaytranada",
-  "Preoccupations - \"Anxiety\" (Video)",
-  "Sigur Rós - \"Óveður\"",
-  "Show Me the Body - \"Body War\"",
-  "Clooner - \"Let Me Be\"",
-  "Nite-Funk - \"Let Me Be Me\"",
-  "The Tallest Man on Earth - \"Time of the Blue\"",
-  "Gucci Mane - \"All My Children\"",
-  "Touché Amoré - \"Palm Dreams\"",
-  "ScHoolboy Q - Tookie Knows II: Part (2)",
-  "BADBADNOTGOOD - In Your Eyes ft. Charlotte Day Wilson",
-  "Maxo Kream - The Persona Tape",
-  "Thelonious Martin - Bomaye ft. Joey Purp",
-  "clipping. - Wriggle (music vid)",
-  "Angel Olsen - Shut Up Kiss Me",
-  "Ghoul - Bringer of War",
-  "Defiled - \"Fear from Above\"",
-  "Gucci Mane - \"First Day out tha Feds\"",
-  "Carnage - \"Mase in '97\" ft. Lil Yachty",
-  "IGLOOGHOST - ᴗ ˳ ᴗ Snoring (Music to Sleep To)",
-  "Arca - Entrañas",
-  "ScHoolboy Q - \"THat Part\" (Black Hippy Remix)",
-  "Factory Floor - \"Ya\"",
-  "Justice - \"Safe and Sound\"",
-  "Quays - \"Your Side\" ft. Nancy Andersen",
-  "Tobacco - \"Human Om\"",
-  "Swain - \"Hold My Head\"",
-  "Jagwar Ma - \"O B 1\"",
-  "Jeff Rosenstock - \"Festival Song\"",
-  "Migos - \"Now\" ft. Gucci Mane",
-  "Preoccupations - \"Degraded\"",
-  "Chris Farren - \"Say U Want Me\"",
-  "Screaming Females - “Skeleton”",
-  "Denzel Curry - \"Today\" ft. Boogie & Allan Kingdom",
-  "A. G. Cook - \"Superstar\"",
-  "Dabbla - \"Randeer\"",
-  "Skrillex & Rick Ross - \"Purple Lamborghini\"",
-  "Street Sects - \"And I Grew into Ribbons\"",
-  "DJ Windows 98 (Win Butler) - “K33p Ur Dr34ms” (Suicide Remix)",
-  "Travis Scott & Young Thug - \"Pick Up The Phone\" ft. Quavo",
-  "AlunaGeorge, Leikeli47, Dreezy - \"Mean What I Mean\"",
-  "Brain Tentacles - \"The Sadist\"",
-  "clipping. - \"Baby Don't Sleep\"",
-  "Injury Reserve - \"Oh Shit!!!\"",
-  "Hot Dad - \"Pokémon Go (Poké Don't Stop)\"",
-  "DJ Khaled - \"Holy Key\" ft. Kendrick Lamar, Big Sean & Betty Wright",
-  "The Garden - \"Call This # Now\"",
-  "Communions - \"Don't Hold Anything Back\"",
-  "Mac Miller - \"Dang\" ft. Anderson . Paak",
-  "Defiant III - \"Crossfire\"",
-  "Koreatown Oddity - \"Fuck Dinosaurs\"",
-  "Space Candy - \"Elastic Spring\"",
-  "Sun Kil Moon - \"God Bless Ohio\"",
-  "Mithras - \"Between Scylla and Charybdis\"",
-  "Alcest - \"Oiseaux de Proie\"",
-  "JP Moregun - Street Signs",
-  "E-40 - \"Petty\" ft. Kamaiyah",
-  "Norah Jones - \"Carry On\"",
-  "yndi halda - \"Golden Threads from the Sun\"",
-  "Protomartyr - \"Born to Be Wine\"",
-  "JPEGMAFIA x Freaky - \"I Might Vote 4 Donald Trump\"",
-  "Street Sects - \"Featherweight Hate\"",
-  "Beach Slang - \"Punks in a Disco Bar\"",
-  "Isaiah Rashad - \"Free Lunch\"",
-  "The Wytches - \"C-Side\"",
-  "Rich Chigga - \"Who That Be?\"",
-  "Subrosa - \"Wound of the Warden\"",
-  "Regina Spektor - \"Small Bill$\"",
-  "Slaves - \"Spit It Out\"",
-  "Kyle Craft - \"Before the Wall\"",
-  "The Dillinger Escape Plan - \"Limerent Death\"",
-  "Usher - \"No Limit\" ft. Young Thug",
-  "Warthog - \"Culture?\"",
-  "Wrekmeister Harmonies - \"Some Were Saved Some Drowned\"",
-  "Isaiah Rashad - \"i mean\"",
-  "Sun Kil Moon - \"I Love Portugal\"",
-  "Danny Brown - \"Pneumonia\"",
-  "Dumbfoundead - \"Harambe\"",
-  "Ka - \"Just\"",
-  "Kool Keith - \"Super Hero\" ft. MF DOOM",
-  "Young Thug - \"Wyclef Jean\"",
-  "Carly Rae Jepsen - \"Higher\"",
-  "Ty Dolla $ign - \"Zaddy\"",
-  "Ulcerate - \"Extinguished Light\"",
-  "clipping. - \"Air 'Em Out\"",
-  "Mick Jenkins - \"Drowning\" ft. BADBADNOTGOOD",
-  "Gatecreeper - \"Desperation\"",
-  "Nick Cave & The Bad Seeds - \"Jesus Alone\"",
-  "Banks - \"Gemini Feed\"",
-  "Everything Everything - \"I Believe It Now\"",
-  "$uicideboy$ - \"Ultimate $uicide\" ft. Denzel Curry",
-  "Goldlink - \"Fall in Love\" ft. Ciscero (produced by Kaytranada & BadBadNotGood)",
-  "Alcest - \"Je Suis D'Ailleurs\"",
-  "Ty Dolla $ign - \"3 Wayz\" ft. Travis Scott",
-  "Sampha - \"Blood On Me\"",
-  "Crapface x Elevation - \"Swim Meet\"",
-  "Regina Spektor - Black and White",
-  "Drug Dealer - Easy To Forget ft. Ariel Pink",
-  "D.R.A.M. - Cash Machine",
-  "Lil Yachty - Like Wassup ft. K$upreme and BIGBRUTHACHUBBA",
-  "Weyes Blood - Do You Need My Love?",
-  "Preoccupations - Memory",
-  "Beach Slang - Atom Bomb",
-  "Radian - Scary Objects",
-  "Slaves - Take Control",
-  "Ty Dolla $ign - Stealing",
-  "Dan Deacon - Change your Life (You Can Do It)",
-  "Warehouse - \"Super Low\"",
-  "Open Mike Eagle - \"Cowtown\" (TMBG Cover)",
-  "Tony Molina - \"See Me Fall\"",
-  "Kim Gordon - \"Murdered Out\"",
-  "Entrance - \"Promises\"",
-  "Car Bomb - Sets",
-  "Bozack Morris - \"Never Change\" ft. Conway & Westside Gunn",
-  "Diploid - \"Barrels\"",
-  "Ghost - \"Square Hammer\"",
-  "Pink Guy - \"STFU\"",
-  "Slaves - \"Consume or Be Consumed\"",
-  "Danny Brown - \"Really Doe\" ft. Earl Sweatshirt, Ab-Soul, Kendrick Lamar",
-  "The Weeknd - \"Starboy\"",
-  "NxWorries (Anderson .Paak & Knxwledge) - \"Lyk Dis\"",
-  "Baauer x CZ - \"How Can You Tell When It's Done\"",
-  "Flowertruck - \"Sunshower\"",
-  "Kevin Abstract - \"Empty\"",
-  "Regina Spektor - \"Older and Taller\"",
-  "Kid Cudi - \"Surfin\" ft. Pharrell Williams",
-  "Lice, Aesop Rock, Homeboy Sandman - Oatmeal Cookies",
-  "Captain Murphy - \"Crowned\"",
-  "Dillinger Escape Plan - \"Symptom of Terminal Illness\"",
-  "The Wytches - \"Crest of Death\"",
-  "Bruno Mars - \"24k Magic\"",
-  "Lady Gaga - \"Million Reasons\"",
-  "Amber Coffman - \"All To Myself\"",
-  "Weyes Blood - \"Generation Why?\"",
-  "Thee Oh Sees - \"The Poem\"",
-  "Wormrot - \"Hollow Roots\"",
-  "Clarence Clarity - \"SAME\"",
-  "Rich Chigga - \"Dat $tick\" (Remix) ft. Ghostface Killah & Pouya",
-  "Big K.R.I.T. - \"Free Agent\"",
-  "Foxygen - \"America\"",
-  "NxWorries - \"Get Bigger\"",
-  "Smidley - \"No One Likes You\"",
-  "Injury Reserve - \"All This Money\"",
-  "Action Bronson - \"Durag vs. Headband\"",
-  "Artificial Pleasure - \"I'll Make It Worth Your While\"",
-  "Common - \"Home\" ft. Bilal",
-  "Rick Ross - \"Freaky Hoe\" ft. Juicy J, Too $hort, Big K.R.I.T.",
-  "A$AP Ferg - \"New Level (Remix)\" ft. A$AP Rocky, Future, Lil Uzi Vert",
-  "The Last Shadow Puppets - \"Is This What You Wanted\"",
-  "Joanna Newsom - \"Make Hay\"",
-  "A$AP Rocky - \"Telephone Calls\" ft. Tyler, The Creator, Playboy Carti & Young Gleesh)",
-  "Run the Jewels - \"Talk To Me\"",
-  "Metallica - \"Atlas, Rise!\"",
-  "Big Sean - \"Bounce Back\" & \"No More Interviews\"",
-  "Kevin Abstract - \"Miserable America\"",
-  "The Chemical Brothers - \"C-h-e-m-i-c-a-l\"",
-  "Bruno Mars - \"Versace On the Floor\"",
-  "Foxygen - \"Follow the Leader\"",
-  "Open Mike Eagle - How To Be Super Petty To Your Ex\"",
-  "Nails / Full of Hell - No Longer Under Your Control",
-  "Nails / Full of Hell - Thy Radiant Garotte Exposed",
-  "Nails / Full of Hell - Bez Bólu",
-  "Childish Gambino - \"Me & Your Mama\"",
-  "Hudson Mohawke - \"Play N Go\"",
-  "HMLTD - \"Stained\"",
-  "OvO - \"Zombie Stomp\"",
-  "Run the Jewels - \"2100\" ft. BOOTS",
-  "Black Lips - \"Deaf Dumb and Blind\"",
-  "Los Campesinos! - \"I Broke Up In Amarante\"",
-  "King Gizzard - \"Rattlesnake\"",
-  "Czarface - \"Machine, Man & Moster\" ft. Conway",
-  "Clarence Clarity - \"Vapid Feels Are Vapid\"",
-  "A Tribe Called Quest - \"We the People....\" (forgot to mention, but also gonna be dropping this review soon after returning)",
-  "Xiu Xiu - \"Wondering\"",
-  "Power Trip - \"Firing Squad\"",
-  "Matthew Squires - \"Shape of Your Heart\" (via Stereogum)",
-  "Childish Gambino - \"Redbone\"",
-  "Flatbush Zombies - \"Aries\" ft. Deadcuts",
-  "Laura Marling - \"Soothing\"",
-  "Run the Jewels - \"Legend Has It\"",
-  "J. Cole - \"False Prophets\"",
-  "GFOTY - \"Heaven\"",
-  "Young M.A - \"EAT\"",
-  "Tkay Maidza - \"Simulation\"",
-  "Hot Dad - \"Sports Men\"",
-  "Promnite - \"Gunsmoke\" ft. Denzel Curry, Nell, J.K. The Reaper, Twelve'len",
-  "Tim Darcy - \"Tall Glass of Water\"",
-  "Lil Yachty - Terminator ft. A$AP Ferg (prod. Maaly Raw)",
-  "At the Drive-In - Governed by Contagions",
-  "Ab-Soul - D.R.U.G.S.",
-  "Yucky Duster - \"Elementary School Dropout\"",
-  "Vic Mensa - hethens freestyle.",
-  "YG - \"Trill\" ft. Lil Wayne (prod. Boi-1da and T-Minus)",
-  "Krallice - \"Hate Power\""
+  {
+    "track": "Hot Dad",
+    "artist": "\"R.I.P. Meme\" ft. FrankJavCee (Video)",
+    "link": "http://www.theneedledrop.com/articles/2016/6/hot-dad-rip-meme-ft-frankjavcee-video"
+  },
+  {
+    "track": "The Avalanches",
+    "artist": "\"Colours\" ft. Jonathan Donahue",
+    "link": "http://www.theneedledrop.com/articles/2016/6/the-avalanches-colours"
+  },
+  {
+    "track": "Danny Brown",
+    "artist": "\"When It Rain\" (Video)",
+    "link": "http://www.theneedledrop.com/articles/2016/6/danny-brown-when-it-rain-video"
+  },
+  {
+    "track": "clipping.",
+    "artist": "Wriggle EP",
+    "link": "http://www.theneedledrop.com/articles/2016/6/clipping-wriggle"
+  },
+  {
+    "track": "Eric Copeland",
+    "artist": "\"Rip It\"",
+    "link": "http://www.theneedledrop.com/articles/2016/6/eric-copeland-rip-it"
+  },
+  {
+    "track": "BADBADNOTGOOD",
+    "artist": "\"Lavender\" ft. Kaytranada",
+    "link": "http://www.theneedledrop.com/articles/2016/6/badbadnotgood-lavender-ft-kaytranada"
+  },
+  {
+    "track": "Preoccupations",
+    "artist": "\"Anxiety\" (Video)",
+    "link": "http://www.theneedledrop.com/articles/2016/6/preoccupations-anxiety-video"
+  },
+  {
+    "track": "Sigur Rós",
+    "artist": "\"Óveður\"",
+    "link": "http://www.theneedledrop.com/articles/2016/6/sigur-rs-veur-video"
+  },
+  {
+    "track": "Show Me the Body",
+    "artist": "\"Body War\"",
+    "link": "http://www.theneedledrop.com/articles/2016/6/show-me-the-body-body-war-video"
+  },
+  {
+    "track": "Clooner",
+    "artist": "\"Let Me Be\"",
+    "link": "http://www.theneedledrop.com/articles/2016/6/clooner-let-me-be"
+  },
+  {
+    "track": "Nite-Funk",
+    "artist": "\"Let Me Be Me\"",
+    "link": "http://www.theneedledrop.com/articles/2016/6/nite-funk-let-me-be-me"
+  },
+  {
+    "track": "The Tallest Man on Earth",
+    "artist": "\"Time of the Blue\"",
+    "link": "http://www.theneedledrop.com/articles/2016/6/the-tallest-man-on-earth-time-of-the-blue-video"
+  },
+  {
+    "track": "Gucci Mane",
+    "artist": "\"All My Children\"",
+    "link": "http://www.theneedledrop.com/articles/2016/6/gucci-mane-all-my-children"
+  },
+  {
+    "track": "Touché Amoré",
+    "artist": "\"Palm Dreams\"",
+    "link": "http://www.theneedledrop.com/articles/2016/6/touch-amor-palm-dreams"
+  },
+  {
+    "track": "ScHoolboy Q",
+    "artist": "Tookie Knows II: Part (2)",
+    "link": "http://www.theneedledrop.com/articles/2016/7/schoolboy-q-tookie-knows-ii-part-2"
+  },
+  {
+    "track": "BADBADNOTGOOD",
+    "artist": "In Your Eyes ft. Charlotte Day Wilson",
+    "link": "http://www.theneedledrop.com/articles/2016/7/badbadnotgood-in-your-eyes-ft-charlotte-day-wilson"
+  },
+  {
+    "track": "Maxo Kream",
+    "artist": "The Persona Tape",
+    "link": "http://www.theneedledrop.com/articles/2016/7/3c72tw2w4uiygl2yszyjrn6wckts5l"
+  },
+  {
+    "track": "Thelonious Martin",
+    "artist": "Bomaye ft. Joey Purp",
+    "link": "http://www.theneedledrop.com/articles/2016/7/thelonious-martin-bomaye-ft-joey-purp"
+  },
+  {
+    "track": "clipping.",
+    "artist": "Wriggle (music vid)",
+    "link": "http://www.theneedledrop.com/articles/2016/7/clipping-wriggle"
+  },
+  {
+    "track": "Angel Olsen",
+    "artist": "Shut Up Kiss Me",
+    "link": "http://www.theneedledrop.com/articles/2016/7/angel-olsen-shut-up-kiss-me"
+  },
+  {
+    "track": "Ghoul",
+    "artist": "Bringer of War",
+    "link": "http://www.theneedledrop.com/articles/2016/7/ghoul-bringer-of-war"
+  },
+  {
+    "track": "Defiled",
+    "artist": "\"Fear from Above\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/defiled-fear-from-above"
+  },
+  {
+    "track": "Gucci Mane",
+    "artist": "\"First Day out tha Feds\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/gucci-mane-first-day-out-tha-feds"
+  },
+  {
+    "track": "Carnage",
+    "artist": "\"Mase in '97\" ft. Lil Yachty",
+    "link": "http://www.theneedledrop.com/articles/2016/7/carnage-mase-in-97-ft-lil-yachty"
+  },
+  {
+    "track": "IGLOOGHOST",
+    "artist": "ᴗ ˳ ᴗ Snoring (Music to Sleep To)",
+    "link": "http://www.theneedledrop.com/articles/2016/7/iglooghost-snoring-music-to-sleep-to"
+  },
+  {
+    "track": "Arca",
+    "artist": "Entrañas",
+    "link": "http://www.theneedledrop.com/articles/2016/7/arca-entranas"
+  },
+  {
+    "track": "ScHoolboy Q",
+    "artist": "\"THat Part\" (Black Hippy Remix)",
+    "link": "http://www.theneedledrop.com/articles/2016/7/schoolboy-q-that-part-black-hippy-remix"
+  },
+  {
+    "track": "Factory Floor",
+    "artist": "\"Ya\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/factory-floor-ya"
+  },
+  {
+    "track": "Justice",
+    "artist": "\"Safe and Sound\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/justice-safe-and-sound"
+  },
+  {
+    "track": "Quays",
+    "artist": "\"Your Side\" ft. Nancy Andersen",
+    "link": "http://www.theneedledrop.com/articles/2016/7/quays-your-side-ft-nancy-andersen"
+  },
+  {
+    "track": "Tobacco",
+    "artist": "\"Human Om\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/tobacco-human-om"
+  },
+  {
+    "track": "Swain",
+    "artist": "\"Hold My Head\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/swain-hold-my-head"
+  },
+  {
+    "track": "Jagwar Ma",
+    "artist": "\"O B 1\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/jagwar-ma-o-b-1"
+  },
+  {
+    "track": "Jeff Rosenstock",
+    "artist": "\"Festival Song\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/jeff-rosenstock-festival-song"
+  },
+  {
+    "track": "Migos",
+    "artist": "\"Now\" ft. Gucci Mane",
+    "link": "http://www.theneedledrop.com/articles/2016/7/migos-now-ft-gucci-mane"
+  },
+  {
+    "track": "Preoccupations",
+    "artist": "\"Degraded\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/preoccupations-degraded"
+  },
+  {
+    "track": "Chris Farren",
+    "artist": "\"Say U Want Me\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/chris-farren-say-u-want-me"
+  },
+  {
+    "track": "Screaming Females",
+    "artist": "“Skeleton”",
+    "link": "http://www.theneedledrop.com/articles/2016/7/screaming-females-skeleton"
+  },
+  {
+    "track": "Denzel Curry",
+    "artist": "\"Today\" ft. Boogie & Allan Kingdom",
+    "link": "http://www.theneedledrop.com/articles/2016/7/denzel-curry-today-ft-boogie-allan-kingdom"
+  },
+  {
+    "track": "A. G. Cook",
+    "artist": "\"Superstar\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/a-g-cook-superstar"
+  },
+  {
+    "track": "Dabbla",
+    "artist": "\"Randeer\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/dabbla-randeer"
+  },
+  {
+    "track": "Skrillex & Rick Ross",
+    "artist": "\"Purple Lamborghini\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/skrillex-rick-ross-purple-lamborghini"
+  },
+  {
+    "track": "Street Sects",
+    "artist": "\"And I Grew into Ribbons\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/street-sects-and-i-grew-into-ribbons"
+  },
+  {
+    "track": "DJ Windows 98 (Win Butler)",
+    "artist": "“K33p Ur Dr34ms” (Suicide Remix)",
+    "link": "http://www.theneedledrop.com/articles/2016/7/dj-windows-98-win-butler-k33p-ur-dr34ms-suicide-remix"
+  },
+  {
+    "track": "Travis Scott & Young Thug",
+    "artist": "\"Pick Up The Phone\" ft. Quavo",
+    "link": "https://www.youtube.com/watch?v=__Wt9Rg-M8E"
+  },
+  {
+    "track": "AlunaGeorge, Leikeli47, Dreezy",
+    "artist": "\"Mean What I Mean\"",
+    "link": "https://youtu.be/NbtEy1Wdqj0"
+  },
+  {
+    "track": "Brain Tentacles",
+    "artist": "\"The Sadist\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/brain-tentacles-the-sadist"
+  },
+  {
+    "track": "clipping.",
+    "artist": "\"Baby Don't Sleep\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/clipping-baby-dont-sleep"
+  },
+  {
+    "track": "Injury Reserve",
+    "artist": "\"Oh Shit!!!\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/injury-reserve-oh-shit"
+  },
+  {
+    "track": "Hot Dad",
+    "artist": "\"Pokémon Go (Poké Don't Stop)\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/hot-dad-pokmon-go-pok-dont-stop"
+  },
+  {
+    "track": "DJ Khaled",
+    "artist": "\"Holy Key\" ft. Kendrick Lamar, Big Sean & Betty Wright",
+    "link": "http://www.theneedledrop.com/articles/2016/7/dj-khaled-holy-key-ft-kendrick-lamar-big-sean-betty-wright"
+  },
+  {
+    "track": "The Garden",
+    "artist": "\"Call This # Now\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/the-garden-call-this-now"
+  },
+  {
+    "track": "Communions",
+    "artist": "\"Don't Hold Anything Back\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/communions-dont-hold-anything-back"
+  },
+  {
+    "track": "Mac Miller",
+    "artist": "\"Dang\" ft. Anderson . Paak",
+    "link": "https://youtu.be/HbDOdFRLV0U"
+  },
+  {
+    "track": "Defiant III",
+    "artist": "\"Crossfire\"",
+    "link": "https://soundcloud.com/cjmhiphop/defiant-iii-crossfire"
+  },
+  {
+    "track": "Koreatown Oddity",
+    "artist": "\"Fuck Dinosaurs\"",
+    "link": "https://youtu.be/-QN6gtU0I9g"
+  },
+  {
+    "track": "Space Candy",
+    "artist": "\"Elastic Spring\"",
+    "link": "https://soundcloud.com/deskpopmusic/space-candy-elastic-spring?in=deskpopmusic/sets/space-candy-forest-ep"
+  },
+  {
+    "track": "Sun Kil Moon",
+    "artist": "\"God Bless Ohio\"",
+    "link": "http://www.theneedledrop.com/articles/2016/7/sun-kil-moon-god-bless-ohio"
+  },
+  {
+    "track": "Mithras",
+    "artist": "\"Between Scylla and Charybdis\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/mithras-between-scylla-and-charybdis"
+  },
+  {
+    "track": "Alcest",
+    "artist": "\"Oiseaux de Proie\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/alcest-oiseaux-de-proie"
+  },
+  {
+    "track": "JP Moregun",
+    "artist": "Street Signs",
+    "link": "https://open.spotify.com/track/1sB9RQHc2ZGFwUNC00YirL?si=74f1c85a180d46b4"
+  },
+  {
+    "track": "E-40",
+    "artist": "\"Petty\" ft. Kamaiyah",
+    "link": "https://soundcloud.com/e40/e-40-petty-feat-kamaiyah"
+  },
+  {
+    "track": "Norah Jones",
+    "artist": "\"Carry On\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/norah-jones-carry-on"
+  },
+  {
+    "track": "yndi halda",
+    "artist": "\"Golden Threads from the Sun\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/yndi-halda-golden-threads-from-the-sun"
+  },
+  {
+    "track": "Protomartyr",
+    "artist": "\"Born to Be Wine\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/protomartyr-born-to-be-wine"
+  },
+  {
+    "track": "JPEGMAFIA x Freaky",
+    "artist": "\"I Might Vote 4 Donald Trump\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/jpegmafia-x-freaky-i-might-vote-4-donald-trump"
+  },
+  {
+    "track": "Street Sects",
+    "artist": "\"Featherweight Hate\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/street-sects-featherweight-hate"
+  },
+  {
+    "track": "Beach Slang",
+    "artist": "\"Punks in a Disco Bar\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/beach-slang-punks-in-a-disco-bar"
+  },
+  {
+    "track": "Isaiah Rashad",
+    "artist": "\"Free Lunch\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/isaiah-rashad-free-lunch"
+  },
+  {
+    "track": "The Wytches",
+    "artist": "\"C-Side\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/the-wytches-c-side"
+  },
+  {
+    "track": "Rich Chigga",
+    "artist": "\"Who That Be?\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/rich-chigga-who-that-be"
+  },
+  {
+    "track": "Subrosa",
+    "artist": "\"Wound of the Warden\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/subrosa-wound-of-the-warden"
+  },
+  {
+    "track": "Regina Spektor",
+    "artist": "\"Small Bill$\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/regina-spektor-small-bill"
+  },
+  {
+    "track": "Slaves",
+    "artist": "\"Spit It Out\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/slaves-spit-it-out"
+  },
+  {
+    "track": "Kyle Craft",
+    "artist": "\"Before the Wall\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/kyle-craft-before-the-wall"
+  },
+  {
+    "track": "The Dillinger Escape Plan",
+    "artist": "\"Limerent Death\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/the-dillinger-escape-plan-limerent-death"
+  },
+  {
+    "track": "Usher",
+    "artist": "\"No Limit\" ft. Young Thug",
+    "link": "https://youtu.be/3w0yqAdJ1iY"
+  },
+  {
+    "track": "Warthog",
+    "artist": "\"Culture?\"",
+    "link": "https://soundcloud.com/beachimpediment/warthog-culture"
+  },
+  {
+    "track": "Wrekmeister Harmonies",
+    "artist": "\"Some Were Saved Some Drowned\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/wrekmeister-harmonies-some-were-saved-some-drowned"
+  },
+  {
+    "track": "Isaiah Rashad",
+    "artist": "\"i mean\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/isaiah-rashad-i-mean"
+  },
+  {
+    "track": "Sun Kil Moon",
+    "artist": "\"I Love Portugal\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/sun-kil-moon-i-love-portugal"
+  },
+  {
+    "track": "Danny Brown",
+    "artist": "\"Pneumonia\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/danny-brown-pneumonia"
+  },
+  {
+    "track": "Dumbfoundead",
+    "artist": "\"Harambe\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/dumbfoundead-harambe"
+  },
+  {
+    "track": "Ka",
+    "artist": "\"Just\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/ka-just"
+  },
+  {
+    "track": "Kool Keith",
+    "artist": "\"Super Hero\" ft. MF DOOM",
+    "link": "http://www.theneedledrop.com/articles/2016/8/kool-keith-super-hero-ft-mf-doom"
+  },
+  {
+    "track": "Young Thug",
+    "artist": "\"Wyclef Jean\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/young-thug-wyclef-jean"
+  },
+  {
+    "track": "Carly Rae Jepsen",
+    "artist": "\"Higher\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/carly-rae-jepsen-higher"
+  },
+  {
+    "track": "Ty Dolla $ign",
+    "artist": "\"Zaddy\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/ty-dolla-ign-zaddy"
+  },
+  {
+    "track": "Ulcerate",
+    "artist": "\"Extinguished Light\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/ulcerate-extinguished-light"
+  },
+  {
+    "track": "clipping.",
+    "artist": "\"Air 'Em Out\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/clipping-air-em-out"
+  },
+  {
+    "track": "Mick Jenkins",
+    "artist": "\"Drowning\" ft. BADBADNOTGOOD",
+    "link": "http://www.theneedledrop.com/articles/2016/8/mick-jenkins-drowning-ft-badbadnotgood"
+  },
+  {
+    "track": "Gatecreeper",
+    "artist": "\"Desperation\"",
+    "link": "http://www.theneedledrop.com/articles/2016/8/gatecreeper-desperation"
+  },
+  {
+    "track": "Nick Cave & The Bad Seeds",
+    "artist": "\"Jesus Alone\"",
+    "link": "http://www.theneedledrop.com/articles/2016/9/nick-cave-the-bad-seeds-jesus-alone"
+  },
+  {
+    "track": "Banks",
+    "artist": "\"Gemini Feed\"",
+    "link": "http://www.theneedledrop.com/articles/2016/9/banks-gemini-feed"
+  },
+  {
+    "track": "Everything Everything",
+    "artist": "\"I Believe It Now\"",
+    "link": "http://www.theneedledrop.com/articles/2016/9/everything-everything-i-believe-it-now"
+  },
+  {
+    "track": "$uicideboy$",
+    "artist": "\"Ultimate $uicide\" ft. Denzel Curry",
+    "link": "http://www.theneedledrop.com/articles/2016/9/uicideboy-x-denzel-curry-ultimate-uicide"
+  },
+  {
+    "track": "Goldlink",
+    "artist": "\"Fall in Love\" ft. Ciscero (produced by Kaytranada & BadBadNotGood)",
+    "link": "https://soundcloud.com/goldlink/fall-in-love-ft-ciscero"
+  },
+  {
+    "track": "Alcest",
+    "artist": "\"Je Suis D'Ailleurs\"",
+    "link": "https://youtu.be/0xLr4v1Lv1Q"
+  },
+  {
+    "track": "Ty Dolla $ign",
+    "artist": "\"3 Wayz\" ft. Travis Scott",
+    "link": "https://youtu.be/lNbTmkG8VpI"
+  },
+  {
+    "track": "Sampha",
+    "artist": "\"Blood On Me\"",
+    "link": "https://youtu.be/z1i2Y7O-m1o"
+  },
+  {
+    "track": "Crapface x Elevation",
+    "artist": "\"Swim Meet\"",
+    "link": "https://soundcloud.com/palettes/swimmeet"
+  },
+  {
+    "track": "Regina Spektor",
+    "artist": "Black and White",
+    "link": "https://www.youtube.com/watch?v=DJs_thSFreI"
+  },
+  {
+    "track": "Drug Dealer",
+    "artist": "Easy To Forget ft. Ariel Pink",
+    "link": "http://www.theneedledrop.com/articles/2016/9/drugdealer-easy-to-forget-ft-ariel-pink"
+  },
+  {
+    "track": "D.R.A.M.",
+    "artist": "Cash Machine",
+    "link": "http://www.theneedledrop.com/articles/2016/9/big-baby-dram-cash-machine"
+  },
+  {
+    "track": "Lil Yachty",
+    "artist": "Like Wassup ft. K$upreme and BIGBRUTHACHUBBA",
+    "link": "https://youtu.be/4Mvc7W8Hkp0"
+  },
+  {
+    "track": "Weyes Blood",
+    "artist": "Do You Need My Love?",
+    "link": "http://www.theneedledrop.com/articles/2016/9/weyes-blood-do-you-need-my-love"
+  },
+  {
+    "track": "Preoccupations",
+    "artist": "Memory",
+    "link": "https://youtu.be/_P6qqceGQlM"
+  },
+  {
+    "track": "Beach Slang",
+    "artist": "Atom Bomb",
+    "link": "https://soundcloud.com/beachslang/atom-bomb-1"
+  },
+  {
+    "track": "Radian",
+    "artist": "Scary Objects",
+    "link": "http://www.theneedledrop.com/articles/2016/9/radian-scary-objects"
+  },
+  {
+    "track": "Slaves",
+    "artist": "Take Control",
+    "link": "https://youtu.be/1GROt_rQ9Jo"
+  },
+  {
+    "track": "Ty Dolla $ign",
+    "artist": "Stealing",
+    "link": "https://youtu.be/uMdNoh04Cos"
+  },
+  {
+    "track": "Dan Deacon",
+    "artist": "Change your Life (You Can Do It)",
+    "link": "http://www.theneedledrop.com/articles/2016/9/dan-deacon-change-your-life-you-can-do-it"
+  },
+  {
+    "track": "Warehouse",
+    "artist": "\"Super Low\"",
+    "link": "http://www.theneedledrop.com/articles/2016/9/warehouse-super-low"
+  },
+  {
+    "track": "Open Mike Eagle",
+    "artist": "\"Cowtown\" (TMBG Cover)",
+    "link": "http://www.theneedledrop.com/articles/2016/9/open-mike-eagle-cowtown-they-might-be-giants-cover"
+  },
+  {
+    "track": "Tony Molina",
+    "artist": "\"See Me Fall\"",
+    "link": "https://youtu.be/OhPOmwN5pgs"
+  },
+  {
+    "track": "Kim Gordon",
+    "artist": "\"Murdered Out\"",
+    "link": "http://www.theneedledrop.com/articles/2016/9/kim-gordon-murdered-out"
+  },
+  {
+    "track": "Entrance",
+    "artist": "\"Promises\"",
+    "link": "https://youtu.be/ZHKxF47l7lw"
+  },
+  {
+    "track": "Car Bomb",
+    "artist": "Sets",
+    "link": "https://youtu.be/eXZ9PH_XTI0"
+  },
+  {
+    "track": "Bozack Morris",
+    "artist": "\"Never Change\" ft. Conway & Westside Gunn",
+    "link": "https://bozackmorris.bandcamp.com/album/loose-cannons-001"
+  },
+  {
+    "track": "Diploid",
+    "artist": "\"Barrels\"",
+    "link": "https://artascatharsis.bandcamp.com/album/is-god-up-there"
+  },
+  {
+    "track": "Ghost",
+    "artist": "\"Square Hammer\"",
+    "link": "http://www.theneedledrop.com/articles/2016/9/ghost-square-hammer"
+  },
+  {
+    "track": "Pink Guy",
+    "artist": "\"STFU\"",
+    "link": "http://www.theneedledrop.com/articles/2016/9/pink-guy-stfu"
+  },
+  {
+    "track": "Slaves",
+    "artist": "\"Consume or Be Consumed\"",
+    "link": "https://youtu.be/05Q5akU8d7g"
+  },
+  {
+    "track": "Danny Brown",
+    "artist": "\"Really Doe\" ft. Earl Sweatshirt, Ab-Soul, Kendrick Lamar",
+    "link": "https://youtu.be/spfsdpuvUyQ"
+  },
+  {
+    "track": "The Weeknd",
+    "artist": "\"Starboy\"",
+    "link": "https://itunes.apple.com/us/album/starboy/id1156172520"
+  },
+  {
+    "track": "NxWorries (Anderson .Paak & Knxwledge)",
+    "artist": "\"Lyk Dis\"",
+    "link": "http://www.theneedledrop.com/articles/2016/9/nxworries-lyk-dis"
+  },
+  {
+    "track": "Baauer x CZ",
+    "artist": "\"How Can You Tell When It's Done\"",
+    "link": "http://www.theneedledrop.com/articles/2016/9/baauer-x-cz-how-can-you-tell-when-its-done"
+  },
+  {
+    "track": "Flowertruck",
+    "artist": "\"Sunshower\"",
+    "link": "http://www.theneedledrop.com/articles/2016/9/flowertruck-sunshower"
+  },
+  {
+    "track": "Kevin Abstract",
+    "artist": "\"Empty\"",
+    "link": "https://www.youtube.com/watch?v=1RSQaVG7_QI&feature=youtu.be"
+  },
+  {
+    "track": "Regina Spektor",
+    "artist": "\"Older and Taller\"",
+    "link": "https://youtu.be/5zB3fwHX83k"
+  },
+  {
+    "track": "Kid Cudi",
+    "artist": "\"Surfin\" ft. Pharrell Williams",
+    "link": "https://www.youtube.com/watch?v=y8GMktNXku8"
+  },
+  {
+    "track": "Lice, Aesop Rock, Homeboy Sandman",
+    "artist": "Oatmeal Cookies",
+    "link": "https://open.spotify.com/track/17AAfKkchZ7GTBH48ODdoF?si=abe23d9591f94927"
+  },
+  {
+    "track": "Captain Murphy",
+    "artist": "\"Crowned\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/captain-murphy-crowned"
+  },
+  {
+    "track": "Dillinger Escape Plan",
+    "artist": "\"Symptom of Terminal Illness\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/the-dillinger-escape-plan-symptom-of-terminal-illness"
+  },
+  {
+    "track": "The Wytches",
+    "artist": "\"Crest of Death\"",
+    "link": "https://soundcloud.com/thewytches/crest-of-death"
+  },
+  {
+    "track": "Bruno Mars",
+    "artist": "\"24k Magic\"",
+    "link": "https://youtu.be/UqyT8IEBkvY"
+  },
+  {
+    "track": "Lady Gaga",
+    "artist": "\"Million Reasons\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/lady-gaga-million-reasons"
+  },
+  {
+    "track": "Amber Coffman",
+    "artist": "\"All To Myself\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/amber-coffman-all-to-myself"
+  },
+  {
+    "track": "Weyes Blood",
+    "artist": "\"Generation Why?\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/weyes-blood-generation-why"
+  },
+  {
+    "track": "Thee Oh Sees",
+    "artist": "\"The Poem\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/thee-oh-sees-the-poem"
+  },
+  {
+    "track": "Wormrot",
+    "artist": "\"Hollow Roots\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/wormrot-hollow-roots"
+  },
+  {
+    "track": "Clarence Clarity",
+    "artist": "\"SAME\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/clarence-clarity-same-ep"
+  },
+  {
+    "track": "Rich Chigga",
+    "artist": "\"Dat $tick\" (Remix) ft. Ghostface Killah & Pouya",
+    "link": "https://youtu.be/Z4eARl9omVs"
+  },
+  {
+    "track": "Big K.R.I.T.",
+    "artist": "\"Free Agent\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/big-krit-free-agent"
+  },
+  {
+    "track": "Foxygen",
+    "artist": "\"America\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/foxygen-america"
+  },
+  {
+    "track": "NxWorries",
+    "artist": "\"Get Bigger\"",
+    "link": "https://soundcloud.com/stonesthrow/nxworries-anderson-paak-knxwledge-get-bigger"
+  },
+  {
+    "track": "Smidley",
+    "artist": "\"No One Likes You\"",
+    "link": "https://smidley.bandcamp.com/track/no-one-likes-you"
+  },
+  {
+    "track": "Injury Reserve",
+    "artist": "\"All This Money\"",
+    "link": "https://www.youtube.com/watch?v=jcZ1Te9-1go"
+  },
+  {
+    "track": "Action Bronson",
+    "artist": "\"Durag vs. Headband\"",
+    "link": "https://youtu.be/MWLg7_G0_go"
+  },
+  {
+    "track": "Artificial Pleasure",
+    "artist": "\"I'll Make It Worth Your While\"",
+    "link": "https://www.youtube.com/watch?v=inFdKDsPCCM&ab_channel=ArtificialPleasure"
+  },
+  {
+    "track": "Common",
+    "artist": "\"Home\" ft. Bilal",
+    "link": "https://youtu.be/1ABnCliiYS0"
+  },
+  {
+    "track": "Rick Ross",
+    "artist": "\"Freaky Hoe\" ft. Juicy J, Too $hort, Big K.R.I.T.",
+    "link": "https://youtu.be/ady6IITQjgo"
+  },
+  {
+    "track": "A$AP Ferg",
+    "artist": "\"New Level (Remix)\" ft. A$AP Rocky, Future, Lil Uzi Vert",
+    "link": "https://youtu.be/PXd0Gg0TABc"
+  },
+  {
+    "track": "The Last Shadow Puppets",
+    "artist": "\"Is This What You Wanted\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/the-last-shadow-puppets-is-this-what-you-wanted"
+  },
+  {
+    "track": "Joanna Newsom",
+    "artist": "\"Make Hay\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/joanna-newsom-make-hay"
+  },
+  {
+    "track": "A$AP Rocky",
+    "artist": "\"Telephone Calls\" ft. Tyler, The Creator, Playboy Carti & Young Gleesh)",
+    "link": "http://www.theneedledrop.com/articles/2016/10/aap-rocky-telephone-calls-ft-playboi-carti-tyler-the-creator-yung-gleesh"
+  },
+  {
+    "track": "Run the Jewels",
+    "artist": "\"Talk To Me\"",
+    "link": "http://www.theneedledrop.com/articles/2016/10/run-the-jewels-talk-to-me"
+  },
+  {
+    "track": "Metallica",
+    "artist": "\"Atlas, Rise!\"",
+    "link": "http://www.theneedledrop.com/articles/2016/11/metallica-atlas-rise"
+  },
+  {
+    "track": "Big Sean",
+    "artist": "\"Bounce Back\" & \"No More Interviews\"",
+    "link": "http://www.theneedledrop.com/articles/2016/11/big-sean-bounce-back-no-more-interviews"
+  },
+  {
+    "track": "Kevin Abstract",
+    "artist": "\"Miserable America\"",
+    "link": "http://www.theneedledrop.com/articles/2016/11/kevin-abstract-miserable-america"
+  },
+  {
+    "track": "The Chemical Brothers",
+    "artist": "\"C-h-e-m-i-c-a-l\"",
+    "link": "https://play.spotify.com/album/0jONnZjGqRobshIWOFyC5S"
+  },
+  {
+    "track": "Bruno Mars",
+    "artist": "\"Versace On the Floor\"",
+    "link": "https://www.youtube.com/watch?v=d2UZlwTDGbY"
+  },
+  {
+    "track": "Foxygen",
+    "artist": "\"Follow the Leader\"",
+    "link": "https://youtu.be/_-tZ1gbc2pQ"
+  },
+  {
+    "track": "Open Mike Eagle",
+    "artist": "How To Be Super Petty To Your Ex\"",
+    "link": "http://www.theneedledrop.com/articles/2016/11/open-mike-eagle-how-to-be-super-petty-to-your-ex"
+  },
+  {
+    "track": "Nails / Full of Hell",
+    "artist": "No Longer Under Your Control",
+    "link": "https://open.spotify.com/track/6KIoYx5Xee7TyxNEOtl29k?si=deced926fa6c48e2"
+  },
+  {
+    "track": "Nails / Full of Hell",
+    "artist": "Thy Radiant Garotte Exposed",
+    "link": "https://open.spotify.com/track/3XTUzlzeuaLlT7ae17pF70?si=1a0f39504b4c47b3"
+  },
+  {
+    "track": "Nails / Full of Hell",
+    "artist": "Bez Bólu",
+    "link": "https://open.spotify.com/track/4WS4lLtwZQ6Ezen9Q0oFqD?si=53b1ce902cd94bc7"
+  },
+  {
+    "track": "Childish Gambino",
+    "artist": "\"Me & Your Mama\"",
+    "link": "http://www.theneedledrop.com/articles/2016/11/childish-gambino-me-and-your-mama"
+  },
+  {
+    "track": "Hudson Mohawke",
+    "artist": "\"Play N Go\"",
+    "link": "https://youtu.be/nHXRMIwpW_Y"
+  },
+  {
+    "track": "HMLTD",
+    "artist": "\"Stained\"",
+    "link": "https://youtu.be/syfZU4kGiSE"
+  },
+  {
+    "track": "OvO",
+    "artist": "\"Zombie Stomp\"",
+    "link": "http://www.stereogum.com/1910191/ovo-zombie-stomp/premiere/"
+  },
+  {
+    "track": "Run the Jewels",
+    "artist": "\"2100\" ft. BOOTS",
+    "link": "https://soundcloud.com/runthejewels/2100-feat-boots"
+  },
+  {
+    "track": "Black Lips",
+    "artist": "\"Deaf Dumb and Blind\"",
+    "link": "https://soundcloud.com/cole-alexander-6/election-night-r1"
+  },
+  {
+    "track": "Los Campesinos!",
+    "artist": "\"I Broke Up In Amarante\"",
+    "link": "https://www.youtube.com/watch?v=1z0PJV5fVcY&ab_channel=LosCampesinos%21"
+  },
+  {
+    "track": "King Gizzard",
+    "artist": "\"Rattlesnake\"",
+    "link": "https://youtu.be/Q-i1XZc8ZwA"
+  },
+  {
+    "track": "Czarface",
+    "artist": "\"Machine, Man & Moster\" ft. Conway",
+    "link": "https://youtu.be/2-sG2aZ72wk"
+  },
+  {
+    "track": "Clarence Clarity",
+    "artist": "\"Vapid Feels Are Vapid\"",
+    "link": "http://www.theneedledrop.com/articles/2016/11/clarence-clarity-vapid-feels-are-vapid"
+  },
+  {
+    "track": "A Tribe Called Quest",
+    "artist": "\"We the People....\" (forgot to mention, but also gonna be dropping this review soon after returning)",
+    "link": "http://www.theneedledrop.com/articles/2016/11/a-tribe-called-quest-we-the-people"
+  },
+  {
+    "track": "Xiu Xiu",
+    "artist": "\"Wondering\"",
+    "link": "http://www.theneedledrop.com/articles/2016/11/xiu-xiu-wondering"
+  },
+  {
+    "track": "Power Trip",
+    "artist": "\"Firing Squad\"",
+    "link": "http://www.theneedledrop.com/articles/2016/11/power-trip-firing-squad"
+  },
+  {
+    "track": "Matthew Squires",
+    "artist": "\"Shape of Your Heart\" (via Stereogum)",
+    "link": "https://soundcloud.com/matthew-squires/shape-of-your-heart-2"
+  },
+  {
+    "track": "Childish Gambino",
+    "artist": "\"Redbone\"",
+    "link": "https://youtu.be/Kp7eSUU9oy8"
+  },
+  {
+    "track": "Flatbush Zombies",
+    "artist": "\"Aries\" ft. Deadcuts",
+    "link": "https://youtu.be/D54vs4CmqNw"
+  },
+  {
+    "track": "Laura Marling",
+    "artist": "\"Soothing\"",
+    "link": "https://youtu.be/eCS4OTgaHeM"
+  },
+  {
+    "track": "Run the Jewels",
+    "artist": "\"Legend Has It\"",
+    "link": "https://www.youtube.com/watch?v=QaPrQa3oMy0"
+  },
+  {
+    "track": "J. Cole",
+    "artist": "\"False Prophets\"",
+    "link": "https://www.youtube.com/watch?v=QNsgIBgpuGQ"
+  },
+  {
+    "track": "GFOTY",
+    "artist": "\"Heaven\"",
+    "link": "https://youtu.be/UIjYFn1ydxs"
+  },
+  {
+    "track": "Young M.A",
+    "artist": "\"EAT\"",
+    "link": "https://youtu.be/GW3gTa-XAlU"
+  },
+  {
+    "track": "Tkay Maidza",
+    "artist": "\"Simulation\"",
+    "link": "https://youtu.be/KqQgnttisUc"
+  },
+  {
+    "track": "Hot Dad",
+    "artist": "\"Sports Men\"",
+    "link": "https://youtu.be/tQ5vMB7dJEs"
+  },
+  {
+    "track": "Promnite",
+    "artist": "\"Gunsmoke\" ft. Denzel Curry, Nell, J.K. The Reaper, Twelve'len",
+    "link": "https://youtu.be/tbqYc5iXvEI"
+  },
+  {
+    "track": "Tim Darcy",
+    "artist": "\"Tall Glass of Water\"",
+    "link": "https://youtu.be/MbgPiAGspB8"
+  },
+  {
+    "track": "Lil Yachty",
+    "artist": "Terminator ft. A$AP Ferg (prod. Maaly Raw)",
+    "link": "https://soundcloud.com/770rd/terminate-lil-yachty-ft-asap-ferg-prod-maaly-raw"
+  },
+  {
+    "track": "At the Drive-In",
+    "artist": "Governed by Contagions",
+    "link": "http://www.theneedledrop.com/articles/2016/12/at-the-drive-in-governed-by-contagions"
+  },
+  {
+    "track": "Ab-Soul",
+    "artist": "D.R.U.G.S.",
+    "link": "http://www.theneedledrop.com/articles/2016/12/ab-soul-drugs"
+  },
+  {
+    "track": "Yucky Duster",
+    "artist": "\"Elementary School Dropout\"",
+    "link": "https://soundcloud.com/infinity-cat/elementary-school-dropout-yucky-duster"
+  },
+  {
+    "track": "Vic Mensa",
+    "artist": "hethens freestyle.",
+    "link": "https://soundcloud.com/vicsavemoney/heathens-freestyle"
+  },
+  {
+    "track": "YG",
+    "artist": "\"Trill\" ft. Lil Wayne (prod. Boi-1da and T-Minus)",
+    "link": "https://soundcloud.com/redbullsoundselect/yg-trill-feat-lil-wayne-prod-by-boi-1da-co-prod-by-t-minus"
+  },
+  {
+    "track": "Krallice",
+    "artist": "\"Hate Power\"",
+    "link": "http://www.theneedledrop.com/articles/2016/12/krallice-hate-power"
+  }
 ]

@@ -1,443 +1,2207 @@
 [
-  "Father John Misty - Funny Girl",
-  "The Smile - You Will Never Work In Television Again",
-  "DJ Shadow & King Gizzard - Black Hot Soup",
-  "Vein.fm - The Killing Womb",
-  "JID - Surround Sound ft. 21 Savage & Baby Tate",
-  "Spiritualized - Crazy",
-  "Mitski - Love Me More",
-  "Guerilla Toss - Cannibal Capital",
-  "Parquet Courts - Watching Strangers Smile",
-  "Earthgang - All Eyes on Me",
-  "CHAI - WHOLE",
-  "Ed Schrader's Music Beat - This Thirst",
-  "Robert Glasper - Black Superhero ft. Killer Mike, Big K.R.I.T. & BJ the Chicago Kid",
-  "Shamir - Reproductive",
-  "Tangerine Dream - You're Always On Time",
-  "Laurie Anderson - Big Science (Arca Remix)",
-  "Soul Glo - Jump!! (Or Get Jumped)",
-  "Daniel Rossen - Shadow in the Frame",
-  "Jenny Hval - Year of Love",
-  "Hatchie - Quicksand",
-  "death's dynamic shroud.wmv - Judgment Bolt",
-  "Animal Collective - Strung with Everything",
-  "Undeath - Rise from the Grave",
-  "Big Thief - Simulation Swarm",
-  "Fatlip & Blu - Gangsta Rap (prod. Madlib)",
-  "Dev Lemons - One Whole Me",
-  "Black Country, New Road - Snow Globes",
-  "Brakence - cbd",
-  "PUP - Robot Writes a Love Song",
-  "2 Chainz, Moneybagg Yo, Beatking - Pop Music",
-  "Denzel Curry - Walkin",
-  "Toro Y Moi - Postman",
-  "Rex Orange County - Keep It Up",
-  "Kilo Kish - New Tricks: Art, Aesthetics, and Money ft. Vince Staples",
-  "Benny the Butcher - Johnny P's Caddy ft. J. Cole",
-  "Yung Kayo - Yeet ft. Yeat",
-  "The Smile - The Smoke",
-  "Saba - Survivor's Guilt ft. G Herbo",
-  "Rick Ross - Not for Nothing ft. Anderson .Paak",
-  "Jameszoo - Bugatti (étude)",
-  "Disclosure & Zedd - You've Got to Let Go If You Want to Be Free",
-  "Kamasi Washington - The Garden Path",
-  "Barely Legal - Dat Way ft. Jay Browne",
-  "Lucy Dacus - Kissing Lessons",
-  "illuminati hotties - Sandwich Sharer",
-  "Kyle Dion & Tkay Maidza - Hazy",
-  "Rosalía - SAOKO",
-  "Ravyn Lenae - Skin Tight ft. Steve Lacy",
-  "Kreator - Hate Über Alles",
-  "Conway x Benny the Butcher x Westside Gunn - John Woo Flick",
-  "Lingua Ignota - Katie Cruel",
-  "Arlo Parks - Softly",
-  "Wesley Joseph - Cold Summer",
-  "Ibeyi - Sister 2 Sister",
-  "Caroline Polachek - Billions",
-  "KayCyy & Gesaffelstein - OKAY!",
-  "Snoop Dogg - Crip Ya Enthusiasm",
-  "Orville Peck - C'mon Baby Cry",
-  "Obongjayar - Try",
-  "Harvey Sutherland - Feeling of Love ft. Dām-FunK",
-  "Ed Sheeran - The Joker and the Queen ft. Taylor Swift",
-  "Silk Sonic - Love's Train (Con Funk Shun Cover)",
-  "Tame Impala - The Boat I Row",
-  "Pupil Slicer - Thermal Runway ft. Cara Drolshagen",
-  "Undeath - Head Splattered in Seven Ways",
-  "Ibibio Sound Machine - Protection from Evil",
-  "The Cool Kids - It's Yours Pt. 2",
-  "Black Dresses - u_u2",
-  "HEALTH x LAMB OF GOD - Cold Blood",
-  "Kilo Kish - NO APOLOGY!",
-  "Jean Dawson - Porn Acting*",
-  "Daniel Rossen - Unpeopled Space",
-  "COBRAH - Good PusS ft. CupcakKe",
-  "Toro Y Moi - The Loop",
-  "Florence + The Machine - King",
-  "Flo Milli - PBC",
-  "Lil Durk - AHHH HA",
-  "ill peach - COMATOSE",
-  "Elzhi & Georgia Anne Muldrow - Strangeland",
-  "Sharon Van Etten - Used to It",
-  "Iceage - Pull Up (Abra Cover)",
-  "Soul Glo - Driponomics ft. Mother Maryrose",
-  "Pusha T & Nigo - Hear Me Clearly",
-  "Joey Bada$$ - Head High",
-  "Charli XCX - Baby",
-  "LIFE - Big Moon Lake",
-  "Alex Cameron - K Hole",
-  "Wet Leg - Angelica",
-  "Otoboke Beaver - I Am Not Maternal",
-  "Nilüfer Yanya - The Dealer",
-  "Emma Ruth Rundle - Pump Organ Song",
-  "Rex Orange County - Open a Window ft. Tyler, the Creator",
-  "Ibibio Sound Machine - 17 18 19",
-  "Superorganism - Teenager ft. CHAI & Pi Ja Ma",
-  "Jenny Hval - Freedom",
-  "Automatic - New Beginning",
-  "Destroyer - June",
-  "Floating Points - Vocoder",
-  "Bill Wurtz - Fly Around",
-  "Florence + The Machine - My Love",
-  "Everything Everything - Teletype",
-  "Rachel Chinouriri - All I Ever Asked",
-  "Princess Nokia - No Effort",
-  "Still Woozy & Remi Wolf - pool",
-  "Undeath - Necrobionics",
-  "Rosalía - HENTAI",
-  "Residente - This Is Not America ft. Ibeyi",
-  "EXUM - X. Anima",
-  "Art d'Ecco - Palm Slave",
-  "Chance the Rapper - Child of God",
-  "Soft Cell & Pet Shop Boys - Purple Zone",
-  "Pabllo Vittar & Rina Sawayama - Follow Me",
-  "Toro Y Moi - Déjá Vu",
-  "J-Tek & Blu - GameBoy",
-  "King Gizzard & The Lizard Wizard - Magenta Mountain",
-  "Haru Nemuri - Ikiru",
-  "Freddie Gibbs - Ice Cream ft. Rick Ross",
-  "Ibeyi - Lavender & Red Roses",
-  "bbno$ - Mathematics",
-  "The Smile - Pana-Vision",
-  "Sudan Archives - Home Maker",
-  "Courting - Tennis",
-  "Quelle Chris - Alive Ain't Always Living",
-  "Doechii - Crazy",
-  "Pusha T - Neck & Wrist ft. Jay-Z & Pharrell",
-  "Joyce Manor - Gotta Let It Go",
-  "Phoebe Bridgers - Sidelines",
-  "Dev Lemons - Autopilot",
-  "Deaton Chris Anthony - iScream ft. Beabadoobee",
-  "100 gecs - Doritos & Fritos",
-  "death's dynamic shroud - Neon Memories",
-  "Jockstrap - Concrete Over Water",
-  "Lizzo - About Damn Time",
-  "Hot Chip - Down",
-  "Viagra Boys - Ain't No Thief",
-  "Megan Thee Stallion - Plan B",
-  "Bolis Pupul - Neon Buddha",
-  "Elza Soares - Meu Guri",
-  "King Gizzard & the Lizard Wizard - Kepler-22b",
-  "Soccer Mommy - Unholy Affliction",
-  "The Smile - Free in the Knowledge",
-  "Florence + The Machine - Free",
-  "Spiritualized - The A Song (Laid in Your Arms)",
-  "Ty Segall - Hello, Hi",
-  "Regina Spektor - Up the Mountain",
-  "Quelle Chris - The Sky Is Blue Because the Sunset Is Red ft. MoRuf & Pink Siifu",
-  "Flume - Palaces ft. Damon Albarn",
-  "Wilco - Falling Apart (Right Now)",
-  "Logic - Therapy Music ft. Russ",
-  "Doja Cat - Vegas",
-  "Westside Boogie - Stuck",
-  "Jens Lekman - The Linden Trees Are Still in Blossom (Night Falls Over Kortedala Rework)",
-  "Viagra Boys - Troglodyte",
-  "Black Thought & Danger Mouse - No Gold Teeth",
-  "Stella Donnelly - Lungs",
-  "black midi - Welcome to Hell",
-  "Polyphia - Playing God",
-  "Kendrick Lamar - N95",
-  "Shygirl - Firefly",
-  "Diamond Dallas Tex (Lil Texas) - Elevate",
-  "Bill Wurtz - if the world doesn't end",
-  "FrankJavCee - Fighting a Giant Crab On the Beach Type Beat",
-  "Death Cab for Cutie - Roman Candles",
-  "Logic - Vinyl Days ft. DJ Premiere",
-  "bbno$ - piccolo",
-  "Osees - Funeral Solution",
-  "Wormrot - Behind Closed Doors",
-  "Diana Ross & Tame Impala - Turn up the Sunshine",
-  "Daniel Avery - Chaos Energy",
-  "Boris - She Is Burning",
-  "Xenia Rubinos & Carolina Oliveros - No Me Dejes Caer",
-  "The Garden - Freight Yard",
-  "Logic - Orville ft. Like, Blu & Exile",
-  "Courting - Loaded",
-  "Rico Nasty - Intrusive",
-  "easy life & Kevin Abstract - DEAR MISS HOLLOWAY",
-  "Superorganism - On & On",
-  "Yeah Yeah Yeahs - Spitting off the Edge of the World ft. Perfume Genius",
-  "CupcakKe - H2hoe",
-  "The Koreatown Oddity - Aggro Crag",
-  "SEBii - Queue3",
-  "Yung Gravy - Betty (Get Money)",
-  "KEN mode - A Love Letter",
-  "Mike Dimes & JID - Home (Remix)",
-  "Danger Mouse & Black Thought - Because ft. Joey Bada$$ & Russ",
-  "Imperial Triumphant - Merkurius Gilded ft. Kenny G & Max Gorelick",
-  "Regina Spektor - Loveology",
-  "Joji - Glimpse of Us",
-  "Shygirl - Come for Me",
-  "Jesca Hoop - Hatred Has a Mother",
-  "Metric - What Feels Like Eternity",
-  "Irreversible Entanglements - Down to Earth",
-  "The A's - He Needs Me",
-  "Moor Mother - Woody Shaw ft. Melanie Charles",
-  "The Beths - Silence Is Golden",
-  "Jockstrap - Glasgow",
-  "Marlon Williams - Thinking of Nina",
-  "Lambchop - Police Dog Blues",
-  "black midi - Eat Men Eat",
-  "The Soft Moon - Him ft. fish narc",
-  "Steve Lacy - Mercury",
-  "Gorillaz - Cracker Island",
-  "Beyoncé - Break My Soul",
-  "Dev Lemons - CEO of My Ass",
-  "Moor Mother - RAP JASM ft. AKAI SOLO & justmadnice",
-  "Mura Masa, Channel Tres & Shygirl - hollaback bitch",
-  "Meridian Brothers & El Grupo Renacimiento - Triste son",
-  "Safety Trance & Arca - El Alma Que Te Trajo",
-  "Wormrot - Weeping Willow",
-  "Dot da Genius, JID, Kid Cudi, Denzel Curry - Talk About Me",
-  "YUKIKA - Scent",
-  "death's dynamic shroud - Messe de E-102",
-  "Chat Pile - Why",
-  "COBRAH - Brand New Bitch",
-  "WILLOW - (maybe) it's my fault",
-  "Stella Donnelly - Flood",
-  "Alex G - Runner",
-  "Cheekface - Pledge Drive",
-  "Living Hour - No Body",
-  "Margaret Glaspy - My Body My Choice",
-  "Hot Chip - Eleanor",
-  "Steve Lacy - Bad Habit",
-  "Jane Remover - Royal Blue Walls",
-  "Joey Bada$$ - Survivor's Guilt",
-  "CHAI - Hero Journey ft. Superorganism",
-  "NLE Choppa - In the UK",
-  "Superorganism - Into the Sun ft. Stephen Malkmus",
-  "Imperial Triumphant - Tower of Glory, City of Shame",
-  "Metric - False Dichotomy",
-  "Cryalot - Hell Is Here",
-  "easylife, BENEE - OTT",
-  "Alice Longyu Gao & Oli Sykes - Believe the Hype",
-  "Doechii - Bitch I'm Nice",
-  "Sudan Archives - NBPQ (Topless)",
-  "DOMi / JD BECK & Anderson .Paak - Take a Chance",
-  "Joey Bada$$ - Zipcodes",
-  "The A's - When I Die",
-  "KEN mode - But They Respect My Tactics",
-  "Latto - PUSSY",
-  "Jesca Hoop - Sioux Falls",
-  "Kai Whiston - Carrier Signal ft. EDEN",
-  "black midi - Sugar/Tzu",
-  "Show Me the Body - Loose Talk",
-  "The Beths - Expert in a Dying Field",
-  "Madi Diaz - Hangover",
-  "Dom Dolla & Clementine Douglas - Miracle Maker",
-  "Sorry - Let the Lights On",
-  "Dangermouse & Black Thought - Aquamarine ft. Michael Kiwanuka",
-  "j-hope - Arson",
-  "The Mountain Goats - Wage Wars Get Rich Die Handsome",
-  "Porter Robinson & League of Legends - Everything Goes On",
-  "FINNEAS - Mona Lisa, Mona Lisa",
-  "Shygirl - Coochie (a bedtime story)",
-  "Genesis Owusu - GTFO",
-  "Billie Eilish - Guitar Songs (Single)",
-  "Jessie Ware - Free Yourself",
-  "Doechii & SZA - Persuasive",
-  "Chat Pile - Wicked Puppet Dance",
-  "Osees - A Foul Form",
-  "Polyphia - Neurotica",
-  "Lil Uzi Vert - Hittin My Shoulder",
-  "Titus Andronicus - (I'm) Screwed",
-  "Preoccupations - Death of Melody",
-  "Charli XCX - Hot Girl (Bodies Bodies Bodies)",
-  "Rosalía - Despechá",
-  "Quavo & Takeoff - Us vs. Them ft. Gucci Mane",
-  "SBTRKT - Miss the Days",
-  "Rina Sawayama - Hold the Girl",
-  "OFF! - War Above Los Angeles",
-  "Sampa the Great - Bona",
-  "U.S. Girls - So Typically Now",
-  "Gucci Mane - Dissin the Dead",
-  "The Comet Is Coming - CODE",
-  "Cryalot - Touch the Sun",
-  "Black Soprano Family: Benny the Butcher, Heem, Rick Hyde & DJ Premier - Times Is Rough",
-  "KAYTRANADA & Anderson .Paak - Twin Flame",
-  "Doechii & Rico Nasty - Swamp Bitches",
-  "Hot Chip - Freakout / Release",
-  "Louis Cole - Let It Happen",
-  "WILLOW - hover like a GODDESS",
-  "Bill Wurtz - i like to wear soft clothing",
-  "DACEY - STEPMOM",
-  "JER - Ska Has Progressed Past the Need for Incels",
-  "Boris - My Name Is blank",
-  "Stella Donnelly - How Was Your Day?",
-  "EKKSTACY - wish i was dead",
-  "JID - Dance Now ft. Kenny Mason",
-  "Nicki Minaj - Super Freaky Girl",
-  "PinkPantheress & Sam Gellaitry - Picture in my mind",
-  "Four Tet - Mango Feedback",
-  "Death's Dynamic Shroud - Fall for Me",
-  "First Aid Kit - Out of My Head",
-  "deadmau5 - My Heart Has Teeth ft. Skylar Grey",
-  "Open Mike Eagle - I'll Fight You",
-  "Yeah Yeah Yeahs - Burning",
-  "Sigh - Mayonaka No Kaii",
-  "Himera - Umbrella",
-  "Bill Wurtz - The Ending",
-  "Louis Cole - I'm Tight",
-  "G Jones - Operator",
-  "Autopsy - Skin by Skin",
-  "The Beths - Knees Deep",
-  "Drugdealer - Someone to Love",
-  "JELEEL! - STONE COLD",
-  "Magdalena Bay - All You Do",
-  "OFF! - Kill to Be Heard",
-  "Dying Fetus - Compulsion for Cruelty",
-  "Pierce the Veil - Pass the Nirvana",
-  "Mount Kimbie & Dom Maker - In Your Eyes ft. slowthai & Danny Brown",
-  "Pink Siifu & Real Bad Man - Looking for Water ft. Boldy James",
-  "Shygirl - Nike",
-  "Plains - Abilene",
-  "Crack Cloud - Costly Engineered Illusion",
-  "Fire-Toolz - Soda Lake with Game Genie / Vedic Software ~ Wet Interfacing",
-  "King Gizzard & The Lizard Wizard - Ice V",
-  "Björk - Atopos ft. Kasimyn",
-  "Gilla Band - Backwash",
-  "Deerhoof - My Lovely Cat!",
-  "Mile End - FCHC",
-  "Carly Rae Jepsen - Talking to Yourself",
-  "Bladee - Drain Story",
-  "Ab-Soul - Moonshooter",
-  "Show Me the Body - We Came to Play",
-  "Weyes Blood - It's Not Just Me, It's Everybody",
-  "Gilla Band - Post Ryan",
-  "Dehd - Eggshells",
-  "Worm - Shadowside Kingdom",
-  "Baby Tate - Dancing Queen / Yasss Queen",
-  "Natalia Lafourcade - De todas las flores",
-  "Quadeca - Born Yesterday",
-  "YG - Maniac",
-  "The 1975 - All I Need to Hear",
-  "FLO - Not My Job",
-  "Mamalarky - Shining Armor",
-  "Björk - Ancestress ft. Sindri Eldon",
-  "Alvvays - Very Online Guy",
-  "Red Hot Chili Peppers - Eddie",
-  "Jamie xx - KILL DEM",
-  "Freddie Gibbs - Dark Hearted",
-  "Autopsy - Knife Slice Axe Chop",
-  "The Cool Kids - Sparklers ft. KEY!, Reese LAFLARE & Chuck II",
-  "Alice Longyu Gao - Make U Heart Me",
-  "Magdalena Bay - Unconditional",
-  "LCD Soundsystem - new body rhumba",
-  "Wings of Desire - Choose a Life",
-  "Divorce - Checking Out",
-  "M.I.A. - Beep",
-  "Paramore - This Is Why",
-  "Louis Cole - Dead Inside Shuffle",
-  "Smino - 90 Proof ft. J. Cole",
-  "Men I Trust - Billie Toppy",
-  "Bree Runway - That Girl",
-  "Polyphia - Ego Death ft. Steve Vai",
-  "Jean Dawson - BAD FRUIT* ft. Earl Sweatshirt",
-  "Jazmine Sullivan - Stand Up",
-  "Carly Rae Jepsen - The Loneliest Time ft. Rufus Wainwright",
-  "Fever Ray - What They Call Us",
-  "Jamila Woods - Boundaries",
-  "Liturgy - 93696",
-  "Open Mike Eagle - Circuit City ft. still rift & Video Dave",
-  "Jordana - SYT",
-  "King Gizzard & The Lizard Wizard - Iron Lung",
-  "Men I Trust - Girl",
-  "Tkay Maidza - High Beams (JPEGMAFIA Remix)",
-  "Weyes Blood - Grapevine",
-  "G Jones & Eprom - R.A.V.E.",
-  "Plains - Hurricane",
-  "Lil Yachty - Poland",
-  "Carly Rae Jepsen - Surrender My Heart",
-  "Ab-Soul - Do Better ft. Zacari",
-  "Young Fathers - I Saw",
-  "NxWorries (Anderson .Paak & Knxwledge) - Where I Go ft. H.E.R.",
-  "Kelela - Happy Ending",
-  "Thaiboy Digital - True Love ft. Yung Lean",
-  "Guerilla Toss - Heathen Money",
-  "The Go! Team - Look Away, Look Away ft. Star Feminine Band",
-  "Rihanna - Lift Me Up",
-  "Kodak Black - 300 Blackout",
-  "Juice WRLD - In My Head",
-  "Ski Mask the Slump God - OOGA BOOGA!",
-  "Algiers - Irreversible Damage ft. Zack de la Rocha",
-  "U.S. Girls - Bless This Mess",
-  "Quadeca - Tell Me a Joke",
-  "Y2K & JPEGMAFIA - Dirt",
-  "Joey Valence x Brae x Logic - Tanaka 2",
-  "Samia - Mad at Me ft. papa mbye",
-  "Miss Grit - Follow the Cyborg",
-  "Yves Tumor - God Is a Circle",
-  "Cheekface - If I Catch on Fire Please Put Me Out",
-  "Temps - no, no ft. Quelle Chris, Xenia Rubinos, NNAMDÏ, Shamir",
-  "Nicole Dollanganger - Gold Satin Dreamer",
-  "BROCKHAMPTON - Big Pussy",
-  "Taylor Swift - Anti-Hero (Girl Talk Remix)",
-  "Dev Lemons - Ghosted My Dentist",
-  "Fleet Foxes - A Sky Like I've Never Seen",
-  "Ahab - Prof. Arronax' Descent into the Vast Oceans ft. Ultha",
-  "Hatchie - Nosedive",
-  "Channel Tres - 6am",
-  "Fever Ray - Carbon Dioxide",
-  "Yard Act vs. Mad Professor - Pour More",
-  "Chat Pile - Tenkiller",
-  "Gucci Mane - Letter to Takeoff",
-  "Phoebe Bridgers - So Much Wine",
-  "Ab-Soul - Gang'Nem ft. Fre$h",
-  "Saweetie - DON'T SAY NOTHIN'",
-  "Black Belt Eagle Scout - My Blood Runs Through This Land",
-  "Fousheé - Spend the Money ft. Lil Uzi Vert",
-  "Christian Lee Hutson - Silent Night",
-  "Jane Remover - Contingency Song",
-  "Fatoumata Diawara - Nsera ft. Daman Albarn",
-  "Shame - Fingers of Steel",
-  "Kelela - On the Run",
-  "Tkay Maidza - Nights in December",
-  "JELEEL! & Denzel Curry - SHOTS!",
-  "Trueno & JID - LO TENGO",
-  "Rachel Chinouriri - I'm Not Perfect (But I'm Trying) [Acoustic]",
-  "Wiki & The Alchemist - Be Realistic",
-  "Kimbra - Replay!",
-  "Remi Wolf - Last Christmas (Wham! Cover)",
-  "Boris -  序章　三叉路",
-  "A$AP Rocky - Shittin' Me",
-  "Coi Leray - Players",
-  "Metro Boomin & Young Thug - Metro Spider",
-  "The Go! Team - Whammy O ft. Nitty Scott",
-  "Divorce - That Hill",
-  "King Tuff - Portrait of God",
-  "Storefront Church & Phoebe Bridgers - Words (Low Cover)",
-  "100 gecs - Torture Me ft. Skrillex",
-  "Zulu - Fakin' tha Funk",
-  "PinkPantheress - Boy's a liar",
-  "Paramore - The News",
-  "Ahab - Colossus of the Liquid Graves",
-  "Weezer - I Want a Dog",
-  "Aesop Rock, Blockhead, Lupe Fiasco - Pumpkin Seeds",
-  "Lil Durk - Hanging with Wolves",
-  "Hemlocke Springs - girlfriend",
-  "Caroline Polachek - Welcome to My Island",
-  "Iglooghost - Rust Genome",
-  "Gorillaz - Skinny Ape",
-  "Pure Adult - Hot Crusade",
-  "Lana Del Rey - Did you know that there's a tunnel under Ocean Blvd"
+  {
+    "track": "Father John Misty",
+    "artist": "Funny Girl",
+    "link": "https://www.youtube.com/watch?v=ES2WW4JJ_84"
+  },
+  {
+    "track": "The Smile",
+    "artist": "You Will Never Work In Television Again",
+    "link": "https://www.youtube.com/watch?v=-EB5NhI2RQQ"
+  },
+  {
+    "track": "DJ Shadow & King Gizzard",
+    "artist": "Black Hot Soup",
+    "link": "https://www.youtube.com/watch?v=MJkbQLVeFPs"
+  },
+  {
+    "track": "Vein.fm",
+    "artist": "The Killing Womb",
+    "link": "https://www.youtube.com/watch?v=HswXctEiNNA"
+  },
+  {
+    "track": "JID",
+    "artist": "Surround Sound ft. 21 Savage & Baby Tate",
+    "link": "https://www.youtube.com/watch?v=Y19q-7VN2WI"
+  },
+  {
+    "track": "Spiritualized",
+    "artist": "Crazy",
+    "link": "https://www.youtube.com/watch?v=3vCcjlcJ8JM"
+  },
+  {
+    "track": "Mitski",
+    "artist": "Love Me More",
+    "link": "https://www.youtube.com/watch?v=P4J3Z9xgjWQ"
+  },
+  {
+    "track": "Guerilla Toss",
+    "artist": "Cannibal Capital",
+    "link": "https://www.youtube.com/watch?v=L6bVTPMpBEk"
+  },
+  {
+    "track": "Parquet Courts",
+    "artist": "Watching Strangers Smile",
+    "link": "https://www.youtube.com/watch?v=4TP8WoWAmqY"
+  },
+  {
+    "track": "Earthgang",
+    "artist": "All Eyes on Me",
+    "link": "https://www.youtube.com/watch?v=zpH0Rxcl4JY"
+  },
+  {
+    "track": "CHAI",
+    "artist": "WHOLE",
+    "link": "https://www.youtube.com/watch?v=ozjOkzdS5u0"
+  },
+  {
+    "track": "Ed Schrader's Music Beat",
+    "artist": "This Thirst",
+    "link": "https://youtu.be/9PmIrse4VYw"
+  },
+  {
+    "track": "Robert Glasper",
+    "artist": "Black Superhero ft. Killer Mike, Big K.R.I.T. & BJ the Chicago Kid",
+    "link": "https://youtu.be/2z8piOggNsw"
+  },
+  {
+    "track": "Shamir",
+    "artist": "Reproductive",
+    "link": "https://youtu.be/NoyFkQTnK-c"
+  },
+  {
+    "track": "Tangerine Dream",
+    "artist": "You're Always On Time",
+    "link": "https://youtu.be/MM2xZZuJvpg"
+  },
+  {
+    "track": "Laurie Anderson",
+    "artist": "Big Science (Arca Remix)",
+    "link": "https://www.youtube.com/watch?v=j4uKk4nr3o0"
+  },
+  {
+    "track": "Soul Glo",
+    "artist": "Jump!! (Or Get Jumped)",
+    "link": "https://www.youtube.com/watch?v=c4vNQ3vEy24"
+  },
+  {
+    "track": "Daniel Rossen",
+    "artist": "Shadow in the Frame",
+    "link": "https://www.youtube.com/watch?v=oKsalgXG1tA"
+  },
+  {
+    "track": "Jenny Hval",
+    "artist": "Year of Love",
+    "link": "https://www.youtube.com/watch?v=2i2oJJwgLTk"
+  },
+  {
+    "track": "Hatchie",
+    "artist": "Quicksand",
+    "link": "https://www.youtube.com/watch?v=xP5yeegZEsE"
+  },
+  {
+    "track": "death's dynamic shroud.wmv",
+    "artist": "Judgment Bolt",
+    "link": "https://www.youtube.com/watch?v=mnRgA2ADhGM"
+  },
+  {
+    "track": "Animal Collective",
+    "artist": "Strung with Everything",
+    "link": "https://www.youtube.com/watch?v=ehaGlhglM5Y"
+  },
+  {
+    "track": "Undeath",
+    "artist": "Rise from the Grave",
+    "link": "https://www.youtube.com/watch?v=23umtsJ3A7A"
+  },
+  {
+    "track": "Big Thief",
+    "artist": "Simulation Swarm",
+    "link": "https://www.youtube.com/watch?v=RnatkV_92Bw"
+  },
+  {
+    "track": "Fatlip & Blu",
+    "artist": "Gangsta Rap (prod. Madlib)",
+    "link": "https://www.youtube.com/watch?v=ud22WKyfAas"
+  },
+  {
+    "track": "Dev Lemons",
+    "artist": "One Whole Me",
+    "link": "https://www.youtube.com/watch?v=wzuRjvDQex4"
+  },
+  {
+    "track": "Black Country, New Road",
+    "artist": "Snow Globes",
+    "link": "https://www.youtube.com/watch?v=hTVwQ1Gjqas"
+  },
+  {
+    "track": "Brakence",
+    "artist": "cbd",
+    "link": "https://www.youtube.com/watch?v=6yakvy3ZV-I"
+  },
+  {
+    "track": "PUP",
+    "artist": "Robot Writes a Love Song",
+    "link": "https://www.youtube.com/watch?v=IuUjidzRhtI"
+  },
+  {
+    "track": "2 Chainz, Moneybagg Yo, Beatking",
+    "artist": "Pop Music",
+    "link": "https://open.spotify.com/track/7562OP1Zx84xqrO5ECYour?si=0b820a6209b74d81"
+  },
+  {
+    "track": "Denzel Curry",
+    "artist": "Walkin",
+    "link": "https://www.youtube.com/watch?v=fOO1mWLGhh8"
+  },
+  {
+    "track": "Toro Y Moi",
+    "artist": "Postman",
+    "link": "https://www.youtube.com/watch?v=xI0alDWn2tM"
+  },
+  {
+    "track": "Rex Orange County",
+    "artist": "Keep It Up",
+    "link": "https://www.youtube.com/watch?v=k53_PziipaA"
+  },
+  {
+    "track": "Kilo Kish",
+    "artist": "New Tricks: Art, Aesthetics, and Money ft. Vince Staples",
+    "link": "https://www.youtube.com/watch?v=LgDlJuzJ-_A"
+  },
+  {
+    "track": "Benny the Butcher",
+    "artist": "Johnny P's Caddy ft. J. Cole",
+    "link": "https://www.youtube.com/watch?v=klZNvJArVSE"
+  },
+  {
+    "track": "Yung Kayo",
+    "artist": "Yeet ft. Yeat",
+    "link": "https://www.youtube.com/watch?v=WiMCjqZK6t8"
+  },
+  {
+    "track": "The Smile",
+    "artist": "The Smoke",
+    "link": "https://www.youtube.com/watch?v=tEPEqZnTwdo"
+  },
+  {
+    "track": "Saba",
+    "artist": "Survivor's Guilt ft. G Herbo",
+    "link": "https://www.youtube.com/watch?v=CPBmwMzoa2o"
+  },
+  {
+    "track": "Rick Ross",
+    "artist": "Not for Nothing ft. Anderson .Paak",
+    "link": "https://www.youtube.com/watch?v=DQmqCJFWaLU"
+  },
+  {
+    "track": "Jameszoo",
+    "artist": "Bugatti (étude)",
+    "link": "https://www.youtube.com/watch?v=Z6t0Cxu0OwA"
+  },
+  {
+    "track": "Disclosure & Zedd",
+    "artist": "You've Got to Let Go If You Want to Be Free",
+    "link": "https://www.youtube.com/watch?v=VsB3r_49D8I"
+  },
+  {
+    "track": "Kamasi Washington",
+    "artist": "The Garden Path",
+    "link": "https://www.youtube.com/watch?v=Xzrkerz1SW8"
+  },
+  {
+    "track": "Barely Legal",
+    "artist": "Dat Way ft. Jay Browne",
+    "link": "https://www.youtube.com/watch?v=DAXZZxS1utM"
+  },
+  {
+    "track": "Lucy Dacus",
+    "artist": "Kissing Lessons",
+    "link": "https://www.youtube.com/watch?v=9gxBufkPx5o"
+  },
+  {
+    "track": "illuminati hotties",
+    "artist": "Sandwich Sharer",
+    "link": "https://www.youtube.com/watch?v=-0Hxn0jcVqo"
+  },
+  {
+    "track": "Kyle Dion & Tkay Maidza",
+    "artist": "Hazy",
+    "link": "https://www.youtube.com/watch?v=Sh98M6d5Zt0"
+  },
+  {
+    "track": "Rosalía",
+    "artist": "SAOKO",
+    "link": "https://www.youtube.com/watch?v=6o7bCAZSxsg"
+  },
+  {
+    "track": "Ravyn Lenae",
+    "artist": "Skin Tight ft. Steve Lacy",
+    "link": "https://www.youtube.com/watch?v=zO7YKwjx1Rk"
+  },
+  {
+    "track": "Kreator",
+    "artist": "Hate Über Alles",
+    "link": "https://www.youtube.com/watch?v=YVfEW5mgrd0"
+  },
+  {
+    "track": "Conway x Benny the Butcher x Westside Gunn",
+    "artist": "John Woo Flick",
+    "link": "https://www.youtube.com/watch?v=FYdbcaaFsOs"
+  },
+  {
+    "track": "Lingua Ignota",
+    "artist": "Katie Cruel",
+    "link": "https://linguaignota.bandcamp.com/track/katie-cruel"
+  },
+  {
+    "track": "Arlo Parks",
+    "artist": "Softly",
+    "link": "https://youtu.be/UOf6N_t69JQ"
+  },
+  {
+    "track": "Wesley Joseph",
+    "artist": "Cold Summer",
+    "link": "https://youtu.be/g6ccGLg-LbM"
+  },
+  {
+    "track": "Ibeyi",
+    "artist": "Sister 2 Sister",
+    "link": "https://youtu.be/t-tQz0T87UA"
+  },
+  {
+    "track": "Caroline Polachek",
+    "artist": "Billions",
+    "link": "https://youtu.be/4zEQJrggKgk"
+  },
+  {
+    "track": "KayCyy & Gesaffelstein",
+    "artist": "OKAY!",
+    "link": "https://www.youtube.com/watch?v=4_aCd8r1OtE"
+  },
+  {
+    "track": "Snoop Dogg",
+    "artist": "Crip Ya Enthusiasm",
+    "link": "https://www.youtube.com/watch?v=MY-5-YiuEZk"
+  },
+  {
+    "track": "Orville Peck",
+    "artist": "C'mon Baby Cry",
+    "link": "https://www.youtube.com/watch?v=DY_jTTOkGUo"
+  },
+  {
+    "track": "Obongjayar",
+    "artist": "Try",
+    "link": "https://www.youtube.com/watch?v=Rm4tFkMnjyY"
+  },
+  {
+    "track": "Harvey Sutherland",
+    "artist": "Feeling of Love ft. Dām-FunK",
+    "link": "https://youtu.be/QoJvet_9rm0"
+  },
+  {
+    "track": "Ed Sheeran",
+    "artist": "The Joker and the Queen ft. Taylor Swift",
+    "link": "https://www.youtube.com/watch?v=2qzcHLyv3N0"
+  },
+  {
+    "track": "Silk Sonic",
+    "artist": "Love's Train (Con Funk Shun Cover)",
+    "link": "https://www.youtube.com/watch?v=eEQMtIX61LA"
+  },
+  {
+    "track": "Tame Impala",
+    "artist": "The Boat I Row",
+    "link": "https://www.youtube.com/watch?v=j706aSetFbI"
+  },
+  {
+    "track": "Pupil Slicer",
+    "artist": "Thermal Runway ft. Cara Drolshagen",
+    "link": "https://www.youtube.com/watch?v=NGjzCQHsF4Q"
+  },
+  {
+    "track": "Undeath",
+    "artist": "Head Splattered in Seven Ways",
+    "link": "https://www.youtube.com/watch?v=8ou0J2DeHNk"
+  },
+  {
+    "track": "Ibibio Sound Machine",
+    "artist": "Protection from Evil",
+    "link": "https://youtu.be/lfMh0zfIO3A"
+  },
+  {
+    "track": "The Cool Kids",
+    "artist": "It's Yours Pt. 2",
+    "link": "https://youtu.be/7o4Nq-4TwzY"
+  },
+  {
+    "track": "Black Dresses",
+    "artist": "u_u2",
+    "link": "https://blackdresses.bandcamp.com/album/forget-your-own-face"
+  },
+  {
+    "track": "HEALTH x LAMB OF GOD",
+    "artist": "Cold Blood",
+    "link": "https://www.youtube.com/watch?v=qxSsenAmP34"
+  },
+  {
+    "track": "Kilo Kish",
+    "artist": "NO APOLOGY!",
+    "link": "https://www.youtube.com/watch?v=ruAUSyQYGzI"
+  },
+  {
+    "track": "Jean Dawson",
+    "artist": "Porn Acting*",
+    "link": "https://www.youtube.com/watch?v=JxNkkAqYGco"
+  },
+  {
+    "track": "Daniel Rossen",
+    "artist": "Unpeopled Space",
+    "link": "https://youtu.be/cKEEbre1-yk"
+  },
+  {
+    "track": "COBRAH",
+    "artist": "Good PusS ft. CupcakKe",
+    "link": "https://www.youtube.com/watch?v=6sg8vCZEqtk"
+  },
+  {
+    "track": "Toro Y Moi",
+    "artist": "The Loop",
+    "link": "https://youtu.be/CvcoxunP7KU"
+  },
+  {
+    "track": "Florence + The Machine",
+    "artist": "King",
+    "link": "https://youtu.be/L62LtChAwww"
+  },
+  {
+    "track": "Flo Milli",
+    "artist": "PBC",
+    "link": "https://www.youtube.com/watch?v=sURT4LJizXs"
+  },
+  {
+    "track": "Lil Durk",
+    "artist": "AHHH HA",
+    "link": "https://www.youtube.com/watch?v=_q6go0G49A0"
+  },
+  {
+    "track": "ill peach",
+    "artist": "COMATOSE",
+    "link": "https://youtu.be/447UUGf1p08"
+  },
+  {
+    "track": "Elzhi & Georgia Anne Muldrow",
+    "artist": "Strangeland",
+    "link": "https://youtu.be/lqVlq69vOZs"
+  },
+  {
+    "track": "Sharon Van Etten",
+    "artist": "Used to It",
+    "link": "https://youtu.be/hV8C7azblTQ"
+  },
+  {
+    "track": "Iceage",
+    "artist": "Pull Up (Abra Cover)",
+    "link": "https://youtu.be/52Ek-e96jLQ"
+  },
+  {
+    "track": "Soul Glo",
+    "artist": "Driponomics ft. Mother Maryrose",
+    "link": "https://www.youtube.com/watch?v=xK6X-zACMRQ"
+  },
+  {
+    "track": "Pusha T & Nigo",
+    "artist": "Hear Me Clearly",
+    "link": "https://www.youtube.com/watch?v=XeB5GlXqD9I"
+  },
+  {
+    "track": "Joey Bada$$",
+    "artist": "Head High",
+    "link": "https://www.youtube.com/watch?v=itQiIKc5Nk0"
+  },
+  {
+    "track": "Charli XCX",
+    "artist": "Baby",
+    "link": "https://youtu.be/ggrYaDxyrGM"
+  },
+  {
+    "track": "LIFE",
+    "artist": "Big Moon Lake",
+    "link": "https://youtu.be/jG9pOfi6kMs"
+  },
+  {
+    "track": "Alex Cameron",
+    "artist": "K Hole",
+    "link": "https://youtu.be/U_nNUgIGjZw"
+  },
+  {
+    "track": "Wet Leg",
+    "artist": "Angelica",
+    "link": "https://www.youtube.com/watch?v=8qWHthLQ1Uw"
+  },
+  {
+    "track": "Otoboke Beaver",
+    "artist": "I Am Not Maternal",
+    "link": "https://music.otobokebeaver.com/album/super-champon"
+  },
+  {
+    "track": "Nilüfer Yanya",
+    "artist": "The Dealer",
+    "link": "https://youtu.be/x9MHQmWfSYM"
+  },
+  {
+    "track": "Emma Ruth Rundle",
+    "artist": "Pump Organ Song",
+    "link": "https://www.youtube.com/watch?v=QiwPfhi7y9w"
+  },
+  {
+    "track": "Rex Orange County",
+    "artist": "Open a Window ft. Tyler, the Creator",
+    "link": "https://youtu.be/KGkabBe-44I"
+  },
+  {
+    "track": "Ibibio Sound Machine",
+    "artist": "17 18 19",
+    "link": "https://youtu.be/tObW6uL58R8"
+  },
+  {
+    "track": "Superorganism",
+    "artist": "Teenager ft. CHAI & Pi Ja Ma",
+    "link": "https://www.youtube.com/watch?v=RbTUzCP6IUY"
+  },
+  {
+    "track": "Jenny Hval",
+    "artist": "Freedom",
+    "link": "https://youtu.be/DSfU3myYYa8"
+  },
+  {
+    "track": "Automatic",
+    "artist": "New Beginning",
+    "link": "https://youtu.be/muEyle9evDQ"
+  },
+  {
+    "track": "Destroyer",
+    "artist": "June",
+    "link": "https://youtu.be/U3hFZkFgs-g"
+  },
+  {
+    "track": "Floating Points",
+    "artist": "Vocoder",
+    "link": "https://www.youtube.com/watch?v=Mnq53ZR9v-w"
+  },
+  {
+    "track": "Bill Wurtz",
+    "artist": "Fly Around",
+    "link": "https://www.youtube.com/watch?v=cixnLVRRVK0"
+  },
+  {
+    "track": "Florence + The Machine",
+    "artist": "My Love",
+    "link": "https://www.youtube.com/watch?v=h9CNGPy11Jc"
+  },
+  {
+    "track": "Everything Everything",
+    "artist": "Teletype",
+    "link": "https://youtu.be/N7X555usJCU"
+  },
+  {
+    "track": "Rachel Chinouriri",
+    "artist": "All I Ever Asked",
+    "link": "https://www.youtube.com/watch?v=2QXSnc_9OuU"
+  },
+  {
+    "track": "Princess Nokia",
+    "artist": "No Effort",
+    "link": "https://www.youtube.com/watch?v=IYcRGO7b_EA"
+  },
+  {
+    "track": "Still Woozy & Remi Wolf",
+    "artist": "pool",
+    "link": "https://www.youtube.com/watch?v=9i2e3yVoS44"
+  },
+  {
+    "track": "Undeath",
+    "artist": "Necrobionics",
+    "link": "https://www.youtube.com/watch?v=mphv4ZQDcCQ"
+  },
+  {
+    "track": "Rosalía",
+    "artist": "HENTAI",
+    "link": "https://youtu.be/_6YCNd3ONUU"
+  },
+  {
+    "track": "Residente",
+    "artist": "This Is Not America ft. Ibeyi",
+    "link": "https://www.youtube.com/watch?v=GK87AKIPyZY"
+  },
+  {
+    "track": "EXUM",
+    "artist": "X. Anima",
+    "link": "https://www.youtube.com/watch?v=6fKZBWlEx30"
+  },
+  {
+    "track": "Art d'Ecco",
+    "artist": "Palm Slave",
+    "link": "https://artdecco.bandcamp.com/track/palm-slave"
+  },
+  {
+    "track": "Chance the Rapper",
+    "artist": "Child of God",
+    "link": "https://www.youtube.com/watch?v=qb2WxKdXcxQ"
+  },
+  {
+    "track": "Soft Cell & Pet Shop Boys",
+    "artist": "Purple Zone",
+    "link": "https://youtu.be/cv4QNTg1Mps"
+  },
+  {
+    "track": "Pabllo Vittar & Rina Sawayama",
+    "artist": "Follow Me",
+    "link": "https://www.youtube.com/watch?v=HCDU3vp6g7U"
+  },
+  {
+    "track": "Toro Y Moi",
+    "artist": "Déjá Vu",
+    "link": "https://www.youtube.com/watch?v=otbjpmcoLWk"
+  },
+  {
+    "track": "J-Tek & Blu",
+    "artist": "GameBoy",
+    "link": "https://www.youtube.com/watch?v=yK-AE6oxIEU"
+  },
+  {
+    "track": "King Gizzard & The Lizard Wizard",
+    "artist": "Magenta Mountain",
+    "link": "https://www.youtube.com/watch?v=65qVLlCspvU"
+  },
+  {
+    "track": "Haru Nemuri",
+    "artist": "Ikiru",
+    "link": "https://www.youtube.com/watch?v=5O3xVYXhfNU"
+  },
+  {
+    "track": "Freddie Gibbs",
+    "artist": "Ice Cream ft. Rick Ross",
+    "link": "https://www.youtube.com/watch?v=I6D1m7i1RyA"
+  },
+  {
+    "track": "Ibeyi",
+    "artist": "Lavender & Red Roses",
+    "link": "https://youtu.be/VoSjxKBT3CA"
+  },
+  {
+    "track": "bbno$",
+    "artist": "Mathematics",
+    "link": "https://www.youtube.com/watch?v=tH_i76JVTDg"
+  },
+  {
+    "track": "The Smile",
+    "artist": "Pana-Vision",
+    "link": "https://www.youtube.com/watch?v=wKXQhFXlFs4"
+  },
+  {
+    "track": "Sudan Archives",
+    "artist": "Home Maker",
+    "link": "https://www.youtube.com/watch?v=2Z5-ejzOouw"
+  },
+  {
+    "track": "Courting",
+    "artist": "Tennis",
+    "link": "https://www.youtube.com/watch?v=VEZFjcEBDSk"
+  },
+  {
+    "track": "Quelle Chris",
+    "artist": "Alive Ain't Always Living",
+    "link": "https://www.youtube.com/watch?v=oT1q7_XvWPQ"
+  },
+  {
+    "track": "Doechii",
+    "artist": "Crazy",
+    "link": "https://www.youtube.com/watch?v=0aQ9Q0hRTwY"
+  },
+  {
+    "track": "Pusha T",
+    "artist": "Neck & Wrist ft. Jay-Z & Pharrell",
+    "link": "https://www.youtube.com/watch?v=sETAgLQCDL4"
+  },
+  {
+    "track": "Joyce Manor",
+    "artist": "Gotta Let It Go",
+    "link": "https://youtu.be/5D7s5glNk8k"
+  },
+  {
+    "track": "Phoebe Bridgers",
+    "artist": "Sidelines",
+    "link": "https://youtu.be/ELGA08YxP94"
+  },
+  {
+    "track": "Dev Lemons",
+    "artist": "Autopilot",
+    "link": "https://www.youtube.com/watch?v=Y2kicVKkZ54"
+  },
+  {
+    "track": "Deaton Chris Anthony",
+    "artist": "iScream ft. Beabadoobee",
+    "link": "https://youtu.be/1jxuLtCwqUo"
+  },
+  {
+    "track": "100 gecs",
+    "artist": "Doritos & Fritos",
+    "link": "https://youtu.be/hBc-zN005PQ"
+  },
+  {
+    "track": "death's dynamic shroud",
+    "artist": "Neon Memories",
+    "link": "https://www.youtube.com/watch?v=5qUUF9kyztI"
+  },
+  {
+    "track": "Jockstrap",
+    "artist": "Concrete Over Water",
+    "link": "https://youtu.be/FfXwm3jwVbI"
+  },
+  {
+    "track": "Lizzo",
+    "artist": "About Damn Time",
+    "link": "https://www.youtube.com/watch?v=IXXxciRUMzE"
+  },
+  {
+    "track": "Hot Chip",
+    "artist": "Down",
+    "link": "https://youtu.be/M8QdB1w-pXo"
+  },
+  {
+    "track": "Viagra Boys",
+    "artist": "Ain't No Thief",
+    "link": "https://youtu.be/oCYBYf62wns"
+  },
+  {
+    "track": "Megan Thee Stallion",
+    "artist": "Plan B",
+    "link": "https://www.youtube.com/watch?v=uY10ROc5eFQ"
+  },
+  {
+    "track": "Bolis Pupul",
+    "artist": "Neon Buddha",
+    "link": "https://www.youtube.com/watch?v=yjjFHt2AHug"
+  },
+  {
+    "track": "Elza Soares",
+    "artist": "Meu Guri",
+    "link": "https://www.youtube.com/watch?v=3-f7DteLTH0"
+  },
+  {
+    "track": "King Gizzard & the Lizard Wizard",
+    "artist": "Kepler-22b",
+    "link": "https://youtu.be/gfvEodNPQGs"
+  },
+  {
+    "track": "Soccer Mommy",
+    "artist": "Unholy Affliction",
+    "link": "https://www.youtube.com/watch?v=gfNHwboQ0yU"
+  },
+  {
+    "track": "The Smile",
+    "artist": "Free in the Knowledge",
+    "link": "https://youtu.be/CXbncoiKLn8"
+  },
+  {
+    "track": "Florence + The Machine",
+    "artist": "Free",
+    "link": "https://youtu.be/ui8kUKuLBaU"
+  },
+  {
+    "track": "Spiritualized",
+    "artist": "The A Song (Laid in Your Arms)",
+    "link": "https://youtu.be/ailAbD4V9gM"
+  },
+  {
+    "track": "Ty Segall",
+    "artist": "Hello, Hi",
+    "link": "https://youtu.be/u9-NIR3B_V4"
+  },
+  {
+    "track": "Regina Spektor",
+    "artist": "Up the Mountain",
+    "link": "https://youtu.be/KVg-z4rSDtk"
+  },
+  {
+    "track": "Quelle Chris",
+    "artist": "The Sky Is Blue Because the Sunset Is Red ft. MoRuf & Pink Siifu",
+    "link": "https://www.youtube.com/watch?v=LrALn7kG-80"
+  },
+  {
+    "track": "Flume",
+    "artist": "Palaces ft. Damon Albarn",
+    "link": "https://www.youtube.com/watch?v=ObNM6AbIY34"
+  },
+  {
+    "track": "Wilco",
+    "artist": "Falling Apart (Right Now)",
+    "link": "https://www.youtube.com/watch?v=DUr1bjehRDU"
+  },
+  {
+    "track": "Logic",
+    "artist": "Therapy Music ft. Russ",
+    "link": "https://www.youtube.com/watch?v=HE1HXmiAw1o"
+  },
+  {
+    "track": "Doja Cat",
+    "artist": "Vegas",
+    "link": "https://www.youtube.com/watch?v=kKpctBHTOGU"
+  },
+  {
+    "track": "Westside Boogie",
+    "artist": "Stuck",
+    "link": "https://www.youtube.com/watch?v=T-wfIruRyiw"
+  },
+  {
+    "track": "Jens Lekman",
+    "artist": "The Linden Trees Are Still in Blossom (Night Falls Over Kortedala Rework)",
+    "link": "https://youtu.be/c7AS17LDRu8"
+  },
+  {
+    "track": "Viagra Boys",
+    "artist": "Troglodyte",
+    "link": "https://www.youtube.com/watch?v=a0s1tNzhkOM"
+  },
+  {
+    "track": "Black Thought & Danger Mouse",
+    "artist": "No Gold Teeth",
+    "link": "https://www.youtube.com/watch?v=yrq1pVgGkMs"
+  },
+  {
+    "track": "Stella Donnelly",
+    "artist": "Lungs",
+    "link": "https://www.youtube.com/watch?v=1fs3K1GteJc"
+  },
+  {
+    "track": "black midi",
+    "artist": "Welcome to Hell",
+    "link": "https://www.youtube.com/watch?v=Efmq_uXt1Rk"
+  },
+  {
+    "track": "Polyphia",
+    "artist": "Playing God",
+    "link": "https://www.youtube.com/watch?v=Z5NoQg8LdDk"
+  },
+  {
+    "track": "Kendrick Lamar",
+    "artist": "N95",
+    "link": "https://www.youtube.com/watch?v=zI383uEwA6Q"
+  },
+  {
+    "track": "Shygirl",
+    "artist": "Firefly",
+    "link": "https://www.youtube.com/watch?v=kEmWsCJzIs4"
+  },
+  {
+    "track": "Diamond Dallas Tex (Lil Texas)",
+    "artist": "Elevate",
+    "link": "https://www.youtube.com/watch?v=2yJgQAQXetI"
+  },
+  {
+    "track": "Bill Wurtz",
+    "artist": "if the world doesn't end",
+    "link": "https://www.youtube.com/watch?v=Np7fFcHFkpg"
+  },
+  {
+    "track": "FrankJavCee",
+    "artist": "Fighting a Giant Crab On the Beach Type Beat",
+    "link": "https://www.youtube.com/watch?v=wCI3IvGSuzg"
+  },
+  {
+    "track": "Death Cab for Cutie",
+    "artist": "Roman Candles",
+    "link": "https://www.youtube.com/watch?v=bGQshorwCGY"
+  },
+  {
+    "track": "Logic",
+    "artist": "Vinyl Days ft. DJ Premiere",
+    "link": "https://www.youtube.com/watch?v=7ouBTgRe1gY"
+  },
+  {
+    "track": "bbno$",
+    "artist": "piccolo",
+    "link": "https://www.youtube.com/watch?v=AMPa3339G5I"
+  },
+  {
+    "track": "Osees",
+    "artist": "Funeral Solution",
+    "link": "https://www.youtube.com/watch?v=HZeOw5yzMzI"
+  },
+  {
+    "track": "Wormrot",
+    "artist": "Behind Closed Doors",
+    "link": "https://www.youtube.com/watch?v=yJGYqFAzsHc"
+  },
+  {
+    "track": "Diana Ross & Tame Impala",
+    "artist": "Turn up the Sunshine",
+    "link": "https://youtu.be/jv8rtXBJxM4"
+  },
+  {
+    "track": "Daniel Avery",
+    "artist": "Chaos Energy",
+    "link": "https://youtu.be/_y5oBIG0ghA"
+  },
+  {
+    "track": "Boris",
+    "artist": "She Is Burning",
+    "link": "https://youtu.be/PdkcZlmwrYw"
+  },
+  {
+    "track": "Xenia Rubinos & Carolina Oliveros",
+    "artist": "No Me Dejes Caer",
+    "link": "https://youtu.be/NmBc6BZHhtA"
+  },
+  {
+    "track": "The Garden",
+    "artist": "Freight Yard",
+    "link": "https://www.youtube.com/watch?v=AOrKhDyHNlk"
+  },
+  {
+    "track": "Logic",
+    "artist": "Orville ft. Like, Blu & Exile",
+    "link": "https://www.youtube.com/watch?v=ZK4qHrudy88"
+  },
+  {
+    "track": "Courting",
+    "artist": "Loaded",
+    "link": "https://www.youtube.com/watch?v=ro4_2d0Qk4o"
+  },
+  {
+    "track": "Rico Nasty",
+    "artist": "Intrusive",
+    "link": "https://www.youtube.com/watch?v=3xkoPYsD9DA"
+  },
+  {
+    "track": "easy life & Kevin Abstract",
+    "artist": "DEAR MISS HOLLOWAY",
+    "link": "https://www.youtube.com/watch?v=nhNvl8sM8KY"
+  },
+  {
+    "track": "Superorganism",
+    "artist": "On & On",
+    "link": "https://www.youtube.com/watch?v=rEbdvw4JMck"
+  },
+  {
+    "track": "Yeah Yeah Yeahs",
+    "artist": "Spitting off the Edge of the World ft. Perfume Genius",
+    "link": "https://youtu.be/ckM_TklU_AQ"
+  },
+  {
+    "track": "CupcakKe",
+    "artist": "H2hoe",
+    "link": "https://www.youtube.com/watch?v=2J4Sz7Q2muk"
+  },
+  {
+    "track": "The Koreatown Oddity",
+    "artist": "Aggro Crag",
+    "link": "https://www.youtube.com/watch?v=lAyoa2Y1N4Y"
+  },
+  {
+    "track": "SEBii",
+    "artist": "Queue3",
+    "link": "https://www.youtube.com/watch?v=09ENJYf_new"
+  },
+  {
+    "track": "Yung Gravy",
+    "artist": "Betty (Get Money)",
+    "link": "https://www.youtube.com/watch?v=8oE5Z2GLhNc"
+  },
+  {
+    "track": "KEN mode",
+    "artist": "A Love Letter",
+    "link": "https://www.youtube.com/watch?v=VkVCcvQswi8"
+  },
+  {
+    "track": "Mike Dimes & JID",
+    "artist": "Home (Remix)",
+    "link": "https://www.youtube.com/watch?v=jGgueg_a-OM"
+  },
+  {
+    "track": "Danger Mouse & Black Thought",
+    "artist": "Because ft. Joey Bada$$ & Russ",
+    "link": "https://youtu.be/Rlnh-gFPrq4"
+  },
+  {
+    "track": "Imperial Triumphant",
+    "artist": "Merkurius Gilded ft. Kenny G & Max Gorelick",
+    "link": "https://www.youtube.com/watch?v=ywcshfrpO3A"
+  },
+  {
+    "track": "Regina Spektor",
+    "artist": "Loveology",
+    "link": "https://youtu.be/lHaetZ-Vu8Y"
+  },
+  {
+    "track": "Joji",
+    "artist": "Glimpse of Us",
+    "link": "https://www.youtube.com/watch?v=NgsWGfUlwJI"
+  },
+  {
+    "track": "Shygirl",
+    "artist": "Come for Me",
+    "link": "https://www.youtube.com/watch?v=FBjiIKBMAJ0"
+  },
+  {
+    "track": "Jesca Hoop",
+    "artist": "Hatred Has a Mother",
+    "link": "https://youtu.be/0thV8KVgDhQ"
+  },
+  {
+    "track": "Metric",
+    "artist": "What Feels Like Eternity",
+    "link": "https://youtu.be/F0RQVKTZQpI"
+  },
+  {
+    "track": "Irreversible Entanglements",
+    "artist": "Down to Earth",
+    "link": "https://www.youtube.com/watch?v=IA2q_vYi7XM"
+  },
+  {
+    "track": "The A's",
+    "artist": "He Needs Me",
+    "link": "https://www.youtube.com/watch?v=0y65W7tIlvg"
+  },
+  {
+    "track": "Moor Mother",
+    "artist": "Woody Shaw ft. Melanie Charles",
+    "link": "https://www.youtube.com/watch?v=-TxK3LjJQnA"
+  },
+  {
+    "track": "The Beths",
+    "artist": "Silence Is Golden",
+    "link": "https://youtu.be/d5ZxW1r1Zc8"
+  },
+  {
+    "track": "Jockstrap",
+    "artist": "Glasgow",
+    "link": "https://youtu.be/_dLOFMxAYuE"
+  },
+  {
+    "track": "Marlon Williams",
+    "artist": "Thinking of Nina",
+    "link": "https://youtu.be/YhaZBN3m2EI"
+  },
+  {
+    "track": "Lambchop",
+    "artist": "Police Dog Blues",
+    "link": "https://youtu.be/OQ7BBAipvzw"
+  },
+  {
+    "track": "black midi",
+    "artist": "Eat Men Eat",
+    "link": "https://youtu.be/dflSgJG4g3M"
+  },
+  {
+    "track": "The Soft Moon",
+    "artist": "Him ft. fish narc",
+    "link": "https://www.youtube.com/watch?v=M-8sAas0hC0"
+  },
+  {
+    "track": "Steve Lacy",
+    "artist": "Mercury",
+    "link": "https://www.youtube.com/watch?v=OHaQyv9Plv4"
+  },
+  {
+    "track": "Gorillaz",
+    "artist": "Cracker Island",
+    "link": "https://youtu.be/24tFMeloa18"
+  },
+  {
+    "track": "Beyoncé",
+    "artist": "Break My Soul",
+    "link": "https://www.youtube.com/watch?v=yjki-9Pthh0"
+  },
+  {
+    "track": "Dev Lemons",
+    "artist": "CEO of My Ass",
+    "link": "https://www.youtube.com/watch?v=5932H5yrrGE"
+  },
+  {
+    "track": "Moor Mother",
+    "artist": "RAP JASM ft. AKAI SOLO & justmadnice",
+    "link": "https://www.youtube.com/watch?v=uVIA5CfW1nY"
+  },
+  {
+    "track": "Mura Masa, Channel Tres & Shygirl",
+    "artist": "hollaback bitch",
+    "link": "https://www.youtube.com/watch?v=jlxeyfYxdqA"
+  },
+  {
+    "track": "Meridian Brothers & El Grupo Renacimiento",
+    "artist": "Triste son",
+    "link": "https://www.youtube.com/watch?v=5_kHE1vxBZ0"
+  },
+  {
+    "track": "Safety Trance & Arca",
+    "artist": "El Alma Que Te Trajo",
+    "link": "https://www.youtube.com/watch?v=rCHYHx68VcE"
+  },
+  {
+    "track": "Wormrot",
+    "artist": "Weeping Willow",
+    "link": "https://www.youtube.com/watch?v=VVk_C_wp1j0"
+  },
+  {
+    "track": "Dot da Genius, JID, Kid Cudi, Denzel Curry",
+    "artist": "Talk About Me",
+    "link": "https://www.youtube.com/watch?v=86e7ORFoFVk"
+  },
+  {
+    "track": "YUKIKA",
+    "artist": "Scent",
+    "link": "https://www.youtube.com/watch?v=JKguI94gt-c"
+  },
+  {
+    "track": "death's dynamic shroud",
+    "artist": "Messe de E-102",
+    "link": "https://www.youtube.com/watch?v=azB_8kjIUuw"
+  },
+  {
+    "track": "Chat Pile",
+    "artist": "Why",
+    "link": "https://www.youtube.com/watch?v=sER0FzJO-c0"
+  },
+  {
+    "track": "COBRAH",
+    "artist": "Brand New Bitch",
+    "link": "https://www.youtube.com/watch?v=N1dnK0HHBUk"
+  },
+  {
+    "track": "WILLOW",
+    "artist": "(maybe) it's my fault",
+    "link": "https://www.youtube.com/watch?v=oF3caRwbKq4"
+  },
+  {
+    "track": "Stella Donnelly",
+    "artist": "Flood",
+    "link": "https://youtu.be/5yV4pywH_KA"
+  },
+  {
+    "track": "Alex G",
+    "artist": "Runner",
+    "link": "https://www.youtube.com/watch?v=JFaMCIVHz2I"
+  },
+  {
+    "track": "Cheekface",
+    "artist": "Pledge Drive",
+    "link": "https://www.youtube.com/watch?v=lOSXqWTvygY"
+  },
+  {
+    "track": "Living Hour",
+    "artist": "No Body",
+    "link": "https://www.youtube.com/watch?v=n0T0LZm8P7Y&t=199s"
+  },
+  {
+    "track": "Margaret Glaspy",
+    "artist": "My Body My Choice",
+    "link": "https://youtu.be/3sC0RTng9lk"
+  },
+  {
+    "track": "Hot Chip",
+    "artist": "Eleanor",
+    "link": "https://youtu.be/nRqHrmAePDE"
+  },
+  {
+    "track": "Steve Lacy",
+    "artist": "Bad Habit",
+    "link": "https://www.youtube.com/watch?v=VF-FGf_ZZiI"
+  },
+  {
+    "track": "Jane Remover",
+    "artist": "Royal Blue Walls",
+    "link": "https://www.youtube.com/watch?v=Z9Rbrch4hUs"
+  },
+  {
+    "track": "Joey Bada$$",
+    "artist": "Survivor's Guilt",
+    "link": "https://www.youtube.com/watch?v=aMe80LEeQcE"
+  },
+  {
+    "track": "CHAI",
+    "artist": "Hero Journey ft. Superorganism",
+    "link": "https://www.youtube.com/watch?v=0avSSQr63f8"
+  },
+  {
+    "track": "NLE Choppa",
+    "artist": "In the UK",
+    "link": "https://www.youtube.com/watch?v=uwllF3lvGLQ"
+  },
+  {
+    "track": "Superorganism",
+    "artist": "Into the Sun ft. Stephen Malkmus",
+    "link": "https://youtu.be/ObfX2kpeJnk"
+  },
+  {
+    "track": "Imperial Triumphant",
+    "artist": "Tower of Glory, City of Shame",
+    "link": "https://www.youtube.com/watch?v=c25Snu9XUBQ"
+  },
+  {
+    "track": "Metric",
+    "artist": "False Dichotomy",
+    "link": "https://youtu.be/fxAIn2OOpwI"
+  },
+  {
+    "track": "Cryalot",
+    "artist": "Hell Is Here",
+    "link": "https://www.youtube.com/watch?v=4TashXWQ0_w"
+  },
+  {
+    "track": "easylife, BENEE",
+    "artist": "OTT",
+    "link": "https://youtu.be/Maa7WVLX2Ts"
+  },
+  {
+    "track": "Alice Longyu Gao & Oli Sykes",
+    "artist": "Believe the Hype",
+    "link": "https://www.youtube.com/watch?v=r4GR7EIL6vg"
+  },
+  {
+    "track": "Doechii",
+    "artist": "Bitch I'm Nice",
+    "link": "https://www.youtube.com/watch?v=U6I1cp5eWz8"
+  },
+  {
+    "track": "Sudan Archives",
+    "artist": "NBPQ (Topless)",
+    "link": "https://youtu.be/yxKYFA_fz6s"
+  },
+  {
+    "track": "DOMi / JD BECK & Anderson .Paak",
+    "artist": "Take a Chance",
+    "link": "https://www.youtube.com/watch?v=jJVe_6N8cLY"
+  },
+  {
+    "track": "Joey Bada$$",
+    "artist": "Zipcodes",
+    "link": "https://www.youtube.com/watch?v=Fy3070QgHV0"
+  },
+  {
+    "track": "The A's",
+    "artist": "When I Die",
+    "link": "https://www.youtube.com/watch?v=7vuwbc70cug"
+  },
+  {
+    "track": "KEN mode",
+    "artist": "But They Respect My Tactics",
+    "link": "https://www.youtube.com/watch?v=ZIZ7M6f3BQ0"
+  },
+  {
+    "track": "Latto",
+    "artist": "PUSSY",
+    "link": "https://www.youtube.com/watch?v=Oe3KMBOwMes"
+  },
+  {
+    "track": "Jesca Hoop",
+    "artist": "Sioux Falls",
+    "link": "https://youtu.be/d5Vzroqo-BM"
+  },
+  {
+    "track": "Kai Whiston",
+    "artist": "Carrier Signal ft. EDEN",
+    "link": "https://www.youtube.com/watch?v=eZ-FkqRQnIY"
+  },
+  {
+    "track": "black midi",
+    "artist": "Sugar/Tzu",
+    "link": "https://youtu.be/8D3TrpQ_nFo"
+  },
+  {
+    "track": "Show Me the Body",
+    "artist": "Loose Talk",
+    "link": "https://www.youtube.com/watch?v=oZ8mbopkG-g"
+  },
+  {
+    "track": "The Beths",
+    "artist": "Expert in a Dying Field",
+    "link": "https://youtu.be/-KACt6YhOyY"
+  },
+  {
+    "track": "Madi Diaz",
+    "artist": "Hangover",
+    "link": "https://youtu.be/RLTL4CNZs0U"
+  },
+  {
+    "track": "Dom Dolla & Clementine Douglas",
+    "artist": "Miracle Maker",
+    "link": "https://www.youtube.com/watch?v=U6Xz8foh7XQ"
+  },
+  {
+    "track": "Sorry",
+    "artist": "Let the Lights On",
+    "link": "https://youtu.be/rNaBYq1-Tqs"
+  },
+  {
+    "track": "Dangermouse & Black Thought",
+    "artist": "Aquamarine ft. Michael Kiwanuka",
+    "link": "https://youtu.be/MHvNapx5PFo"
+  },
+  {
+    "track": "j-hope",
+    "artist": "Arson",
+    "link": "https://www.youtube.com/watch?v=QmpTkkaKYSU"
+  },
+  {
+    "track": "The Mountain Goats",
+    "artist": "Wage Wars Get Rich Die Handsome",
+    "link": "https://youtu.be/FesuReuhye0"
+  },
+  {
+    "track": "Porter Robinson & League of Legends",
+    "artist": "Everything Goes On",
+    "link": "https://www.youtube.com/watch?v=eEFVxI9lqjU"
+  },
+  {
+    "track": "FINNEAS",
+    "artist": "Mona Lisa, Mona Lisa",
+    "link": "https://youtu.be/2NdluzeDNow"
+  },
+  {
+    "track": "Shygirl",
+    "artist": "Coochie (a bedtime story)",
+    "link": "https://www.youtube.com/watch?v=CsJi7OQBJYA"
+  },
+  {
+    "track": "Genesis Owusu",
+    "artist": "GTFO",
+    "link": "https://www.youtube.com/watch?v=OlgRyo1bKCw"
+  },
+  {
+    "track": "Billie Eilish",
+    "artist": "Guitar Songs (Single)",
+    "link": "https://youtu.be/_JGGLJMpVks"
+  },
+  {
+    "track": "Jessie Ware",
+    "artist": "Free Yourself",
+    "link": "https://youtu.be/-U-ls1W7Sio"
+  },
+  {
+    "track": "Doechii & SZA",
+    "artist": "Persuasive",
+    "link": "https://www.youtube.com/watch?v=6T621eIlBPE"
+  },
+  {
+    "track": "Chat Pile",
+    "artist": "Wicked Puppet Dance",
+    "link": "https://www.youtube.com/watch?v=XjV0fczvA3o"
+  },
+  {
+    "track": "Osees",
+    "artist": "A Foul Form",
+    "link": "https://www.youtube.com/watch?v=a5DN0teDMkI"
+  },
+  {
+    "track": "Polyphia",
+    "artist": "Neurotica",
+    "link": "https://www.youtube.com/watch?v=NkuOJNBICyQ"
+  },
+  {
+    "track": "Lil Uzi Vert",
+    "artist": "Hittin My Shoulder",
+    "link": "https://soundcloud.com/liluzivert/sets/red-white-ep"
+  },
+  {
+    "track": "Titus Andronicus",
+    "artist": "(I'm) Screwed",
+    "link": "https://youtu.be/l9He-ZJCl3Y"
+  },
+  {
+    "track": "Preoccupations",
+    "artist": "Death of Melody",
+    "link": "https://youtu.be/yi6jdCx56AA"
+  },
+  {
+    "track": "Charli XCX",
+    "artist": "Hot Girl (Bodies Bodies Bodies)",
+    "link": "https://www.youtube.com/watch?v=vKIU3Q5oiMg"
+  },
+  {
+    "track": "Rosalía",
+    "artist": "Despechá",
+    "link": "https://www.youtube.com/watch?v=Y2ESxHKuSOk"
+  },
+  {
+    "track": "Quavo & Takeoff",
+    "artist": "Us vs. Them ft. Gucci Mane",
+    "link": "https://www.youtube.com/watch?v=A80MkpiMHVI"
+  },
+  {
+    "track": "SBTRKT",
+    "artist": "Miss the Days",
+    "link": "https://www.youtube.com/watch?v=jx878XZJZKE"
+  },
+  {
+    "track": "Rina Sawayama",
+    "artist": "Hold the Girl",
+    "link": "https://www.youtube.com/watch?v=Zdr1AsgBFCU"
+  },
+  {
+    "track": "OFF!",
+    "artist": "War Above Los Angeles",
+    "link": "https://youtu.be/LBWUgluGdTw"
+  },
+  {
+    "track": "Sampa the Great",
+    "artist": "Bona",
+    "link": "https://youtu.be/WYmCWEx6x8M"
+  },
+  {
+    "track": "U.S. Girls",
+    "artist": "So Typically Now",
+    "link": "https://youtu.be/S4O_dChJKII"
+  },
+  {
+    "track": "Gucci Mane",
+    "artist": "Dissin the Dead",
+    "link": "https://www.youtube.com/watch?v=zpxecHNkGaM"
+  },
+  {
+    "track": "The Comet Is Coming",
+    "artist": "CODE",
+    "link": "https://youtu.be/eUiI1SJqgRo"
+  },
+  {
+    "track": "Cryalot",
+    "artist": "Touch the Sun",
+    "link": "https://www.youtube.com/watch?v=nN_d1fkkSr0"
+  },
+  {
+    "track": "Black Soprano Family: Benny the Butcher, Heem, Rick Hyde & DJ Premier",
+    "artist": "Times Is Rough",
+    "link": "https://www.youtube.com/watch?v=gV4zeC1G4Q4"
+  },
+  {
+    "track": "KAYTRANADA & Anderson .Paak",
+    "artist": "Twin Flame",
+    "link": "https://www.youtube.com/watch?v=nFk20L7MrDw"
+  },
+  {
+    "track": "Doechii & Rico Nasty",
+    "artist": "Swamp Bitches",
+    "link": "https://www.youtube.com/watch?v=J3QcCLzwrj0"
+  },
+  {
+    "track": "Hot Chip",
+    "artist": "Freakout / Release",
+    "link": "https://youtu.be/2vod4AuRjZ4"
+  },
+  {
+    "track": "Louis Cole",
+    "artist": "Let It Happen",
+    "link": "https://www.youtube.com/watch?v=fkQgAN9xRO4"
+  },
+  {
+    "track": "WILLOW",
+    "artist": "hover like a GODDESS",
+    "link": "https://www.youtube.com/watch?v=yDOj9Tj-0Rg"
+  },
+  {
+    "track": "Bill Wurtz",
+    "artist": "i like to wear soft clothing",
+    "link": "https://www.youtube.com/watch?v=dvrBEyKdIiU"
+  },
+  {
+    "track": "DACEY",
+    "artist": "STEPMOM",
+    "link": "https://www.youtube.com/watch?v=sER0gNmkfvo"
+  },
+  {
+    "track": "JER",
+    "artist": "Ska Has Progressed Past the Need for Incels",
+    "link": "https://www.youtube.com/watch?v=wgHuohh-LUs"
+  },
+  {
+    "track": "Boris",
+    "artist": "My Name Is blank",
+    "link": "https://youtu.be/yBHB3l1ZtVg"
+  },
+  {
+    "track": "Stella Donnelly",
+    "artist": "How Was Your Day?",
+    "link": "https://youtu.be/MyV1dN2efgU"
+  },
+  {
+    "track": "EKKSTACY",
+    "artist": "wish i was dead",
+    "link": "https://www.youtube.com/watch?v=xk4dSy8VPiU"
+  },
+  {
+    "track": "JID",
+    "artist": "Dance Now ft. Kenny Mason",
+    "link": "https://www.youtube.com/watch?v=EVlGLtCnN-Y"
+  },
+  {
+    "track": "Nicki Minaj",
+    "artist": "Super Freaky Girl",
+    "link": "https://www.youtube.com/watch?v=HInFfnzyqR4"
+  },
+  {
+    "track": "PinkPantheress & Sam Gellaitry",
+    "artist": "Picture in my mind",
+    "link": "https://www.youtube.com/watch?v=SIHS1lLzqOo"
+  },
+  {
+    "track": "Four Tet",
+    "artist": "Mango Feedback",
+    "link": "https://www.youtube.com/watch?v=7AYwLLvbyzA"
+  },
+  {
+    "track": "Death's Dynamic Shroud",
+    "artist": "Fall for Me",
+    "link": "https://www.youtube.com/watch?v=jC2T963FYU0"
+  },
+  {
+    "track": "First Aid Kit",
+    "artist": "Out of My Head",
+    "link": "https://www.youtube.com/watch?v=PmSwUCdQQC4"
+  },
+  {
+    "track": "deadmau5",
+    "artist": "My Heart Has Teeth ft. Skylar Grey",
+    "link": "https://www.youtube.com/watch?v=EvkCcbd7oJM"
+  },
+  {
+    "track": "Open Mike Eagle",
+    "artist": "I'll Fight You",
+    "link": "https://openmikeeagle.bandcamp.com/track/ill-fight-you"
+  },
+  {
+    "track": "Yeah Yeah Yeahs",
+    "artist": "Burning",
+    "link": "https://www.youtube.com/watch?v=vSffKUyr0lk"
+  },
+  {
+    "track": "Sigh",
+    "artist": "Mayonaka No Kaii",
+    "link": "https://peaceville.bandcamp.com/track/mayonaka-no-kaii"
+  },
+  {
+    "track": "Himera",
+    "artist": "Umbrella",
+    "link": "https://himera.bandcamp.com/track/umbrella-unsls017"
+  },
+  {
+    "track": "Bill Wurtz",
+    "artist": "The Ending",
+    "link": "https://www.youtube.com/watch?v=1MvzHGmwgvg"
+  },
+  {
+    "track": "Louis Cole",
+    "artist": "I'm Tight",
+    "link": "https://www.youtube.com/watch?v=u9XrWB-u1vc"
+  },
+  {
+    "track": "G Jones",
+    "artist": "Operator",
+    "link": "https://www.youtube.com/watch?v=64ooTj50ejo"
+  },
+  {
+    "track": "Autopsy",
+    "artist": "Skin by Skin",
+    "link": "https://www.youtube.com/watch?v=fY1XB7Jlaeo"
+  },
+  {
+    "track": "The Beths",
+    "artist": "Knees Deep",
+    "link": "https://www.youtube.com/watch?v=1XriDeVHO8w"
+  },
+  {
+    "track": "Drugdealer",
+    "artist": "Someone to Love",
+    "link": "https://youtu.be/WN7O_gCKq50"
+  },
+  {
+    "track": "JELEEL!",
+    "artist": "STONE COLD",
+    "link": "https://www.youtube.com/watch?v=aHtIUNWUZzs"
+  },
+  {
+    "track": "Magdalena Bay",
+    "artist": "All You Do",
+    "link": "https://www.youtube.com/watch?v=wxaJ8aiURgU"
+  },
+  {
+    "track": "OFF!",
+    "artist": "Kill to Be Heard",
+    "link": "https://www.youtube.com/watch?v=I613dabsscU"
+  },
+  {
+    "track": "Dying Fetus",
+    "artist": "Compulsion for Cruelty",
+    "link": "https://www.youtube.com/watch?v=eknenF4E72c"
+  },
+  {
+    "track": "Pierce the Veil",
+    "artist": "Pass the Nirvana",
+    "link": "https://www.youtube.com/watch?v=p5-RDiFiQgI"
+  },
+  {
+    "track": "Mount Kimbie & Dom Maker",
+    "artist": "In Your Eyes ft. slowthai & Danny Brown",
+    "link": "https://www.youtube.com/watch?v=sldUhbbH9-E"
+  },
+  {
+    "track": "Pink Siifu & Real Bad Man",
+    "artist": "Looking for Water ft. Boldy James",
+    "link": "https://www.youtube.com/watch?v=Ir54OXjs_18"
+  },
+  {
+    "track": "Shygirl",
+    "artist": "Nike",
+    "link": "https://www.youtube.com/watch?v=D7mJ67d1mQk"
+  },
+  {
+    "track": "Plains",
+    "artist": "Abilene",
+    "link": "https://youtu.be/-WbS5ntkkF8"
+  },
+  {
+    "track": "Crack Cloud",
+    "artist": "Costly Engineered Illusion",
+    "link": "https://youtu.be/QeuauwF6HlU"
+  },
+  {
+    "track": "Fire-Toolz",
+    "artist": "Soda Lake with Game Genie / Vedic Software ~ Wet Interfacing",
+    "link": "https://fire-toolz.bandcamp.com/album/i-will-not-use-the-bodys-eyes-today?from=fanpub_fnb"
+  },
+  {
+    "track": "King Gizzard & The Lizard Wizard",
+    "artist": "Ice V",
+    "link": "https://youtu.be/ydeV1_8pM4o"
+  },
+  {
+    "track": "Björk",
+    "artist": "Atopos ft. Kasimyn",
+    "link": "https://youtu.be/9FD2mUonh5s"
+  },
+  {
+    "track": "Gilla Band",
+    "artist": "Backwash",
+    "link": "https://www.youtube.com/watch?v=q07rF2E-0Hw"
+  },
+  {
+    "track": "Deerhoof",
+    "artist": "My Lovely Cat!",
+    "link": "https://deerhoof.bandcamp.com/track/my-lovely-cat"
+  },
+  {
+    "track": "Mile End",
+    "artist": "FCHC",
+    "link": "https://mileendband.bandcamp.com/track/fchc"
+  },
+  {
+    "track": "Carly Rae Jepsen",
+    "artist": "Talking to Yourself",
+    "link": "https://www.youtube.com/watch?v=9u2PPXhEelo"
+  },
+  {
+    "track": "Bladee",
+    "artist": "Drain Story",
+    "link": "https://www.youtube.com/watch?v=NGdiQm4wI2M"
+  },
+  {
+    "track": "Ab-Soul",
+    "artist": "Moonshooter",
+    "link": "https://www.youtube.com/watch?v=sDfjqudjYF4"
+  },
+  {
+    "track": "Show Me the Body",
+    "artist": "We Came to Play",
+    "link": "https://www.youtube.com/watch?v=qO2pLviiTi8"
+  },
+  {
+    "track": "Weyes Blood",
+    "artist": "It's Not Just Me, It's Everybody",
+    "link": "https://youtu.be/TzJqr_4KSIo"
+  },
+  {
+    "track": "Gilla Band",
+    "artist": "Post Ryan",
+    "link": "https://youtu.be/fk_UX8sQ1LY"
+  },
+  {
+    "track": "Dehd",
+    "artist": "Eggshells",
+    "link": "https://youtu.be/y3NujKtwPWs"
+  },
+  {
+    "track": "Worm",
+    "artist": "Shadowside Kingdom",
+    "link": "https://www.youtube.com/watch?v=nfOCOab4yac"
+  },
+  {
+    "track": "Baby Tate",
+    "artist": "Dancing Queen / Yasss Queen",
+    "link": "https://www.youtube.com/watch?v=8MUwBrHK85g"
+  },
+  {
+    "track": "Natalia Lafourcade",
+    "artist": "De todas las flores",
+    "link": "https://www.youtube.com/watch?v=3ejTMieCiWs"
+  },
+  {
+    "track": "Quadeca",
+    "artist": "Born Yesterday",
+    "link": "https://www.youtube.com/watch?v=Ig17K38Fy0Y"
+  },
+  {
+    "track": "YG",
+    "artist": "Maniac",
+    "link": "https://www.youtube.com/watch?v=N4ScH0796BA"
+  },
+  {
+    "track": "The 1975",
+    "artist": "All I Need to Hear",
+    "link": "https://www.youtube.com/watch?v=8YDyhUh2xrU"
+  },
+  {
+    "track": "FLO",
+    "artist": "Not My Job",
+    "link": "https://www.youtube.com/watch?v=PyfLgrL1PGU"
+  },
+  {
+    "track": "Mamalarky",
+    "artist": "Shining Armor",
+    "link": "https://www.youtube.com/watch?v=65KhdCeKQhY"
+  },
+  {
+    "track": "Björk",
+    "artist": "Ancestress ft. Sindri Eldon",
+    "link": "https://youtu.be/1QRIgD1bAjI"
+  },
+  {
+    "track": "Alvvays",
+    "artist": "Very Online Guy",
+    "link": "https://youtu.be/koyW2p2vksY"
+  },
+  {
+    "track": "Red Hot Chili Peppers",
+    "artist": "Eddie",
+    "link": "https://www.youtube.com/watch?v=pXMEXCT5ohY"
+  },
+  {
+    "track": "Jamie xx",
+    "artist": "KILL DEM",
+    "link": "https://www.youtube.com/watch?v=nJHhTlmooM0"
+  },
+  {
+    "track": "Freddie Gibbs",
+    "artist": "Dark Hearted",
+    "link": "https://www.youtube.com/watch?v=BK72YNkZwQ4"
+  },
+  {
+    "track": "Autopsy",
+    "artist": "Knife Slice Axe Chop",
+    "link": "https://www.youtube.com/watch?v=2tJoIR0Asfc"
+  },
+  {
+    "track": "The Cool Kids",
+    "artist": "Sparklers ft. KEY!, Reese LAFLARE & Chuck II",
+    "link": "https://www.youtube.com/watch?v=00JrkwZJDuM"
+  },
+  {
+    "track": "Alice Longyu Gao",
+    "artist": "Make U Heart Me",
+    "link": "https://www.youtube.com/watch?v=PyQI282tOOI"
+  },
+  {
+    "track": "Magdalena Bay",
+    "artist": "Unconditional",
+    "link": "https://youtu.be/hQjqyxC97gA"
+  },
+  {
+    "track": "LCD Soundsystem",
+    "artist": "new body rhumba",
+    "link": "https://youtu.be/JG17jiPdbb0"
+  },
+  {
+    "track": "Wings of Desire",
+    "artist": "Choose a Life",
+    "link": "https://youtu.be/y4Bx4DDizM0"
+  },
+  {
+    "track": "Divorce",
+    "artist": "Checking Out",
+    "link": "https://youtu.be/jLy1d5wC7mU"
+  },
+  {
+    "track": "M.I.A.",
+    "artist": "Beep",
+    "link": "https://www.youtube.com/watch?v=4y-ejCCrIUA"
+  },
+  {
+    "track": "Paramore",
+    "artist": "This Is Why",
+    "link": "https://youtu.be/xIYJ7VaSxYY"
+  },
+  {
+    "track": "Louis Cole",
+    "artist": "Dead Inside Shuffle",
+    "link": "https://www.youtube.com/watch?v=RoG-nrvKKZc"
+  },
+  {
+    "track": "Smino",
+    "artist": "90 Proof ft. J. Cole",
+    "link": "https://www.youtube.com/watch?v=1blOUbdxb4I"
+  },
+  {
+    "track": "Men I Trust",
+    "artist": "Billie Toppy",
+    "link": "https://www.youtube.com/watch?v=HAK5D3drObI"
+  },
+  {
+    "track": "Bree Runway",
+    "artist": "That Girl",
+    "link": "https://www.youtube.com/watch?v=3OYjXb7Yr30"
+  },
+  {
+    "track": "Polyphia",
+    "artist": "Ego Death ft. Steve Vai",
+    "link": "https://www.youtube.com/watch?v=1JNmz17gnMw"
+  },
+  {
+    "track": "Jean Dawson",
+    "artist": "BAD FRUIT* ft. Earl Sweatshirt",
+    "link": "https://www.youtube.com/watch?v=3hRWsICXMyk"
+  },
+  {
+    "track": "Jazmine Sullivan",
+    "artist": "Stand Up",
+    "link": "https://youtu.be/YSYtUDDW1WU"
+  },
+  {
+    "track": "Carly Rae Jepsen",
+    "artist": "The Loneliest Time ft. Rufus Wainwright",
+    "link": "https://youtu.be/WwZjjiD8eoE"
+  },
+  {
+    "track": "Fever Ray",
+    "artist": "What They Call Us",
+    "link": "https://www.youtube.com/watch?v=VudTAeQeA9o"
+  },
+  {
+    "track": "Jamila Woods",
+    "artist": "Boundaries",
+    "link": "https://youtu.be/XPd1cB2yy4o"
+  },
+  {
+    "track": "Liturgy",
+    "artist": "93696",
+    "link": "https://liturgy.bandcamp.com/album/93696"
+  },
+  {
+    "track": "Open Mike Eagle",
+    "artist": "Circuit City ft. still rift & Video Dave",
+    "link": "https://youtu.be/HJsWoc-d6ok"
+  },
+  {
+    "track": "Jordana",
+    "artist": "SYT",
+    "link": "https://youtu.be/tuGDCUakP9U"
+  },
+  {
+    "track": "King Gizzard & The Lizard Wizard",
+    "artist": "Iron Lung",
+    "link": "https://youtu.be/Njk2YAgNMnE"
+  },
+  {
+    "track": "Men I Trust",
+    "artist": "Girl",
+    "link": "https://www.youtube.com/watch?v=6Y9gxXsFoI8"
+  },
+  {
+    "track": "Tkay Maidza",
+    "artist": "High Beams (JPEGMAFIA Remix)",
+    "link": "https://www.youtube.com/watch?v=J9diGjY4o6s"
+  },
+  {
+    "track": "Weyes Blood",
+    "artist": "Grapevine",
+    "link": "https://youtu.be/uzKQP141Vuw"
+  },
+  {
+    "track": "G Jones & Eprom",
+    "artist": "R.A.V.E.",
+    "link": "https://www.youtube.com/watch?v=ux6FpKi_khE"
+  },
+  {
+    "track": "Plains",
+    "artist": "Hurricane",
+    "link": "https://youtu.be/0OBxqFV1Fq4"
+  },
+  {
+    "track": "Lil Yachty",
+    "artist": "Poland",
+    "link": "https://www.youtube.com/watch?v=s9PzYuVwCSE"
+  },
+  {
+    "track": "Carly Rae Jepsen",
+    "artist": "Surrender My Heart",
+    "link": "https://www.youtube.com/watch?v=oKptqOwiYX0"
+  },
+  {
+    "track": "Ab-Soul",
+    "artist": "Do Better ft. Zacari",
+    "link": "https://youtu.be/baTxdSdYR5E"
+  },
+  {
+    "track": "Young Fathers",
+    "artist": "I Saw",
+    "link": "https://youtu.be/uPyC0JUfZrU"
+  },
+  {
+    "track": "NxWorries (Anderson .Paak & Knxwledge)",
+    "artist": "Where I Go ft. H.E.R.",
+    "link": "https://youtu.be/-w7Kve9SqUo"
+  },
+  {
+    "track": "Kelela",
+    "artist": "Happy Ending",
+    "link": "https://youtu.be/lhJpOjqho8s"
+  },
+  {
+    "track": "Thaiboy Digital",
+    "artist": "True Love ft. Yung Lean",
+    "link": "https://youtu.be/5sLNrS9Fqfs"
+  },
+  {
+    "track": "Guerilla Toss",
+    "artist": "Heathen Money",
+    "link": "https://songsforclimatejustice.bandcamp.com/track/heathen-money"
+  },
+  {
+    "track": "The Go! Team",
+    "artist": "Look Away, Look Away ft. Star Feminine Band",
+    "link": "https://youtu.be/WlfkjwNbM8E"
+  },
+  {
+    "track": "Rihanna",
+    "artist": "Lift Me Up",
+    "link": "https://www.youtube.com/watch?v=Mx_OexsUI2M"
+  },
+  {
+    "track": "Kodak Black",
+    "artist": "300 Blackout",
+    "link": "https://www.youtube.com/watch?v=l2Pe9ZN7-4c"
+  },
+  {
+    "track": "Juice WRLD",
+    "artist": "In My Head",
+    "link": "https://www.youtube.com/watch?v=DqZhP-Vuxgs"
+  },
+  {
+    "track": "Ski Mask the Slump God",
+    "artist": "OOGA BOOGA!",
+    "link": "https://www.youtube.com/watch?v=IWnAm2wJS-E"
+  },
+  {
+    "track": "Algiers",
+    "artist": "Irreversible Damage ft. Zack de la Rocha",
+    "link": "https://youtu.be/sfkWWzQPNrs"
+  },
+  {
+    "track": "U.S. Girls",
+    "artist": "Bless This Mess",
+    "link": "https://youtu.be/i-mmfWC5-d4"
+  },
+  {
+    "track": "Quadeca",
+    "artist": "Tell Me a Joke",
+    "link": "https://www.youtube.com/watch?v=twQ6kKjtBkY"
+  },
+  {
+    "track": "Y2K & JPEGMAFIA",
+    "artist": "Dirt",
+    "link": "https://www.youtube.com/watch?v=1ySfQMoCZKg"
+  },
+  {
+    "track": "Joey Valence x Brae x Logic",
+    "artist": "Tanaka 2",
+    "link": "https://www.youtube.com/watch?v=J6HOqWm-qIc"
+  },
+  {
+    "track": "Samia",
+    "artist": "Mad at Me ft. papa mbye",
+    "link": "https://youtu.be/Aohi3lSkc1Q"
+  },
+  {
+    "track": "Miss Grit",
+    "artist": "Follow the Cyborg",
+    "link": "https://youtu.be/QZFxE1LcNsM"
+  },
+  {
+    "track": "Yves Tumor",
+    "artist": "God Is a Circle",
+    "link": "https://youtu.be/dLzFdcNewKU"
+  },
+  {
+    "track": "Cheekface",
+    "artist": "If I Catch on Fire Please Put Me Out",
+    "link": "https://cheekface.bandcamp.com/album/dont-ask-b-sides"
+  },
+  {
+    "track": "Temps",
+    "artist": "no, no ft. Quelle Chris, Xenia Rubinos, NNAMDÏ, Shamir",
+    "link": "https://youtu.be/j5aKI53UF8I"
+  },
+  {
+    "track": "Nicole Dollanganger",
+    "artist": "Gold Satin Dreamer",
+    "link": "https://nicoledollanganger.bandcamp.com/track/gold-satin-dreamer"
+  },
+  {
+    "track": "BROCKHAMPTON",
+    "artist": "Big Pussy",
+    "link": "https://youtu.be/OHAGO5e8nBo"
+  },
+  {
+    "track": "Taylor Swift",
+    "artist": "Anti-Hero (Girl Talk Remix)",
+    "link": "https://youtu.be/33BmWp2vgt4"
+  },
+  {
+    "track": "Dev Lemons",
+    "artist": "Ghosted My Dentist",
+    "link": "https://www.youtube.com/watch?v=5Q4VSh6QQck"
+  },
+  {
+    "track": "Fleet Foxes",
+    "artist": "A Sky Like I've Never Seen",
+    "link": "https://www.youtube.com/watch?v=_DDi7lqEmSI"
+  },
+  {
+    "track": "Ahab",
+    "artist": "Prof. Arronax' Descent into the Vast Oceans ft. Ultha",
+    "link": "https://www.youtube.com/watch?v=FOKC1hBPxZg"
+  },
+  {
+    "track": "Hatchie",
+    "artist": "Nosedive",
+    "link": "https://youtu.be/fHzDZD2hoBc"
+  },
+  {
+    "track": "Channel Tres",
+    "artist": "6am",
+    "link": "https://www.youtube.com/watch?v=AQFTC6YKh-U"
+  },
+  {
+    "track": "Fever Ray",
+    "artist": "Carbon Dioxide",
+    "link": "https://www.youtube.com/watch?v=CacWHzB-Dt4"
+  },
+  {
+    "track": "Yard Act vs. Mad Professor",
+    "artist": "Pour More",
+    "link": "https://youtu.be/Pc2dZbz87-8"
+  },
+  {
+    "track": "Chat Pile",
+    "artist": "Tenkiller",
+    "link": "https://youtu.be/U-5FKTNFz1E"
+  },
+  {
+    "track": "Gucci Mane",
+    "artist": "Letter to Takeoff",
+    "link": "https://www.youtube.com/watch?v=n-9F1B_OPAM"
+  },
+  {
+    "track": "Phoebe Bridgers",
+    "artist": "So Much Wine",
+    "link": "https://www.youtube.com/watch?v=4SBhPYhI-XA"
+  },
+  {
+    "track": "Ab-Soul",
+    "artist": "Gang'Nem ft. Fre$h",
+    "link": "https://youtu.be/605sWoD5qxU"
+  },
+  {
+    "track": "Saweetie",
+    "artist": "DON'T SAY NOTHIN'",
+    "link": "https://www.youtube.com/watch?v=hDgG0_CK_jU"
+  },
+  {
+    "track": "Black Belt Eagle Scout",
+    "artist": "My Blood Runs Through This Land",
+    "link": "https://www.youtube.com/watch?v=ntg4az1AsdM"
+  },
+  {
+    "track": "Fousheé",
+    "artist": "Spend the Money ft. Lil Uzi Vert",
+    "link": "https://youtu.be/ybiy_2NQ9ik"
+  },
+  {
+    "track": "Christian Lee Hutson",
+    "artist": "Silent Night",
+    "link": "https://youtu.be/RHWAlvhiAKY"
+  },
+  {
+    "track": "Jane Remover",
+    "artist": "Contingency Song",
+    "link": "https://youtu.be/cLM7xB3UDKc"
+  },
+  {
+    "track": "Fatoumata Diawara",
+    "artist": "Nsera ft. Daman Albarn",
+    "link": "https://youtu.be/VfMDqUSgbck"
+  },
+  {
+    "track": "Shame",
+    "artist": "Fingers of Steel",
+    "link": "https://youtu.be/ULLsuL0y-Fk"
+  },
+  {
+    "track": "Kelela",
+    "artist": "On the Run",
+    "link": "https://youtu.be/getdc1zzvnc"
+  },
+  {
+    "track": "Tkay Maidza",
+    "artist": "Nights in December",
+    "link": "https://youtu.be/2d4FTBml1Pw"
+  },
+  {
+    "track": "JELEEL! & Denzel Curry",
+    "artist": "SHOTS!",
+    "link": "https://www.youtube.com/watch?v=9pY8uXtqsxo"
+  },
+  {
+    "track": "Trueno & JID",
+    "artist": "LO TENGO",
+    "link": "https://www.youtube.com/watch?v=1ccCcz7dvTg"
+  },
+  {
+    "track": "Rachel Chinouriri",
+    "artist": "I'm Not Perfect (But I'm Trying) [Acoustic]",
+    "link": "https://www.youtube.com/watch?v=HBDb4wP5lC8"
+  },
+  {
+    "track": "Wiki & The Alchemist",
+    "artist": "Be Realistic",
+    "link": "https://www.youtube.com/watch?v=NHEoowcxa_I"
+  },
+  {
+    "track": "Kimbra",
+    "artist": "Replay!",
+    "link": "https://www.youtube.com/watch?v=yHwKSosF_QE"
+  },
+  {
+    "track": "Remi Wolf",
+    "artist": "Last Christmas (Wham! Cover)",
+    "link": "https://www.youtube.com/watch?v=s72L59XE-4o"
+  },
+  {
+    "track": "Boris",
+    "artist": " 序章　三叉路",
+    "link": "https://boris.bandcamp.com/album/fade"
+  },
+  {
+    "track": "A$AP Rocky",
+    "artist": "Shittin' Me",
+    "link": "https://www.youtube.com/watch?v=i3ghL5CIFLw"
+  },
+  {
+    "track": "Coi Leray",
+    "artist": "Players",
+    "link": "https://www.youtube.com/watch?v=MZV0CIFQbbE"
+  },
+  {
+    "track": "Metro Boomin & Young Thug",
+    "artist": "Metro Spider",
+    "link": "https://www.youtube.com/watch?v=PlxOXgPasFk"
+  },
+  {
+    "track": "The Go! Team",
+    "artist": "Whammy O ft. Nitty Scott",
+    "link": "https://youtu.be/n4uW1mopr8c"
+  },
+  {
+    "track": "Divorce",
+    "artist": "That Hill",
+    "link": "https://youtu.be/G7bEqlFXqKg"
+  },
+  {
+    "track": "King Tuff",
+    "artist": "Portrait of God",
+    "link": "https://youtu.be/LxNcbZighPM"
+  },
+  {
+    "track": "Storefront Church & Phoebe Bridgers",
+    "artist": "Words (Low Cover)",
+    "link": "https://youtu.be/aarNuzpdmU8"
+  },
+  {
+    "track": "100 gecs",
+    "artist": "Torture Me ft. Skrillex",
+    "link": "https://www.youtube.com/watch?v=vaBFLNWnQ0E"
+  },
+  {
+    "track": "Zulu",
+    "artist": "Fakin' tha Funk",
+    "link": "https://youtu.be/ksguNraZXtY"
+  },
+  {
+    "track": "PinkPantheress",
+    "artist": "Boy's a liar",
+    "link": "https://www.youtube.com/watch?v=U_hj-wT3biU"
+  },
+  {
+    "track": "Paramore",
+    "artist": "The News",
+    "link": "https://youtu.be/YSFa_wOZPXg"
+  },
+  {
+    "track": "Ahab",
+    "artist": "Colossus of the Liquid Graves",
+    "link": "https://www.youtube.com/watch?v=_y16EPGFK2E"
+  },
+  {
+    "track": "Weezer",
+    "artist": "I Want a Dog",
+    "link": "https://www.youtube.com/watch?v=BcjmEOby3Vc"
+  },
+  {
+    "track": "Aesop Rock, Blockhead, Lupe Fiasco",
+    "artist": "Pumpkin Seeds",
+    "link": "https://www.youtube.com/watch?v=JE4HJK4F5K0"
+  },
+  {
+    "track": "Lil Durk",
+    "artist": "Hanging with Wolves",
+    "link": "https://www.youtube.com/watch?v=CnT6NRiTz9M"
+  },
+  {
+    "track": "Hemlocke Springs",
+    "artist": "girlfriend",
+    "link": "https://www.youtube.com/watch?v=aEvbBFV3zB4"
+  },
+  {
+    "track": "Caroline Polachek",
+    "artist": "Welcome to My Island",
+    "link": "https://youtu.be/aDVlugvztQE"
+  },
+  {
+    "track": "Iglooghost",
+    "artist": "Rust Genome",
+    "link": "https://www.youtube.com/watch?v=zPkG-eNQBd8"
+  },
+  {
+    "track": "Gorillaz",
+    "artist": "Skinny Ape",
+    "link": "https://youtu.be/vZWfEqqfDaM"
+  },
+  {
+    "track": "Pure Adult",
+    "artist": "Hot Crusade",
+    "link": "https://youtu.be/qt25SMs4NIc"
+  },
+  {
+    "track": "Lana Del Rey",
+    "artist": "Did you know that there's a tunnel under Ocean Blvd",
+    "link": "https://youtu.be/IuY54A3bOmg"
+  }
 ]
