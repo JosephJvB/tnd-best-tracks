@@ -39,7 +39,7 @@ export const getPlaylistItems = async ({
 }) => {
   try {
     const params: PlaylistItemQuery = {
-      key: process.env.API_KEY,
+      key: process.env.YOUTUBE_API_KEY,
       playlistId,
       part: 'snippet,status',
       maxResults: 50,
