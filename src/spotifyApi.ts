@@ -1,5 +1,6 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
 import { BestTrack } from './tasks/extractBestTracks'
+import { SPOTIFY_DOMAIN, SPOTIFY_ID_LENGTH } from './constants'
 
 const API_BASE_URL = 'https://api.spotify.com/v1'
 const ACCOUNTS_BASE_URL = 'https://accounts.spotify.com/api'
@@ -48,11 +49,16 @@ export const findTrack = async (bestTrack: BestTrack, year: number) => {
       limit: 3,
     }
 
+    const albumId = extractSpotifyId(bestTrack.link, 'album')
+    if (albumId) {
+      params.q += ` album:${albumId}`
+    }
     const res: AxiosResponse<SearchResults<SpotifyTrack>> = await axios({
       method: 'get',
       url: `${API_BASE_URL}/search`,
       params,
     })
+    await new Promise((r) => setTimeout(r, 300))
 
     return res.data
   } catch (e) {
@@ -99,4 +105,25 @@ export const setToken = async () => {
     console.error('setToken failed')
     process.exit()
   }
+}
+
+// https://open.spotify.com/track/1nxudYVyc5RLm8LrSMzeTa?si=-G3WGzRgTDq8OuRa688FMg
+// https://open.spotify.com/album/3BFHembK3fNseQR5kAEE2I
+export const extractSpotifyId = (link: string, type: 'album' | 'track') => {
+  const url = new URL(link)
+  if (url.host !== SPOTIFY_DOMAIN) {
+    return null
+  }
+
+  const [urlType, id] = url.pathname.split('/').slice(1)
+
+  if (urlType !== type) {
+    return null
+  }
+
+  if (id.length !== SPOTIFY_ID_LENGTH) {
+    throw new Error(`failed to parse trackId ${JSON.stringify({ link, id })}`)
+  }
+
+  return id
 }

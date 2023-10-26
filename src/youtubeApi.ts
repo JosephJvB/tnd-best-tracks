@@ -51,6 +51,8 @@ export const getPlaylistItems = async ({
       url: `${BASE_URL}/playlistItems`,
       params,
     })
+    await new Promise((r) => setTimeout(r, 300))
+
     return res.data
   } catch (e) {
     const axError = e as AxiosError

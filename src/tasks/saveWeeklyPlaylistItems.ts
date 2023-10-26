@@ -18,7 +18,6 @@ export const getAllPlaylistItems = async (playlistId: string) => {
     })
     items.push(...res.items)
     pageToken = res.nextPageToken
-    await new Promise((r) => setTimeout(r, 300))
   } while (!!pageToken)
 
   return items
