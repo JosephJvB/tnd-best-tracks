@@ -10,6 +10,17 @@ contentDetails,id,snippet,status
 2. parse description.
   - boy howdy that was not easy
 
+```txt
+2016.json x 199 tracks
+2017.json x 342 tracks
+2018.json x 385 tracks
+2019.json x 486 tracks
+2020.json x 598 tracks
+2021.json x 511 tracks
+2022.json x 441 tracks
+2023.json x 462 tracks
+```
+
 3. lookup each song on spotify and save ids to json
   - gonna need spotify search api
   - https://developer.spotify.com/documentation/web-api/reference/search
