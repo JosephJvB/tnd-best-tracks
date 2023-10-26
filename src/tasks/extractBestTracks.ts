@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync } from 'fs'
 import { PlaylistItem } from '../youtubeApi'
 import { TRACKLISTS_JSON_DIR, PLAYLIST_ITEMS_JSON_PATH } from '../constants'
+import { MANUAL_CORRECTIONS } from '../manualCorrections'
 
 // TODO: refactor - don't just push logic down
 
@@ -165,90 +166,13 @@ export const getBestTrackStr = (line: string) => {
 }
 
 export const descriptionToLines = (description: string) => {
-  return (
-    description
-      .replace(/–/g, '-')
-      .replace(/\n \n/g, '\n\n')
-      .replace(
-        'Brain Tentacles -"The Sadist"',
-        'Brain Tentacles - "The Sadist"'
-      )
-      .replace('SORRY NOT SORRY\nDogtooth: https', 'SORRY NOT SORRY\nhttps')
-      .replace('Model/Actriz- Damocles', 'Model/Actriz - Damocles')
-      .replace(
-        `Bonnie Prince Billy \"I've Made Up My Mind`,
-        `Bonnie Prince Billy - \"I've Made Up My Mind`
-      )
-      .replace('ft. Charlie Wilson\nReview: https', 'ft. Charlie Wilson\nhttps')
-      // multi song
-      .replace(
-        'Björk / Fever Ray co-remixes:\nhttp://bjork.lnk.to/fctheknife \nhttp://bjork.lnk.to/fcfeverray \nhttp://bjork.lnk.to/bjorkremix',
-        [
-          [
-            'Björk - Features Creatures (The Knife Remix)',
-            'http://bjork.lnk.to/fctheknife',
-          ],
-          [
-            'Björk - Features Creatures (Fever Ray Remix)',
-            'http://bjork.lnk.to/fcfeverray',
-          ],
-          [
-            'Fever Ray - This Country Makes It Hard To Fuck (Björk Remix)',
-            'https://bjork.lnk.to/bjorkremix',
-          ],
-        ]
-          .map((p) => p.join('\n'))
-          .join('\n\n')
-      )
-      // multi song
-      .replace(
-        'Nails / Full of Hell split:\nhttp://www.theneedledrop.com/articles/2016/11/nails-full-of-hell-split-7',
-        [
-          [
-            'Nails / Full of Hell - No Longer Under Your Control',
-            'https://open.spotify.com/track/6KIoYx5Xee7TyxNEOtl29k?si=deced926fa6c48e2',
-          ],
-          [
-            'Nails / Full of Hell - Thy Radiant Garotte Exposed',
-            'https://open.spotify.com/track/3XTUzlzeuaLlT7ae17pF70?si=1a0f39504b4c47b3',
-          ],
-          [
-            'Nails / Full of Hell - Bez Bólu',
-            'https://open.spotify.com/track/4WS4lLtwZQ6Ezen9Q0oFqD?si=53b1ce902cd94bc7',
-          ],
-        ]
-          .map((p) => p.join('\n'))
-          .join('\n\n')
-      )
-      // multi song
-      .replace(
-        'Disclosure - Where You Come From (Extended Mix) / Love Can Be So Hard / Where Angels Fear To Tread / Moonlight\nhttps://youtu.be/wslO7YNg3S0\nhttps://youtu.be/4CCfYi1u8Y4\nhttps://youtu.be/stixXyfsJfE\nhttps://youtu.be/yTF7LwR9YEc',
-        [
-          [
-            'Disclosure - Where You Come From (Extended Mix)',
-            'https://youtu.be/wslO7YNg3S0',
-          ],
-          ['Disclosure - Love Can Be So Hard', 'https://youtu.be/4CCfYi1u8Y4'],
-          [
-            'Disclosure - Where Angels Fear To Tread',
-            'https://youtu.be/stixXyfsJfE',
-          ],
-          ['Disclosure - Moonlight', 'https://youtu.be/yTF7LwR9YEc'],
-        ]
-          .map((p) => p.join('\n'))
-          .join('\n\n')
-      )
-      // multi song - just chose one for simplicity
-      .replace(
-        'JP Moregun Mixtape\nhttp://www.jpmoregun.com/',
-        'JP Moregun - Street Signs\nhttps://open.spotify.com/track/1sB9RQHc2ZGFwUNC00YirL?si=74f1c85a180d46b4'
-      )
-      // multi song - just chose one for simplicity
-      .replace(
-        'Aesop Rock / Homeboy Sandman EP\nhttp://www.theneedledrop.com/articles/2016/10/aesop-rock-homeboy-sandman-lice-two-still-buggin',
-        'Lice, Aesop Rock, Homeboy Sandman - Oatmeal Cookies\nhttps://open.spotify.com/track/17AAfKkchZ7GTBH48ODdoF?si=abe23d9591f94927'
-      )
-      .split('\n\n')
-      .map((l) => l.trim())
-  )
+  let temp = description.replace(/–/g, '-').replace(/\n \n/g, '\n\n')
+
+  MANUAL_CORRECTIONS.forEach(({ original, corrected }) => {
+    if (temp.includes(original)) {
+      temp = temp.replace(original, corrected)
+    }
+  })
+
+  return temp.split('\n\n').map((l) => l.trim())
 }

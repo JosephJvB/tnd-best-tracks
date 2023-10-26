@@ -7,6 +7,6 @@ import saveWeeklyPlaylistItems from './tasks/saveWeeklyPlaylistItems'
 
 void (async function () {
   // await saveWeeklyPlaylistItems()
-  // extractBestTracks()
+  extractBestTracks()
   // await assignSpotifyIds()
 })()
