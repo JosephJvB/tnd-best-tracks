@@ -1,29 +1,19 @@
-import { readFileSync, readdirSync, utimes, writeFileSync } from 'fs'
-import {
-  PLAYLISTS_JSON_DIR,
-  SPOTIFY_ID_LENGTH,
-  TRACKLISTS_JSON_DIR,
-} from '../constants'
+import { readFileSync, readdirSync, writeFileSync } from 'fs'
+import { PLAYLISTS_JSON_DIR, TRACKLISTS_JSON_DIR } from '../constants'
 import { BestTrack } from './extractBestTracks'
 import {
   SpotifyTrack,
   extractSpotifyId,
   findTrack,
+  getTrack,
   setToken,
 } from '../spotifyApi'
 
-export type FromYoutube = {
-  fromYoutube: true
-  uri: string
-}
-export type FromSpotify = Pick<SpotifyTrack, 'uri' | 'name'> & {
-  artist: string
-}
 export type PrePlaylistitem = {
   youtubeTrack: BestTrack
-  // we can infer spotify uri from youtube info if the track in the youtube track link is a open.spotify.com link
-  // otherwise we must search spotify
-  spotifyTrack: FromYoutube | FromSpotify
+  spotifyTrack: Pick<SpotifyTrack, 'uri' | 'name'> & {
+    artists: string[]
+  }
 }
 
 export default async function () {
@@ -32,6 +22,7 @@ export default async function () {
   )
 
   await setToken()
+
   for (const jsonFile of bestTrackFiles) {
     const year = parseInt(jsonFile.replace('.json', ''))
     const bestTracks: BestTrack[] = JSON.parse(
@@ -58,17 +49,20 @@ export const preparePlaylistItem = async (
 ): Promise<PrePlaylistitem> => {
   const trackId = extractSpotifyId(track.link, 'track')
   if (trackId) {
+    const result = await getTrack(trackId)
+    const { uri, artists, name } = result
+
     return {
       youtubeTrack: track,
       spotifyTrack: {
-        fromYoutube: true,
-        uri: `spotify:track:${trackId}`,
+        uri,
+        name,
+        artists: artists.map((a) => a.name),
       },
     }
   }
 
   const results = await findTrack(track, year)
-
   const { uri, artists, name } = results.tracks.items[0]
 
   return {
@@ -76,7 +70,7 @@ export const preparePlaylistItem = async (
     spotifyTrack: {
       uri,
       name,
-      artist: artists[0].name,
+      artists: artists.map((a) => a.name),
     },
   }
 }

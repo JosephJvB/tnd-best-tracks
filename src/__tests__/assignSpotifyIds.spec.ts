@@ -1,67 +1,87 @@
-import {
-  FromSpotify,
-  FromYoutube,
-  preparePlaylistItem,
-} from '../tasks/assignSpotifyIds'
+import { preparePlaylistItem } from '../tasks/assignSpotifyIds'
 import * as spotifyApi from '../spotifyApi'
 
 describe('assignSpotifyIds.ts', () => {
   describe('#preparePlaylistItem', () => {
+    const getTrackSpy = jest
+      .spyOn(spotifyApi, 'getTrack')
+      .mockImplementation(jest.fn())
     const findTrackSpy = jest
       .spyOn(spotifyApi, 'findTrack')
       .mockImplementation(jest.fn())
 
-    it('does not call findTrack when link is open.spotify.com/track', async () => {
-      const track = {
+    it('calls getTrack when link is open.spotify.com/track', async () => {
+      const trackId = '4m08vFKrKbjEklzRIBwllU'
+      const youtubeTrack = {
         artist: 'Dizzee Rascal',
         name: 'Money Right ft. Skepta',
-        link: 'https://open.spotify.com/track/4m08vFKrKbjEklzRIBwllU',
+        link: `https://open.spotify.com/track/${trackId}`,
       }
+      const spotifyTrack = {
+        id: trackId,
+        artists: [
+          {
+            name: youtubeTrack.artist,
+          } as spotifyApi.SpotifyArtist,
+        ],
+        name: youtubeTrack.name,
+        uri: `spotify:track:${trackId}`,
+      } as spotifyApi.SpotifyTrack
       const year = 2018
+      getTrackSpy.mockResolvedValueOnce(spotifyTrack)
 
-      const playlistItem = await preparePlaylistItem(track, year)
+      const playlistItem = await preparePlaylistItem(youtubeTrack, year)
 
-      expect(playlistItem.spotifyTrack.uri).toBeDefined()
-      expect(playlistItem.spotifyTrack.uri).toBe(
-        'spotify:track:4m08vFKrKbjEklzRIBwllU'
-      )
-      expect((playlistItem.spotifyTrack as FromYoutube).fromYoutube).toBe(true)
+      expect(playlistItem).toEqual({
+        youtubeTrack: youtubeTrack,
+        spotifyTrack: {
+          uri: spotifyTrack.uri,
+          name: spotifyTrack.name,
+          artists: spotifyTrack.artists.map((a) => a.name),
+        },
+      })
+      expect(getTrackSpy).toBeCalledTimes(1)
       expect(findTrackSpy).toBeCalledTimes(0)
     })
 
     it('calls findTrack when link is open.spotify.com/album', async () => {
-      const track = {
+      const trackId = '4EdIYV0iL5DFpA9V4c7pwO'
+      const youtubeTrack = {
         artist: 'Jessie Ware',
         name: 'Egoista',
-        link: 'https://open.spotify.com/album/4EdIYV0iL5DFpA9V4c7pwO',
+        link: `https://open.spotify.com/album/${trackId}`,
       }
+      const spotifyTrack = {
+        id: trackId,
+        artists: [
+          {
+            name: youtubeTrack.artist,
+          } as spotifyApi.SpotifyArtist,
+        ],
+        name: youtubeTrack.name,
+        uri: `spotify:track:${trackId}`,
+      } as spotifyApi.SpotifyTrack
+
       const year = 2017
 
       findTrackSpy.mockResolvedValueOnce({
         tracks: {
           href: '',
-          items: [
-            {
-              uri: 'spotify:track:abc123',
-              name: track.name,
-              artists: [
-                {
-                  name: track.artist,
-                } as spotifyApi.SpotifyArtist,
-              ],
-            } as spotifyApi.SpotifyTrack,
-          ],
+          items: [spotifyTrack],
         },
       })
 
-      const playlistItem = await preparePlaylistItem(track, year)
+      const playlistItem = await preparePlaylistItem(youtubeTrack, year)
 
-      expect(playlistItem.spotifyTrack.uri).toBeDefined()
-      expect(playlistItem.spotifyTrack.uri).toBe('spotify:track:abc123')
-      expect((playlistItem.spotifyTrack as FromSpotify).artist).toBe(
-        track.artist
-      )
-      expect((playlistItem.spotifyTrack as FromSpotify).name).toBe(track.name)
+      expect(playlistItem).toEqual({
+        youtubeTrack: youtubeTrack,
+        spotifyTrack: {
+          uri: spotifyTrack.uri,
+          name: spotifyTrack.name,
+          artists: spotifyTrack.artists.map((a) => a.name),
+        },
+      })
+      expect(getTrackSpy).toBeCalledTimes(0)
       expect(findTrackSpy).toBeCalledTimes(1)
     })
   })

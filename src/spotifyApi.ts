@@ -40,22 +40,51 @@ export const getToken = async () => {
   return TOKEN
 }
 
-export const findTrack = async (bestTrack: BestTrack, year: number) => {
+export const getTrack = async (trackId: string) => {
   try {
-    const { name, artist } = bestTrack
+    const res: AxiosResponse<SpotifyTrack> = await axios({
+      method: 'get',
+      url: `${API_BASE_URL}/tracks/${trackId}`,
+      headers: {
+        Authorization: `Bearer ${TOKEN}`,
+      },
+    })
+    await new Promise((r) => setTimeout(r, 300))
+
+    return res.data
+  } catch (e) {
+    const axError = e as AxiosError
+    if (axError.isAxiosError) {
+      console.error(axError.response?.data)
+      console.error(axError.response?.status)
+      console.error('axios error')
+    } else {
+      console.error(e)
+    }
+    console.error('getTrack failed')
+    process.exit()
+  }
+}
+
+export const findTrack = async (track: BestTrack, year: number) => {
+  try {
+    const { name, artist, link } = track
     const params: SpotifySearchParams = {
       q: [`track:${name}`, `artist:${artist}`, `year:${year}`].join(' '),
       type: 'track',
       limit: 3,
     }
 
-    const albumId = extractSpotifyId(bestTrack.link, 'album')
+    const albumId = extractSpotifyId(link, 'album')
     if (albumId) {
       params.q += ` album:${albumId}`
     }
     const res: AxiosResponse<SearchResults<SpotifyTrack>> = await axios({
       method: 'get',
       url: `${API_BASE_URL}/search`,
+      headers: {
+        Authorization: `Bearer ${TOKEN}`,
+      },
       params,
     })
     await new Promise((r) => setTimeout(r, 300))
