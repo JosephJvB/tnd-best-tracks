@@ -69,6 +69,7 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
   }
 
   const lines = descriptionToLines(item.snippet.description)
+
   let foundBestSection = false
   for (const line of lines) {
     const bestTrackPrefix = BEST_TRACK_PREFIXES.find((pref) =>
@@ -82,13 +83,12 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
       continue
     }
 
-    const s = line.split('\n')
-    if (!isTrackLine(s)) {
+    const bestTrack = getBestTrackStr(line)
+    if (!bestTrack) {
       break // assume best tracks section has ended
     }
 
-    const trackName = s[0].trim()
-    trackList.push(trackName)
+    trackList.push(bestTrack)
   }
 
   if (trackList.length === 0) {
@@ -122,39 +122,33 @@ export const extractTrackList_fallback = (
       return
     }
 
-    const ls = line.split('\n')
-    if (isTrackLine(ls)) {
-      trackList.push(ls[0])
+    const bestTrack = getBestTrackStr(line)
+    if (bestTrack) {
+      trackList.push(bestTrack)
     }
   })
 
   return trackList
 }
 
-export const isTrackLine = (lineSplit: string[]) => {
-  return (
-    [2, 3].includes(lineSplit.length) &&
-    lineSplit[0].includes(' - ') &&
-    lineSplit[1].startsWith('http')
-  )
-}
-
 export const getBestTrackStr = (line: string) => {
-  const lineSplit = line.split('\n')
+  const lineSplit = line.split('\n').map((s) => s.trim())
 
   if (![2, 3].includes(lineSplit.length)) {
     return null
   }
 
-  if (lineSplit[0].includes(' - ')) {
+  const [bestTrack, trackLink] = lineSplit
+
+  if (!bestTrack.includes(' - ')) {
     return null
   }
 
-  if (lineSplit[1].startsWith('http')) {
+  if (!trackLink.startsWith('http')) {
     return null
   }
 
-  return lineSplit[0]
+  return bestTrack
 }
 
 export const descriptionToLines = (description: string) => {
