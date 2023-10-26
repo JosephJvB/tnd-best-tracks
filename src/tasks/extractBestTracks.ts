@@ -1,11 +1,14 @@
 import { readFileSync, writeFileSync } from 'fs'
 import { PlaylistItem } from '../youtubeApi'
-import { TRACKLISTS_JSON_DIR, PLAYLIST_ITEMS_JSON_PATH } from '../constants'
+import {
+  YOUTUBE_TRACKS_JSON_DIR,
+  YOUTUBE_PLAYLIST_ITEMS_JSON_PATH,
+} from '../constants'
 import { MANUAL_CORRECTIONS } from '../manualCorrections'
 
 // TODO: refactor - don't just push logic down
 
-export type BestTrack = {
+export type YoutubeTrack = {
   name: string
   artist: string
   link: string
@@ -22,7 +25,7 @@ const OLD_TITLE_PREFIXES = ['FAV TRACKS:', 'FAV & WORST TRACKS:']
 
 export default function () {
   const allItems: PlaylistItem[] = JSON.parse(
-    readFileSync(PLAYLIST_ITEMS_JSON_PATH, 'utf-8')
+    readFileSync(YOUTUBE_PLAYLIST_ITEMS_JSON_PATH, 'utf-8')
   )
 
   allItems.sort(
@@ -38,7 +41,7 @@ export default function () {
     allItems[allItems.length - 1].snippet.publishedAt
   )
 
-  const bestTracksByYear = allItems.reduce((acc, item) => {
+  const youtubeTracksByYear = allItems.reduce((acc, item) => {
     const nextBatch = extractTrackList_v2(item)
     if (nextBatch.length) {
       const year = item.snippet.publishedAt.split('-')[0]
@@ -47,18 +50,18 @@ export default function () {
     }
 
     return acc
-  }, new Map<string, BestTrack[]>())
+  }, new Map<string, YoutubeTrack[]>())
 
-  bestTracksByYear.forEach((trackList, year) => {
+  youtubeTracksByYear.forEach((trackList, year) => {
     console.log(' > write', trackList.length, 'tracks for', year)
     writeFileSync(
-      `${TRACKLISTS_JSON_DIR}/${year}.json`,
+      `${YOUTUBE_TRACKS_JSON_DIR}/${year}.json`,
       JSON.stringify(trackList, null, 2)
     )
   })
 }
 export const extractTrackList_v2 = (item: PlaylistItem) => {
-  const trackList: BestTrack[] = []
+  const trackList: YoutubeTrack[] = []
   // early return cases
   if (item.snippet.channelId !== item.snippet.videoOwnerChannelId) {
     return trackList
@@ -79,10 +82,10 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
 
   let foundBestSection = false
   for (const line of lines) {
-    const bestTrackPrefix = BEST_TRACK_PREFIXES.find((pref) =>
+    const youtubeTrackPrefix = BEST_TRACK_PREFIXES.find((pref) =>
       line.startsWith(pref)
     )
-    if (!!bestTrackPrefix) {
+    if (!!youtubeTrackPrefix) {
       foundBestSection = true
       continue
     }
@@ -90,13 +93,13 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
       continue
     }
 
-    const bestTrack = getBestTrackStr(line)
-    if (!bestTrack) {
+    const youtubeTrack = getYoutubeTrack(line)
+    if (!youtubeTrack) {
       // console.log('exit', JSON.stringify(line))
       break // assume best tracks section has ended
     }
 
-    trackList.push(bestTrack)
+    trackList.push(youtubeTrack)
   }
 
   if (trackList.length === 0) {
@@ -104,9 +107,13 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
   }
 
   if (trackList.length === 0) {
-    console.error('failed to extract bestTrackList for', item.snippet.title, {
-      foundBestSection,
-    })
+    console.error(
+      'failed to extract youtubeTrackList for',
+      item.snippet.title,
+      {
+        foundBestSection,
+      }
+    )
   }
 
   return trackList
@@ -116,7 +123,7 @@ export const extractTrackList_fallback = (
   item: PlaylistItem,
   lines: string[]
 ) => {
-  const trackList: BestTrack[] = []
+  const trackList: YoutubeTrack[] = []
   const oldPrefix = OLD_TITLE_PREFIXES.find((p) =>
     item.snippet.title.startsWith(p)
   )
@@ -130,29 +137,29 @@ export const extractTrackList_fallback = (
       return
     }
 
-    const bestTrack = getBestTrackStr(line)
-    if (bestTrack) {
-      trackList.push(bestTrack)
+    const youtubeTrack = getYoutubeTrack(line)
+    if (youtubeTrack) {
+      trackList.push(youtubeTrack)
     }
   })
 
   return trackList
 }
 
-export const getBestTrackStr = (line: string) => {
+export const getYoutubeTrack = (line: string) => {
   const lineSplit = line.split('\n').map((s) => s.trim())
 
   if (![2, 3, 4].includes(lineSplit.length)) {
     return null
   }
 
-  const [bestTrack, link] = lineSplit
+  const [youtubeTrack, link] = lineSplit
 
-  if (!bestTrack.includes(' - ')) {
+  if (!youtubeTrack.includes(' - ')) {
     return null
   }
 
-  const [artist, name] = bestTrack.split(' - ')
+  const [artist, name] = youtubeTrack.split(' - ')
 
   if (!link.startsWith('http')) {
     return null

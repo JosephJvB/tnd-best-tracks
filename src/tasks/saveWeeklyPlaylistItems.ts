@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs'
 import {
-  PLAYLIST_ITEMS_JSON_PATH,
+  YOUTUBE_PLAYLIST_ITEMS_JSON_PATH,
   WEEKLY_TRACK_REVIEW_PLAYLIST_ID,
 } from '../constants'
 import { PlaylistItem, getPlaylistItems } from '../youtubeApi'
@@ -31,7 +31,7 @@ export default async function () {
   console.log('  > got', allPlaylistItems.length, 'playlist items')
 
   writeFileSync(
-    PLAYLIST_ITEMS_JSON_PATH,
+    YOUTUBE_PLAYLIST_ITEMS_JSON_PATH,
     JSON.stringify(allPlaylistItems, null, 2)
   )
 }

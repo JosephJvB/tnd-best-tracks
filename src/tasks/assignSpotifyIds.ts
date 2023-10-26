@@ -1,6 +1,6 @@
 import { readFileSync, readdirSync, writeFileSync } from 'fs'
-import { PLAYLISTS_JSON_DIR, TRACKLISTS_JSON_DIR } from '../constants'
-import { BestTrack as YoutubeTrack } from './extractBestTracks'
+import { PLAYLIST_PREP_JSON_DIR, YOUTUBE_TRACKS_JSON_DIR } from '../constants'
+import { YoutubeTrack as YoutubeTrack } from './extractBestTracks'
 import {
   SpotifyTrack,
   extractSpotifyId,
@@ -17,7 +17,7 @@ export type PrePlaylistitem = {
 }
 
 export default async function () {
-  const bestTrackFiles = readdirSync(TRACKLISTS_JSON_DIR).filter(
+  const bestTrackFiles = readdirSync(YOUTUBE_TRACKS_JSON_DIR).filter(
     (f) => !f.startsWith('.') && f.endsWith('.json')
   )
 
@@ -28,7 +28,7 @@ export default async function () {
   for (const jsonFile of bestTrackFiles) {
     const year = parseInt(jsonFile.replace('.json', ''))
     const tracksFromFile: YoutubeTrack[] = JSON.parse(
-      readFileSync(`${TRACKLISTS_JSON_DIR}/${jsonFile}`, 'utf8')
+      readFileSync(`${YOUTUBE_TRACKS_JSON_DIR}/${jsonFile}`, 'utf8')
     )
     console.log(
       fileNum++,
@@ -56,7 +56,7 @@ export default async function () {
 
       withSpotifyId.push(playlistItem)
       writeFileSync(
-        `${PLAYLISTS_JSON_DIR}/${jsonFile}`,
+        `${PLAYLIST_PREP_JSON_DIR}/${jsonFile}`,
         JSON.stringify(withSpotifyId, null, 2)
       )
     }

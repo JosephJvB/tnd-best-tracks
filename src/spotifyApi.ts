@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
-import { BestTrack } from './tasks/extractBestTracks'
+import { YoutubeTrack } from './tasks/extractBestTracks'
 import { SPOTIFY_DOMAIN, SPOTIFY_ID_LENGTH } from './constants'
 
 const API_BASE_URL = 'https://api.spotify.com/v1'
@@ -66,7 +66,7 @@ export const getTrack = async (trackId: string) => {
   }
 }
 
-export const findTrack = async (track: BestTrack, year: number) => {
+export const findTrack = async (track: YoutubeTrack, year: number) => {
   try {
     const { name, artist, link } = track
     const params: SpotifySearchParams = {
