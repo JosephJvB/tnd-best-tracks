@@ -10,7 +10,7 @@ export type SpotifySearchParams = {
   type: 'track' | 'album'
   limit: number
 }
-export type SearchResults = {
+export type SearchResults<T> = {
   tracks: {
     href: string
     items: SpotifyTrack[]
@@ -41,18 +41,20 @@ export const getToken = async () => {
 
 export const findTrack = async (bestTrack: BestTrack, year: number) => {
   try {
-    const { track, artist } = bestTrack
+    const { name, artist } = bestTrack
     const params: SpotifySearchParams = {
-      q: [`track:${track}`, `artist:${artist}`, `year:${year}`].join(' '),
+      q: [`track:${name}`, `artist:${artist}`, `year:${year}`].join(' '),
       type: 'track',
       limit: 3,
     }
 
-    const res = await axios({
+    const res: AxiosResponse<SearchResults<SpotifyTrack>> = await axios({
       method: 'get',
       url: `${API_BASE_URL}/search`,
       params,
     })
+
+    return res.data
   } catch (e) {
     const axError = e as AxiosError
     if (axError.isAxiosError) {

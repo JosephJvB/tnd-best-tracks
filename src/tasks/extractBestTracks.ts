@@ -5,7 +5,7 @@ import { TRACKLISTS_JSON_DIR, PLAYLIST_ITEMS_JSON_PATH } from '../constants'
 // TODO: refactor - don't just push logic down
 
 export type BestTrack = {
-  track: string
+  name: string
   artist: string
   link: string
 }
@@ -151,14 +151,14 @@ export const getBestTrackStr = (line: string) => {
     return null
   }
 
-  const [track, artist] = bestTrack.split(' - ')
+  const [artist, name] = bestTrack.split(' - ')
 
   if (!link.startsWith('http')) {
     return null
   }
 
   return {
-    track,
+    name,
     artist,
     link,
   }
