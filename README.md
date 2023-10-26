@@ -7,18 +7,21 @@ https://developers.google.com/youtube/v3/getting-started
 
 contentDetails,id,snippet,status
 
-2. parse description
+2. parse description.
+  - boy howdy that was not easy
 
 3. lookup each song on spotify and save ids to json
   - gonna need spotify search api
   - https://developer.spotify.com/documentation/web-api/reference/search
   - resolve not found
 
-3. get my existing playlists
+4. Do user auth, callback url stuff
+
+5. get my existing playlists
   - https://developer.spotify.com/documentation/web-api/reference/get-list-users-playlists
 
-4. create those playlists that dont exist
+6. create those playlists that dont exist
   - https://developer.spotify.com/documentation/web-api/reference/create-playlist
 
-5. add songs to playlists
+7. add songs to playlists
   - https://developer.spotify.com/documentation/web-api/reference/add-tracks-to-playlist
