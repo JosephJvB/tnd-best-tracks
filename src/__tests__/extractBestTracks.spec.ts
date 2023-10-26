@@ -249,13 +249,13 @@ describe('extractBestTracks.ts', () => {
       expect(result.length).toBe(8)
       expect(result).toEqual([
         'Chris Farren - "Say U Want Me"',
-        'Screaming Females – “Skeleton”',
+        'Screaming Females - “Skeleton”',
         'Denzel Curry - "Today" ft. Boogie & Allan Kingdom',
         'A. G. Cook - "Superstar"',
         'Dabbla - "Randeer"',
         'Skrillex & Rick Ross - "Purple Lamborghini"',
         'Street Sects - "And I Grew into Ribbons"',
-        'DJ Windows 98 (Win Butler) – “K33p Ur Dr34ms” (Suicide Remix)',
+        'DJ Windows 98 (Win Butler) - “K33p Ur Dr34ms” (Suicide Remix)',
       ])
     })
 

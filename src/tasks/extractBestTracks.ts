@@ -11,7 +11,6 @@ const BEST_TRACK_PREFIXES = [
   '!!!FAV TRACK',
 ]
 const RAW_REVIEW_TITLES = ['MIXTAPE', 'EP', 'ALBUM', 'TRACK', 'COMPILATION']
-const TRACK_DIVIDERS = [' - ', ' – ']
 const OLD_TITLE_PREFIXES = ['FAV TRACKS:', 'FAV & WORST TRACKS:']
 
 export default function () {
@@ -69,6 +68,8 @@ export const extractTrackList_v2 = (item: PlaylistItem) => {
     return trackList
   }
 
+  item.snippet.description = item.snippet.description.replace(/–/g, '-')
+
   const lines = item.snippet.description.split('\n\n')
   let foundBestSection = false
   for (const line of lines) {
@@ -123,8 +124,7 @@ export const extractTrackList_fallback = (item: PlaylistItem) => {
     }
 
     const ls = lt.split('\n')
-    const trackDivider = TRACK_DIVIDERS.find((td) => ls[0].includes(td))
-    if (!!trackDivider && ls[1]?.startsWith('http')) {
+    if (ls[0].includes(' - ') && ls[1]?.startsWith('http')) {
       trackList.push(ls[0])
     }
   })
