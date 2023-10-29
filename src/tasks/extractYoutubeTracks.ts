@@ -6,13 +6,11 @@ import {
 } from '../constants'
 import { MANUAL_CORRECTIONS } from '../manualCorrections'
 
-// TODO: refactor - don't just push logic down
-
 export type YoutubeTrack = {
   name: string
   artist: string
   link: string
-  year: string
+  year: number
 }
 
 const BEST_TRACK_PREFIXES = [

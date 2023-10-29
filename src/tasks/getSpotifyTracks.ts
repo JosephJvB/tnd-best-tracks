@@ -25,9 +25,6 @@ export type PrePlaylistItem = {
   youtubeTrack: YoutubeTrack
   spotifyTrack?: TrimSpotifyTrack
 }
-export type WithSpotifyId = PrePlaylistItem & {
-  spotifyId: string
-}
 
 export default async function () {
   const youtubeTracks: YoutubeTrack[] = JSON.parse(
@@ -38,7 +35,6 @@ export default async function () {
     id: [t.artist, t.name, t.year].join('__'), // use as ID
     youtubeTrack: t,
     spotifyId: extractSpotifyId(t.link, 'track'),
-    spotifyTrack: undefined,
   }))
 
   await setToken()
