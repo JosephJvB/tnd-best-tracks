@@ -71,7 +71,8 @@ export default async function () {
     ...i,
     spotifyTrack:
       (i.spotifyId && spotifyIdTrackMap.get(i.spotifyId)) ??
-      youtubeIdTrackMap.get(i.id),
+      youtubeIdTrackMap.get(i.id) ??
+      null,
   }))
   const withTrack = combined.filter((t) => !!t.spotifyTrack)
   console.log(
