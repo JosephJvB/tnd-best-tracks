@@ -1,8 +1,8 @@
 import { readFileSync, writeFileSync } from 'fs'
 import { PlaylistItem } from '../youtubeApi'
 import {
-  YOUTUBE_TRACKS_JSON_DIR,
   YOUTUBE_PLAYLIST_ITEMS_JSON_PATH,
+  YOUTUBE_TRACKS_JSON__PATH,
 } from '../constants'
 import { MANUAL_CORRECTIONS } from '../manualCorrections'
 
@@ -12,6 +12,7 @@ export type YoutubeTrack = {
   name: string
   artist: string
   link: string
+  year: string
 }
 
 const BEST_TRACK_PREFIXES = [
@@ -41,27 +42,24 @@ export default function () {
     allItems[allItems.length - 1].snippet.publishedAt
   )
 
-  const youtubeTracksByYear = allItems.reduce((acc, item) => {
-    const nextBatch = extractTrackList_v2(item)
-    if (nextBatch.length) {
-      const year = item.snippet.publishedAt.split('-')[0]
-      const yearsTracks = acc.get(year) ?? []
-      acc.set(year, [...yearsTracks, ...nextBatch])
-    }
+  const youtubeTracks = allItems.flatMap((item) => {
+    const trackList = extractTrackList_v2(item)
+    const year = item.snippet.publishedAt.split('-')[0]
 
-    return acc
-  }, new Map<string, YoutubeTrack[]>())
-
-  youtubeTracksByYear.forEach((trackList, year) => {
-    console.log(' > write', trackList.length, 'tracks for', year)
-    writeFileSync(
-      `${YOUTUBE_TRACKS_JSON_DIR}/${year}.json`,
-      JSON.stringify(trackList, null, 2)
-    )
+    return trackList.map((t) => ({
+      ...t,
+      year,
+    }))
   })
+
+  console.log(' > write', youtubeTracks.length, 'youtube tracks')
+  writeFileSync(
+    `${YOUTUBE_TRACKS_JSON__PATH}.json`,
+    JSON.stringify(youtubeTracks, null, 2)
+  )
 }
 export const extractTrackList_v2 = (item: PlaylistItem) => {
-  const trackList: YoutubeTrack[] = []
+  const trackList: Omit<YoutubeTrack, 'year'>[] = []
   if (!containsBestTracks(item)) {
     return []
   }
@@ -111,7 +109,7 @@ export const extractTrackList_fallback = (
   item: PlaylistItem,
   lines: string[]
 ) => {
-  const trackList: YoutubeTrack[] = []
+  const trackList: Omit<YoutubeTrack, 'year'>[] = []
   const oldPrefix = OLD_TITLE_PREFIXES.find((p) =>
     item.snippet.title.startsWith(p)
   )
