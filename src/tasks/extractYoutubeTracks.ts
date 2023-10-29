@@ -62,20 +62,8 @@ export default function () {
 }
 export const extractTrackList_v2 = (item: PlaylistItem) => {
   const trackList: YoutubeTrack[] = []
-  // early return cases
-  if (item.snippet.channelId !== item.snippet.videoOwnerChannelId) {
-    return trackList
-  }
-  if (item.status.privacyStatus === 'private') {
-    return trackList
-  }
-  // playlist is "Weekly Track Roundup / Raw Reviews"
-  // skip raw reviews
-  const reviewTitle = RAW_REVIEW_TITLES.find((rt) =>
-    item.snippet.title.includes(`${rt} REVIEW`)
-  )
-  if (!!reviewTitle) {
-    return trackList
+  if (!containsBestTracks(item)) {
+    return []
   }
 
   const lines = descriptionToLines(item.snippet.description)
@@ -170,6 +158,25 @@ export const getYoutubeTrack = (line: string) => {
     artist,
     link,
   }
+}
+
+export const containsBestTracks = (v: PlaylistItem) => {
+  if (v.snippet.channelId !== v.snippet.videoOwnerChannelId) {
+    return false
+  }
+  if (v.status.privacyStatus === 'private') {
+    return false
+  }
+  // playlist is "Weekly Track Roundup / Raw Reviews"
+  // skip raw reviews
+  const reviewTitle = RAW_REVIEW_TITLES.find((rt) =>
+    v.snippet.title.includes(`${rt} REVIEW`)
+  )
+  if (!!reviewTitle) {
+    return false
+  }
+
+  return true
 }
 
 export const descriptionToLines = (description: string) => {

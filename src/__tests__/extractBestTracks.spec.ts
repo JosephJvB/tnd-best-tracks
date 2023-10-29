@@ -1,7 +1,30 @@
-import { extractTrackList_v2 } from '../tasks/extractYoutubeTracks'
+import { readFileSync, readdirSync } from 'fs'
+import {
+  containsBestTracks,
+  extractTrackList_v2,
+} from '../tasks/extractYoutubeTracks'
 import { PlaylistItem } from '../youtubeApi'
+import { YOUTUBE_PLAYLIST_ITEMS_JSON_PATH } from '../constants'
 
 describe('extractBestTracks.ts', () => {
+  describe('#extractTrackList_v2 - all videos', () => {
+    const allYoutubeVideos = JSON.parse(
+      readFileSync(YOUTUBE_PLAYLIST_ITEMS_JSON_PATH, 'utf8')
+    ) as PlaylistItem[]
+
+    allYoutubeVideos.forEach((vid) => {
+      it(`can parse id:${vid.id}`, () => {
+        const result = extractTrackList_v2(vid)
+
+        if (containsBestTracks(vid)) {
+          expect(result.length).toBeGreaterThan(0)
+        } else {
+          expect(result.length).toBe(0)
+        }
+      })
+    })
+  })
+
   describe('#extractTrackList_v2', () => {
     // const consoleErrorSpy = jest
     //   .spyOn(console, 'error')
