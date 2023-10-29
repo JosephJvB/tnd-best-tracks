@@ -71,9 +71,9 @@ export const getTracks = async (trackIds: string[]) => {
   }
 }
 
-export const findTrack = async (track: YoutubeTrack, year: number) => {
+export const findTrack = async (track: YoutubeTrack) => {
   try {
-    const { name, artist, link } = track
+    const { name, artist, link, year } = track
     const params: SpotifySearchParams = {
       q: [`track:${name}`, `artist:${artist}`, `year:${year}`].join(' '),
       type: 'track',
