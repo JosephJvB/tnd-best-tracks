@@ -6,8 +6,8 @@ import {
 import * as spotifyApi from '../spotifyApi'
 import * as mapUtil from '../mapUtil'
 import {
-  SPOTIFY_IDX_ID_MAP_JSON_PATH,
   SPOTIFY_TRACK_ID_MAP_JSON_PATH,
+  YOUTUBE_ID_MAP_JSON_PATH,
 } from '../constants'
 
 describe('getSpotifyTracks.ts', () => {
@@ -228,7 +228,7 @@ describe('getSpotifyTracks.ts', () => {
       const result = await searchSpotifyTracks(input)
 
       expect(mapHelperSpy).toBeCalledTimes(1)
-      expect(mapHelperSpy).toBeCalledWith(SPOTIFY_IDX_ID_MAP_JSON_PATH)
+      expect(mapHelperSpy).toBeCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
       expect(loadMapFn).toBeCalledTimes(1)
       expect(findTrackSpy).toBeCalledTimes(0)
       expect(saveMapFn).toBeCalledTimes(0)
@@ -240,7 +240,7 @@ describe('getSpotifyTracks.ts', () => {
       const input: PrePlaylistItem[] = Array(10)
         .fill(0)
         .map((_, i) => ({
-          idx: i,
+          id: `id_${i}`,
           spotifyId: null,
           youtubeTrack: {
             name: `name_${i}`,
@@ -280,7 +280,7 @@ describe('getSpotifyTracks.ts', () => {
       const result = await searchSpotifyTracks(input)
 
       expect(mapHelperSpy).toBeCalledTimes(1)
-      expect(mapHelperSpy).toBeCalledWith(SPOTIFY_IDX_ID_MAP_JSON_PATH)
+      expect(mapHelperSpy).toBeCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
       expect(loadMapFn).toBeCalledTimes(1)
       expect(findTrackSpy).toBeCalledTimes(input.length)
       expect(saveMapFn).toBeCalledTimes(spotifyTracks.length)
@@ -298,7 +298,7 @@ describe('getSpotifyTracks.ts', () => {
       const input: PrePlaylistItem[] = Array(55)
         .fill(0)
         .map((_, i) => ({
-          idx: i,
+          id: `id_${i}`,
           spotifyId: null,
           youtubeTrack: {
             name: `name_${i}`,
@@ -338,7 +338,7 @@ describe('getSpotifyTracks.ts', () => {
       const result = await searchSpotifyTracks(input)
 
       expect(mapHelperSpy).toBeCalledTimes(1)
-      expect(mapHelperSpy).toBeCalledWith(SPOTIFY_IDX_ID_MAP_JSON_PATH)
+      expect(mapHelperSpy).toBeCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
       expect(loadMapFn).toBeCalledTimes(1)
       expect(findTrackSpy).toBeCalledTimes(input.length)
       expect(saveMapFn).toBeCalledTimes(spotifyTracks.length)
@@ -356,7 +356,7 @@ describe('getSpotifyTracks.ts', () => {
       const input: PrePlaylistItem[] = Array(690)
         .fill(0)
         .map((_, i) => ({
-          idx: i,
+          id: `id_${i}`,
           spotifyId: null,
           youtubeTrack: {
             name: `name_${i}`,
@@ -396,7 +396,7 @@ describe('getSpotifyTracks.ts', () => {
       const result = await searchSpotifyTracks(input)
 
       expect(mapHelperSpy).toBeCalledTimes(1)
-      expect(mapHelperSpy).toBeCalledWith(SPOTIFY_IDX_ID_MAP_JSON_PATH)
+      expect(mapHelperSpy).toBeCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
       expect(loadMapFn).toBeCalledTimes(1)
       expect(findTrackSpy).toBeCalledTimes(input.length)
       expect(saveMapFn).toBeCalledTimes(spotifyTracks.length)

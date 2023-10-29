@@ -8,7 +8,7 @@ import {
 } from '../spotifyApi'
 import { readFileSync, writeFileSync } from 'fs'
 import {
-  SPOTIFY_IDX_ID_MAP_JSON_PATH,
+  YOUTUBE_ID_MAP_JSON_PATH,
   SPOTIFY_TRACKS_JSON_PATH,
   SPOTIFY_TRACK_ID_MAP_JSON_PATH,
   YOUTUBE_TRACKS_JSON_PATH,
@@ -20,7 +20,7 @@ export type TrimSpotifyTrack = Pick<SpotifyTrack, 'id' | 'uri' | 'name'> & {
 }
 
 export type PrePlaylistItem = {
-  idx: number
+  id: string
   spotifyId: string | null
   youtubeTrack: YoutubeTrack
   spotifyTrack?: TrimSpotifyTrack
@@ -34,8 +34,8 @@ export default async function () {
     readFileSync(YOUTUBE_TRACKS_JSON_PATH, 'utf-8')
   )
 
-  const items: PrePlaylistItem[] = youtubeTracks.map((t, i) => ({
-    idx: i, // use as ID
+  const items: PrePlaylistItem[] = youtubeTracks.map((t) => ({
+    id: [t.artist, t.name, t.year].join('__'), // use as ID
     youtubeTrack: t,
     spotifyId: extractSpotifyId(t.link, 'track'),
     spotifyTrack: undefined,
@@ -46,10 +46,10 @@ export default async function () {
   const spotifyIds = items
     .map((i) => i.spotifyId)
     .filter((id): id is string => !!id)
-  const spotifyTrackMap = await batchGetById(spotifyIds)
+  const spotifyIdTrackMap = await batchGetById(spotifyIds)
   console.log(
     '  >',
-    spotifyTrackMap.size,
+    spotifyIdTrackMap.size,
     '/',
     spotifyIds.length,
     'spotify tracks found by trackId'
@@ -60,12 +60,12 @@ export default async function () {
       return true
     }
 
-    return spotifyTrackMap.has(i.spotifyId)
+    return spotifyIdTrackMap.has(i.spotifyId)
   })
-  const indexTrackMap = await searchSpotifyTracks(toSearch)
+  const youtubeIdTrackMap = await searchSpotifyTracks(toSearch)
   console.log(
     '  >',
-    indexTrackMap.size,
+    youtubeIdTrackMap.size,
     '/',
     spotifyIds.length,
     'spotify tracks found by search'
@@ -74,8 +74,8 @@ export default async function () {
   const combined = items.map((i) => ({
     ...i,
     spotifyTrack:
-      (i.spotifyId && spotifyTrackMap.get(i.spotifyId)) ??
-      indexTrackMap.get(i.idx),
+      (i.spotifyId && spotifyIdTrackMap.get(i.spotifyId)) ??
+      youtubeIdTrackMap.get(i.id),
   }))
   const withTrack = combined.filter((t) => !!t.spotifyTrack)
   console.log(
@@ -117,10 +117,10 @@ export const batchGetById = async (spotifyIds: string[]) => {
 }
 
 export const searchSpotifyTracks = async (items: PrePlaylistItem[]) => {
-  const mapHelper = createMapHelper<number, TrimSpotifyTrack>(
-    SPOTIFY_IDX_ID_MAP_JSON_PATH
+  const mapHelper = createMapHelper<string, TrimSpotifyTrack>(
+    YOUTUBE_ID_MAP_JSON_PATH
   )
-  const idxTrackMap = mapHelper.load()
+  const youtubeTrackMap = mapHelper.load()
 
   let trackNum = 1
   for (const item of items) {
@@ -138,15 +138,15 @@ export const searchSpotifyTracks = async (items: PrePlaylistItem[]) => {
       continue
     }
     const { id, uri, artists, name } = results.tracks.items[0]
-    idxTrackMap.set(item.idx, {
+    youtubeTrackMap.set(item.id, {
       id,
       uri,
       name,
       artists: artists.map((a) => a.name),
     })
 
-    mapHelper.save(idxTrackMap)
+    mapHelper.save(youtubeTrackMap)
   }
 
-  return idxTrackMap
+  return youtubeTrackMap
 }
