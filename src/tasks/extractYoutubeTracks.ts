@@ -1,8 +1,8 @@
 import { readFileSync, writeFileSync } from 'fs'
 import { PlaylistItem } from '../youtubeApi'
 import {
-  YOUTUBE_PLAYLIST_ITEMS_JSON_PATH,
-  YOUTUBE_TRACKS_JSON__PATH,
+  TND_PLAYLIST_ITEMS_JSON_PATH,
+  YOUTUBE_TRACKS_JSON_PATH,
 } from '../constants'
 import { MANUAL_CORRECTIONS } from '../manualCorrections'
 
@@ -26,7 +26,7 @@ const OLD_TITLE_PREFIXES = ['FAV TRACKS:', 'FAV & WORST TRACKS:']
 
 export default function () {
   const allItems: PlaylistItem[] = JSON.parse(
-    readFileSync(YOUTUBE_PLAYLIST_ITEMS_JSON_PATH, 'utf-8')
+    readFileSync(TND_PLAYLIST_ITEMS_JSON_PATH, 'utf-8')
   )
 
   allItems.sort(
@@ -44,7 +44,7 @@ export default function () {
 
   const youtubeTracks = allItems.flatMap((item) => {
     const trackList = extractTrackList_v2(item)
-    const year = item.snippet.publishedAt.split('-')[0]
+    const year = parseInt(item.snippet.publishedAt.split('-')[0])
 
     return trackList.map((t) => ({
       ...t,
@@ -54,7 +54,7 @@ export default function () {
 
   console.log(' > write', youtubeTracks.length, 'youtube tracks')
   writeFileSync(
-    `${YOUTUBE_TRACKS_JSON__PATH}.json`,
+    YOUTUBE_TRACKS_JSON_PATH,
     JSON.stringify(youtubeTracks, null, 2)
   )
 }
