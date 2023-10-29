@@ -10,6 +10,9 @@ export const YOUTUBE_TRACKS_JSON_PATH =
 export const SPOTIFY_ID_LENGTH = 22
 export const SPOTIFY_DOMAIN = 'open.spotify.com'
 
-export const SPOTIFY_TRACK_ID_MAP_JSON_PATH = '/../data/track-id-map.json'
-export const YOUTUBE_ID_MAP_JSON_PATH = '/../data/youtube-id-map.json'
-export const SPOTIFY_TRACKS_JSON_PATH = '/../data/spotify-tracks.json'
+export const SPOTIFY_TRACK_ID_MAP_JSON_PATH =
+  __dirname + '/../data/track-id-map.json'
+export const YOUTUBE_ID_MAP_JSON_PATH =
+  __dirname + '/../data/youtube-id-map.json'
+export const SPOTIFY_TRACKS_JSON_PATH =
+  __dirname + '/../data/spotify-tracks.json'
