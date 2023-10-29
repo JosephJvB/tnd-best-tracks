@@ -8,9 +8,12 @@ import {
 } from '../spotifyApi'
 import { readFileSync, writeFileSync } from 'fs'
 import {
+  SPOTIFY_IDX_ID_MAP_JSON_PATH,
   SPOTIFY_TRACKS_JSON_PATH,
+  SPOTIFY_TRACK_ID_MAP_JSON_PATH,
   YOUTUBE_TRACKS_JSON_PATH,
 } from '../constants'
+import { createMapHelper } from '../mapUtil'
 
 export type TrimSpotifyTrack = Pick<SpotifyTrack, 'id' | 'uri' | 'name'> & {
   artists: string[]
@@ -25,13 +28,6 @@ export type PrePlaylistItem = {
 export type WithSpotifyId = PrePlaylistItem & {
   spotifyId: string
 }
-
-/**
- * TODO:
- * save incrementally
- * handle restart
- * doable by reading / writing maps to json files
- */
 
 export default async function () {
   const youtubeTracks: YoutubeTrack[] = JSON.parse(
@@ -94,10 +90,14 @@ export default async function () {
 }
 
 export const batchGetById = async (spotifyIds: string[]) => {
-  const spotifyTrackMap = new Map<string, TrimSpotifyTrack>()
+  const mapHelper = createMapHelper<string, TrimSpotifyTrack>(
+    SPOTIFY_TRACK_ID_MAP_JSON_PATH
+  )
+  const spotifyTrackMap = mapHelper.load()
 
-  for (let i = 0; i < spotifyIds.length; i += 50) {
-    const batch = spotifyIds.slice(i, i + 50)
+  const toGet = spotifyIds.filter((id) => !spotifyTrackMap.has(id))
+  for (let i = 0; i < toGet.length; i += 50) {
+    const batch = toGet.slice(i, i + 50)
 
     const result = await getTracks(batch)
 
@@ -109,13 +109,18 @@ export const batchGetById = async (spotifyIds: string[]) => {
         artists: t.artists.map((a) => a.name),
       })
     )
+
+    mapHelper.save(spotifyTrackMap)
   }
 
   return spotifyTrackMap
 }
 
 export const searchSpotifyTracks = async (items: PrePlaylistItem[]) => {
-  const idxTrackMap = new Map<number, TrimSpotifyTrack>()
+  const mapHelper = createMapHelper<number, TrimSpotifyTrack>(
+    SPOTIFY_IDX_ID_MAP_JSON_PATH
+  )
+  const idxTrackMap = mapHelper.load()
 
   let trackNum = 1
   for (const item of items) {
@@ -139,12 +144,9 @@ export const searchSpotifyTracks = async (items: PrePlaylistItem[]) => {
       name,
       artists: artists.map((a) => a.name),
     })
+
+    mapHelper.save(idxTrackMap)
   }
 
   return idxTrackMap
 }
-
-export const mapToString = (map: Map<any, any>) =>
-  JSON.stringify([...map.entries()], null, 2)
-
-export const stringToMap = <K, V>(str: string) => new Map<K, V>(JSON.parse(str))
