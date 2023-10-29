@@ -513,7 +513,7 @@ describe('getSpotifyTracks.ts', () => {
       .spyOn(spotifyApi, 'extractSpotifyId')
       .mockImplementation(jest.fn())
 
-    it('works', async () => {
+    it('works when all spotify tracks are found as expected', async () => {
       const readFileSpy = jest
         .spyOn(fs, 'readFileSync')
         .mockImplementation(jest.fn())
@@ -604,6 +604,112 @@ describe('getSpotifyTracks.ts', () => {
         id: [i.artist, i.name, i.year].join('__'),
         youtubeTrack: i,
         spotifyId: idx < NUM_BY_BATCH ? spotifyTracks[idx].id : null,
+        spotifyTrack: {
+          id: spotifyTracks[idx].id,
+          uri: spotifyTracks[idx].uri,
+          name: spotifyTracks[idx].name,
+          artists: spotifyTracks[idx].artists.map((a) => a.name),
+        },
+      }))
+      const writeFilePayload = JSON.parse(
+        writeFileSpy.mock.calls[0][1].toString()
+      )
+      expect(writeFilePayload).toEqual(expectedPayload)
+    })
+
+    it('tracks missed by batch are found by single search', async () => {
+      const readFileSpy = jest
+        .spyOn(fs, 'readFileSync')
+        .mockImplementation(jest.fn())
+      const writeFileSpy = jest
+        .spyOn(fs, 'writeFileSync')
+        .mockImplementation(jest.fn())
+
+      const NUM_FOUND_TRACKS = 100
+      const NUM_GET_BY_BATCH = 55
+      const NUM_MISSED_BY_BATCH = 15
+      const NUM_FOUND_BY_BATCH = NUM_GET_BY_BATCH - NUM_MISSED_BY_BATCH
+      const input: YoutubeTrack[] = Array(100)
+        .fill(0)
+        .map((_, idx) => ({
+          artist: `artist_${idx}`,
+          name: `name_${idx}`,
+          link: `link_${idx}`,
+          year: idx,
+        }))
+      const spotifyTracks: spotifyApi.SpotifyTrack[] = input
+        .slice(0, NUM_FOUND_TRACKS)
+        .map((track, idx) => ({
+          id: `id_${idx}`,
+          name: `name_${idx}`,
+          uri: `uri_${idx}`,
+          href: `href_${idx}`,
+          artists: [
+            {
+              name: `artist_${idx}`,
+            } as spotifyApi.SpotifyArtist,
+          ],
+        }))
+
+      readFileSpy.mockReturnValueOnce(JSON.stringify(input))
+
+      for (let i = 0; i < input.length; i++) {
+        const id = i < NUM_GET_BY_BATCH ? spotifyTracks[i].id : null
+        extractIdSpy.mockReturnValueOnce(id)
+      }
+
+      const trackIdMap = new Map()
+      const youtubeIdMap = new Map()
+      loadMapFn.mockReturnValueOnce(trackIdMap)
+      loadMapFn.mockReturnValueOnce(youtubeIdMap)
+
+      for (let i = 0; i < NUM_GET_BY_BATCH; i += 50) {
+        const upper = Math.min(NUM_FOUND_BY_BATCH, i + 50)
+        getTracksSpy.mockResolvedValueOnce({
+          tracks: spotifyTracks.slice(i, upper),
+        })
+      }
+      for (let i = NUM_FOUND_BY_BATCH; i < input.length; i++) {
+        const track = spotifyTracks[i]
+        const items = track ? [track] : []
+        findTrackSpy.mockResolvedValueOnce({
+          tracks: {
+            href: '',
+            items,
+          },
+        })
+      }
+
+      await getSpotifyTracks()
+
+      expect(setTokenSpy).toBeCalledTimes(1)
+      expect(extractIdSpy).toBeCalledTimes(input.length)
+      for (const i of input) {
+        expect(extractIdSpy).toBeCalledWith(i.link, 'track')
+      }
+      expect(mapHelperSpy).toBeCalledTimes(2)
+      expect(loadMapFn).toBeCalledTimes(2)
+      expect(getTracksSpy).toBeCalledTimes(2)
+      for (let i = 0; i < NUM_GET_BY_BATCH; i += 50) {
+        expect(getTracksSpy).toBeCalledWith(
+          input.slice(i, i + 50).map((t, idx) => spotifyTracks[idx].id)
+        )
+      }
+      expect(saveMapFn).toBeCalledTimes(
+        Math.ceil(NUM_GET_BY_BATCH / 50) + input.length - NUM_FOUND_BY_BATCH
+      )
+      expect(saveMapFn).toBeCalledWith(trackIdMap)
+      expect(findTrackSpy).toBeCalledTimes(input.length - NUM_FOUND_BY_BATCH)
+      input.slice(NUM_GET_BY_BATCH).forEach((i) => {
+        expect(findTrackSpy).toBeCalledWith(i)
+      })
+      expect(saveMapFn).toBeCalledWith(youtubeIdMap)
+      expect(writeFileSpy).toBeCalledTimes(1)
+      expect(writeFileSpy.mock.calls[0][0]).toBe(SPOTIFY_TRACKS_JSON_PATH)
+      const expectedPayload = input.map((i, idx) => ({
+        id: [i.artist, i.name, i.year].join('__'),
+        youtubeTrack: i,
+        spotifyId: idx < NUM_GET_BY_BATCH ? spotifyTracks[idx].id : null,
         spotifyTrack: {
           id: spotifyTracks[idx].id,
           uri: spotifyTracks[idx].uri,
