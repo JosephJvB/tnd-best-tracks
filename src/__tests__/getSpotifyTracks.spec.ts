@@ -2,6 +2,7 @@ import {
   batchGetById,
   searchSpotifyTracks,
   PrePlaylistItem,
+  TrimSpotifyTrack,
 } from '../tasks/getSpotifyTracks'
 import * as spotifyApi from '../spotifyApi'
 import * as mapUtil from '../mapUtil'
@@ -189,9 +190,17 @@ describe('getSpotifyTracks.ts', () => {
         }))
 
       const numExistingTracks = 123
-      const inputLengthAdjusted = input.length - numExistingTracks
-      const existingMap = new Map(
-        spotifyTracks.slice(0, numExistingTracks).map((t) => [t.id, t])
+      const existingMap = new Map<string, TrimSpotifyTrack>(
+        spotifyTracks.slice(0, numExistingTracks).map((t) => [
+          t.id,
+          {
+            id: t.id,
+            href: t.href,
+            uri: t.uri,
+            name: t.name,
+            artists: t.artists.map((a) => a.name),
+          },
+        ])
       )
       loadMapFn.mockReturnValueOnce(existingMap)
 
@@ -205,7 +214,9 @@ describe('getSpotifyTracks.ts', () => {
 
       expect(mapHelperSpy).toBeCalledWith(SPOTIFY_TRACK_ID_MAP_JSON_PATH)
       expect(loadMapFn).toBeCalledTimes(1)
-      expect(getTracksSpy).toBeCalledTimes(Math.ceil(inputLengthAdjusted / 50))
+      expect(getTracksSpy).toBeCalledTimes(
+        Math.ceil((input.length - numExistingTracks) / 50)
+      )
       for (let i = numExistingTracks; i < input.length; i += 50) {
         expect(getTracksSpy).toBeCalledWith(input.slice(i, i + 50))
         expect(saveMapFn).toBeCalledWith(existingMap)
@@ -266,10 +277,12 @@ describe('getSpotifyTracks.ts', () => {
         }))
 
       input.forEach((item, idx) => {
+        const track = spotifyTracks[idx]
+        const items = track ? [spotifyTracks[idx]] : []
         findTrackSpy.mockResolvedValueOnce({
           tracks: {
             href: '',
-            items: spotifyTracks[idx] ? [spotifyTracks[idx]] : [],
+            items,
           },
         })
       })
@@ -324,10 +337,12 @@ describe('getSpotifyTracks.ts', () => {
         }))
 
       input.forEach((item, idx) => {
+        const track = spotifyTracks[idx]
+        const items = track ? [spotifyTracks[idx]] : []
         findTrackSpy.mockResolvedValueOnce({
           tracks: {
             href: '',
-            items: spotifyTracks[idx] ? [spotifyTracks[idx]] : [],
+            items,
           },
         })
       })
@@ -382,10 +397,12 @@ describe('getSpotifyTracks.ts', () => {
         }))
 
       input.forEach((item, idx) => {
+        const track = spotifyTracks[idx]
+        const items = track ? [track] : []
         findTrackSpy.mockResolvedValueOnce({
           tracks: {
             href: '',
-            items: spotifyTracks[idx] ? [spotifyTracks[idx]] : [],
+            items,
           },
         })
       })
@@ -404,6 +421,80 @@ describe('getSpotifyTracks.ts', () => {
         expect(findTrackSpy).toBeCalledWith(item.youtubeTrack)
       })
       spotifyTracks.forEach(() => {
+        expect(saveMapFn).toBeCalledWith(existingMap)
+      })
+      expect(result.size).toBe(NUM_FOUND_TRACKS)
+    })
+
+    it('can resume progress (420 / 690)', async () => {
+      const NUM_FOUND_TRACKS = 420
+      const input: PrePlaylistItem[] = Array(690)
+        .fill(0)
+        .map((_, i) => ({
+          id: `id_${i}`,
+          spotifyId: null,
+          youtubeTrack: {
+            name: `name_${i}`,
+            artist: `artist_${i}`,
+            year: `year_${i}`,
+            link: `link_${i}`,
+          },
+          spotifyTrack: undefined,
+        }))
+
+      const spotifyTracks: spotifyApi.SpotifyTrack[] = input
+        .slice(0, NUM_FOUND_TRACKS)
+        .map((item, idx) => ({
+          id: `id_${idx}`,
+          name: `name_${idx}`,
+          uri: `uri_${idx}`,
+          href: `href_${idx}`,
+          artists: [
+            {
+              name: `artist_${idx}`,
+            } as spotifyApi.SpotifyArtist,
+          ],
+        }))
+
+      const numExistingTracks = 123
+      input.slice(numExistingTracks).forEach((item, idx) => {
+        const track = spotifyTracks[idx + numExistingTracks]
+        const items = track ? [track] : []
+        findTrackSpy.mockResolvedValueOnce({
+          tracks: {
+            href: '',
+            items,
+          },
+        })
+      })
+
+      const existingMap = new Map<string, TrimSpotifyTrack>(
+        spotifyTracks.slice(0, numExistingTracks).map((t, idx) => [
+          input[idx].id,
+          {
+            id: t.id,
+            href: t.href,
+            uri: t.uri,
+            name: t.name,
+            artists: t.artists.map((a) => a.name),
+          },
+        ])
+      )
+      loadMapFn.mockReturnValueOnce(existingMap)
+
+      const result = await searchSpotifyTracks(input)
+
+      expect(mapHelperSpy).toBeCalledTimes(1)
+      expect(mapHelperSpy).toBeCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
+      expect(loadMapFn).toBeCalledTimes(1)
+      expect(findTrackSpy).toBeCalledTimes(input.length - numExistingTracks)
+      expect(saveMapFn).toBeCalledTimes(
+        spotifyTracks.length - numExistingTracks
+      )
+      input.slice(numExistingTracks).forEach((item) => {
+        expect(findTrackSpy).toBeCalledWith(item.youtubeTrack)
+      })
+      spotifyTracks.slice(numExistingTracks).forEach(() => {
         expect(saveMapFn).toBeCalledWith(existingMap)
       })
       expect(result.size).toBe(NUM_FOUND_TRACKS)

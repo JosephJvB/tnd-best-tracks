@@ -60,7 +60,7 @@ export default async function () {
       return true
     }
 
-    return spotifyIdTrackMap.has(i.spotifyId)
+    return !spotifyIdTrackMap.has(i.spotifyId)
   })
   const youtubeIdTrackMap = await searchSpotifyTracks(toSearch)
   console.log(
@@ -123,8 +123,9 @@ export const searchSpotifyTracks = async (items: PrePlaylistItem[]) => {
   const youtubeTrackMap = mapHelper.load()
 
   let trackNum = 1
-  for (const item of items) {
-    const logMsg = `  > ${trackNum++} / ${items.length}`
+  const toSearch = items.filter((i) => !youtubeTrackMap.has(i.id))
+  for (const item of toSearch) {
+    const logMsg = `  > ${trackNum++} / ${toSearch.length}`
     process.stdout.write(`${logMsg}\r`)
 
     let ts1 = Date.now()
