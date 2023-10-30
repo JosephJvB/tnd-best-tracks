@@ -8,5 +8,5 @@ import saveWeeklyPlaylistItems from './tasks/saveWeeklyPlaylistItems'
 void (async function () {
   // await saveWeeklyPlaylistItems()
   // extractYoutubeTracks()
-  await getSpotifyTracks()
+  // await getSpotifyTracks()
 })()
