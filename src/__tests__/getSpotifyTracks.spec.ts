@@ -262,6 +262,7 @@ describe('getSpotifyTracks.ts', () => {
             artist: `artist_${i}`,
             year: i,
             link: `link_${i}`,
+            videoPublishedDate: `date_${i}`,
           },
           spotifyTrack: undefined,
         }))
@@ -322,6 +323,7 @@ describe('getSpotifyTracks.ts', () => {
             artist: `artist_${i}`,
             year: i,
             link: `link_${i}`,
+            videoPublishedDate: `date_${i}`,
           },
           spotifyTrack: undefined,
         }))
@@ -382,6 +384,7 @@ describe('getSpotifyTracks.ts', () => {
             artist: `artist_${i}`,
             year: i,
             link: `link_${i}`,
+            videoPublishedDate: `date_${i}`,
           },
           spotifyTrack: undefined,
         }))
@@ -442,6 +445,7 @@ describe('getSpotifyTracks.ts', () => {
             artist: `artist_${i}`,
             year: i,
             link: `link_${i}`,
+            videoPublishedDate: `date_${i}`,
           },
           spotifyTrack: undefined,
         }))
@@ -530,6 +534,7 @@ describe('getSpotifyTracks.ts', () => {
           name: `name_${idx}`,
           link: `link_${idx}`,
           year: idx,
+          videoPublishedDate: `date_${idx}`,
         }))
       const spotifyTracks: spotifyApi.SpotifyTrack[] = input
         .slice(0, NUM_FOUND_TRACKS)
@@ -636,6 +641,7 @@ describe('getSpotifyTracks.ts', () => {
           name: `name_${idx}`,
           link: `link_${idx}`,
           year: idx,
+          videoPublishedDate: `date_${idx}`,
         }))
       const spotifyTracks: spotifyApi.SpotifyTrack[] = input
         .slice(0, NUM_FOUND_TRACKS)

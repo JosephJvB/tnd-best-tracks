@@ -11,6 +11,7 @@ export type YoutubeTrack = {
   artist: string
   link: string
   year: number
+  videoPublishedDate: string
 }
 
 const BEST_TRACK_PREFIXES = [
@@ -47,6 +48,7 @@ export default function () {
     return trackList.map((t) => ({
       ...t,
       year,
+      videoPublishedDate: item.snippet.publishedAt,
     }))
   })
 
@@ -57,7 +59,7 @@ export default function () {
   )
 }
 export const extractTrackList_v2 = (item: PlaylistItem) => {
-  const trackList: Omit<YoutubeTrack, 'year'>[] = []
+  const trackList: Omit<YoutubeTrack, 'year' | 'videoPublishedDate'>[] = []
   if (!containsBestTracks(item)) {
     return []
   }
@@ -107,7 +109,7 @@ export const extractTrackList_fallback = (
   item: PlaylistItem,
   lines: string[]
 ) => {
-  const trackList: Omit<YoutubeTrack, 'year'>[] = []
+  const trackList: Omit<YoutubeTrack, 'year' | 'videoPublishedDate'>[] = []
   const oldPrefix = OLD_TITLE_PREFIXES.find((p) =>
     item.snippet.title.startsWith(p)
   )

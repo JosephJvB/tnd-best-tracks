@@ -39,6 +39,7 @@ describe('spotifyAxiosRequests', () => {
           artist: 'Denzel Curry',
           link: 'https://www.youtube.com/watch?v=geVZ6ayvyzY&pp=ygUzRGVuemVsIEN1cnJ5IC0gV09PIGZ0LiBQbGF5VGhhdEJvaVpheSAmIENoaWVmIFBvdW5k',
           year: 2023,
+          videoPublishedDate: 'some-date',
         }
 
         const result = await requestSearch(input)
@@ -52,6 +53,7 @@ describe('spotifyAxiosRequests', () => {
           artist: 'Denzel Curry',
           link: 'https://www.youtube.com/watch?v=geVZ6ayvyzY&pp=ygUzRGVuemVsIEN1cnJ5IC0gV09PIGZ0LiBQbGF5VGhhdEJvaVpheSAmIENoaWVmIFBvdW5k',
           year: 2023,
+          videoPublishedDate: 'some-date',
         }
 
         const result = await requestSearch(input)
@@ -65,6 +67,7 @@ describe('spotifyAxiosRequests', () => {
           artist: 'Phoenix',
           link: 'https://www.youtube.com/watch?v=zmA7_I_q5e8&pp=ygU3UGhvZW5peCAtIEFsbCBFeWVzIG9uIE1lIGZ0LiBCRU5FRSwgQ2hhZCBIdWdvICYgUHVzaGEgVA%3D%3D',
           year: 2023,
+          videoPublishedDate: 'some-date',
         }
 
         const result = await requestSearch(input)
@@ -78,6 +81,7 @@ describe('spotifyAxiosRequests', () => {
           artist: 'Phoenix',
           link: 'https://www.youtube.com/watch?v=zmA7_I_q5e8&pp=ygU3UGhvZW5peCAtIEFsbCBFeWVzIG9uIE1lIGZ0LiBCRU5FRSwgQ2hhZCBIdWdvICYgUHVzaGEgVA%3D%3D',
           year: 2023,
+          videoPublishedDate: 'some-date',
         }
 
         const result = await requestSearch(input)
@@ -93,6 +97,7 @@ describe('spotifyAxiosRequests', () => {
           artist: 'Car Seat Headrest',
           link: 'https://www.youtube.com/watch?v=SkSewZhqXG8&pp=ygUpQ2FyIFNlYXQgSGVhZHJlc3QgLSBXZSBMb29rZWQgTGlrZSBHaWFudHM%3D',
           year: 2023,
+          videoPublishedDate: 'some-date',
         }
 
         const result = await requestSearch(input)
@@ -106,6 +111,7 @@ describe('spotifyAxiosRequests', () => {
           artist: 'Car Seat Headrest',
           link: 'https://www.youtube.com/watch?v=SkSewZhqXG8&pp=ygUpQ2FyIFNlYXQgSGVhZHJlc3QgLSBXZSBMb29rZWQgTGlrZSBHaWFudHM%3D',
           year: 2023,
+          videoPublishedDate: 'some-date',
         }
 
         const result = await requestSearch(input)
@@ -121,6 +127,7 @@ describe('spotifyAxiosRequests', () => {
           artist: 'Paul Wall & Termanology',
           link: 'https://www.youtube.com/watch?v=wbIXsr0nzPs&pp=ygUuUGF1bCBXYWxsLCBUZXJtYW5vbG9neSAtIEhvdXN0b24gQkJRIGZ0LiBCdW4gQg%3D%3D',
           year: 2023,
+          videoPublishedDate: 'some-date',
         }
 
         const result = await requestSearch(input)
@@ -135,6 +142,7 @@ describe('spotifyAxiosRequests', () => {
           artist: 'Paul Wall Termanology',
           link: 'https://www.youtube.com/watch?v=wbIXsr0nzPs&pp=ygUuUGF1bCBXYWxsLCBUZXJtYW5vbG9neSAtIEhvdXN0b24gQkJRIGZ0LiBCdW4gQg%3D%3D',
           year: 2023,
+          videoPublishedDate: 'some-date',
         }
 
         const result = await requestSearch(input)
