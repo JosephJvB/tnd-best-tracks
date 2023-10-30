@@ -3144,7 +3144,13 @@
     "year": 2017
   },
   {
-    "name": "Poison / Tongue",
+    "name": "Poison",
+    "artist": "GFOTY",
+    "link": "https://youtu.be/qzo2vvUWLoo",
+    "year": 2017
+  },
+  {
+    "name": "Tongue",
     "artist": "GFOTY",
     "link": "https://youtu.be/qzo2vvUWLoo",
     "year": 2017
@@ -3174,9 +3180,15 @@
     "year": 2017
   },
   {
-    "name": "Mystery / Ruthven",
+    "name": "Mystery",
     "artist": "Fabiana Palladino",
-    "link": "http://www.theneedledrop.com/articles/2017/11/fabiana-palladino-mystery-ruthven-evil",
+    "link": "https://youtu.be/qzo2vvUWLoo",
+    "year": 2017
+  },
+  {
+    "name": "Evil",
+    "artist": "Ruthven",
+    "link": "https://youtu.be/qzo2vvUWLoo",
     "year": 2017
   },
   {
@@ -3378,9 +3390,15 @@
     "year": 2018
   },
   {
-    "name": "Leave It In My Dreams & QYURRYUS",
+    "name": "Leave It In My Dreams",
     "artist": "The Voidz",
-    "link": "http://www.theneedledrop.com/articles/2018/1/the-voidz-leave-it-in-my-dreams",
+    "link": "https://youtu.be/qzo2vvUWLoo",
+    "year": 2018
+  },
+  {
+    "name": "QYURRYUS",
+    "artist": "The Voidz",
+    "link": "https://youtu.be/qzo2vvUWLoo",
     "year": 2018
   },
   {
@@ -3558,9 +3576,15 @@
     "year": 2018
   },
   {
-    "name": "Make Me Feel / Django Jane",
+    "name": "Make Me Feel",
     "artist": "Janelle Monae",
-    "link": "https://www.youtube.com/watch?v=tGRzz0oqgUE",
+    "link": "https://youtu.be/qzo2vvUWLoo",
+    "year": 2018
+  },
+  {
+    "name": "Django Jane",
+    "artist": "Janelle Monae",
+    "link": "https://youtu.be/qzo2vvUWLoo",
     "year": 2018
   },
   {
@@ -3888,15 +3912,27 @@
     "year": 2018
   },
   {
-    "name": "Fists of Fury / The Space Travelers Lullaby",
+    "name": "Fists of Fury",
     "artist": "Kamasi Washington",
-    "link": "https://itunes.apple.com/us/album/fists-of-fury/1363033047?i=1363034076",
+    "link": "https://youtu.be/qzo2vvUWLoo",
     "year": 2018
   },
   {
-    "name": "Barbie Tingz / Chun-Li",
+    "name": "The Space Travelers Lullaby",
+    "artist": "Kamasi Washington",
+    "link": "https://youtu.be/qzo2vvUWLoo",
+    "year": 2018
+  },
+  {
+    "name": "Barbie Tingz",
     "artist": "Nicki Minaj",
-    "link": "https://itunes.apple.com/us/album/chun-li/1371043173?i=1371043175",
+    "link": "https://youtu.be/qzo2vvUWLoo",
+    "year": 2018
+  },
+  {
+    "name": "Chun-Li",
+    "artist": "Nicki Minaj",
+    "link": "https://youtu.be/qzo2vvUWLoo",
     "year": 2018
   },
   {
@@ -4050,9 +4086,15 @@
     "year": 2018
   },
   {
-    "name": "Me&My / Look Ma No Hands",
+    "name": "Me&My",
     "artist": "André 3000",
-    "link": "http://www.theneedledrop.com/articles/2018/5/andr-3000-memy-to-bury-your-parents-look-ma-no-hands",
+    "link": "https://youtu.be/qzo2vvUWLoo",
+    "year": 2018
+  },
+  {
+    "name": "Look Ma No Hands",
+    "artist": "André 3000",
+    "link": "https://youtu.be/qzo2vvUWLoo",
     "year": 2018
   },
   {
@@ -4308,9 +4350,15 @@
     "year": 2018
   },
   {
-    "name": "3 Knifes / The Hunt ft. Corey Taylor",
+    "name": "3 Knifes",
     "artist": "Code Orange",
-    "link": "https://youtu.be/hoE7AISG7Kc",
+    "link": "https://youtu.be/qzo2vvUWLoo",
+    "year": 2018
+  },
+  {
+    "name": "The Hunt ft. Corey Taylor",
+    "artist": "Code Orange",
+    "link": "https://youtu.be/qzo2vvUWLoo",
     "year": 2018
   },
   {
