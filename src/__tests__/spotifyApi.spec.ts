@@ -363,6 +363,91 @@ describe('spotifyApi.ts', () => {
         expect(normalizeArtistSpy).toBeCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
+
+      it('can find WAVVES__No Shade__2017', async () => {
+        const input = {
+          name: 'No Shade',
+          artist: 'WAVVES',
+          link: 'https://open.spotify.com/album/7mwIpBo4UBr1JKez0GxoR8',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Miya Folick__Touble Adjusting__2017', async () => {
+        const input = {
+          name: 'Touble Adjusting',
+          artist: 'Miya Folick',
+          link: 'http://www.theneedledrop.com/articles/2017/5/miya-folick-trouble-adjusting',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it("can find Brockhampton__Heat (forgot to mention, sorry. it's fire tho!)__2017", async () => {
+        const input = {
+          name: "Heat (forgot to mention, sorry. it's fire tho!)",
+          artist: 'Brockhampton',
+          link: 'https://youtu.be/Jpu0JZxDz-w',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Dangermouse__Chase Me ft. Run the Jewels and Big Boi__2017', async () => {
+        const input = {
+          name: 'Chase Me ft. Run the Jewels and Big Boi',
+          artist: 'Dangermouse',
+          link: 'http://vevo.ly/d1k64k',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find King Gizzard & The Lizard Wizard__The Lord of Lightning Vs. Balrog__2017', async () => {
+        const input = {
+          name: 'The Lord of Lightning Vs. Balrog',
+          artist: 'King Gizzard & The Lizard Wizard',
+          link: 'http://www.theneedledrop.com/articles/2017/6/king-gizzard-the-lizard-wizard-the-lord-of-lightning-vs-balrog',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
     })
 
     describe.skip('songs are not on spotify!', () => {
@@ -424,6 +509,23 @@ describe('spotifyApi.ts', () => {
           name: 'Answer My Text',
           artist: 'PWR BTTM',
           link: 'https://youtu.be/TlNHAkXDS10',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Kirin J Callinan__S.A.D__2017', async () => {
+        const input = {
+          name: 'S.A.D',
+          artist: 'Kirin J Callinan',
+          link: 'http://www.theneedledrop.com/articles/2017/5/kirin-j-callinan-sad',
           year: 2017,
         }
 

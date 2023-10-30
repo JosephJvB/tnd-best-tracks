@@ -124,6 +124,14 @@ export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
     original: 'Youre The Problem Here',
     corrected: 'You are The Problem Here',
   },
+  {
+    original: 'Touble Adjusting',
+    corrected: 'Trouble Adjusting',
+  },
+  {
+    original: 'The Lord of Lightning Vs. Balrog',
+    corrected: 'The Lord of Lightning',
+  },
 ]
 export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
   {
@@ -138,6 +146,10 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
     original: 'Slaves',
     corrected: 'SOFT PLAY',
   },
+  {
+    original: 'Dangermouse',
+    corrected: 'Danger Mouse',
+  },
 ]
 // link is most reliably unique
 export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
@@ -150,3 +162,4 @@ export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
     corrected: 'Ryan Pollie',
   },
 ]
+export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = []

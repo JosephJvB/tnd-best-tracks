@@ -4,6 +4,7 @@ import { SPOTIFY_DOMAIN, SPOTIFY_ID_LENGTH } from './constants'
 import {
   ARTIST_NAME_CORRECTIONS,
   FIX_ARTIST_FROM_LINK_CORRECTIONS,
+  FIX_TRACK_FROM_LINK_CORRECTIONS,
   TRACK_NAME_CORRECTIONS,
 } from './manualCorrections'
 
@@ -122,10 +123,10 @@ export const findTrack = async (
     if (res.data.tracks.items.length === 0 && retry) {
       return await findTrack(
         {
-          ...track,
           name: normalizeTrackName(track as YoutubeTrack),
           artist: normalizeArtistName(track as YoutubeTrack),
           year: normalizeYear(track as YoutubeTrack),
+          link: normalizeLink(track as YoutubeTrack),
         },
         false // do not retry again
       )
@@ -247,6 +248,12 @@ export const normalizeTrackName = (track: YoutubeTrack) => {
     }
   })
 
+  FIX_TRACK_FROM_LINK_CORRECTIONS.forEach((c) => {
+    if (track.link === c.original) {
+      normalized = c.corrected
+    }
+  })
+
   return normalized
 }
 
@@ -255,4 +262,11 @@ export const normalizeYear = (track: YoutubeTrack) => {
   // eg: clipping.__Wriggle EP__2016 -> re-released in 2023
   // for now, prefer to just widen search by omitting year
   return undefined
+}
+
+export const normalizeLink = (track: YoutubeTrack) => {
+  // TODO: apply manual year fixes based on track properties
+  // eg: WAVVES__No Shade__2017 album id in link causes search to fail
+  // for now, prefer to just widen search by omitting link
+  return ''
 }
