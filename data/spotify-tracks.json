@@ -766,7 +766,15 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4GXl8l1MfZPf2GvpyRPJBf",
+      "uri": "spotify:track:4GXl8l1MfZPf2GvpyRPJBf",
+      "name": "pick up the phone",
+      "artists": [
+        "Young Thug",
+        "Travis Scott"
+      ]
+    }
   },
   {
     "id": "AlunaGeorge, Leikeli47, Dreezy__\"Mean What I Mean\"__2016",
@@ -851,7 +859,14 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7bakEx2uXJVmbGCznY3Tmt",
+      "uri": "spotify:track:7bakEx2uXJVmbGCznY3Tmt",
+      "name": "Poké Don't Stop",
+      "artists": [
+        "Hot Dad"
+      ]
+    }
   },
   {
     "id": "DJ Khaled__\"Holy Key\" ft. Kendrick Lamar, Big Sean & Betty Wright__2016",
@@ -1142,7 +1157,15 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2bbBX3dLcLwDjxiXF7Pxbj",
+      "uri": "spotify:track:2bbBX3dLcLwDjxiXF7Pxbj",
+      "name": "I Might Vote 4 Donald Trump",
+      "artists": [
+        "JPEGMAFIA",
+        "Freaky"
+      ]
+    }
   },
   {
     "id": "Street Sects__\"Featherweight Hate\"__2016",
@@ -1766,7 +1789,15 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1Xeb5vhTKKvm2x92MKKOn2",
+      "uri": "spotify:track:1Xeb5vhTKKvm2x92MKKOn2",
+      "name": "Swim Meet",
+      "artists": [
+        "Crapface",
+        "Elevation"
+      ]
+    }
   },
   {
     "id": "Regina Spektor__Black and White__2016",
@@ -2233,7 +2264,15 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "20CkKriGLOSWbLtnJx9OvK",
+      "uri": "spotify:track:20CkKriGLOSWbLtnJx9OvK",
+      "name": "How Can You Tell When It's Done?",
+      "artists": [
+        "Baauer",
+        "C.Z."
+      ]
+    }
   },
   {
     "id": "Flowertruck__\"Sunshower\"__2016",
@@ -2790,15 +2829,40 @@
     }
   },
   {
-    "id": "Big Sean__\"Bounce Back\" & \"No More Interviews\"__2016",
+    "id": "Big Sean__Bounce Back__2016",
     "youtubeTrack": {
-      "name": "\"Bounce Back\" & \"No More Interviews\"",
+      "name": "Bounce Back",
       "artist": "Big Sean",
-      "link": "http://www.theneedledrop.com/articles/2016/11/big-sean-bounce-back-no-more-interviews",
+      "link": "https://youtu.be/qzo2vvUWLoo",
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0SGkqnVQo9KPytSri1H6cF",
+      "uri": "spotify:track:0SGkqnVQo9KPytSri1H6cF",
+      "name": "Bounce Back",
+      "artists": [
+        "Big Sean"
+      ]
+    }
+  },
+  {
+    "id": "Big Sean__No More Interviews__2016",
+    "youtubeTrack": {
+      "name": "No More Interviews",
+      "artist": "Big Sean",
+      "link": "https://youtu.be/qzo2vvUWLoo",
+      "year": 2016
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "3IRloeDfPgi7bH5OwXfwkN",
+      "uri": "spotify:track:3IRloeDfPgi7bH5OwXfwkN",
+      "name": "No More Interviews",
+      "artists": [
+        "Big Sean"
+      ]
+    }
   },
   {
     "id": "Kevin Abstract__\"Miserable America\"__2016",
@@ -3094,7 +3158,15 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1HAZrl3uyMARpU7KxVM6SH",
+      "uri": "spotify:track:1HAZrl3uyMARpU7KxVM6SH",
+      "name": "Machine, Man & Monster",
+      "artists": [
+        "CZARFACE",
+        "Conway the Machine"
+      ]
+    }
   },
   {
     "id": "Clarence Clarity__\"Vapid Feels Are Vapid\"__2016",
@@ -8805,7 +8877,15 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "39lWY2WobnfmU9wSx4hABs",
+      "uri": "spotify:track:39lWY2WobnfmU9wSx4hABs",
+      "name": "2 Stings",
+      "artists": [
+        "Westside Gunn",
+        "MF DOOM"
+      ]
+    }
   },
   {
     "id": "No Age__Snares Like A Haircut__2017",
@@ -12426,7 +12506,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4UoB59D0giPmZaPlGQVYpw",
+      "uri": "spotify:track:4UoB59D0giPmZaPlGQVYpw",
+      "name": "Old niggas",
+      "artists": [
+        "Cordae"
+      ]
+    }
   },
   {
     "id": "Nine Inch Nails__God Break Down the Door__2018",
@@ -12975,15 +13062,22 @@
     }
   },
   {
-    "id": "Code Orange__3 Knifes__2018",
+    "id": "Code Orange__3 Knives__2018",
     "youtubeTrack": {
-      "name": "3 Knifes",
+      "name": "3 Knives",
       "artist": "Code Orange",
       "link": "https://youtu.be/qzo2vvUWLoo",
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7EPn0zVuBYY5gd7k633ucs",
+      "uri": "spotify:track:7EPn0zVuBYY5gd7k633ucs",
+      "name": "3 Knives",
+      "artists": [
+        "Code Orange"
+      ]
+    }
   },
   {
     "id": "Code Orange__The Hunt ft. Corey Taylor__2018",
@@ -13301,7 +13395,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3CArFtrkJzWkxgjmX7ki9N",
+      "uri": "spotify:track:3CArFtrkJzWkxgjmX7ki9N",
+      "name": "Kung Fu",
+      "artists": [
+        "Cordae"
+      ]
+    }
   },
   {
     "id": "The Internet__La Di Da__2018",
@@ -13377,7 +13478,16 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6dktyiCWz2JYGmcPQ5D5dY",
+      "uri": "spotify:track:6dktyiCWz2JYGmcPQ5D5dY",
+      "name": "Peach Jam",
+      "artists": [
+        "88rising",
+        "Joji",
+        "BlocBoy JB"
+      ]
+    }
   },
   {
     "id": "Low__Double Negative Triptych__2018",
@@ -13523,11 +13633,18 @@
     "youtubeTrack": {
       "name": "Blueberry Jam",
       "artist": "Bonnie \"Prince\" Billy",
-      "link": "https://youtu.be/eJf2iY2Kbx0",
+      "link": "https://open.spotify.com/track/0gdye9nvTsXMYOQyIatwGR",
       "year": 2018
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "0gdye9nvTsXMYOQyIatwGR",
+    "spotifyTrack": {
+      "id": "0gdye9nvTsXMYOQyIatwGR",
+      "uri": "spotify:track:0gdye9nvTsXMYOQyIatwGR",
+      "name": "Blueberry Jam",
+      "artists": [
+        "Bonnie Prince Billy"
+      ]
+    }
   },
   {
     "id": "The Lemon Twigs__Small Victories__2018",
@@ -13911,11 +14028,21 @@
     "youtubeTrack": {
       "name": "Good Gas ft. 2Chainz & A$AP Ferg",
       "artist": "FKi 1st",
-      "link": "https://youtu.be/VGceCqZL6JQ",
+      "link": "https://open.spotify.com/track/2o8VvyPvmjhDid7zk7XNHV",
       "year": 2018
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "2o8VvyPvmjhDid7zk7XNHV",
+    "spotifyTrack": {
+      "id": "2o8VvyPvmjhDid7zk7XNHV",
+      "uri": "spotify:track:2o8VvyPvmjhDid7zk7XNHV",
+      "name": "Good Gas",
+      "artists": [
+        "Good Gas",
+        "FKi 1st",
+        "UnoTheActivist",
+        "MadeinTYO"
+      ]
+    }
   },
   {
     "id": "Soap&Skin__Heal__2018",
@@ -14612,7 +14739,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "483zhvZBTmKGsaU9nBQCdi",
+      "uri": "spotify:track:483zhvZBTmKGsaU9nBQCdi",
+      "name": "Apocalypse Now (& Later)",
+      "artists": [
+        "Laura Jane Grace"
+      ]
+    }
   },
   {
     "id": "milo__stet__2018",
@@ -14651,15 +14785,40 @@
     }
   },
   {
-    "id": "Kitten__Secrets / Mercury__2018",
+    "id": "Kitten__Secrets__2018",
     "youtubeTrack": {
-      "name": "Secrets / Mercury",
+      "name": "Secrets",
       "artist": "Kitten",
       "link": "https://youtu.be/ZRJ1WSNYhhM",
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1CGwcVQNk7uCNT6tbEzDDK",
+      "uri": "spotify:track:1CGwcVQNk7uCNT6tbEzDDK",
+      "name": "Secrets",
+      "artists": [
+        "Kitten"
+      ]
+    }
+  },
+  {
+    "id": "Kitten__Mercury__2018",
+    "youtubeTrack": {
+      "name": "Mercury",
+      "artist": "Kitten",
+      "link": "https://youtu.be/ShlQ2k5YfjU",
+      "year": 2018
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "4kHRrKlx23P4hmTeaUB4vm",
+      "uri": "spotify:track:4kHRrKlx23P4hmTeaUB4vm",
+      "name": "Mercury",
+      "artists": [
+        "Kitten"
+      ]
+    }
   },
   {
     "id": "Lando Chill__Dah Vapor ft. Swansuit__2018",
@@ -14931,7 +15090,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5UvgTF3oGUxRwi96UZJd4I",
+      "uri": "spotify:track:5UvgTF3oGUxRwi96UZJd4I",
+      "name": "symbol",
+      "artists": [
+        "Adrianne Lenker"
+      ]
+    }
   },
   {
     "id": "Fidlar__Too Real__2018",
@@ -15126,7 +15292,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5TTmRh90xJzpoECbXbPHWE",
+      "uri": "spotify:track:5TTmRh90xJzpoECbXbPHWE",
+      "name": "Corruption",
+      "artists": [
+        "Sinistarr"
+      ]
+    }
   },
   {
     "id": "Perdu__Saromosa__2018",
@@ -15247,7 +15420,15 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3T9MsVCjS5HTYLaGdyn1U0",
+      "uri": "spotify:track:3T9MsVCjS5HTYLaGdyn1U0",
+      "name": "Tried",
+      "artists": [
+        "BADBADNOTGOOD",
+        "Little Dragon"
+      ]
+    }
   },
   {
     "id": "Tiny Jag__Riding/CUT HER HAIR__2018",
@@ -15426,7 +15607,15 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7q8cy4uoA2itYATsKeXhcq",
+      "uri": "spotify:track:7q8cy4uoA2itYATsKeXhcq",
+      "name": "Multi Millionaire (feat. Lil Uzi Vert)",
+      "artists": [
+        "Lil Pump",
+        "Lil Uzi Vert"
+      ]
+    }
   },
   {
     "id": "Sharon Van Etten__Comeback Kid__2018",
@@ -15455,7 +15644,15 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7m3XMxbqUlg4ePYfiKUJx5",
+      "uri": "spotify:track:7m3XMxbqUlg4ePYfiKUJx5",
+      "name": "Shit I'm On",
+      "artists": [
+        "DJ Muggs",
+        "Roc Marciano"
+      ]
+    }
   },
   {
     "id": "Holy Ghost__Anxious__2018",
@@ -15862,7 +16059,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5psluCCbVst5gPTN8R5fZG",
+      "uri": "spotify:track:5psluCCbVst5gPTN8R5fZG",
+      "name": "Dawn and gaze",
+      "artists": [
+        "envy"
+      ]
+    }
   },
   {
     "id": "Young Fathers__Cocoa Sugar__2018",
@@ -15949,15 +16153,40 @@
     }
   },
   {
-    "id": "Clarence Clarity__Anthropic Principles / Telenovela__2018",
+    "id": "Clarence Clarity__Anthropic Principles__2018",
     "youtubeTrack": {
-      "name": "Anthropic Principles / Telenovela",
+      "name": "Anthropic Principles",
       "artist": "Clarence Clarity",
       "link": "https://www.youtube.com/watch?v=cn3OMeiYTgk",
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2MT8ioaVpPWwkISkH4AkMi",
+      "uri": "spotify:track:2MT8ioaVpPWwkISkH4AkMi",
+      "name": "Anthropic Principles",
+      "artists": [
+        "Clarence Clarity"
+      ]
+    }
+  },
+  {
+    "id": "Clarence Clarity__Telenovela__2018",
+    "youtubeTrack": {
+      "name": "Telenovela",
+      "artist": "Clarence Clarity",
+      "link": "https://www.youtube.com/watch?v=_fzqIwIdpGk",
+      "year": 2018
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "20ZMLGVMVfMrmHyIvJe4VX",
+      "uri": "spotify:track:20ZMLGVMVfMrmHyIvJe4VX",
+      "name": "Telenovela",
+      "artists": [
+        "Clarence Clarity"
+      ]
+    }
   },
   {
     "id": "Rosalía__Di Mi Nombre__2018",
@@ -16004,7 +16233,17 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0HCDvbGNsigLpkzCDwpKVr",
+      "uri": "spotify:track:0HCDvbGNsigLpkzCDwpKVr",
+      "name": "Mountains (feat. Sia, Diplo, and Labrinth)",
+      "artists": [
+        "Sia",
+        "Diplo",
+        "Labrinth",
+        "LSD"
+      ]
+    }
   },
   {
     "id": "Earl Sweatshirt__Nowhere2go__2018",
@@ -16101,7 +16340,15 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5C1j74nknJnlcMXqywJC2a",
+      "uri": "spotify:track:5C1j74nknJnlcMXqywJC2a",
+      "name": "INNOCENCE",
+      "artists": [
+        "HEALTH",
+        "Youth Code"
+      ]
+    }
   },
   {
     "id": "Lil Wayne__In This House ft. Gucci Mane__2018",
@@ -16149,7 +16396,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5n5GajV1FOt1iINQciUZTG",
+      "uri": "spotify:track:5n5GajV1FOt1iINQciUZTG",
+      "name": "Popstars",
+      "artists": [
+        "Dar-Ken"
+      ]
+    }
   },
   {
     "id": "Karen O and Danger Mouse__LUX PRIMA__2018",
@@ -16160,7 +16414,15 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0A2nyIqL9VGELypstIeNU2",
+      "uri": "spotify:track:0A2nyIqL9VGELypstIeNU2",
+      "name": "Lux Prima",
+      "artists": [
+        "Karen O",
+        "Danger Mouse"
+      ]
+    }
   },
   {
     "id": "Hozier__Movement__2018",
@@ -16355,7 +16617,16 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3esNtc32FjwCvU9BO33L5Q",
+      "uri": "spotify:track:3esNtc32FjwCvU9BO33L5Q",
+      "name": "Acid King",
+      "artists": [
+        "Malibu Ken",
+        "Aesop Rock",
+        "TOBACCO"
+      ]
+    }
   },
   {
     "id": "Earl Sweatshirt__The Mint__2018",
@@ -17336,7 +17607,15 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "41gdQOR0TLrND7NpWyQGSa",
+      "uri": "spotify:track:41gdQOR0TLrND7NpWyQGSa",
+      "name": "Steps",
+      "artists": [
+        "Isaac Zale",
+        "Mick Jenkins"
+      ]
+    }
   },
   {
     "id": "LCD Soundsystem__Seconds (Human League Cover)__2019",
@@ -17456,7 +17735,15 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2P5rXlJqSw6G7PwhvXVBa1",
+      "uri": "spotify:track:2P5rXlJqSw6G7PwhvXVBa1",
+      "name": "Ancestral Recall",
+      "artists": [
+        "Christian Scott aTunde Adjuah",
+        "Saul Williams"
+      ]
+    }
   },
   {
     "id": "Show Me the Body__Camp Orchestra__2019",
@@ -17776,7 +18063,14 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7nPYDqurKtIWSiwFv99rf1",
+      "uri": "spotify:track:7nPYDqurKtIWSiwFv99rf1",
+      "name": "Painkiller Paradise",
+      "artists": [
+        "Lou From Paradise"
+      ]
+    }
   },
   {
     "id": "Shlohmo__The End__2019",
@@ -17980,18 +18274,51 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "095nyFKlTwa9JIp9cVrHOF",
+      "uri": "spotify:track:095nyFKlTwa9JIp9cVrHOF",
+      "name": "Blast Off (feat. Pharrell Williams)",
+      "artists": [
+        "Gesaffelstein",
+        "Pharrell Williams"
+      ]
+    }
   },
   {
-    "id": "Carly Rae Jepsen__Now That I Found You / No Drug Like Me__2019",
+    "id": "Carly Rae Jepsen__Now That I Found You__2019",
     "youtubeTrack": {
-      "name": "Now That I Found You / No Drug Like Me",
+      "name": "Now That I Found You",
       "artist": "Carly Rae Jepsen",
       "link": "https://youtu.be/cyP_JyP1QJg",
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3dtp75StyEK5XeKraS5KiI",
+      "uri": "spotify:track:3dtp75StyEK5XeKraS5KiI",
+      "name": "Now That I Found You",
+      "artists": [
+        "Carly Rae Jepsen"
+      ]
+    }
+  },
+  {
+    "id": "Carly Rae Jepsen__No Drug Like Me__2019",
+    "youtubeTrack": {
+      "name": "No Drug Like Me",
+      "artist": "Carly Rae Jepsen",
+      "link": "https://youtu.be/mVocX_uNTIU",
+      "year": 2019
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "2YTblAt3gfs9F3DGYIv2nK",
+      "uri": "spotify:track:2YTblAt3gfs9F3DGYIv2nK",
+      "name": "No Drug Like Me",
+      "artists": [
+        "Carly Rae Jepsen"
+      ]
+    }
   },
   {
     "id": "Wand__Thin Air__2019",
@@ -18084,15 +18411,40 @@
     }
   },
   {
-    "id": "Matmos__Breaking Bread & Thermoplastic Riot Shield__2019",
+    "id": "Matmos__Breaking Bread__2019",
     "youtubeTrack": {
-      "name": "Breaking Bread & Thermoplastic Riot Shield",
+      "name": "Breaking Bread",
       "artist": "Matmos",
       "link": "https://youtu.be/ilq8HsRk2BQ",
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3hbxSBTE3REYFtWRuin5am",
+      "uri": "spotify:track:3hbxSBTE3REYFtWRuin5am",
+      "name": "Breaking Bread",
+      "artists": [
+        "Matmos"
+      ]
+    }
+  },
+  {
+    "id": "Matmos__Thermoplastic Riot Shield__2019",
+    "youtubeTrack": {
+      "name": "Thermoplastic Riot Shield",
+      "artist": "Matmos",
+      "link": "https://youtu.be/zWO2VdDqdXE",
+      "year": 2019
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "5LmcqKPfLzp0pUsKeqIO8Q",
+      "uri": "spotify:track:5LmcqKPfLzp0pUsKeqIO8Q",
+      "name": "Thermoplastic Riot Shield",
+      "artists": [
+        "Matmos"
+      ]
+    }
   },
   {
     "id": "Partner__Tell You Off__2019",
@@ -18187,7 +18539,15 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4waVSC9eSkrt6RxJK3DhwW",
+      "uri": "spotify:track:4waVSC9eSkrt6RxJK3DhwW",
+      "name": "Only Human",
+      "artists": [
+        "KH",
+        "Four Tet"
+      ]
+    }
   },
   {
     "id": "The National__You Had Your Soul with You__2019",
@@ -18234,7 +18594,14 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0GwYkXgQdqY4dyRffHw3HT",
+      "uri": "spotify:track:0GwYkXgQdqY4dyRffHw3HT",
+      "name": "Have Mercy",
+      "artists": [
+        "Cordae"
+      ]
+    }
   },
   {
     "id": "IDK__Trigger Happy__2019",
@@ -18556,7 +18923,15 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2MnEG4htbbdfoUsyzxZ4BM",
+      "uri": "spotify:track:2MnEG4htbbdfoUsyzxZ4BM",
+      "name": "Throwaway (with Clairo)",
+      "artists": [
+        "SG Lewis",
+        "Clairo"
+      ]
+    }
   },
   {
     "id": "Martyrdöd__Cashless Society__2019",
@@ -19153,15 +19528,40 @@
     }
   },
   {
-    "id": "Vampire Weekend__This Life / Unbearably White__2019",
+    "id": "Vampire Weekend__This Life__2019",
     "youtubeTrack": {
-      "name": "This Life / Unbearably White",
+      "name": "This Life",
       "artist": "Vampire Weekend",
       "link": "https://youtu.be/KIGNNOZ0948",
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4dRqYKhLVujxiBXcq50YzG",
+      "uri": "spotify:track:4dRqYKhLVujxiBXcq50YzG",
+      "name": "This Life",
+      "artists": [
+        "Vampire Weekend"
+      ]
+    }
+  },
+  {
+    "id": "Vampire Weekend__Unbearably White__2019",
+    "youtubeTrack": {
+      "name": "Unbearably White",
+      "artist": "Vampire Weekend",
+      "link": "https://youtu.be/bkBjoY7eyvU",
+      "year": 2019
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "2FjoCQaBoiEKs3FCvD0HkR",
+      "uri": "spotify:track:2FjoCQaBoiEKs3FCvD0HkR",
+      "name": "Unbearably White",
+      "artists": [
+        "Vampire Weekend"
+      ]
+    }
   },
   {
     "id": "The Get Up Kids__The Problem Is Me__2019",
@@ -19308,15 +19708,41 @@
     }
   },
   {
-    "id": "Nails__I Don't Want to Know You & Endless Resistance ft. Max Cavalera__2019",
+    "id": "Nails__I Don't Want to Know You__2019",
     "youtubeTrack": {
-      "name": "I Don't Want to Know You & Endless Resistance ft. Max Cavalera",
+      "name": "I Don't Want to Know You",
       "artist": "Nails",
       "link": "https://youtu.be/b8mNK0vAk2s",
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6iZoml0bus2TjHoUfbvI3c",
+      "uri": "spotify:track:6iZoml0bus2TjHoUfbvI3c",
+      "name": "I Don't Want to Know You",
+      "artists": [
+        "Nails"
+      ]
+    }
+  },
+  {
+    "id": "Nails__Endless Resistance ft. Max Cavalera__2019",
+    "youtubeTrack": {
+      "name": "Endless Resistance ft. Max Cavalera",
+      "artist": "Nails",
+      "link": "https://youtu.be/k6E5R6mkh8k",
+      "year": 2019
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "57N2Pl8g7Kw63PR8YcTbda",
+      "uri": "spotify:track:57N2Pl8g7Kw63PR8YcTbda",
+      "name": "Endless Resistance",
+      "artists": [
+        "Nails",
+        "Max Cavalera"
+      ]
+    }
   },
   {
     "id": "Jesca Hoop__Shoulder Charge__2019",
@@ -20067,7 +20493,15 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5aDZOMeCa6VuKJSENFsuGx",
+      "uri": "spotify:track:5aDZOMeCa6VuKJSENFsuGx",
+      "name": "Easter Sunday",
+      "artists": [
+        "Zelooperz",
+        "Earl Sweatshirt"
+      ]
+    }
   },
   {
     "id": "Freddie Gibbs & Madlib__Crime Pays__2019",
@@ -20345,15 +20779,40 @@
     }
   },
   {
-    "id": "Bon Iver__Hey Ma / U (Man Like)__2019",
+    "id": "Bon Iver__Hey Ma__2019",
     "youtubeTrack": {
-      "name": "Hey Ma / U (Man Like)",
+      "name": "Hey Ma",
       "artist": "Bon Iver",
       "link": "https://www.youtube.com/watch?v=HDAKS18Gv1U",
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0RstfX9nRY1Lfuy1808MoT",
+      "uri": "spotify:track:0RstfX9nRY1Lfuy1808MoT",
+      "name": "Hey, Ma",
+      "artists": [
+        "Bon Iver"
+      ]
+    }
+  },
+  {
+    "id": "Bon Iver__U (Man Like)__2019",
+    "youtubeTrack": {
+      "name": "U (Man Like)",
+      "artist": "Bon Iver",
+      "link": "https://www.youtube.com/watch?v=Hs5rXRPC0rc",
+      "year": 2019
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "59lQwJcWbr9x3OvTvW5NNX",
+      "uri": "spotify:track:59lQwJcWbr9x3OvTvW5NNX",
+      "name": "U (Man Like)",
+      "artists": [
+        "Bon Iver"
+      ]
+    }
   },
   {
     "id": "(Sandy) Alex G__Gretel__2019",
@@ -20364,7 +20823,14 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "36zqSzaPzQWZYDCNm1klgY",
+      "uri": "spotify:track:36zqSzaPzQWZYDCNm1klgY",
+      "name": "Gretel",
+      "artists": [
+        "Alex G"
+      ]
+    }
   },
   {
     "id": "Ty Segall__Taste__2019",
@@ -20643,15 +21109,49 @@
     }
   },
   {
-    "id": "Dreamville__Down Bad / Got Me__2019",
+    "id": "Dreamville__Down Bad__2019",
     "youtubeTrack": {
-      "name": "Down Bad / Got Me",
+      "name": "Down Bad",
       "artist": "Dreamville",
       "link": "https://www.youtube.com/watch?v=ibvxfN7G6Gs",
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "36J0iaPDGbYGsHvYpaYs3k",
+      "uri": "spotify:track:36J0iaPDGbYGsHvYpaYs3k",
+      "name": "Down Bad (feat. JID, Bas, J. Cole, EARTHGANG & Young Nudy)",
+      "artists": [
+        "Dreamville",
+        "JID",
+        "Bas",
+        "J. Cole",
+        "EARTHGANG",
+        "Young Nudy"
+      ]
+    }
+  },
+  {
+    "id": "Dreamville__Got Me__2019",
+    "youtubeTrack": {
+      "name": "Got Me",
+      "artist": "Dreamville",
+      "link": "https://www.youtube.com/watch?v=kcYsb1-ffuQ",
+      "year": 2019
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "4nw0S8MtvcLSpXCS9M8ciL",
+      "uri": "spotify:track:4nw0S8MtvcLSpXCS9M8ciL",
+      "name": "Got Me (with Ari Lennox & Omen feat. Ty Dolla $ign & Dreezy)",
+      "artists": [
+        "Dreamville",
+        "Ari Lennox",
+        "Omen",
+        "Ty Dolla $ign",
+        "Dreezy"
+      ]
+    }
   },
   {
     "id": "Freddie Gibbs & Madlib__Giannis ft Anderson .Paak__2019",
@@ -20662,7 +21162,16 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0jc0dX55DtUJaHRw8rreNd",
+      "uri": "spotify:track:0jc0dX55DtUJaHRw8rreNd",
+      "name": "Giannis (feat. Anderson .Paak)",
+      "artists": [
+        "Freddie Gibbs",
+        "Madlib",
+        "Anderson .Paak"
+      ]
+    }
   },
   {
     "id": "BACKXWASH__DON'T COME TO THE WOODS__2019",
@@ -20847,7 +21356,15 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5yK37zazHUe3WxEvymZs20",
+      "uri": "spotify:track:5yK37zazHUe3WxEvymZs20",
+      "name": "Bad Idea (feat. Chance the Rapper)",
+      "artists": [
+        "Cordae",
+        "Chance the Rapper"
+      ]
+    }
   },
   {
     "id": "88-Keys & Mac Miller__That's Life ft. Sia__2019",
@@ -20878,7 +21395,14 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5YIVVzQcJG7pFhyNo0Ytlh",
+      "uri": "spotify:track:5YIVVzQcJG7pFhyNo0Ytlh",
+      "name": "Door",
+      "artists": [
+        "Caroline Polachek"
+      ]
+    }
   },
   {
     "id": "Rick Ross__Act a Fool ft. Wale__2019",
@@ -21304,15 +21828,41 @@
     }
   },
   {
-    "id": "A$AP Ferg__Floor Seats / WAM ft. MadeinTYO__2019",
+    "id": "A$AP Ferg__Floor Seats__2019",
     "youtubeTrack": {
-      "name": "Floor Seats / WAM ft. MadeinTYO",
+      "name": "Floor Seats",
       "artist": "A$AP Ferg",
       "link": "https://youtu.be/2U-vrd6JhBY",
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6AomCkEOQUODCYzQwH4SWC",
+      "uri": "spotify:track:6AomCkEOQUODCYzQwH4SWC",
+      "name": "Floor Seats",
+      "artists": [
+        "A$AP Ferg"
+      ]
+    }
+  },
+  {
+    "id": "A$AP Ferg__WAM ft. MadeinTYO__2019",
+    "youtubeTrack": {
+      "name": "WAM ft. MadeinTYO",
+      "artist": "A$AP Ferg",
+      "link": "https://www.youtube.com/watch?v=3nhH-t15jEc",
+      "year": 2019
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "7f2HHmhlbdkW5f9Ge26qny",
+      "uri": "spotify:track:7f2HHmhlbdkW5f9Ge26qny",
+      "name": "WAM",
+      "artists": [
+        "A$AP Ferg",
+        "MadeinTYO"
+      ]
+    }
   },
   {
     "id": "Charli XCX & Christine and the Queens__Gone__2019",
@@ -21597,7 +22147,14 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4RqBss578GNj4u9VYZK5u0",
+      "uri": "spotify:track:4RqBss578GNj4u9VYZK5u0",
+      "name": "Ocean of Tears",
+      "artists": [
+        "Caroline Polachek"
+      ]
+    }
   },
   {
     "id": "Black Country, New Road__Sunglasses__2019",
@@ -21956,7 +22513,16 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "17MSgwkXV7yAYtH3Eqg9O7",
+      "uri": "spotify:track:17MSgwkXV7yAYtH3Eqg9O7",
+      "name": "Lockii",
+      "artists": [
+        "Kai Whiston",
+        "BABii",
+        "Iglooghost"
+      ]
+    }
   },
   {
     "id": "EPROM & G Jones__Daemon Veil__2019",
@@ -22060,7 +22626,15 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "02eAshORZ7I00rjCdGUnAG",
+      "uri": "spotify:track:02eAshORZ7I00rjCdGUnAG",
+      "name": "Eyelids",
+      "artists": [
+        "Isaac Zale",
+        "Sylvan LaCue"
+      ]
+    }
   },
   {
     "id": "Taylor Swift__Lover__2019",
@@ -22118,7 +22692,17 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1ODfuiDVXAZk4bzXUcJ6f3",
+      "uri": "spotify:track:1ODfuiDVXAZk4bzXUcJ6f3",
+      "name": "The Next Day",
+      "artists": [
+        "The Professionals",
+        "Madlib",
+        "Oh No",
+        "Freddie Gibbs"
+      ]
+    }
   },
   {
     "id": "clipping.__Nothing Is Safe__2019",
@@ -22443,15 +23027,40 @@
     }
   },
   {
-    "id": "Lana Del Rey__F*** It I Love You & The Greatest__2019",
+    "id": "Lana Del Rey__Fuck It I Love You__2019",
     "youtubeTrack": {
-      "name": "F*** It I Love You & The Greatest",
+      "name": "Fuck It I Love You",
       "artist": "Lana Del Rey",
       "link": "https://youtu.be/LrSX_OcpeJg",
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7MtVPRGtZl6rPjMfLoI3Lh",
+      "uri": "spotify:track:7MtVPRGtZl6rPjMfLoI3Lh",
+      "name": "Fuck it I love you",
+      "artists": [
+        "Lana Del Rey"
+      ]
+    }
+  },
+  {
+    "id": "Lana Del Rey__The Greatest__2019",
+    "youtubeTrack": {
+      "name": "The Greatest",
+      "artist": "Lana Del Rey",
+      "link": "https://youtu.be/LrSX_OcpeJg",
+      "year": 2019
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "6ERZ30cRjVWGtVLhczX9aL",
+      "uri": "spotify:track:6ERZ30cRjVWGtVLhczX9aL",
+      "name": "The greatest",
+      "artists": [
+        "Lana Del Rey"
+      ]
+    }
   },
   {
     "id": "Bat for Lashes__Jasmine__2019",
@@ -23217,11 +23826,18 @@
     "youtubeTrack": {
       "name": "At the Back of the Pit",
       "artist": "Bonnie 'Prince' Billy",
-      "link": "https://youtu.be/LhMz9pvRNCQ",
+      "link": "https://open.spotify.com/track/5O1apNU3Emu6BkFzIEPiJM?si=4667a6cbddcd4620",
       "year": 2019
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "5O1apNU3Emu6BkFzIEPiJM",
+    "spotifyTrack": {
+      "id": "5O1apNU3Emu6BkFzIEPiJM",
+      "uri": "spotify:track:5O1apNU3Emu6BkFzIEPiJM",
+      "name": "At The Back Of The Pit",
+      "artists": [
+        "Bonnie Prince Billy"
+      ]
+    }
   },
   {
     "id": "Charli XCX__2099 ft. Troye Sivan__2019",
@@ -23875,7 +24491,14 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0jv5VgdENAPV7lHtBlsaXE",
+      "uri": "spotify:track:0jv5VgdENAPV7lHtBlsaXE",
+      "name": "Blood of the Fang",
+      "artists": [
+        "clipping."
+      ]
+    }
   },
   {
     "id": "Rex Orange County__Pluto Projector__2019",
@@ -24067,7 +24690,14 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2nONwTTwEhKo9Kdzr2aSec",
+      "uri": "spotify:track:2nONwTTwEhKo9Kdzr2aSec",
+      "name": "Odelia",
+      "artists": [
+        "Black Lips"
+      ]
+    }
   },
   {
     "id": "Fever Ray__Falling (Glasser Remix)__2019",
@@ -24366,7 +24996,15 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6CYyxobulcKumfeV6e2I9g",
+      "uri": "spotify:track:6CYyxobulcKumfeV6e2I9g",
+      "name": "Ride Or Die - From \"Queen & Slim: The Soundtrack\"",
+      "artists": [
+        "Megan Thee Stallion",
+        "VickeeLo"
+      ]
+    }
   },
   {
     "id": "Lizzo & Ariana Grande__Good as Hell Remix__2019",
@@ -24791,7 +25429,16 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3kynnCf3eWWYfbvhGdxlj6",
+      "uri": "spotify:track:3kynnCf3eWWYfbvhGdxlj6",
+      "name": "Ninjarous",
+      "artists": [
+        "Danger Mouse",
+        "Sparklehorse",
+        "MF DOOM"
+      ]
+    }
   },
   {
     "id": "PlayThatBoiZay__Poison Klan ft. Denzel Curry & Anonymuz__2019",
@@ -26371,7 +27018,15 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6YBz2t787QoPWZrIww5AvV",
+      "uri": "spotify:track:6YBz2t787QoPWZrIww5AvV",
+      "name": "PEOPLE (feat. FIDLAR)",
+      "artists": [
+        "SWMRS",
+        "FIDLAR"
+      ]
+    }
   },
   {
     "id": "Ariel Pink__Crybaby (Remastered)__2020",
@@ -33442,7 +34097,14 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4BEwK6LHno1uJXQUrn2XXK",
+      "uri": "spotify:track:4BEwK6LHno1uJXQUrn2XXK",
+      "name": "Trauma",
+      "artists": [
+        "Homeboy Sandman"
+      ]
+    }
   },
   {
     "id": "New Order__Be a Rebel__2020",
@@ -34391,7 +35053,15 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6B3NBWtTa7WuPILwpAz6D5",
+      "uri": "spotify:track:6B3NBWtTa7WuPILwpAz6D5",
+      "name": "Don Dada",
+      "artists": [
+        "Cakes da Killa",
+        "Proper Villains"
+      ]
+    }
   },
   {
     "id": "Bfb Da Packman__Honey Pack__2020",
@@ -35520,7 +36190,16 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2MhDAsciLk9txdni5CL8iw",
+      "uri": "spotify:track:2MhDAsciLk9txdni5CL8iw",
+      "name": "Her Revolution",
+      "artists": [
+        "Burial",
+        "Four Tet",
+        "Thom Yorke"
+      ]
+    }
   },
   {
     "id": "Boldy James__On Ten__2020",
@@ -35865,7 +36544,14 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2wcrQZ7ZJolYEfIaPP9yL4",
+      "uri": "spotify:track:2wcrQZ7ZJolYEfIaPP9yL4",
+      "name": "Hit Me Where It Hurts",
+      "artists": [
+        "Caroline Polachek"
+      ]
+    }
   },
   {
     "id": "Julia Jacklin__baby jesus is nobody's baby now__2020",
@@ -37070,7 +37756,15 @@
       "year": 2021
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2XEFWSnkgjXe4eZ9gDqAgq",
+      "uri": "spotify:track:2XEFWSnkgjXe4eZ9gDqAgq",
+      "name": "Catalog of Unabashed Gratitude",
+      "artists": [
+        "Ross Gay",
+        "Bon Iver"
+      ]
+    }
   },
   {
     "id": "Nipsey Hussle, JAY-Z__What It Feels Like__2021",
@@ -37767,7 +38461,15 @@
       "year": 2021
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2lKLv8eRLop0ll9GbYXxRe",
+      "uri": "spotify:track:2lKLv8eRLop0ll9GbYXxRe",
+      "name": "Looking Down",
+      "artists": [
+        "Youth Code",
+        "King Yosef"
+      ]
+    }
   },
   {
     "id": "Bill Callahan & Bonnie 'Prince' Billy__I Want to Go to the Beach (Iggy Pop Cover)__2021",
@@ -42655,7 +43357,15 @@
       "year": 2021
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "437XIxViqqepF5n6tYfl3h",
+      "uri": "spotify:track:437XIxViqqepF5n6tYfl3h",
+      "name": "Guessing Games",
+      "artists": [
+        "Dev Lemons",
+        "Whose Rules"
+      ]
+    }
   },
   {
     "id": "Amber Mark__Foreign Things__2021",
@@ -46065,7 +46775,16 @@
       "year": 2022
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2Ri3R5tB1FlZhYgLMqTjSn",
+      "uri": "spotify:track:2Ri3R5tB1FlZhYgLMqTjSn",
+      "name": "John Woo Flick (with Benny The Butcher & Westside Gunn)",
+      "artists": [
+        "Conway the Machine",
+        "Benny The Butcher",
+        "Westside Gunn"
+      ]
+    }
   },
   {
     "id": "Lingua Ignota__Katie Cruel__2022",
@@ -46382,7 +47101,15 @@
       "year": 2022
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "50iNloLV9uEyEvVzuwl6kz",
+      "uri": "spotify:track:50iNloLV9uEyEvVzuwl6kz",
+      "name": "COLD BLOOD",
+      "artists": [
+        "HEALTH",
+        "Lamb of God"
+      ]
+    }
   },
   {
     "id": "Kilo Kish__NO APOLOGY!__2022",
@@ -49389,7 +50116,15 @@
       "year": 2022
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2NZUXUA8gGmXXw5MayF63k",
+      "uri": "spotify:track:2NZUXUA8gGmXXw5MayF63k",
+      "name": "TAKE A CHANCE (feat. Anderson .Paak)",
+      "artists": [
+        "DOMi & JD BECK",
+        "Anderson .Paak"
+      ]
+    }
   },
   {
     "id": "Joey Bada$$__Zipcodes__2022",
@@ -52105,7 +52840,15 @@
       "year": 2022
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1A3qSmHLIjPhFoNVIn2JGz",
+      "uri": "spotify:track:1A3qSmHLIjPhFoNVIn2JGz",
+      "name": "TANAKA 2",
+      "artists": [
+        "Joey Valence & Brae",
+        "Logic"
+      ]
+    }
   },
   {
     "id": "Samia__Mad at Me ft. papa mbye__2022",
@@ -59806,7 +60549,15 @@
       "year": 2023
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0DYx61aCRKosFH85SLGcxJ",
+      "uri": "spotify:track:0DYx61aCRKosFH85SLGcxJ",
+      "name": "Bad News",
+      "artists": [
+        "Real Bad Man",
+        "Blu"
+      ]
+    }
   },
   {
     "id": "Kvelertak__Endling__2023",
