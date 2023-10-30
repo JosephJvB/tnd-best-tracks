@@ -4,7 +4,7 @@ import {
   TND_PLAYLIST_ITEMS_JSON_PATH,
   YOUTUBE_TRACKS_JSON_PATH,
 } from '../constants'
-import { MANUAL_CORRECTIONS } from '../manualCorrections'
+import { DESCRIPTION_CORRECTIONS } from '../manualCorrections'
 
 export type YoutubeTrack = {
   name: string
@@ -178,7 +178,7 @@ export const containsBestTracks = (v: PlaylistItem) => {
 export const descriptionToLines = (description: string) => {
   let temp = description.replace(/–/g, '-').replace(/\n \n/g, '\n\n')
 
-  MANUAL_CORRECTIONS.forEach(({ original, corrected }) => {
+  DESCRIPTION_CORRECTIONS.forEach(({ original, corrected }) => {
     if (temp.includes(original)) {
       temp = temp.replace(original, corrected)
     }

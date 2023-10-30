@@ -1,9 +1,15 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
 import { YoutubeTrack } from './tasks/extractYoutubeTracks'
 import { SPOTIFY_DOMAIN, SPOTIFY_ID_LENGTH } from './constants'
+import {
+  ARTIST_NAME_CORRECTIONS,
+  TRACK_NAME_CORRECTIONS,
+} from './manualCorrections'
 
 const API_BASE_URL = 'https://api.spotify.com/v1'
 const ACCOUNTS_BASE_URL = 'https://accounts.spotify.com/api'
+
+const FEATURE_PREFIXES = [' ft. ', ' feat. ']
 
 export type SpotifySearchParams = {
   // album, artist, track, year, upc, tag:hipster, tag:new, isrc, genre
@@ -71,9 +77,13 @@ export const getTracks = async (trackIds: string[]) => {
   }
 }
 
-export const findTrack = async (track: YoutubeTrack) => {
+export const findTrack = async (
+  track: YoutubeTrack,
+  retry = true
+): Promise<SearchResults<SpotifyTrack>> => {
   try {
     const { name, artist, link, year } = track
+
     const params: SpotifySearchParams = {
       q: [`track:${name}`, `artist:${artist}`, `year:${year}`].join(' '),
       type: 'track',
@@ -93,6 +103,17 @@ export const findTrack = async (track: YoutubeTrack) => {
       params,
     })
     await new Promise((r) => setTimeout(r, 300))
+
+    if (res.data.tracks.items.length === 0 && retry) {
+      return await findTrack(
+        {
+          ...track,
+          name: normalizeTrackName(name),
+          artist: normalizeArtistName(artist),
+        },
+        false // do not retry again
+      )
+    }
 
     return res.data
   } catch (e) {
@@ -169,4 +190,34 @@ export const extractSpotifyId = (link: string, type: 'album' | 'track') => {
   }
 
   return id
+}
+
+export const normalizeArtistName = (name: string) => {
+  let normalized = name
+
+  ARTIST_NAME_CORRECTIONS.forEach((c) => {
+    if (normalized.includes(c.original)) {
+      normalized = normalized.replace(c.original, c.corrected)
+    }
+  })
+
+  return normalized
+}
+export const normalizeTrackName = (name: string) => {
+  let normalized = name
+
+  FEATURE_PREFIXES.forEach((pref) => {
+    const ftIdx = name.toLowerCase().indexOf(pref)
+    if (ftIdx !== -1) {
+      normalized = normalized.substring(0, ftIdx)
+    }
+  })
+
+  TRACK_NAME_CORRECTIONS.forEach((c) => {
+    if (normalized.includes(c.original)) {
+      normalized = normalized.replace(c.original, c.corrected)
+    }
+  })
+
+  return normalized
 }

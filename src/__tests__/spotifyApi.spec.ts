@@ -1,13 +1,12 @@
-import { stringify } from 'querystring'
 import { SPOTIFY_ID_LENGTH } from '../constants'
-import { extractSpotifyId, findTrack, setToken } from '../spotifyApi'
+import * as spotifyApi from '../spotifyApi'
 
 describe('spotifyApi.ts', () => {
   describe('#extractSpotifyId', () => {
     it('returns null for invalid url', () => {
       const link = 'invalid url here'
 
-      const id = extractSpotifyId(link, 'track')
+      const id = spotifyApi.extractSpotifyId(link, 'track')
 
       expect(id).toBeNull()
     })
@@ -15,7 +14,7 @@ describe('spotifyApi.ts', () => {
     it('returns null for non-spotify links', () => {
       const link = 'https://www.youtube.com/watch?v=DJs_thSFreI'
 
-      const id = extractSpotifyId(link, 'track')
+      const id = spotifyApi.extractSpotifyId(link, 'track')
 
       expect(id).toBeNull()
     })
@@ -23,7 +22,7 @@ describe('spotifyApi.ts', () => {
     it('returns null when type does not match', () => {
       const link = 'https://open.spotify.com/track/4m08vFKrKbjEklzRIBwllU'
 
-      const id = extractSpotifyId(link, 'album')
+      const id = spotifyApi.extractSpotifyId(link, 'album')
 
       expect(id).toBeNull()
     })
@@ -34,7 +33,7 @@ describe('spotifyApi.ts', () => {
       let id: null | string = null
 
       expect(() => {
-        id = extractSpotifyId(link, 'track')
+        id = spotifyApi.extractSpotifyId(link, 'track')
       }).not.toThrow()
       expect(id).not.toBeNull()
       expect((id as unknown as string).length).toBe(SPOTIFY_ID_LENGTH)
@@ -46,7 +45,7 @@ describe('spotifyApi.ts', () => {
       let id: null | string = null
 
       expect(() => {
-        id = extractSpotifyId(link, 'album')
+        id = spotifyApi.extractSpotifyId(link, 'album')
       }).not.toThrow()
       expect(id).not.toBeNull()
       expect((id as unknown as string).length).toBe(SPOTIFY_ID_LENGTH)
@@ -59,7 +58,7 @@ describe('spotifyApi.ts', () => {
       let id: null | string = null
 
       expect(() => {
-        id = extractSpotifyId(link, 'track')
+        id = spotifyApi.extractSpotifyId(link, 'track')
       }).not.toThrow()
       expect(id).not.toBeNull()
       expect((id as unknown as string).length).toBe(SPOTIFY_ID_LENGTH)
@@ -72,7 +71,7 @@ describe('spotifyApi.ts', () => {
       let id: null | string = null
 
       expect(() => {
-        id = extractSpotifyId(link, 'track')
+        id = spotifyApi.extractSpotifyId(link, 'track')
       }).not.toThrow()
       expect(id).not.toBeNull()
       expect((id as unknown as string).length).toBe(SPOTIFY_ID_LENGTH)
@@ -82,36 +81,16 @@ describe('spotifyApi.ts', () => {
     const processExitSpy = jest
       .spyOn(process, 'exit')
       .mockImplementation(jest.fn() as any)
+    const findTrackSpy = jest.spyOn(spotifyApi, 'findTrack')
+    const normalizeTrackSpy = jest.spyOn(spotifyApi, 'normalizeTrackName')
+    const normalizeArtistSpy = jest.spyOn(spotifyApi, 'normalizeArtistName')
 
     beforeAll(async () => {
-      await setToken()
+      await spotifyApi.setToken()
     })
 
-    it.skip('creates the correct query string', () => {
-      const input = {
-        name: 'WOO ft. PlayThatBoiZay & Chief Pound',
-        artist: 'Denzel Curry',
-        link: 'https://www.youtube.com/watch?v=geVZ6ayvyzY&pp=ygUzRGVuemVsIEN1cnJ5IC0gV09PIGZ0LiBQbGF5VGhhdEJvaVpheSAmIENoaWVmIFBvdW5k',
-        year: 2023,
-      }
-
-      const { name, artist, link, year } = input
-      const actual = stringify({
-        q: [`track:${name}`, `artist:${artist}`, `year:${year}`].join(' '),
-      })
-
-      const expectedOutput =
-        'q=track:WOO+ft.+PlayThatBoiZay+%26+Chief+Pound+artist:Denzel+Curry+year:2023'
-
-      expect(actual).toEqual(expectedOutput)
-    })
-
-    // issue case 1.
-    // can be solved by excluding trackName after "ft. "
-    // ie: track.split('ft. ')[0]
     describe('can handle ft. in trackname', () => {
-      it('cant find Denzel Curry__WOO ft. PlayThatBoiZay & Chief Pound__2023', async () => {
-        // q=track:WOO+ft.+PlayThatBoiZay+%26+Chief+Pound+artist:Denzel+Curry+year:2023
+      it('can find Denzel Curry__WOO ft. PlayThatBoiZay & Chief Pound__2023', async () => {
         const input = {
           name: 'WOO ft. PlayThatBoiZay & Chief Pound',
           artist: 'Denzel Curry',
@@ -119,28 +98,14 @@ describe('spotifyApi.ts', () => {
           year: 2023,
         }
 
-        const result = await findTrack(input)
+        const result = await spotifyApi.findTrack(input)
 
         expect(processExitSpy).toBeCalledTimes(0)
-        expect(result.tracks.items.length).toBe(0)
-      })
-      it('can find Denzel Curry__WOO__2023', async () => {
-        // q=track:WOO+ft.+PlayThatBoiZay+%26+Chief+Pound+artist:Denzel+Curry+year:2023
-        const input = {
-          name: 'WOO',
-          artist: 'Denzel Curry',
-          link: 'https://www.youtube.com/watch?v=geVZ6ayvyzY&pp=ygUzRGVuemVsIEN1cnJ5IC0gV09PIGZ0LiBQbGF5VGhhdEJvaVpheSAmIENoaWVmIFBvdW5k',
-          year: 2023,
-        }
-
-        const result = await findTrack(input)
-
-        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
-      it('cant find Phoenix__All Eyes on Me ft. BENEE, Chad Hugo & Pusha T__2023', async () => {
-        // q=track:All+Eyes+on+Me+ft.+BENEE,+Chad+Hugo+%26+Pusha+T+artist:Phoenix+year:2023
+      it('can find Phoenix__All Eyes on Me ft. BENEE, Chad Hugo & Pusha T__2023', async () => {
         const input = {
           name: 'All Eyes on Me ft. BENEE, Chad Hugo & Pusha T',
           artist: 'Phoenix',
@@ -148,24 +113,48 @@ describe('spotifyApi.ts', () => {
           year: 2023,
         }
 
-        const result = await findTrack(input)
+        const result = await spotifyApi.findTrack(input)
 
         expect(processExitSpy).toBeCalledTimes(0)
-        expect(result.tracks.items.length).toBe(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
       })
+    })
 
-      it('can find Phoenix__All Eyes on Me__2023', async () => {
-        // q=track:All+Eyes+on+Me+artist:Phoenix+year:2023
+    describe('misc trackname issues', () => {
+      it('can find Car Seat Headrest__We Looked Like Giants ( + shoutout to The Beths & Pickle Darling)__2023', async () => {
         const input = {
-          name: 'All Eyes on Me',
-          artist: 'Phoenix',
-          link: 'https://www.youtube.com/watch?v=zmA7_I_q5e8&pp=ygU3UGhvZW5peCAtIEFsbCBFeWVzIG9uIE1lIGZ0LiBCRU5FRSwgQ2hhZCBIdWdvICYgUHVzaGEgVA%3D%3D',
+          name: 'We Looked Like Giants ( + shoutout to The Beths & Pickle Darling)',
+          artist: 'Car Seat Headrest',
+          link: 'https://www.youtube.com/watch?v=SkSewZhqXG8&pp=ygUpQ2FyIFNlYXQgSGVhZHJlc3QgLSBXZSBMb29rZWQgTGlrZSBHaWFudHM%3D',
           year: 2023,
         }
 
-        const result = await findTrack(input)
+        const result = await spotifyApi.findTrack(input)
 
         expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Paul Wall & Termanology__Houston BBQ ft. Bun B__2023', async () => {
+        const input = {
+          name: 'Houston BBQ ft. Bun B',
+          artist: 'Paul Wall & Termanology',
+          link: 'https://www.youtube.com/watch?v=wbIXsr0nzPs&pp=ygUuUGF1bCBXYWxsLCBUZXJtYW5vbG9neSAtIEhvdXN0b24gQkJRIGZ0LiBCdW4gQg%3D%3D',
+          year: 2023,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
     })

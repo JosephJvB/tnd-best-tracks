@@ -2,7 +2,7 @@ export type ManualCorrection = {
   original: string
   corrected: string
 }
-export const MANUAL_CORRECTIONS: ManualCorrection[] = [
+export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
   {
     original: 'Brain Tentacles -"The Sadist"',
     corrected: 'Brain Tentacles - "The Sadist"',
@@ -108,5 +108,19 @@ export const MANUAL_CORRECTIONS: ManualCorrection[] = [
       'Lice, Aesop Rock, Homeboy Sandman - Oatmeal Cookies',
       'https://open.spotify.com/track/17AAfKkchZ7GTBH48ODdoF?si=abe23d9591f94927',
     ].join('\n'),
+  },
+]
+
+export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
+  {
+    original:
+      'We Looked Like Giants ( + shoutout to The Beths & Pickle Darling)',
+    corrected: 'We Looked Like Giants',
+  },
+]
+export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
+  {
+    original: 'Paul Wall & Termanology',
+    corrected: 'Paul Wall Termanology',
   },
 ]
