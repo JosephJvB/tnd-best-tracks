@@ -121,7 +121,12 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
     ].join('\n\n'),
   },
   {
-    original: 'Brockhampton - Gold / Heat / Face',
+    original: [
+      'Brockhampton - Gold / Heat / Face',
+      'http://www.theneedledrop.com/articles/2017/5/brockhampton-gold',
+      'https://youtu.be/Jpu0JZxDz-w',
+      'https://youtu.be/_nWYiEq4wd0',
+    ].join('\n'),
     corrected: [
       'Brockhampton - Gold\nhttps://open.spotify.com/track/7HRv1sYuwgoea1m0JRvChV',
       'Brockhampton - Heat\nhttps://open.spotify.com/track/2maEFaoAyNjQVv14Hm4esN',
@@ -129,7 +134,11 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
     ].join('\n\n'),
   },
   {
-    original: 'Kirin J Callinan - Down 2 Hang / Living Each Day',
+    original: [
+      'Kirin J Callinan - Down 2 Hang / Living Each Day',
+      'https://soundcloud.com/terrible-records/kirin-j-callinan-living-each-day',
+      'https://soundcloud.com/terrible-records/kirin-j-callinan-down-2-hang',
+    ].join('\n'),
     corrected: [
       'Kirin J Callinan - Down 2 Hang\nhttps://open.spotify.com/track/4QwsYsR1UasL8gP0DBYQAb',
       'Kirin J Callinan - Living Each Day\nhttps://open.spotify.com/track/0kQD7jcpErQ7L7TSWxZpcw',
