@@ -213,8 +213,13 @@ export const extractSpotifyId = (link: string, type: 'album' | 'track') => {
   return id
 }
 
+// TODO: move this logic to extract step
+// will cause many less retries, save a lot of time.
 export const normalizeArtistName = (track: YoutubeTrack) => {
-  let normalized = track.artist.replace(/ & /, ' ')
+  let normalized = track.artist
+    .replace(/ & /, ' ')
+    .replace(/"/g, '')
+    .replace(/'/g, '')
 
   ARTIST_NAME_CORRECTIONS.forEach((c) => {
     if (normalized.includes(c.original)) {

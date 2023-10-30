@@ -159,7 +159,7 @@ describe('spotifyApi.ts', () => {
       })
     })
 
-    describe('misc trackname issues', () => {
+    describe('misc issues', () => {
       it('can find Car Seat Headrest__We Looked Like Giants ( + shoutout to The Beths & Pickle Darling)__2023', async () => {
         const input = {
           name: 'We Looked Like Giants ( + shoutout to The Beths & Pickle Darling)',
@@ -482,6 +482,193 @@ describe('spotifyApi.ts', () => {
         expect(normalizeArtistSpy).toBeCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
+
+      it("can find Alex Cameron__Stanger's Kiss ft. Angel Olsen__2017", async () => {
+        const input = {
+          name: "Stanger's Kiss ft. Angel Olsen",
+          artist: 'Alex Cameron',
+          link: 'https://youtu.be/L4C-Lw-YaWg',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Courtney Barnett + Kurt Vile__Continental Breakfast__2017', async () => {
+        const input = {
+          name: 'Continental Breakfast',
+          artist: 'Courtney Barnett + Kurt Vile',
+          link: 'http://www.theneedledrop.com/articles/2017/10/courtney-barnett-kurt-vile-continental-breakfast',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find WESTSIDEDOOM__GORILLA MONSOON__2017', async () => {
+        const input = {
+          name: 'GORILLA MONSOON',
+          artist: 'WESTSIDEDOOM',
+          link: 'http://www.theneedledrop.com/articles/2017/10/westsidedoom-gorilla-monsoon',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Krallice & Dave Edwardson__Rank Mankind__2017', async () => {
+        const input = {
+          name: 'Rank Mankind',
+          artist: 'Krallice & Dave Edwardson',
+          link: 'https://krallice.bandcamp.com/track/rank-mankind',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Health x NOLIFE__Hard To Be A God__2017', async () => {
+        const input = {
+          name: 'Hard To Be A God',
+          artist: 'Health x NOLIFE',
+          link: 'https://youtu.be/_-XuV_SZYGI',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find DMX__Rudolph the Rednose Reindeer__2017', async () => {
+        const input = {
+          name: 'Rudolph the Rednose Reindeer',
+          artist: 'DMX',
+          link: 'https://open.spotify.com/album/4pPYffqEe0QKJPf4FEgH2u',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Lil Wayne__Bloody Mary ft. Juelz Santana & Big Bad Wolf__2018', async () => {
+        const input = {
+          name: 'Bloody Mary ft. Juelz Santana & Big Bad Wolf',
+          artist: 'Lil Wayne',
+          link: 'https://youtu.be/lYATz3STgew',
+          year: 2018,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Royce Da 5\'9"__Boblo Boat ft. J. Cole__2018', async () => {
+        const input = {
+          name: 'Boblo Boat ft. J. Cole',
+          artist: 'Royce Da 5\'9"',
+          link: 'https://www.youtube.com/watch?v=iwcy5mDDDOU',
+          year: 2018,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Lump__May I Be the Light__2018', async () => {
+        const input = {
+          name: 'May I Be the Light',
+          artist: 'Lump',
+          link: 'https://youtu.be/2dgOVuYp9SU',
+          year: 2018,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Koenji Hyakkei__Dhorimviskha Digest__2018', async () => {
+        const input = {
+          name: 'Dhorimviskha Digest',
+          artist: 'Koenji Hyakkei',
+          link: 'https://www.youtube.com/watch?v=9L358RmKgN0&app=desktop',
+          year: 2018,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find IGLOOGHOST__ᴗ ˳ ᴗ Snoring (Music to Sleep To)__2016', async () => {
+        const input = {
+          name: 'ᴗ ˳ ᴗ Snoring (Music to Sleep To)',
+          artist: 'IGLOOGHOST',
+          link: 'http://www.theneedledrop.com/articles/2016/7/iglooghost-snoring-music-to-sleep-to',
+          year: 2016,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
     })
 
     describe.skip('songs are not on spotify!', () => {
@@ -541,6 +728,40 @@ describe('spotifyApi.ts', () => {
           name: 'WTF You Doin ft. Quavo, Duke & Rich the Kid',
           artist: 'Young Thug',
           link: 'https://soundcloud.com/digital-trapstars/young-thug-quavo-duke-rich-the-kid-wtf-you-doin-prod-dj-durel',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find James Ferraro__Twilight Pretender (I forgot to mention it!)__2017', async () => {
+        const input = {
+          name: 'Twilight Pretender (I forgot to mention it!)',
+          artist: 'James Ferraro',
+          link: 'http://www.theneedledrop.com/articles/2017/8/james-ferraro-twilight-pretender-',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Classixx__Possessive__2017', async () => {
+        const input = {
+          name: 'Possessive',
+          artist: 'Classixx',
+          link: 'https://soundcloud.com/classixx/possessive',
           year: 2017,
         }
 

@@ -167,6 +167,69 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
     corrected:
       'PWR BTTM - Answer My Text\nhttps://open.spotify.com/track/4d6PqLM7AswcwXZztMou7J',
   },
+  {
+    original: 'GFOTY - Poison / Tongue\nhttps://youtu.be/qzo2vvUWLoo',
+    corrected: [
+      'GFOTY - Poison\nhttps://youtu.be/qzo2vvUWLoo',
+      'GFOTY - Tongue\nhttps://youtu.be/qzo2vvUWLoo',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Fabiana Palladino - Mystery / Ruthven - Evil\nhttp://www.theneedledrop.com/articles/2017/11/fabiana-palladino-mystery-ruthven-evil',
+    corrected: [
+      'Fabiana Palladino - Mystery\nhttps://youtu.be/qzo2vvUWLoo',
+      'Ruthven - Evil\nhttps://youtu.be/qzo2vvUWLoo',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'The Voidz - Leave It In My Dreams & QYURRYUS\nhttp://www.theneedledrop.com/articles/2018/1/the-voidz-leave-it-in-my-dreams',
+    corrected: [
+      'The Voidz - Leave It In My Dreams\nhttps://youtu.be/qzo2vvUWLoo',
+      'The Voidz - QYURRYUS\nhttps://youtu.be/qzo2vvUWLoo',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Janelle Monae - Make Me Feel / Django Jane\nhttps://www.youtube.com/watch?v=tGRzz0oqgUE\nhttps://www.youtube.com/watch?v=mTjQq5rMlEY',
+    corrected: [
+      'Janelle Monae - Make Me Feel\nhttps://youtu.be/qzo2vvUWLoo',
+      'Janelle Monae - Django Jane\nhttps://youtu.be/qzo2vvUWLoo',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Kamasi Washington - Fists of Fury / The Space Travelers Lullaby\nhttps://itunes.apple.com/us/album/fists-of-fury/1363033047?i=1363034076\nhttps://itunes.apple.com/us/album/the-space-travelers-lullaby/1363033047?i=1363034949',
+    corrected: [
+      'Kamasi Washington - Fists of Fury\nhttps://youtu.be/qzo2vvUWLoo',
+      'Kamasi Washington - The Space Travelers Lullaby\nhttps://youtu.be/qzo2vvUWLoo',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Nicki Minaj - Barbie Tingz / Chun-Li\nhttps://itunes.apple.com/us/album/chun-li/1371043173?i=1371043175\nhttps://itunes.apple.com/us/album/barbie-tingz/1370203547?i=1370204600',
+    corrected: [
+      'Nicki Minaj - Barbie Tingz\nhttps://youtu.be/qzo2vvUWLoo',
+      'Nicki Minaj - Chun-Li\nhttps://youtu.be/qzo2vvUWLoo',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'André 3000 - Me&My / Look Ma No Hands\nhttp://www.theneedledrop.com/articles/2018/5/andr-3000-memy-to-bury-your-parents-look-ma-no-hands',
+    corrected: [
+      'André 3000 - Me&My\nhttps://youtu.be/qzo2vvUWLoo',
+      'André 3000 - Look Ma No Hands\nhttps://youtu.be/qzo2vvUWLoo',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Code Orange - 3 Knifes / The Hunt ft. Corey Taylor\nhttps://youtu.be/hoE7AISG7Kc\nhttps://youtu.be/qgs5JzUQpy4',
+    corrected: [
+      'Code Orange - 3 Knifes\nhttps://youtu.be/qzo2vvUWLoo',
+      'Code Orange - The Hunt ft. Corey Taylor\nhttps://youtu.be/qzo2vvUWLoo',
+    ].join('\n\n'),
+  },
 ]
 
 export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
@@ -190,6 +253,22 @@ export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
     original: 'SeanPaulWasNeverThereToGiveMeTheLight',
     corrected: 'SeanPaul',
   },
+  {
+    original: 'Stangers Kiss',
+    corrected: 'Strangers Kiss Duet with Angel Olsen',
+  },
+  {
+    original: 'Rudolph the Rednose Reindeer',
+    corrected: 'Rudolph The Red Nosed Reindeer',
+  },
+  {
+    original: 'Yume wo miyou',
+    corrected: 'Yumewomiyou',
+  },
+  {
+    original: 'Dhorimviskha Digest',
+    corrected: 'Vleztemtraiv',
+  },
 ]
 export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
   {
@@ -212,8 +291,36 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
     original: 'GHOSTEMANE X CLAMS CASINO',
     corrected: 'GHOSTEMANE CLAMS CASINO',
   },
+  {
+    original: 'Courtney Barnett + Kurt Vile',
+    corrected: 'Courtney Barnett Kurt Vile',
+  },
+  {
+    original: 'WESTSIDEDOOM',
+    corrected: 'Westside Gunn MF DOOM',
+  },
+  {
+    original: 'DADHELO',
+    corrected: 'Chepang',
+  },
+  {
+    original: 'Health x NOLIFE',
+    corrected: 'Health NOLIFE',
+  },
+  {
+    original: 'A.A.L. (Against All Logic)',
+    corrected: 'Against All Logic',
+  },
+  {
+    original: 'Koenji Hyakkei',
+    corrected: 'Koenjihyakkei',
+  },
+  {
+    original: 'DJ MUGGS X MF DOOM',
+    corrected: 'DJ MUGGS MF DOOM',
+  },
 ]
-// link is most reliably unique
+// link is most reliably unique. less risk of affecting other songs
 export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
   {
     original: 'https://youtu.be/4Mvc7W8Hkp0',
@@ -223,5 +330,47 @@ export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
     original: 'https://youtu.be/s5zfbNiuOyk',
     corrected: 'Ryan Pollie',
   },
+  {
+    original: 'https://krallice.bandcamp.com/track/rank-mankind',
+    corrected: 'Krallice',
+  },
+  {
+    original: 'https://youtu.be/lYATz3STgew',
+    corrected: 'Juelz Santana',
+  },
+  {
+    original: 'https://youtu.be/L4WiZ8pdIvM',
+    corrected: 'City Morgue',
+  },
+  {
+    original: 'https://youtu.be/h_GwO10HroY',
+    corrected: 'Sia',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=Wngm_Zbp8lo',
+    corrected: 'Cordae',
+  },
+  {
+    original: 'https://youtu.be/2dgOVuYp9SU',
+    corrected: 'Laura Marling',
+  },
 ]
-export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = []
+export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
+  {
+    original: 'https://youtu.be/c-0mSEZDm18',
+    corrected: 'Pure Comedy',
+  },
+  {
+    original: 'https://youtu.be/qP8GJj8lAI8',
+    corrected: 'Pain Killer',
+  },
+  {
+    original: 'https://youtu.be/NEoVjmfYlJ8',
+    corrected: '4 Gold Chains',
+  },
+  {
+    original:
+      'http://www.theneedledrop.com/articles/2016/7/gucci-mane-first-day-out-tha-feds',
+    corrected: '1st Day out Tha Feds',
+  },
+]
