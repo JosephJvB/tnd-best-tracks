@@ -122,4 +122,24 @@ export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
     corrected: 'Wriggle',
   },
 ]
-export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = []
+export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
+  {
+    original: 'Drug Dealer',
+    corrected: 'Drugdealer',
+  },
+  {
+    original: 'D.R.A.M.',
+    corrected: 'DRAM',
+  },
+  {
+    original: 'Slaves',
+    corrected: 'SOFT PLAY',
+  },
+]
+// link is most reliably unique
+export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
+  {
+    original: 'https://youtu.be/4Mvc7W8Hkp0',
+    corrected: 'Dolan Beats',
+  },
+]

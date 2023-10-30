@@ -193,6 +193,108 @@ describe('spotifyApi.ts', () => {
         expect(normalizeArtistSpy).toBeCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
+
+      it('can find clipping.__"Baby Don\'t Sleep"__2016', async () => {
+        const input = {
+          name: '"Baby Don\'t Sleep"',
+          artist: 'clipping.',
+          link: 'http://www.theneedledrop.com/articles/2016/7/clipping-baby-dont-sleep',
+          year: 2016,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Drug Dealer__Easy To Forget ft. Ariel Pink__2016', async () => {
+        const input = {
+          name: 'Easy To Forget ft. Ariel Pink',
+          artist: 'Drug Dealer',
+          link: 'http://www.theneedledrop.com/articles/2016/9/drugdealer-easy-to-forget-ft-ariel-pink',
+          year: 2016,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find D.R.A.M.__Cash Machine__2016', async () => {
+        const input = {
+          name: 'Cash Machine',
+          artist: 'D.R.A.M.',
+          link: 'http://www.theneedledrop.com/articles/2016/9/big-baby-dram-cash-machine',
+          year: 2016,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Lil Yachty__Like Wassup ft. K$upreme and BIGBRUTHACHUBBA__2016', async () => {
+        const input = {
+          name: 'Like Wassup ft. K$upreme and BIGBRUTHACHUBBA',
+          artist: 'Lil Yachty',
+          link: 'https://youtu.be/4Mvc7W8Hkp0',
+          year: 2016,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it("can find ADULT.__They're Just Words ft. Douglas J. McCarthy__2017", async () => {
+        const input = {
+          name: "They're Just Words ft. Douglas J. McCarthy",
+          artist: 'ADULT.',
+          link: 'https://www.youtube.com/watch?v=p5HLW4TepBI',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it("can find Passion Pit__I'm Perfect__2017", async () => {
+        const input = {
+          name: "I'm Perfect",
+          artist: 'Passion Pit',
+          link: 'https://youtu.be/ZSQv0XRfVOk',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
     })
 
     describe.skip('songs are not on spotify!', () => {
@@ -202,6 +304,40 @@ describe('spotifyApi.ts', () => {
           artist: 'clairo',
           link: 'https://clairecottrill.bandcamp.com/track/lavender',
           year: 2023,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find The Avalanches__Bad Day ft. Freddie Gibbs__2017', async () => {
+        const input = {
+          name: 'Bad Day ft. Freddie Gibbs',
+          artist: 'The Avalanches',
+          link: 'https://www.youtube.com/watch?v=QY4r_MfGR94',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Ariel Pink & Weyes Blood__Tears On Fire__2017', async () => {
+        const input = {
+          name: 'Tears On Fire',
+          artist: 'Ariel Pink & Weyes Blood',
+          link: 'https://youtu.be/Wl5nG5DA2Is',
+          year: 2017,
         }
 
         const result = await spotifyApi.findTrack(input)

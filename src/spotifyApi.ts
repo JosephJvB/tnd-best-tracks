@@ -3,6 +3,7 @@ import { YoutubeTrack } from './tasks/extractYoutubeTracks'
 import { SPOTIFY_DOMAIN, SPOTIFY_ID_LENGTH } from './constants'
 import {
   ARTIST_NAME_CORRECTIONS,
+  FIX_ARTIST_FROM_LINK_CORRECTIONS,
   TRACK_NAME_CORRECTIONS,
 } from './manualCorrections'
 
@@ -122,8 +123,8 @@ export const findTrack = async (
       return await findTrack(
         {
           ...track,
-          name: normalizeTrackName(name),
-          artist: normalizeArtistName(artist),
+          name: normalizeTrackName(track as YoutubeTrack),
+          artist: normalizeArtistName(track as YoutubeTrack),
           year: normalizeYear(track as YoutubeTrack),
         },
         false // do not retry again
@@ -207,8 +208,8 @@ export const extractSpotifyId = (link: string, type: 'album' | 'track') => {
   return id
 }
 
-export const normalizeArtistName = (name: string) => {
-  let normalized = name.replace(/ & /, ' ')
+export const normalizeArtistName = (track: YoutubeTrack) => {
+  let normalized = track.artist.replace(/ & /, ' ')
 
   ARTIST_NAME_CORRECTIONS.forEach((c) => {
     if (normalized.includes(c.original)) {
@@ -216,13 +217,19 @@ export const normalizeArtistName = (name: string) => {
     }
   })
 
+  FIX_ARTIST_FROM_LINK_CORRECTIONS.forEach((c) => {
+    if (track.link === c.original) {
+      normalized = c.corrected
+    }
+  })
+
   return normalized
 }
-export const normalizeTrackName = (name: string) => {
-  let normalized = name
+export const normalizeTrackName = (track: YoutubeTrack) => {
+  let normalized = track.name.replace(/"/g, '').replace(/'/g, '')
 
   FEATURE_PREFIXES.forEach((pref) => {
-    const ftIdx = name.toLowerCase().indexOf(pref)
+    const ftIdx = normalized.toLowerCase().indexOf(pref)
     if (ftIdx !== -1) {
       normalized = normalized.substring(0, ftIdx)
     }
