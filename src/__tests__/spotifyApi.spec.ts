@@ -123,6 +123,42 @@ describe('spotifyApi.ts', () => {
       })
     })
 
+    describe('can handle & in artistname', () => {
+      it('can find Paul Wall & Termanology__Houston BBQ ft. Bun B__2023', async () => {
+        const input = {
+          name: 'Houston BBQ ft. Bun B',
+          artist: 'Paul Wall & Termanology',
+          link: 'https://www.youtube.com/watch?v=wbIXsr0nzPs&pp=ygUuUGF1bCBXYWxsLCBUZXJtYW5vbG9neSAtIEhvdXN0b24gQkJRIGZ0LiBCdW4gQg%3D%3D',
+          year: 2023,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it("can find Wiki & Tony Seltzer__That Ain't Pat__2023", async () => {
+        const input = {
+          name: "That Ain't Pat",
+          artist: 'Wiki & Tony Seltzer',
+          link: 'https://youtu.be/b_9HBMHK7-s',
+          year: 2023,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+    })
+
     describe('misc trackname issues', () => {
       it('can find Car Seat Headrest__We Looked Like Giants ( + shoutout to The Beths & Pickle Darling)__2023', async () => {
         const input = {
@@ -141,11 +177,30 @@ describe('spotifyApi.ts', () => {
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
-      it('can find Paul Wall & Termanology__Houston BBQ ft. Bun B__2023', async () => {
+      it('can find clipping.__Wriggle EP__2016', async () => {
         const input = {
-          name: 'Houston BBQ ft. Bun B',
-          artist: 'Paul Wall & Termanology',
-          link: 'https://www.youtube.com/watch?v=wbIXsr0nzPs&pp=ygUuUGF1bCBXYWxsLCBUZXJtYW5vbG9neSAtIEhvdXN0b24gQkJRIGZ0LiBCdW4gQg%3D%3D',
+          name: 'Wriggle EP',
+          artist: 'clipping.',
+          link: 'http://www.theneedledrop.com/articles/2016/6/clipping-wriggle',
+          year: 2016,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+    })
+
+    describe.skip('songs are not on spotify!', () => {
+      it('can find clairo__Lavender__2023', async () => {
+        const input = {
+          name: 'Lavender',
+          artist: 'clairo',
+          link: 'https://clairecottrill.bandcamp.com/track/lavender',
           year: 2023,
         }
 

@@ -11,6 +11,16 @@ const ACCOUNTS_BASE_URL = 'https://accounts.spotify.com/api'
 
 const FEATURE_PREFIXES = [' ft. ', ' feat. ']
 
+// https://stackoverflow.com/questions/43159887/make-a-single-property-optional-in-typescript#answer-61108377
+// type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>
+// export type YoutubeTrackSearch = Optional<YoutubeTrack, 'year'>
+export type YoutubeTrackSearch = Pick<
+  YoutubeTrack,
+  'artist' | 'link' | 'name'
+> & {
+  year?: number
+}
+
 export type SpotifySearchParams = {
   // album, artist, track, year, upc, tag:hipster, tag:new, isrc, genre
   q: string
@@ -78,22 +88,26 @@ export const getTracks = async (trackIds: string[]) => {
 }
 
 export const findTrack = async (
-  track: YoutubeTrack,
+  track: YoutubeTrackSearch,
   retry = true
 ): Promise<SearchResults<SpotifyTrack>> => {
   try {
     const { name, artist, link, year } = track
 
     const params: SpotifySearchParams = {
-      q: [`track:${name}`, `artist:${artist}`, `year:${year}`].join(' '),
+      q: `track:${name} artist:${artist}`,
       type: 'track',
       limit: 3,
     }
 
+    if (year) {
+      params.q += ` year:${year}`
+    }
     const albumId = extractSpotifyId(link, 'album')
     if (albumId) {
       params.q += ` album:${albumId}`
     }
+
     const res: AxiosResponse<SearchResults<SpotifyTrack>> = await axios({
       method: 'get',
       url: `${API_BASE_URL}/search`,
@@ -110,9 +124,14 @@ export const findTrack = async (
           ...track,
           name: normalizeTrackName(name),
           artist: normalizeArtistName(artist),
+          year: normalizeYear(track as YoutubeTrack),
         },
         false // do not retry again
       )
+    }
+
+    if (!res.data.tracks.items.length) {
+      console.log(res.request)
     }
 
     return res.data
@@ -193,7 +212,7 @@ export const extractSpotifyId = (link: string, type: 'album' | 'track') => {
 }
 
 export const normalizeArtistName = (name: string) => {
-  let normalized = name
+  let normalized = name.replace(/ & /, ' ')
 
   ARTIST_NAME_CORRECTIONS.forEach((c) => {
     if (normalized.includes(c.original)) {
@@ -220,4 +239,11 @@ export const normalizeTrackName = (name: string) => {
   })
 
   return normalized
+}
+
+export const normalizeYear = (track: YoutubeTrack) => {
+  // TODO: apply manual year fixes based on track properties
+  // eg: clipping.__Wriggle EP__2016 -> re-released in 2023
+  // for now, prefer to just widen search by omitting year
+  return undefined
 }

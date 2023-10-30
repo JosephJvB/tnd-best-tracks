@@ -117,10 +117,9 @@ export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
       'We Looked Like Giants ( + shoutout to The Beths & Pickle Darling)',
     corrected: 'We Looked Like Giants',
   },
-]
-export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
   {
-    original: 'Paul Wall & Termanology',
-    corrected: 'Paul Wall Termanology',
+    original: 'Wriggle EP',
+    corrected: 'Wriggle',
   },
 ]
+export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = []
