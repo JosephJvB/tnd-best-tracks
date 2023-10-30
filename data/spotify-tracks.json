@@ -787,7 +787,14 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1qpNiUpXYjys3adYnwZ7Xp",
+      "uri": "spotify:track:1qpNiUpXYjys3adYnwZ7Xp",
+      "name": "Baby Don't Sleep",
+      "artists": [
+        "clipping."
+      ]
+    }
   },
   {
     "id": "Injury Reserve__\"Oh Shit!!!\"__2016",
@@ -866,7 +873,14 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6SzA9Iw0BSqhi39Js7LOvn",
+      "uri": "spotify:track:6SzA9Iw0BSqhi39Js7LOvn",
+      "name": "Don't Hold Anything Back",
+      "artists": [
+        "Communions"
+      ]
+    }
   },
   {
     "id": "Mac Miller__\"Dang\" ft. Anderson . Paak__2016",
@@ -1237,7 +1251,14 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4e9wXDHDt3o0xbaWFS9Wfp",
+      "uri": "spotify:track:4e9wXDHDt3o0xbaWFS9Wfp",
+      "name": "Spit It Out",
+      "artists": [
+        "SOFT PLAY"
+      ]
+    }
   },
   {
     "id": "Kyle Craft__\"Before the Wall\"__2016",
@@ -1662,7 +1683,14 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1uWelyRGnWol9EcbEy4Yei",
+      "uri": "spotify:track:1uWelyRGnWol9EcbEy4Yei",
+      "name": "Je suis d'ailleurs",
+      "artists": [
+        "Alcest"
+      ]
+    }
   },
   {
     "id": "Ty Dolla $ign__\"3 Wayz\" ft. Travis Scott__2016",
@@ -1739,7 +1767,15 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0AvaN1Y5bv0C0xrDeDZjDh",
+      "uri": "spotify:track:0AvaN1Y5bv0C0xrDeDZjDh",
+      "name": "Easy to Forget",
+      "artists": [
+        "Drugdealer",
+        "Ariel Pink"
+      ]
+    }
   },
   {
     "id": "D.R.A.M.__Cash Machine__2016",
@@ -1750,7 +1786,14 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2UzQdfooGVIeGjqcUMOBWY",
+      "uri": "spotify:track:2UzQdfooGVIeGjqcUMOBWY",
+      "name": "Cash Machine",
+      "artists": [
+        "DRAM"
+      ]
+    }
   },
   {
     "id": "Lil Yachty__Like Wassup ft. K$upreme and BIGBRUTHACHUBBA__2016",
@@ -1761,7 +1804,17 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6kiiIlGjxqGLVwdAYvpxk6",
+      "uri": "spotify:track:6kiiIlGjxqGLVwdAYvpxk6",
+      "name": "Like Wassup (feat. Lil Yachy, K$upreme & Bigbruthachubba)",
+      "artists": [
+        "Dolan Beats",
+        "Bigbruthachubba",
+        "K$upreme",
+        "Lil Yachy"
+      ]
+    }
   },
   {
     "id": "Weyes Blood__Do You Need My Love?__2016",
@@ -1844,7 +1897,14 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0Wq7g148gp2Im7L9wlkJwO",
+      "uri": "spotify:track:0Wq7g148gp2Im7L9wlkJwO",
+      "name": "Take Control",
+      "artists": [
+        "SOFT PLAY"
+      ]
+    }
   },
   {
     "id": "Ty Dolla $ign__Stealing__2016",
@@ -2066,7 +2126,15 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1ViKzP97t7ImGSo5UeTXAY",
+      "uri": "spotify:track:1ViKzP97t7ImGSo5UeTXAY",
+      "name": "Consume Or Be Consumed",
+      "artists": [
+        "SOFT PLAY",
+        "Mike D"
+      ]
+    }
   },
   {
     "id": "Danny Brown__\"Really Doe\" ft. Earl Sweatshirt, Ab-Soul, Kendrick Lamar__2016",
@@ -2545,7 +2613,14 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1wGo4tlrH2cetJTDAJ42cu",
+      "uri": "spotify:track:1wGo4tlrH2cetJTDAJ42cu",
+      "name": "I'll Make It Worth Your While",
+      "artists": [
+        "Artificial Pleasure"
+      ]
+    }
   },
   {
     "id": "Common__\"Home\" ft. Bilal__2016",
@@ -2778,7 +2853,15 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2LLFaQpeyJm7QYxh8PHfHL",
+      "uri": "spotify:track:2LLFaQpeyJm7QYxh8PHfHL",
+      "name": "How to Be Super Petty to Your Ex (30 Days, 30 Songs)",
+      "artists": [
+        "Open Mike Eagle",
+        "Liv Marisco"
+      ]
+    }
   },
   {
     "id": "Nails / Full of Hell__No Longer Under Your Control__2016",
@@ -3424,7 +3507,15 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6RGupXiqXyepFuP5pZaMXj",
+      "uri": "spotify:track:6RGupXiqXyepFuP5pZaMXj",
+      "name": "They're Just Words (feat. Douglas J McCarthy)",
+      "artists": [
+        "ADULT.",
+        "Douglas J McCarthy"
+      ]
+    }
   },
   {
     "id": "David Bowie__No Plan__2017",
@@ -4361,7 +4452,14 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5fxrnG0VTla4dlTmjLkoPN",
+      "uri": "spotify:track:5fxrnG0VTla4dlTmjLkoPN",
+      "name": "I'm Perfect",
+      "artists": [
+        "Passion Pit"
+      ]
+    }
   },
   {
     "id": "Parquet Courts__Captive of the Sun (Remix) ft. Bun B__2017",
@@ -5004,7 +5102,14 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3ZsyMMgVoajS5LeBoHR5XD",
+      "uri": "spotify:track:3ZsyMMgVoajS5LeBoHR5XD",
+      "name": "Can't Hold On",
+      "artists": [
+        "Black Lips"
+      ]
+    }
   },
   {
     "id": "Perfume Genius__Slip Away__2017",
@@ -6932,7 +7037,14 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3P5KXy1P0RZAi0L9KOHjBU",
+      "uri": "spotify:track:3P5KXy1P0RZAi0L9KOHjBU",
+      "name": "Don't Say I Know",
+      "artists": [
+        "Tera Melos"
+      ]
+    }
   },
   {
     "id": "Charli XCX__Boys__2017",
@@ -9354,7 +9466,15 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3Cwqx8uT01lNO3gHYuQRkG",
+      "uri": "spotify:track:3Cwqx8uT01lNO3gHYuQRkG",
+      "name": "I'm Gon Make U Sick O'me",
+      "artists": [
+        "Parliament",
+        "Scarface"
+      ]
+    }
   },
   {
     "id": "Cynic__Humanoid__2018",
@@ -10040,7 +10160,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1RXNJ6L5qQxgcpZt9EdlHQ",
+      "uri": "spotify:track:1RXNJ6L5qQxgcpZt9EdlHQ",
+      "name": "I'll Make You Sorry",
+      "artists": [
+        "Screaming Females"
+      ]
+    }
   },
   {
     "id": "FLOWERTRUCK__Enough For Now__2018",
@@ -11739,7 +11866,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5VYCCPct242jtbidE13EKK",
+      "uri": "spotify:track:5VYCCPct242jtbidE13EKK",
+      "name": "Don't Miss It",
+      "artists": [
+        "James Blake"
+      ]
+    }
   },
   {
     "id": "Drake__Duppy Freestyle__2018",
@@ -14182,7 +14316,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3djWN7th03XZtmF5s3C1Lv",
+      "uri": "spotify:track:3djWN7th03XZtmF5s3C1Lv",
+      "name": "J'OUVERT",
+      "artists": [
+        "BROCKHAMPTON"
+      ]
+    }
   },
   {
     "id": "Kero Kero Bonito__Make Believe__2018",
@@ -14715,7 +14856,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2f9VEEmi8ZtPfwPdCa2mFb",
+      "uri": "spotify:track:2f9VEEmi8ZtPfwPdCa2mFb",
+      "name": "Can't Knock the Hustle",
+      "artists": [
+        "Weezer"
+      ]
+    }
   },
   {
     "id": "Powers Pleasant__Please Forgive ft. Denzel Curry, Zombie Juice, Zillakami, IDK__2018",
@@ -15334,7 +15482,15 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "79GYAkpRIEXZEEKSqufbj8",
+      "uri": "spotify:track:79GYAkpRIEXZEEKSqufbj8",
+      "name": "I'm Not Goin' (feat. Kevin Gates)",
+      "artists": [
+        "Gucci Mane",
+        "Kevin Gates"
+      ]
+    }
   },
   {
     "id": "Fontaines D.C.__Too Real__2018",
@@ -15958,7 +16114,14 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "493m2m347zCKM4HpFPcjlx",
+      "uri": "spotify:track:493m2m347zCKM4HpFPcjlx",
+      "name": "I'll Be You, Be Me",
+      "artists": [
+        "Glen Hansard"
+      ]
+    }
   },
   {
     "id": "Methyl Ethel__Trip the Mains__2019",
@@ -17410,7 +17573,14 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7susTbuAy63MdzO4vY3Emm",
+      "uri": "spotify:track:7susTbuAy63MdzO4vY3Emm",
+      "name": "We've Got To Try",
+      "artists": [
+        "The Chemical Brothers"
+      ]
+    }
   },
   {
     "id": "The Black Keys__Lo/Hi__2019",
@@ -19679,7 +19849,14 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7CxP7gRBgJrMALUtTN5L8L",
+      "uri": "spotify:track:7CxP7gRBgJrMALUtTN5L8L",
+      "name": "DONT COME TO THE WOODS",
+      "artists": [
+        "Backxwash"
+      ]
+    }
   },
   {
     "id": "Purple Mountains__Darkness and Cold__2019",
@@ -20352,7 +20529,14 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5rEGZQmknnFZL1OiNRo4NQ",
+      "uri": "spotify:track:5rEGZQmknnFZL1OiNRo4NQ",
+      "name": "I'm Not Done - Still Not Done Mix",
+      "artists": [
+        "Fever Ray"
+      ]
+    }
   },
   {
     "id": "Whitney__Valleys (My Love)__2019",
@@ -21855,7 +22039,14 @@
       "year": 2019
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0n1g2VqMpcYJVzEHvSpQPs",
+      "uri": "spotify:track:0n1g2VqMpcYJVzEHvSpQPs",
+      "name": "I DONT KNOW ABOUT HIM",
+      "artists": [
+        "Roy Blair"
+      ]
+    }
   },
   {
     "id": "EarthGang__Top Down__2019",
@@ -26449,7 +26640,14 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3nIgICd9QMd8B337TtDq14",
+      "uri": "spotify:track:3nIgICd9QMd8B337TtDq14",
+      "name": "I'm Alive",
+      "artists": [
+        "Norah Jones"
+      ]
+    }
   },
   {
     "id": "Horse Lords__People's Park__2020",
@@ -27592,7 +27790,14 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5teYCP3pROESCEaASCVf5w",
+      "uri": "spotify:track:5teYCP3pROESCEaASCVf5w",
+      "name": "You're Too Precious",
+      "artists": [
+        "James Blake"
+      ]
+    }
   },
   {
     "id": "nothing,nowhere.__DEATH__2020",
@@ -30284,7 +30489,15 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2BWiRQTaGAYL7N0wv4ce2h",
+      "uri": "spotify:track:2BWiRQTaGAYL7N0wv4ce2h",
+      "name": "Don't Call Again",
+      "artists": [
+        "Tkay Maidza",
+        "Kari Faux"
+      ]
+    }
   },
   {
     "id": "King Gizzard and the Lizard Wizard__Honey__2020",
@@ -31806,7 +32019,14 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4Aip0FPb3mjqhEfF59cmje",
+      "uri": "spotify:track:4Aip0FPb3mjqhEfF59cmje",
+      "name": "I'll Be Your Host",
+      "artists": [
+        "Touché Amoré"
+      ]
+    }
   },
   {
     "id": "Bring Me the Horizon__Obey ft. Yungblud__2020",
@@ -33040,7 +33260,16 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0RICDmtykWneVpFrLVY0Jz",
+      "uri": "spotify:track:0RICDmtykWneVpFrLVY0Jz",
+      "name": "I've Made Up My Mind (feat. Alasdair Roberts)",
+      "artists": [
+        "Bill Callahan",
+        "Bonnie Prince Billy",
+        "Alasdair Roberts"
+      ]
+    }
   },
   {
     "id": "Viagra Boys__Ain't Nice__2020",
@@ -33051,7 +33280,14 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3hxUQ6HX7p4dY8qQVInVoY",
+      "uri": "spotify:track:3hxUQ6HX7p4dY8qQVInVoY",
+      "name": "Ain't Nice",
+      "artists": [
+        "Viagra Boys"
+      ]
+    }
   },
   {
     "id": "clipping.__Pain Everyday__2020",
@@ -33637,7 +33873,14 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1x8Wm6urdzbDZcWpjtIUTK",
+      "uri": "spotify:track:1x8Wm6urdzbDZcWpjtIUTK",
+      "name": "You'll Never Walk Alone",
+      "artists": [
+        "Brittany Howard"
+      ]
+    }
   },
   {
     "id": "Aries__Fool's Gold__2020",
@@ -38703,7 +38946,14 @@
       "year": 2021
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7JKW0gH84HWAyDEBQgsNbX",
+      "uri": "spotify:track:7JKW0gH84HWAyDEBQgsNbX",
+      "name": "Don't Go Puttin Wishes in My Head",
+      "artists": [
+        "TORRES"
+      ]
+    }
   },
   {
     "id": "Natalia Lafourcade__Tú Sí Sabes Quererme ft. Rubén Blades & Mare Advertencia Lirika__2021",
@@ -41510,7 +41760,14 @@
       "year": 2021
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2AHnmlkyZbnxqSA66B7jK3",
+      "uri": "spotify:track:2AHnmlkyZbnxqSA66B7jK3",
+      "name": "Don't Shut Me Down",
+      "artists": [
+        "ABBA"
+      ]
+    }
   },
   {
     "id": "Blu__People Call Me Blu(e)__2021",
@@ -42040,7 +42297,14 @@
       "year": 2021
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0iCEcnS6hnUYWh1FGbByJ9",
+      "uri": "spotify:track:0iCEcnS6hnUYWh1FGbByJ9",
+      "name": "Don't Put Me In Red",
+      "artists": [
+        "Xenia Rubinos"
+      ]
+    }
   },
   {
     "id": "Open Mike Eagle__Burner Account ft. Armand Hammer__2021",
@@ -44081,7 +44345,14 @@
       "year": 2022
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2V8UJGFbDhLKS7XgvmyQQD",
+      "uri": "spotify:track:2V8UJGFbDhLKS7XgvmyQQD",
+      "name": "You're Always On Time",
+      "artists": [
+        "Tangerine Dream"
+      ]
+    }
   },
   {
     "id": "Laurie Anderson__Big Science (Arca Remix)__2022",
@@ -44536,7 +44807,15 @@
       "year": 2022
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5kVXjAxYDkN57tZQi0JKya",
+      "uri": "spotify:track:5kVXjAxYDkN57tZQi0JKya",
+      "name": "You've Got To Let Go If You Want To Be Free",
+      "artists": [
+        "Disclosure",
+        "Zedd"
+      ]
+    }
   },
   {
     "id": "Kamasi Washington__The Garden Path__2022",
@@ -44825,7 +45104,14 @@
       "year": 2022
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "67swXHVknS142T5tIcNFkl",
+      "uri": "spotify:track:67swXHVknS142T5tIcNFkl",
+      "name": "C'mon Baby, Cry",
+      "artists": [
+        "Orville Peck"
+      ]
+    }
   },
   {
     "id": "Obongjayar__Try__2022",
@@ -48452,7 +48738,14 @@
       "year": 2022
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5USKEXz46EhDLyGt3XIM0b",
+      "uri": "spotify:track:5USKEXz46EhDLyGt3XIM0b",
+      "name": "(I'm) Screwed",
+      "artists": [
+        "Titus Andronicus"
+      ]
+    }
   },
   {
     "id": "Preoccupations__Death of Melody__2022",
@@ -49025,7 +49318,14 @@
       "year": 2022
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1pHKJodnA1bOXyWj981Tmx",
+      "uri": "spotify:track:1pHKJodnA1bOXyWj981Tmx",
+      "name": "I'll Fight You",
+      "artists": [
+        "Open Mike Eagle"
+      ]
+    }
   },
   {
     "id": "Yeah Yeah Yeahs__Burning__2022",
@@ -51004,7 +51304,15 @@
       "year": 2022
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4qRzgvOBTiOi6XdHgDFRAl",
+      "uri": "spotify:track:4qRzgvOBTiOi6XdHgDFRAl",
+      "name": "GANG'NEM",
+      "artists": [
+        "Ab-Soul",
+        "Fre$H"
+      ]
+    }
   },
   {
     "id": "Saweetie__DON'T SAY NOTHIN'__2022",
@@ -51015,7 +51323,14 @@
       "year": 2022
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "71OhlyZmlUaJ1yL20SR372",
+      "uri": "spotify:track:71OhlyZmlUaJ1yL20SR372",
+      "name": "DON'T SAY NOTHIN'",
+      "artists": [
+        "Saweetie"
+      ]
+    }
   },
   {
     "id": "Black Belt Eagle Scout__My Blood Runs Through This Land__2022",
@@ -52440,7 +52755,14 @@
       "year": 2023
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2QsjD7pgOH3xGOy8JjnM4q",
+      "uri": "spotify:track:2QsjD7pgOH3xGOy8JjnM4q",
+      "name": "D'un feu secret",
+      "artists": [
+        "Cécile McLorin Salvant"
+      ]
+    }
   },
   {
     "id": "Caroline Polachek__Blood and Butter__2023",
@@ -55619,7 +55941,15 @@
       "year": 2023
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "156cGz1jvMWNN44oMdJSaE",
+      "uri": "spotify:track:156cGz1jvMWNN44oMdJSaE",
+      "name": "I'm Making Believe",
+      "artists": [
+        "Orville Peck",
+        "King Princess"
+      ]
+    }
   },
   {
     "id": "Baby Keem & Kendrick Lamar__The Hillbillies__2023",
@@ -56189,7 +56519,15 @@
       "year": 2023
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7j3zZ2jAjzFD60UjhldhHo",
+      "uri": "spotify:track:7j3zZ2jAjzFD60UjhldhHo",
+      "name": "I've Been In Love",
+      "artists": [
+        "Jungle",
+        "Channel Tres"
+      ]
+    }
   },
   {
     "id": "Jay Rock__Eastside ft. Kal Banx__2023",
@@ -56688,7 +57026,14 @@
       "year": 2023
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5n0EvYxNnyCBJpKn90i9Wl",
+      "uri": "spotify:track:5n0EvYxNnyCBJpKn90i9Wl",
+      "name": "I'll Wait",
+      "artists": [
+        "Petey"
+      ]
+    }
   },
   {
     "id": "Chris Farren__First Place ft. Jeff Rosenstock__2023",
@@ -57922,7 +58267,14 @@
       "year": 2023
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3ZspQSOFcZZfRZhNoYDPLs",
+      "uri": "spotify:track:3ZspQSOFcZZfRZhNoYDPLs",
+      "name": "J'adore",
+      "artists": [
+        "LSDXOXO"
+      ]
+    }
   },
   {
     "id": "Jamila Woods__Boomerang__2023",
