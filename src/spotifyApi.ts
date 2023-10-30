@@ -11,7 +11,14 @@ import {
 const API_BASE_URL = 'https://api.spotify.com/v1'
 const ACCOUNTS_BASE_URL = 'https://accounts.spotify.com/api'
 
-const FEATURE_PREFIXES = [' ft. ', ' feat. ']
+const FEATURE_PREFIXES = [
+  ' ft. ',
+  ' ft ',
+  ' feat. ',
+  ' feat ',
+  ' prod. ',
+  ' prod ',
+]
 
 // https://stackoverflow.com/questions/43159887/make-a-single-property-optional-in-typescript#answer-61108377
 // type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>
@@ -217,7 +224,11 @@ export const extractSpotifyId = (link: string, type: 'album' | 'track') => {
 // will cause many less retries, save a lot of time.
 export const normalizeArtistName = (track: YoutubeTrack) => {
   let normalized = track.artist
-    .replace(/ & /, ' ')
+    .replace(/ & /g, ' ')
+    .replace(/ and /g, ' ')
+    .replace(/ \/ /gi, ' ')
+    .replace(/ \+ /gi, ' ')
+    .replace(/ x /gi, ' ')
     .replace(/"/g, '')
     .replace(/'/g, '')
 
@@ -241,8 +252,17 @@ export const normalizeTrackName = (track: YoutubeTrack) => {
     .replace(/'/g, '')
     .replace(/\//g, '')
     .replace(/\\/g, '')
-    // https://stackoverflow.com/questions/4292468/javascript-regex-remove-text-between-parentheses#answer-4292483
-    .replace(/ *\([^)]*\)*/g, '')
+  // // https://stackoverflow.com/questions/4292468/javascript-regex-remove-text-between-parentheses#answer-4292483
+  // .replace(/ *\([^)]*\)*/g, '')
+
+  // prefer this:
+  const openParensIdx = normalized.indexOf('(')
+  const closeParensIdx = normalized.lastIndexOf(')')
+  if (openParensIdx !== 1 && closeParensIdx !== 1) {
+    const first = normalized.substring(0, openParensIdx).trim()
+    const second = normalized.substring(closeParensIdx + 1)
+    normalized = first + second
+  }
 
   FEATURE_PREFIXES.forEach((pref) => {
     const ftIdx = normalized.toLowerCase().indexOf(pref)

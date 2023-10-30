@@ -226,8 +226,118 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
     original:
       'Code Orange - 3 Knifes / The Hunt ft. Corey Taylor\nhttps://youtu.be/hoE7AISG7Kc\nhttps://youtu.be/qgs5JzUQpy4',
     corrected: [
-      'Code Orange - 3 Knifes\nhttps://youtu.be/qzo2vvUWLoo',
+      'Code Orange - 3 Knives\nhttps://youtu.be/qzo2vvUWLoo',
       'Code Orange - The Hunt ft. Corey Taylor\nhttps://youtu.be/qzo2vvUWLoo',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Big Sean - "Bounce Back" & "No More Interviews"\nhttp://www.theneedledrop.com/articles/2016/11/big-sean-bounce-back-no-more-interviews',
+    corrected: [
+      'Big Sean - Bounce Back\nhttps://youtu.be/qzo2vvUWLoo',
+      'Big Sean - No More Interviews\nhttps://youtu.be/qzo2vvUWLoo',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Bonnie "Prince" Billy - Blueberry Jam\nhttps://youtu.be/eJf2iY2Kbx0',
+    corrected:
+      'Bonnie "Prince" Billy - Blueberry Jam\nhttps://open.spotify.com/track/0gdye9nvTsXMYOQyIatwGR',
+  },
+  {
+    original:
+      'FKi 1st - Good Gas ft. 2Chainz & A$AP Ferg\nhttps://youtu.be/VGceCqZL6JQ',
+    corrected:
+      'FKi 1st - Good Gas ft. 2Chainz & A$AP Ferg\nhttps://open.spotify.com/track/2o8VvyPvmjhDid7zk7XNHV',
+  },
+  // i could actually handle this by code..
+  // if trackname.includes('/') && check that links.length == length of trackname split('/')
+  // then combine [artist + trackname[0], artist + trackname[1], ...]
+  {
+    original:
+      'Clarence Clarity - Anthropic Principles / Telenovela\nhttps://www.youtube.com/watch?v=cn3OMeiYTgk\nhttps://www.youtube.com/watch?v=_fzqIwIdpGk',
+    corrected: [
+      'Clarence Clarity - Anthropic Principles\nhttps://www.youtube.com/watch?v=cn3OMeiYTgk',
+      'Clarence Clarity - Telenovela\nhttps://www.youtube.com/watch?v=_fzqIwIdpGk',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Kitten - Secrets / Mercury\nhttps://youtu.be/ZRJ1WSNYhhM\nhttps://youtu.be/ShlQ2k5YfjU',
+    corrected: [
+      'Kitten - Secrets\nhttps://youtu.be/ZRJ1WSNYhhM',
+      'Kitten - Mercury\nhttps://youtu.be/ShlQ2k5YfjU',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Carly Rae Jepsen - Now That I Found You / No Drug Like Me\nhttps://youtu.be/cyP_JyP1QJg\nhttps://youtu.be/mVocX_uNTIU',
+    corrected: [
+      'Carly Rae Jepsen - Now That I Found You\nhttps://youtu.be/cyP_JyP1QJg',
+      'Carly Rae Jepsen - No Drug Like Me\nhttps://youtu.be/mVocX_uNTIU',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Matmos - Breaking Bread & Thermoplastic Riot Shield\nhttps://youtu.be/ilq8HsRk2BQ\nhttps://youtu.be/zWO2VdDqdXE',
+    corrected: [
+      'Matmos - Breaking Bread\nhttps://youtu.be/ilq8HsRk2BQ',
+      'Matmos - Thermoplastic Riot Shield\nhttps://youtu.be/zWO2VdDqdXE',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Vampire Weekend - This Life / Unbearably White\nhttps://youtu.be/KIGNNOZ0948\nhttps://youtu.be/bkBjoY7eyvU',
+    corrected: [
+      'Vampire Weekend - This Life\nhttps://youtu.be/KIGNNOZ0948',
+      'Vampire Weekend - Unbearably White\nhttps://youtu.be/bkBjoY7eyvU',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      "Nails - I Don't Want to Know You & Endless Resistance ft. Max Cavalera\nhttps://youtu.be/b8mNK0vAk2s\nhttps://youtu.be/k6E5R6mkh8k",
+    corrected: [
+      "Nails - I Don't Want to Know You\nhttps://youtu.be/b8mNK0vAk2s",
+      'Nails - Endless Resistance ft. Max Cavalera\nhttps://youtu.be/k6E5R6mkh8k',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Bon Iver - Hey Ma / U (Man Like)\nhttps://www.youtube.com/watch?v=HDAKS18Gv1U\nhttps://www.youtube.com/watch?v=Hs5rXRPC0rc\nReview: https://www.youtube.com/watch?v=kNpsREz5PwY',
+    corrected: [
+      'Bon Iver - Hey Ma\nhttps://www.youtube.com/watch?v=HDAKS18Gv1U',
+      'Bon Iver - U (Man Like)\nhttps://www.youtube.com/watch?v=Hs5rXRPC0rc',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Dreamville - Down Bad / Got Me\nhttps://www.youtube.com/watch?v=ibvxfN7G6Gs\nhttps://www.youtube.com/watch?v=kcYsb1-ffuQ',
+    corrected: [
+      'Dreamville - Down Bad\nhttps://www.youtube.com/watch?v=ibvxfN7G6Gs',
+      'Dreamville - Got Me\nhttps://www.youtube.com/watch?v=kcYsb1-ffuQ',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'A$AP Ferg - Floor Seats / WAM ft. MadeinTYO\nhttps://youtu.be/2U-vrd6JhBY\nhttps://www.youtube.com/watch?v=3nhH-t15jEc',
+    corrected: [
+      'A$AP Ferg - Floor Seats\nhttps://youtu.be/2U-vrd6JhBY',
+      'A$AP Ferg - WAM ft. MadeinTYO\nhttps://www.youtube.com/watch?v=3nhH-t15jEc',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Lana Del Rey - F*** It I Love You & The Greatest\nhttps://youtu.be/LrSX_OcpeJg',
+    corrected: [
+      'Lana Del Rey - Fuck It I Love You\nhttps://youtu.be/LrSX_OcpeJg',
+      'Lana Del Rey - The Greatest\nhttps://youtu.be/LrSX_OcpeJg',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      "Bonnie 'Prince' Billy - At the Back of the Pit\nhttps://youtu.be/LhMz9pvRNCQ",
+    corrected: [
+      "Bonnie 'Prince' Billy - At the Back of the Pit\nhttps://open.spotify.com/track/5O1apNU3Emu6BkFzIEPiJM?si=4667a6cbddcd4620",
     ].join('\n\n'),
   },
 ]
@@ -269,6 +379,34 @@ export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
     original: 'Dhorimviskha Digest',
     corrected: 'Vleztemtraiv',
   },
+  {
+    original: 'Machine, Man & Moster',
+    corrected: 'Machine, Man & Monster',
+  },
+  {
+    original: '2STINGS',
+    corrected: '2 Stings',
+  },
+  {
+    original: 'Old N*ggas',
+    corrected: 'Old n',
+  },
+  {
+    original: 'Double Negative Triptych',
+    corrected: 'Double Negative',
+  },
+  {
+    original: 'Riding/CUT HER HAIR',
+    corrected: 'Riding',
+  },
+  {
+    original: 'Alnair In August',
+    corrected: 'Dawn and Gaze',
+  },
+  {
+    original: 'Blood on the Fang',
+    corrected: 'Blood of the Fang',
+  },
 ]
 export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
   {
@@ -288,24 +426,12 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
     corrected: 'Danger Mouse',
   },
   {
-    original: 'GHOSTEMANE X CLAMS CASINO',
-    corrected: 'GHOSTEMANE CLAMS CASINO',
-  },
-  {
-    original: 'Courtney Barnett + Kurt Vile',
-    corrected: 'Courtney Barnett Kurt Vile',
-  },
-  {
     original: 'WESTSIDEDOOM',
     corrected: 'Westside Gunn MF DOOM',
   },
   {
     original: 'DADHELO',
     corrected: 'Chepang',
-  },
-  {
-    original: 'Health x NOLIFE',
-    corrected: 'Health NOLIFE',
   },
   {
     original: 'A.A.L. (Against All Logic)',
@@ -316,8 +442,48 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
     corrected: 'Koenjihyakkei',
   },
   {
-    original: 'DJ MUGGS X MF DOOM',
-    corrected: 'DJ MUGGS MF DOOM',
+    original: 'YBN Cordae',
+    corrected: 'Cordae',
+  },
+  {
+    original: 'Adrienne Lenker',
+    corrected: 'Adrianne Lenker',
+  },
+  {
+    original: 'Sinstarr',
+    corrected: 'Sinistarr',
+  },
+  {
+    original: 'J.I.D, J. Cole',
+    corrected: 'J.I.D J. Cole',
+  },
+  {
+    original: 'Karen O and Danger Mouse',
+    corrected: 'Karen O Danger Mouse',
+  },
+  {
+    original: 'Chrsitian Scott aTunde Adjuah',
+    corrected: 'Christian Scott aTunde Adjuah',
+  },
+  {
+    original: 'Gessafelstein',
+    corrected: 'Gesaffelstein',
+  },
+  {
+    original: '(Sandy) Alex G',
+    corrected: 'Alex G',
+  },
+  {
+    original: 'Caroline Polacheck',
+    corrected: 'Caroline Polachek',
+  },
+  {
+    original: "Jeff Lynne's ELO",
+    corrected: 'Electric Light Orchestra',
+  },
+  {
+    original: 'The Black Lips',
+    corrected: 'Black Lips',
   },
 ]
 // link is most reliably unique. less risk of affecting other songs
@@ -347,12 +513,45 @@ export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
     corrected: 'Sia',
   },
   {
-    original: 'https://www.youtube.com/watch?v=Wngm_Zbp8lo',
-    corrected: 'Cordae',
+    original: 'https://youtu.be/S-epdHG-ZS0',
+    corrected: 'Sia',
   },
   {
     original: 'https://youtu.be/2dgOVuYp9SU',
     corrected: 'Laura Marling',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=__Wt9Rg-M8E',
+    corrected: 'Young Thug',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=Epka2clixz4',
+    corrected: '88rising',
+  },
+  {
+    original:
+      'https://laurajanegracethedevouringmothers.bandcamp.com/album/bought-to-rot',
+    corrected: 'Laura Jane Grace',
+  },
+  {
+    original: 'https://fanlink.to/StepsMickJenkins',
+    corrected: 'Isaac Zale Mick Jenkins',
+  },
+  {
+    original: 'https://open.spotify.com/album/4dVxavcdnxTHyrM4U5U0kD',
+    corrected: 'KH Four Tet',
+  },
+  {
+    original: 'https://youtu.be/HvgG-kifQnI',
+    corrected: 'Kai Whiston',
+  },
+  {
+    original: 'https://youtu.be/oaTkJ9GNYJ4',
+    corrected: 'Isaac Zale',
+  },
+  {
+    original: 'https://www.adultswim.com/music/singles-2018/52',
+    corrected: 'The Professionals',
   },
 ]
 export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
@@ -372,5 +571,26 @@ export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
     original:
       'http://www.theneedledrop.com/articles/2016/7/gucci-mane-first-day-out-tha-feds',
     corrected: '1st Day out Tha Feds',
+  },
+  {
+    original:
+      'http://www.theneedledrop.com/articles/2016/7/hot-dad-pokmon-go-pok-dont-stop',
+    corrected: "Poké Don't Stop",
+  },
+  {
+    original: 'https://soundcloud.com/fatherdaughter/rose-droll-hush',
+    corrected: 'Rose Droll',
+  },
+  {
+    original: 'https://youtu.be/LrVWkW7d1Vs',
+    corrected: 'Multi Millionaire',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=-5GxIUtt-N0',
+    corrected: 'Painkiller Paradise',
+  },
+  {
+    original: 'https://youtu.be/ET0y32ziV_c',
+    corrected: 'Easter Sunday',
   },
 ]

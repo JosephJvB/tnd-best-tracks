@@ -6,4 +6,21 @@ describe('replacer', () => {
 
     expect(replaced).not.toEqual(line)
   })
+
+  it('removes parens', () => {
+    const name = 'POP/STARS (ft. Madison Beer, (G)I-DLE, Jaira Burns)'
+
+    const openParensIdx = name.indexOf('(')
+    const closeParensIdx = name.lastIndexOf(')')
+
+    const first = name.substring(0, openParensIdx).trim()
+    const second = name.substring(closeParensIdx + 1).trim()
+
+    expect(first).toBe('POP/STARS')
+    expect(second).toBe('')
+
+    const res = first + second
+
+    expect(res).toBe('POP/STARS')
+  })
 })

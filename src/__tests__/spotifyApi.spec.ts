@@ -653,12 +653,234 @@ describe('spotifyApi.ts', () => {
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
-      it('can find IGLOOGHOST__ᴗ ˳ ᴗ Snoring (Music to Sleep To)__2016', async () => {
+      it('can find Travis Scott & Young Thug__"Pick Up The Phone" ft. Quavo__2016', async () => {
         const input = {
-          name: 'ᴗ ˳ ᴗ Snoring (Music to Sleep To)',
-          artist: 'IGLOOGHOST',
-          link: 'http://www.theneedledrop.com/articles/2016/7/iglooghost-snoring-music-to-sleep-to',
+          name: '"Pick Up The Phone" ft. Quavo',
+          artist: 'Travis Scott & Young Thug',
+          link: 'https://www.youtube.com/watch?v=__Wt9Rg-M8E',
           year: 2016,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Hot Dad__"Pokémon Go (Poké Don\'t Stop)"__2016', async () => {
+        const input = {
+          name: '"Pokémon Go (Poké Don\'t Stop)"',
+          artist: 'Hot Dad',
+          link: 'http://www.theneedledrop.com/articles/2016/7/hot-dad-pokmon-go-pok-dont-stop',
+          year: 2016,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Czarface__"Machine, Man & Moster" ft. Conway__2016', async () => {
+        const input = {
+          name: '"Machine, Man & Moster" ft. Conway',
+          artist: 'Czarface',
+          link: 'https://youtu.be/2-sG2aZ72wk',
+          year: 2016,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find WESTSIDEDOOM__2STINGS prod. The Alchemist__2017', async () => {
+        const input = {
+          id: 'WESTSIDEDOOM__2STINGS prod. The Alchemist__2017',
+          name: '2STINGS prod. The Alchemist',
+          artist: 'WESTSIDEDOOM',
+          link: 'https://soundcloud.com/user-5212897/westsidedoom-2stings',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find YBN Cordae__Old N*ggas__2018', async () => {
+        const input = {
+          name: 'Old N*ggas',
+          artist: 'YBN Cordae',
+          link: 'https://www.youtube.com/watch?v=Wngm_Zbp8lo',
+          year: 2018,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Bonnie "Prince" Billy__Blueberry Jam__2018', async () => {
+        const input = {
+          name: 'Blueberry Jam',
+          artist: 'Bonnie "Prince" Billy',
+          link: 'https://youtu.be/eJf2iY2Kbx0',
+          year: 2018,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find FKi 1st__Good Gas ft. 2Chainz & A$AP Ferg__2018', async () => {
+        const input = {
+          name: 'Good Gas ft. 2Chainz & A$AP Ferg',
+          artist: 'FKi 1st',
+          link: 'https://youtu.be/VGceCqZL6JQ',
+          year: 2018,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find K/DA__POP/STARS (ft. Madison Beer, (G)I-DLE, Jaira Burns)__2018', async () => {
+        const input = {
+          name: 'POP/STARS (ft. Madison Beer, (G)I-DLE, Jaira Burns)',
+          artist: 'K/DA',
+          link: 'https://youtu.be/UOxkGD8qRB4',
+          year: 2018,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Malibu Ken (Aesop Rock / Tobacco)__Acid King__2018', async () => {
+        const input = {
+          name: 'Acid King',
+          artist: 'Malibu Ken (Aesop Rock / Tobacco)',
+          link: 'https://youtu.be/dzieBpafT2o',
+          year: 2018,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Chrsitian Scott aTunde Adjuah__Ancestral Recall ft. Saul Williams__2019', async () => {
+        const input = {
+          name: 'Ancestral Recall ft. Saul Williams',
+          artist: 'Chrsitian Scott aTunde Adjuah',
+          link: 'https://christianscott.bandcamp.com/track/ancestral-recall-feat-saul-williams-2',
+          year: 2019,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Freddie Gibbs & Madlib__Giannis ft Anderson .Paak__2019', async () => {
+        const input = {
+          name: 'Giannis ft Anderson .Paak',
+          artist: 'Freddie Gibbs & Madlib',
+          link: 'https://youtu.be/xo8Ls80pi0w',
+          year: 2019,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Iglooghost, Kai Whiston, BABii__Lockii__2019', async () => {
+        const input = {
+          name: 'Lockii',
+          artist: 'Iglooghost, Kai Whiston, BABii',
+          link: 'https://youtu.be/HvgG-kifQnI',
+          year: 2019,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Zac Flewids & Sylvan LaCue__Eyelids__2019', async () => {
+        const input = {
+          name: 'Eyelids',
+          artist: 'Zac Flewids & Sylvan LaCue',
+          link: 'https://youtu.be/oaTkJ9GNYJ4',
+          year: 2019,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it("can find Bonnie 'Prince' Billy__At the Back of the Pit__2019", async () => {
+        const input = {
+          name: 'At the Back of the Pit',
+          artist: "Bonnie 'Prince' Billy",
+          link: 'https://youtu.be/LhMz9pvRNCQ',
+          year: 2019,
         }
 
         const result = await spotifyApi.findTrack(input)
@@ -763,6 +985,23 @@ describe('spotifyApi.ts', () => {
           artist: 'Classixx',
           link: 'https://soundcloud.com/classixx/possessive',
           year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find IGLOOGHOST__ᴗ ˳ ᴗ Snoring (Music to Sleep To)__2016', async () => {
+        const input = {
+          name: 'ᴗ ˳ ᴗ Snoring (Music to Sleep To)',
+          artist: 'IGLOOGHOST',
+          link: 'http://www.theneedledrop.com/articles/2016/7/iglooghost-snoring-music-to-sleep-to',
+          year: 2016,
         }
 
         const result = await spotifyApi.findTrack(input)
