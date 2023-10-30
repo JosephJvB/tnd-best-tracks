@@ -130,10 +130,6 @@ export const findTrack = async (
       )
     }
 
-    if (!res.data.tracks.items.length) {
-      console.log(res.request)
-    }
-
     return res.data
   } catch (e) {
     const axError = e as AxiosError
