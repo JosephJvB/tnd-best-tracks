@@ -109,17 +109,20 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
       'https://open.spotify.com/track/17AAfKkchZ7GTBH48ODdoF?si=abe23d9591f94927',
     ].join('\n'),
   },
+  {
+    original: 'White Suns - Psychic Drift',
+    corrected: 'White Suns - Korea',
+  },
 ]
 
 export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
   {
-    original:
-      'We Looked Like Giants ( + shoutout to The Beths & Pickle Darling)',
-    corrected: 'We Looked Like Giants',
-  },
-  {
     original: 'Wriggle EP',
     corrected: 'Wriggle',
+  },
+  {
+    original: 'Youre The Problem Here',
+    corrected: 'You are The Problem Here',
   },
 ]
 export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
@@ -141,5 +144,9 @@ export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
   {
     original: 'https://youtu.be/4Mvc7W8Hkp0',
     corrected: 'Dolan Beats',
+  },
+  {
+    original: 'https://youtu.be/s5zfbNiuOyk',
+    corrected: 'Ryan Pollie',
   },
 ]

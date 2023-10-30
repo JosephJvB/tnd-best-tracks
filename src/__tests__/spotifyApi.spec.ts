@@ -295,6 +295,74 @@ describe('spotifyApi.ts', () => {
         expect(normalizeArtistSpy).toBeCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
+
+      it('can find Parquet Courts__Captive of the Sun (Remix) ft. Bun B__2017', async () => {
+        const input = {
+          name: 'Captive of the Sun (Remix) ft. Bun B',
+          artist: 'Parquet Courts',
+          link: 'https://youtu.be/6eeY9scCsYY',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it("can find WAVVES__Daisy / You're Welcome__2017", async () => {
+        const input = {
+          name: "Daisy / You're Welcome",
+          artist: 'WAVVES',
+          link: 'https://soundcloud.com/ghost-ramp/daisy-single',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Los Angeles Police Department__Grown__2017', async () => {
+        const input = {
+          name: 'Grown',
+          artist: 'Los Angeles Police Department',
+          link: 'https://youtu.be/s5zfbNiuOyk',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it("can find First Aid Kit__You're The Problem Here__2017", async () => {
+        const input = {
+          name: "You're The Problem Here",
+          artist: 'First Aid Kit',
+          link: 'https://youtu.be/0esbbnY5Xvw',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
     })
 
     describe.skip('songs are not on spotify!', () => {
@@ -337,6 +405,25 @@ describe('spotifyApi.ts', () => {
           name: 'Tears On Fire',
           artist: 'Ariel Pink & Weyes Blood',
           link: 'https://youtu.be/Wl5nG5DA2Is',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+    })
+
+    describe.skip('on spotify, but shadowbanned from search results?', () => {
+      it('can find PWR BTTM__Answer My Text__2017', async () => {
+        const input = {
+          name: 'Answer My Text',
+          artist: 'PWR BTTM',
+          link: 'https://youtu.be/TlNHAkXDS10',
           year: 2017,
         }
 

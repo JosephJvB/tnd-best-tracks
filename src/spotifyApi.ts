@@ -226,7 +226,13 @@ export const normalizeArtistName = (track: YoutubeTrack) => {
   return normalized
 }
 export const normalizeTrackName = (track: YoutubeTrack) => {
-  let normalized = track.name.replace(/"/g, '').replace(/'/g, '')
+  let normalized = track.name
+    .replace(/"/g, '')
+    .replace(/'/g, '')
+    .replace(/\//g, '')
+    .replace(/\\/g, '')
+    // https://stackoverflow.com/questions/4292468/javascript-regex-remove-text-between-parentheses#answer-4292483
+    .replace(/ *\([^)]*\)*/g, '')
 
   FEATURE_PREFIXES.forEach((pref) => {
     const ftIdx = normalized.toLowerCase().indexOf(pref)

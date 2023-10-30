@@ -1,6 +1,6 @@
 {
     "tracks": {
-        "href": "https://api.spotify.com/v1/search?query=track%3AWe+Looked+Like+Giants+artist%3ACar+Seat+Headrest+year%3A2023&type=track&offset=0&limit=3",
+        "href": "https://api.spotify.com/v1/search?query=track%3AAnswer+My+Text+tag%3Ahipster&type=track&offset=0&limit=3",
         "items": [
             {
                 "album": {
@@ -8,33 +8,13 @@
                     "artists": [
                         {
                             "external_urls": {
-                                "spotify": "https://open.spotify.com/artist/5PbpKlxQE0Ktl5lcNABoFf"
+                                "spotify": "https://open.spotify.com/artist/26we0N9O1VrOeUG37oolnb"
                             },
-                            "href": "https://api.spotify.com/v1/artists/5PbpKlxQE0Ktl5lcNABoFf",
-                            "id": "5PbpKlxQE0Ktl5lcNABoFf",
-                            "name": "Car Seat Headrest",
+                            "href": "https://api.spotify.com/v1/artists/26we0N9O1VrOeUG37oolnb",
+                            "id": "26we0N9O1VrOeUG37oolnb",
+                            "name": "Red Sky",
                             "type": "artist",
-                            "uri": "spotify:artist:5PbpKlxQE0Ktl5lcNABoFf"
-                        },
-                        {
-                            "external_urls": {
-                                "spotify": "https://open.spotify.com/artist/7DjwIxbe8kpw4pqnzAMoin"
-                            },
-                            "href": "https://api.spotify.com/v1/artists/7DjwIxbe8kpw4pqnzAMoin",
-                            "id": "7DjwIxbe8kpw4pqnzAMoin",
-                            "name": "The Beths",
-                            "type": "artist",
-                            "uri": "spotify:artist:7DjwIxbe8kpw4pqnzAMoin"
-                        },
-                        {
-                            "external_urls": {
-                                "spotify": "https://open.spotify.com/artist/1CkgDItGS5PnRLXcEaforp"
-                            },
-                            "href": "https://api.spotify.com/v1/artists/1CkgDItGS5PnRLXcEaforp",
-                            "id": "1CkgDItGS5PnRLXcEaforp",
-                            "name": "Pickle Darling",
-                            "type": "artist",
-                            "uri": "spotify:artist:1CkgDItGS5PnRLXcEaforp"
+                            "uri": "spotify:artist:26we0N9O1VrOeUG37oolnb"
                         }
                     ],
                     "available_markets": [
@@ -224,44 +204,44 @@
                         "XK"
                     ],
                     "external_urls": {
-                        "spotify": "https://open.spotify.com/album/2kigXWMQMRJmXeWZAvgDZU"
+                        "spotify": "https://open.spotify.com/album/0bcWMG7E2tPVRzvk7HX8hO"
                     },
-                    "href": "https://api.spotify.com/v1/albums/2kigXWMQMRJmXeWZAvgDZU",
-                    "id": "2kigXWMQMRJmXeWZAvgDZU",
+                    "href": "https://api.spotify.com/v1/albums/0bcWMG7E2tPVRzvk7HX8hO",
+                    "id": "0bcWMG7E2tPVRzvk7HX8hO",
                     "images": [
                         {
                             "height": 640,
-                            "url": "https://i.scdn.co/image/ab67616d0000b2734f6f65f7b39fb1be25726f16",
+                            "url": "https://i.scdn.co/image/ab67616d0000b27313fcdfa793057395da0b3b58",
                             "width": 640
                         },
                         {
                             "height": 300,
-                            "url": "https://i.scdn.co/image/ab67616d00001e024f6f65f7b39fb1be25726f16",
+                            "url": "https://i.scdn.co/image/ab67616d00001e0213fcdfa793057395da0b3b58",
                             "width": 300
                         },
                         {
                             "height": 64,
-                            "url": "https://i.scdn.co/image/ab67616d000048514f6f65f7b39fb1be25726f16",
+                            "url": "https://i.scdn.co/image/ab67616d0000485113fcdfa793057395da0b3b58",
                             "width": 64
                         }
                     ],
-                    "name": "We Looked Like Giants / Brand New Colony",
-                    "release_date": "2023-10-12",
+                    "name": "answer my text",
+                    "release_date": "2021-08-06",
                     "release_date_precision": "day",
-                    "total_tracks": 2,
+                    "total_tracks": 1,
                     "type": "album",
-                    "uri": "spotify:album:2kigXWMQMRJmXeWZAvgDZU"
+                    "uri": "spotify:album:0bcWMG7E2tPVRzvk7HX8hO"
                 },
                 "artists": [
                     {
                         "external_urls": {
-                            "spotify": "https://open.spotify.com/artist/5PbpKlxQE0Ktl5lcNABoFf"
+                            "spotify": "https://open.spotify.com/artist/26we0N9O1VrOeUG37oolnb"
                         },
-                        "href": "https://api.spotify.com/v1/artists/5PbpKlxQE0Ktl5lcNABoFf",
-                        "id": "5PbpKlxQE0Ktl5lcNABoFf",
-                        "name": "Car Seat Headrest",
+                        "href": "https://api.spotify.com/v1/artists/26we0N9O1VrOeUG37oolnb",
+                        "id": "26we0N9O1VrOeUG37oolnb",
+                        "name": "Red Sky",
                         "type": "artist",
-                        "uri": "spotify:artist:5PbpKlxQE0Ktl5lcNABoFf"
+                        "uri": "spotify:artist:26we0N9O1VrOeUG37oolnb"
                     }
                 ],
                 "available_markets": [
@@ -451,23 +431,23 @@
                     "XK"
                 ],
                 "disc_number": 1,
-                "duration_ms": 315317,
+                "duration_ms": 251729,
                 "explicit": false,
                 "external_ids": {
-                    "isrc": "USSUB2363202"
+                    "isrc": "QZK6K2116821"
                 },
                 "external_urls": {
-                    "spotify": "https://open.spotify.com/track/5krql2naijsOaVtwGE4q9d"
+                    "spotify": "https://open.spotify.com/track/3aE4d2VOMuwsIMHHed2cou"
                 },
-                "href": "https://api.spotify.com/v1/tracks/5krql2naijsOaVtwGE4q9d",
-                "id": "5krql2naijsOaVtwGE4q9d",
+                "href": "https://api.spotify.com/v1/tracks/3aE4d2VOMuwsIMHHed2cou",
+                "id": "3aE4d2VOMuwsIMHHed2cou",
                 "is_local": false,
-                "name": "We Looked Like Giants",
-                "popularity": 52,
-                "preview_url": "https://p.scdn.co/mp3-preview/4d3d609ca8c16ede05f81b274d685db5a60daefa?cid=678f8fa942f640deaad0fa4f8005c98d",
+                "name": "answer my text",
+                "popularity": 1,
+                "preview_url": "https://p.scdn.co/mp3-preview/1bd73c2212be254045108e3489eac24246204a2f?cid=678f8fa942f640deaad0fa4f8005c98d",
                 "track_number": 1,
                 "type": "track",
-                "uri": "spotify:track:5krql2naijsOaVtwGE4q9d"
+                "uri": "spotify:track:3aE4d2VOMuwsIMHHed2cou"
             },
             {
                 "album": {
@@ -475,33 +455,13 @@
                     "artists": [
                         {
                             "external_urls": {
-                                "spotify": "https://open.spotify.com/artist/7DjwIxbe8kpw4pqnzAMoin"
+                                "spotify": "https://open.spotify.com/artist/2TzppSD4biA2Hiroj2hpxK"
                             },
-                            "href": "https://api.spotify.com/v1/artists/7DjwIxbe8kpw4pqnzAMoin",
-                            "id": "7DjwIxbe8kpw4pqnzAMoin",
-                            "name": "The Beths",
+                            "href": "https://api.spotify.com/v1/artists/2TzppSD4biA2Hiroj2hpxK",
+                            "id": "2TzppSD4biA2Hiroj2hpxK",
+                            "name": "A-Game",
                             "type": "artist",
-                            "uri": "spotify:artist:7DjwIxbe8kpw4pqnzAMoin"
-                        },
-                        {
-                            "external_urls": {
-                                "spotify": "https://open.spotify.com/artist/1CkgDItGS5PnRLXcEaforp"
-                            },
-                            "href": "https://api.spotify.com/v1/artists/1CkgDItGS5PnRLXcEaforp",
-                            "id": "1CkgDItGS5PnRLXcEaforp",
-                            "name": "Pickle Darling",
-                            "type": "artist",
-                            "uri": "spotify:artist:1CkgDItGS5PnRLXcEaforp"
-                        },
-                        {
-                            "external_urls": {
-                                "spotify": "https://open.spotify.com/artist/5PbpKlxQE0Ktl5lcNABoFf"
-                            },
-                            "href": "https://api.spotify.com/v1/artists/5PbpKlxQE0Ktl5lcNABoFf",
-                            "id": "5PbpKlxQE0Ktl5lcNABoFf",
-                            "name": "Car Seat Headrest",
-                            "type": "artist",
-                            "uri": "spotify:artist:5PbpKlxQE0Ktl5lcNABoFf"
+                            "uri": "spotify:artist:2TzppSD4biA2Hiroj2hpxK"
                         }
                     ],
                     "available_markets": [
@@ -691,44 +651,54 @@
                         "XK"
                     ],
                     "external_urls": {
-                        "spotify": "https://open.spotify.com/album/35K1POG2fNm3ar7YiqB9L4"
+                        "spotify": "https://open.spotify.com/album/3oKL8cKCW23dHdmbecWAfJ"
                     },
-                    "href": "https://api.spotify.com/v1/albums/35K1POG2fNm3ar7YiqB9L4",
-                    "id": "35K1POG2fNm3ar7YiqB9L4",
+                    "href": "https://api.spotify.com/v1/albums/3oKL8cKCW23dHdmbecWAfJ",
+                    "id": "3oKL8cKCW23dHdmbecWAfJ",
                     "images": [
                         {
                             "height": 640,
-                            "url": "https://i.scdn.co/image/ab67616d0000b273050b33fd2c2322deb751188a",
+                            "url": "https://i.scdn.co/image/ab67616d0000b2737603a5d0b6a2f4163188ed9e",
                             "width": 640
                         },
                         {
                             "height": 300,
-                            "url": "https://i.scdn.co/image/ab67616d00001e02050b33fd2c2322deb751188a",
+                            "url": "https://i.scdn.co/image/ab67616d00001e027603a5d0b6a2f4163188ed9e",
                             "width": 300
                         },
                         {
                             "height": 64,
-                            "url": "https://i.scdn.co/image/ab67616d00004851050b33fd2c2322deb751188a",
+                            "url": "https://i.scdn.co/image/ab67616d000048517603a5d0b6a2f4163188ed9e",
                             "width": 64
                         }
                     ],
-                    "name": "Brand New Colony / We Looked Like Giants",
-                    "release_date": "2023-10-12",
+                    "name": "Answer My Text",
+                    "release_date": "2023-07-31",
                     "release_date_precision": "day",
-                    "total_tracks": 2,
+                    "total_tracks": 1,
                     "type": "album",
-                    "uri": "spotify:album:35K1POG2fNm3ar7YiqB9L4"
+                    "uri": "spotify:album:3oKL8cKCW23dHdmbecWAfJ"
                 },
                 "artists": [
                     {
                         "external_urls": {
-                            "spotify": "https://open.spotify.com/artist/5PbpKlxQE0Ktl5lcNABoFf"
+                            "spotify": "https://open.spotify.com/artist/2TzppSD4biA2Hiroj2hpxK"
                         },
-                        "href": "https://api.spotify.com/v1/artists/5PbpKlxQE0Ktl5lcNABoFf",
-                        "id": "5PbpKlxQE0Ktl5lcNABoFf",
-                        "name": "Car Seat Headrest",
+                        "href": "https://api.spotify.com/v1/artists/2TzppSD4biA2Hiroj2hpxK",
+                        "id": "2TzppSD4biA2Hiroj2hpxK",
+                        "name": "A-Game",
                         "type": "artist",
-                        "uri": "spotify:artist:5PbpKlxQE0Ktl5lcNABoFf"
+                        "uri": "spotify:artist:2TzppSD4biA2Hiroj2hpxK"
+                    },
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/7LUXCU3vRfQ90RG68SqsS1"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/7LUXCU3vRfQ90RG68SqsS1",
+                        "id": "7LUXCU3vRfQ90RG68SqsS1",
+                        "name": "Trill 6attle",
+                        "type": "artist",
+                        "uri": "spotify:artist:7LUXCU3vRfQ90RG68SqsS1"
                     }
                 ],
                 "available_markets": [
@@ -918,29 +888,476 @@
                     "XK"
                 ],
                 "disc_number": 1,
-                "duration_ms": 315317,
-                "explicit": false,
+                "duration_ms": 205190,
+                "explicit": true,
                 "external_ids": {
-                    "isrc": "USSUB2363202"
+                    "isrc": "QZYFZ2323417"
                 },
                 "external_urls": {
-                    "spotify": "https://open.spotify.com/track/5nR3aN7AJpd8SIRAVVHXE4"
+                    "spotify": "https://open.spotify.com/track/7s5VAZESyBHSDq930APaej"
                 },
-                "href": "https://api.spotify.com/v1/tracks/5nR3aN7AJpd8SIRAVVHXE4",
-                "id": "5nR3aN7AJpd8SIRAVVHXE4",
+                "href": "https://api.spotify.com/v1/tracks/7s5VAZESyBHSDq930APaej",
+                "id": "7s5VAZESyBHSDq930APaej",
                 "is_local": false,
-                "name": "We Looked Like Giants",
-                "popularity": 47,
-                "preview_url": "https://p.scdn.co/mp3-preview/4d3d609ca8c16ede05f81b274d685db5a60daefa?cid=678f8fa942f640deaad0fa4f8005c98d",
-                "track_number": 2,
+                "name": "Answer My Text",
+                "popularity": 0,
+                "preview_url": "https://p.scdn.co/mp3-preview/a15782069112c7eea32b17a4668881c07c551ceb?cid=678f8fa942f640deaad0fa4f8005c98d",
+                "track_number": 1,
                 "type": "track",
-                "uri": "spotify:track:5nR3aN7AJpd8SIRAVVHXE4"
+                "uri": "spotify:track:7s5VAZESyBHSDq930APaej"
+            },
+            {
+                "album": {
+                    "album_type": "single",
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/2UxFhNJXoekDdofxmlXxrW"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/2UxFhNJXoekDdofxmlXxrW",
+                            "id": "2UxFhNJXoekDdofxmlXxrW",
+                            "name": "Martin Rodenheber",
+                            "type": "artist",
+                            "uri": "spotify:artist:2UxFhNJXoekDdofxmlXxrW"
+                        }
+                    ],
+                    "available_markets": [
+                        "AR",
+                        "AU",
+                        "AT",
+                        "BE",
+                        "BO",
+                        "BR",
+                        "BG",
+                        "CA",
+                        "CL",
+                        "CO",
+                        "CR",
+                        "CY",
+                        "CZ",
+                        "DK",
+                        "DO",
+                        "DE",
+                        "EC",
+                        "EE",
+                        "SV",
+                        "FI",
+                        "FR",
+                        "GR",
+                        "GT",
+                        "HN",
+                        "HK",
+                        "HU",
+                        "IS",
+                        "IE",
+                        "IT",
+                        "LV",
+                        "LT",
+                        "LU",
+                        "MY",
+                        "MT",
+                        "MX",
+                        "NL",
+                        "NZ",
+                        "NI",
+                        "NO",
+                        "PA",
+                        "PY",
+                        "PE",
+                        "PH",
+                        "PL",
+                        "PT",
+                        "SG",
+                        "SK",
+                        "ES",
+                        "SE",
+                        "CH",
+                        "TW",
+                        "TR",
+                        "UY",
+                        "US",
+                        "GB",
+                        "AD",
+                        "LI",
+                        "MC",
+                        "ID",
+                        "JP",
+                        "TH",
+                        "VN",
+                        "RO",
+                        "IL",
+                        "ZA",
+                        "SA",
+                        "AE",
+                        "BH",
+                        "QA",
+                        "OM",
+                        "KW",
+                        "EG",
+                        "MA",
+                        "DZ",
+                        "TN",
+                        "LB",
+                        "JO",
+                        "PS",
+                        "IN",
+                        "BY",
+                        "KZ",
+                        "MD",
+                        "UA",
+                        "AL",
+                        "BA",
+                        "HR",
+                        "ME",
+                        "MK",
+                        "RS",
+                        "SI",
+                        "KR",
+                        "BD",
+                        "PK",
+                        "LK",
+                        "GH",
+                        "KE",
+                        "NG",
+                        "TZ",
+                        "UG",
+                        "AG",
+                        "AM",
+                        "BS",
+                        "BB",
+                        "BZ",
+                        "BT",
+                        "BW",
+                        "BF",
+                        "CV",
+                        "CW",
+                        "DM",
+                        "FJ",
+                        "GM",
+                        "GE",
+                        "GD",
+                        "GW",
+                        "GY",
+                        "HT",
+                        "JM",
+                        "KI",
+                        "LS",
+                        "LR",
+                        "MW",
+                        "MV",
+                        "ML",
+                        "MH",
+                        "FM",
+                        "NA",
+                        "NR",
+                        "NE",
+                        "PW",
+                        "PG",
+                        "WS",
+                        "SM",
+                        "ST",
+                        "SN",
+                        "SC",
+                        "SL",
+                        "SB",
+                        "KN",
+                        "LC",
+                        "VC",
+                        "SR",
+                        "TL",
+                        "TO",
+                        "TT",
+                        "TV",
+                        "VU",
+                        "AZ",
+                        "BN",
+                        "BI",
+                        "KH",
+                        "CM",
+                        "TD",
+                        "KM",
+                        "GQ",
+                        "SZ",
+                        "GA",
+                        "GN",
+                        "KG",
+                        "LA",
+                        "MO",
+                        "MR",
+                        "MN",
+                        "NP",
+                        "RW",
+                        "TG",
+                        "UZ",
+                        "ZW",
+                        "BJ",
+                        "MG",
+                        "MU",
+                        "MZ",
+                        "AO",
+                        "CI",
+                        "DJ",
+                        "ZM",
+                        "CD",
+                        "CG",
+                        "IQ",
+                        "LY",
+                        "TJ",
+                        "VE",
+                        "ET",
+                        "XK"
+                    ],
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/album/1fZQpFsFy47yFIXoH6NmtG"
+                    },
+                    "href": "https://api.spotify.com/v1/albums/1fZQpFsFy47yFIXoH6NmtG",
+                    "id": "1fZQpFsFy47yFIXoH6NmtG",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b273abd526df50dd59891c32f437",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e02abd526df50dd59891c32f437",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d00004851abd526df50dd59891c32f437",
+                            "width": 64
+                        }
+                    ],
+                    "name": "please answer my texts",
+                    "release_date": "2022-07-26",
+                    "release_date_precision": "day",
+                    "total_tracks": 1,
+                    "type": "album",
+                    "uri": "spotify:album:1fZQpFsFy47yFIXoH6NmtG"
+                },
+                "artists": [
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/2UxFhNJXoekDdofxmlXxrW"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/2UxFhNJXoekDdofxmlXxrW",
+                        "id": "2UxFhNJXoekDdofxmlXxrW",
+                        "name": "Martin Rodenheber",
+                        "type": "artist",
+                        "uri": "spotify:artist:2UxFhNJXoekDdofxmlXxrW"
+                    }
+                ],
+                "available_markets": [
+                    "AR",
+                    "AU",
+                    "AT",
+                    "BE",
+                    "BO",
+                    "BR",
+                    "BG",
+                    "CA",
+                    "CL",
+                    "CO",
+                    "CR",
+                    "CY",
+                    "CZ",
+                    "DK",
+                    "DO",
+                    "DE",
+                    "EC",
+                    "EE",
+                    "SV",
+                    "FI",
+                    "FR",
+                    "GR",
+                    "GT",
+                    "HN",
+                    "HK",
+                    "HU",
+                    "IS",
+                    "IE",
+                    "IT",
+                    "LV",
+                    "LT",
+                    "LU",
+                    "MY",
+                    "MT",
+                    "MX",
+                    "NL",
+                    "NZ",
+                    "NI",
+                    "NO",
+                    "PA",
+                    "PY",
+                    "PE",
+                    "PH",
+                    "PL",
+                    "PT",
+                    "SG",
+                    "SK",
+                    "ES",
+                    "SE",
+                    "CH",
+                    "TW",
+                    "TR",
+                    "UY",
+                    "US",
+                    "GB",
+                    "AD",
+                    "LI",
+                    "MC",
+                    "ID",
+                    "JP",
+                    "TH",
+                    "VN",
+                    "RO",
+                    "IL",
+                    "ZA",
+                    "SA",
+                    "AE",
+                    "BH",
+                    "QA",
+                    "OM",
+                    "KW",
+                    "EG",
+                    "MA",
+                    "DZ",
+                    "TN",
+                    "LB",
+                    "JO",
+                    "PS",
+                    "IN",
+                    "BY",
+                    "KZ",
+                    "MD",
+                    "UA",
+                    "AL",
+                    "BA",
+                    "HR",
+                    "ME",
+                    "MK",
+                    "RS",
+                    "SI",
+                    "KR",
+                    "BD",
+                    "PK",
+                    "LK",
+                    "GH",
+                    "KE",
+                    "NG",
+                    "TZ",
+                    "UG",
+                    "AG",
+                    "AM",
+                    "BS",
+                    "BB",
+                    "BZ",
+                    "BT",
+                    "BW",
+                    "BF",
+                    "CV",
+                    "CW",
+                    "DM",
+                    "FJ",
+                    "GM",
+                    "GE",
+                    "GD",
+                    "GW",
+                    "GY",
+                    "HT",
+                    "JM",
+                    "KI",
+                    "LS",
+                    "LR",
+                    "MW",
+                    "MV",
+                    "ML",
+                    "MH",
+                    "FM",
+                    "NA",
+                    "NR",
+                    "NE",
+                    "PW",
+                    "PG",
+                    "WS",
+                    "SM",
+                    "ST",
+                    "SN",
+                    "SC",
+                    "SL",
+                    "SB",
+                    "KN",
+                    "LC",
+                    "VC",
+                    "SR",
+                    "TL",
+                    "TO",
+                    "TT",
+                    "TV",
+                    "VU",
+                    "AZ",
+                    "BN",
+                    "BI",
+                    "KH",
+                    "CM",
+                    "TD",
+                    "KM",
+                    "GQ",
+                    "SZ",
+                    "GA",
+                    "GN",
+                    "KG",
+                    "LA",
+                    "MO",
+                    "MR",
+                    "MN",
+                    "NP",
+                    "RW",
+                    "TG",
+                    "UZ",
+                    "ZW",
+                    "BJ",
+                    "MG",
+                    "MU",
+                    "MZ",
+                    "AO",
+                    "CI",
+                    "DJ",
+                    "ZM",
+                    "CD",
+                    "CG",
+                    "IQ",
+                    "LY",
+                    "TJ",
+                    "VE",
+                    "ET",
+                    "XK"
+                ],
+                "disc_number": 1,
+                "duration_ms": 174471,
+                "explicit": false,
+                "external_ids": {
+                    "isrc": "SE6SA2264874"
+                },
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/track/7kzmYITVOSDonRwFKnccdE"
+                },
+                "href": "https://api.spotify.com/v1/tracks/7kzmYITVOSDonRwFKnccdE",
+                "id": "7kzmYITVOSDonRwFKnccdE",
+                "is_local": false,
+                "name": "please answer my texts",
+                "popularity": 0,
+                "preview_url": "https://p.scdn.co/mp3-preview/0361a26fa5e8c71b032066db62b899e09d15047c?cid=678f8fa942f640deaad0fa4f8005c98d",
+                "track_number": 1,
+                "type": "track",
+                "uri": "spotify:track:7kzmYITVOSDonRwFKnccdE"
             }
         ],
         "limit": 3,
-        "next": null,
+        "next": "https://api.spotify.com/v1/search?query=track%3AAnswer+My+Text+tag%3Ahipster&type=track&offset=3&limit=3",
         "offset": 0,
         "previous": null,
-        "total": 2
+        "total": 10
     }
 }
