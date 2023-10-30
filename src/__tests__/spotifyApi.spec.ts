@@ -448,6 +448,40 @@ describe('spotifyApi.ts', () => {
         expect(normalizeArtistSpy).toBeCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
+
+      it('can find GHOSTEMANE X CLAMS CASINO__KALI YUGA__2017', async () => {
+        const input = {
+          name: 'KALI YUGA',
+          artist: 'GHOSTEMANE X CLAMS CASINO',
+          link: 'http://www.adultswim.com/music/singles-2017/3',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Bones__SeanPaulWasNeverThereToGiveMeTheLight ft. Danny Brown__2017', async () => {
+        const input = {
+          name: 'SeanPaulWasNeverThereToGiveMeTheLight ft. Danny Brown',
+          artist: 'Bones',
+          link: 'http://www.theneedledrop.com/articles/2017/6/bones-seanpaulwasnevertheretogimmethelight-ft-danny-brown',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
     })
 
     describe.skip('songs are not on spotify!', () => {
@@ -501,6 +535,23 @@ describe('spotifyApi.ts', () => {
         expect(normalizeArtistSpy).toBeCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
+
+      it('can find Young Thug__WTF You Doin ft. Quavo, Duke & Rich the Kid__2017', async () => {
+        const input = {
+          name: 'WTF You Doin ft. Quavo, Duke & Rich the Kid',
+          artist: 'Young Thug',
+          link: 'https://soundcloud.com/digital-trapstars/young-thug-quavo-duke-rich-the-kid-wtf-you-doin-prod-dj-durel',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
     })
 
     describe.skip('on spotify, but shadowbanned from search results?', () => {
@@ -526,6 +577,23 @@ describe('spotifyApi.ts', () => {
           name: 'S.A.D',
           artist: 'Kirin J Callinan',
           link: 'http://www.theneedledrop.com/articles/2017/5/kirin-j-callinan-sad',
+          year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Zomby__ZKITTLES__2017', async () => {
+        const input = {
+          name: 'ZKITTLES',
+          artist: 'Zomby',
+          link: 'https://youtu.be/ZFnPbAzNLSk',
           year: 2017,
         }
 

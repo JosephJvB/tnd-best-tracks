@@ -113,6 +113,51 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
     original: 'White Suns - Psychic Drift',
     corrected: 'White Suns - Korea',
   },
+  {
+    original: "WAVVES - Daisy / You're Welcome",
+    corrected: [
+      'WAVVES - Daisy\nhttps://open.spotify.com/track/6pLvN4ZpGZAIctequZFejE',
+      "WAVVES - You're Welcome\nhttps://open.spotify.com/track/6ZFidrzLRVPZkUZuEdWSX5",
+    ].join('\n\n'),
+  },
+  {
+    original: 'Brockhampton - Gold / Heat / Face',
+    corrected: [
+      'Brockhampton - Gold\nhttps://open.spotify.com/track/7HRv1sYuwgoea1m0JRvChV',
+      'Brockhampton - Heat\nhttps://open.spotify.com/track/2maEFaoAyNjQVv14Hm4esN',
+      'Brockhampton - Face\nhttps://open.spotify.com/track/5bknBRjKJZ643DAN2w8Yoy',
+    ].join('\n\n'),
+  },
+  {
+    original: 'Kirin J Callinan - Down 2 Hang / Living Each Day',
+    corrected: [
+      'Kirin J Callinan - Down 2 Hang\nhttps://open.spotify.com/track/4QwsYsR1UasL8gP0DBYQAb',
+      'Kirin J Callinan - Living Each Day\nhttps://open.spotify.com/track/0kQD7jcpErQ7L7TSWxZpcw',
+    ].join('\n\n'),
+  },
+  {
+    original: 'Liars - Coins In My Caged Fist / The Grand Delusional',
+    corrected: [
+      'Liars - Coins In My Caged Fist\nhttps://open.spotify.com/track/4Tv9F9Q8mgr569pEl21JV9',
+      'Liars - The Grand Delusional\nhttps://open.spotify.com/track/2nfrMSGsqtlPrHSjicV2ET',
+    ].join('\n\n'),
+  },
+  {
+    original: 'Zomby - ZKITTLES\nhttps://youtu.be/ZFnPbAzNLSk',
+    corrected:
+      'Zomby - ZKITTLES\nhttps://open.spotify.com/track/6nxuygxyYOeQiqHbGY7Tzh',
+  },
+  {
+    original:
+      'Kirin J Callinan - S.A.D\nhttp://www.theneedledrop.com/articles/2017/5/kirin-j-callinan-sad',
+    corrected:
+      'Kirin J Callinan - S.A.D\nhttps://open.spotify.com/track/6PKyEhTtTgwl3S6fdF54y0',
+  },
+  {
+    original: 'PWR BTTM - Answer My Text\nhttps://youtu.be/TlNHAkXDS10',
+    corrected:
+      'PWR BTTM - Answer My Text\nhttps://open.spotify.com/track/4d6PqLM7AswcwXZztMou7J',
+  },
 ]
 
 export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
@@ -132,6 +177,10 @@ export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
     original: 'The Lord of Lightning Vs. Balrog',
     corrected: 'The Lord of Lightning',
   },
+  {
+    original: 'SeanPaulWasNeverThereToGiveMeTheLight',
+    corrected: 'SeanPaul',
+  },
 ]
 export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
   {
@@ -149,6 +198,10 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
   {
     original: 'Dangermouse',
     corrected: 'Danger Mouse',
+  },
+  {
+    original: 'GHOSTEMANE X CLAMS CASINO',
+    corrected: 'GHOSTEMANE CLAMS CASINO',
   },
 ]
 // link is most reliably unique

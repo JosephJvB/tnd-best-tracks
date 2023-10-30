@@ -132,6 +132,10 @@ export const findTrack = async (
       )
     }
 
+    if (process.env.JEST_WORKER_ID && !res.data.tracks.items.length) {
+      console.log(res.request)
+    }
+
     return res.data
   } catch (e) {
     const axError = e as AxiosError
