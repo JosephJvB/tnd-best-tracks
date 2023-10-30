@@ -32,6 +32,7 @@ contentDetails,id,snippet,status
 
 4. Review youtube / spotify pairs
   - case where spotifyTrack is not found
+    - still missing 238 songs... will go through a bunch of them...
   - case where match is bad
 
 4. Do user auth, callback url stuff

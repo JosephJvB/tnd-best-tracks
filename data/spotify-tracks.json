@@ -394,7 +394,14 @@
       "year": 2016
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3O4mrgA9FYu5MA79rqTfpL",
+      "uri": "spotify:track:3O4mrgA9FYu5MA79rqTfpL",
+      "name": "1st Day out Tha Feds",
+      "artists": [
+        "Gucci Mane"
+      ]
+    }
   },
   {
     "id": "Carnage__\"Mase in '97\" ft. Lil Yachty__2016",
@@ -4743,18 +4750,36 @@
     }
   },
   {
-    "id": "WAVVES__Daisy / You're Welcome__2017",
+    "id": "WAVVES__Daisy__2017",
     "youtubeTrack": {
-      "name": "Daisy / You're Welcome",
+      "name": "Daisy",
       "artist": "WAVVES",
-      "link": "https://soundcloud.com/ghost-ramp/daisy-single",
+      "link": "https://open.spotify.com/track/6pLvN4ZpGZAIctequZFejE",
       "year": 2017
     },
-    "spotifyId": null,
+    "spotifyId": "6pLvN4ZpGZAIctequZFejE",
     "spotifyTrack": {
-      "id": "5S8aNcgCqln60B0nABhb4w",
-      "uri": "spotify:track:5S8aNcgCqln60B0nABhb4w",
+      "id": "6pLvN4ZpGZAIctequZFejE",
+      "uri": "spotify:track:6pLvN4ZpGZAIctequZFejE",
       "name": "Daisy",
+      "artists": [
+        "Wavves"
+      ]
+    }
+  },
+  {
+    "id": "WAVVES__You're Welcome__2017",
+    "youtubeTrack": {
+      "name": "You're Welcome",
+      "artist": "WAVVES",
+      "link": "https://open.spotify.com/track/6ZFidrzLRVPZkUZuEdWSX5",
+      "year": 2017
+    },
+    "spotifyId": "6ZFidrzLRVPZkUZuEdWSX5",
+    "spotifyTrack": {
+      "id": "6ZFidrzLRVPZkUZuEdWSX5",
+      "uri": "spotify:track:6ZFidrzLRVPZkUZuEdWSX5",
+      "name": "You’re Welcome",
       "artists": [
         "Wavves"
       ]
@@ -4945,11 +4970,18 @@
     "youtubeTrack": {
       "name": "Answer My Text",
       "artist": "PWR BTTM",
-      "link": "https://youtu.be/TlNHAkXDS10",
+      "link": "https://open.spotify.com/track/4d6PqLM7AswcwXZztMou7J",
       "year": 2017
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "4d6PqLM7AswcwXZztMou7J",
+    "spotifyTrack": {
+      "id": "4d6PqLM7AswcwXZztMou7J",
+      "uri": "spotify:track:4d6PqLM7AswcwXZztMou7J",
+      "name": "Answer My Text",
+      "artists": [
+        "PWR BTTM"
+      ]
+    }
   },
   {
     "id": "alt-j__3WW__2017",
@@ -5884,11 +5916,18 @@
     "youtubeTrack": {
       "name": "S.A.D",
       "artist": "Kirin J Callinan",
-      "link": "http://www.theneedledrop.com/articles/2017/5/kirin-j-callinan-sad",
+      "link": "https://open.spotify.com/track/6PKyEhTtTgwl3S6fdF54y0",
       "year": 2017
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "6PKyEhTtTgwl3S6fdF54y0",
+    "spotifyTrack": {
+      "id": "6PKyEhTtTgwl3S6fdF54y0",
+      "uri": "spotify:track:6PKyEhTtTgwl3S6fdF54y0",
+      "name": "S. A. D.",
+      "artists": [
+        "Kirin J Callinan"
+      ]
+    }
   },
   {
     "id": "HAIM__Want You Back__2017",
@@ -6222,26 +6261,96 @@
     }
   },
   {
-    "id": "Brockhampton__Gold / Heat / Face__2017",
+    "id": "Brockhampton__Gold__2017",
     "youtubeTrack": {
-      "name": "Gold / Heat / Face",
+      "name": "Gold",
       "artist": "Brockhampton",
-      "link": "http://www.theneedledrop.com/articles/2017/5/brockhampton-gold",
+      "link": "https://open.spotify.com/track/7HRv1sYuwgoea1m0JRvChV",
       "year": 2017
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "7HRv1sYuwgoea1m0JRvChV",
+    "spotifyTrack": {
+      "id": "7HRv1sYuwgoea1m0JRvChV",
+      "uri": "spotify:track:7HRv1sYuwgoea1m0JRvChV",
+      "name": "GOLD",
+      "artists": [
+        "BROCKHAMPTON"
+      ]
+    }
   },
   {
-    "id": "Kirin J Callinan__Down 2 Hang / Living Each Day__2017",
+    "id": "Brockhampton__Heat__2017",
     "youtubeTrack": {
-      "name": "Down 2 Hang / Living Each Day",
-      "artist": "Kirin J Callinan",
-      "link": "https://soundcloud.com/terrible-records/kirin-j-callinan-living-each-day",
+      "name": "Heat",
+      "artist": "Brockhampton",
+      "link": "https://open.spotify.com/track/2maEFaoAyNjQVv14Hm4esN",
       "year": 2017
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "2maEFaoAyNjQVv14Hm4esN",
+    "spotifyTrack": {
+      "id": "2maEFaoAyNjQVv14Hm4esN",
+      "uri": "spotify:track:2maEFaoAyNjQVv14Hm4esN",
+      "name": "HEAT",
+      "artists": [
+        "BROCKHAMPTON"
+      ]
+    }
+  },
+  {
+    "id": "Brockhampton__Face__2017",
+    "youtubeTrack": {
+      "name": "Face",
+      "artist": "Brockhampton",
+      "link": "https://open.spotify.com/track/5bknBRjKJZ643DAN2w8Yoy",
+      "year": 2017
+    },
+    "spotifyId": "5bknBRjKJZ643DAN2w8Yoy",
+    "spotifyTrack": {
+      "id": "5bknBRjKJZ643DAN2w8Yoy",
+      "uri": "spotify:track:5bknBRjKJZ643DAN2w8Yoy",
+      "name": "FACE",
+      "artists": [
+        "BROCKHAMPTON"
+      ]
+    }
+  },
+  {
+    "id": "Kirin J Callinan__Down 2 Hang__2017",
+    "youtubeTrack": {
+      "name": "Down 2 Hang",
+      "artist": "Kirin J Callinan",
+      "link": "https://open.spotify.com/track/4QwsYsR1UasL8gP0DBYQAb",
+      "year": 2017
+    },
+    "spotifyId": "4QwsYsR1UasL8gP0DBYQAb",
+    "spotifyTrack": {
+      "id": "4QwsYsR1UasL8gP0DBYQAb",
+      "uri": "spotify:track:4QwsYsR1UasL8gP0DBYQAb",
+      "name": "Down 2 Hang",
+      "artists": [
+        "Kirin J Callinan",
+        "james chance"
+      ]
+    }
+  },
+  {
+    "id": "Kirin J Callinan__Living Each Day__2017",
+    "youtubeTrack": {
+      "name": "Living Each Day",
+      "artist": "Kirin J Callinan",
+      "link": "https://open.spotify.com/track/0kQD7jcpErQ7L7TSWxZpcw",
+      "year": 2017
+    },
+    "spotifyId": "0kQD7jcpErQ7L7TSWxZpcw",
+    "spotifyTrack": {
+      "id": "0kQD7jcpErQ7L7TSWxZpcw",
+      "uri": "spotify:track:0kQD7jcpErQ7L7TSWxZpcw",
+      "name": "Living Each Day",
+      "artists": [
+        "Kirin J Callinan",
+        "Connan Mockasin"
+      ]
+    }
   },
   {
     "id": "Shabazz Palaces__Since C.A.Y.A.__2017",
@@ -6499,7 +6608,15 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7vNYfMAh3bvHGmRxve1YAg",
+      "uri": "spotify:track:7vNYfMAh3bvHGmRxve1YAg",
+      "name": "Kali Yuga",
+      "artists": [
+        "Ghostemane",
+        "Clams Casino"
+      ]
+    }
   },
   {
     "id": "Guerilla Toss__Skull Pop__2017",
@@ -6528,7 +6645,14 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1vwOHDeOQ3h6ZK8UsWRb1G",
+      "uri": "spotify:track:1vwOHDeOQ3h6ZK8UsWRb1G",
+      "name": "SeanPaulWasNeverThereToGimmeTheLight",
+      "artists": [
+        "BONES"
+      ]
+    }
   },
   {
     "id": "Queens of the Stone Age__The Way You Used To Do__2017",
@@ -7381,15 +7505,40 @@
     }
   },
   {
-    "id": "Liars__Coins In My Caged Fist / The Grand Delusional__2017",
+    "id": "Liars__Coins In My Caged Fist__2017",
     "youtubeTrack": {
-      "name": "Coins In My Caged Fist / The Grand Delusional",
+      "name": "Coins In My Caged Fist",
       "artist": "Liars",
-      "link": "http://www.theneedledrop.com/articles/2017/8/liars-coins-in-my-caged-fist-the-grand-delusional",
+      "link": "https://open.spotify.com/track/4Tv9F9Q8mgr569pEl21JV9",
       "year": 2017
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "4Tv9F9Q8mgr569pEl21JV9",
+    "spotifyTrack": {
+      "id": "4Tv9F9Q8mgr569pEl21JV9",
+      "uri": "spotify:track:4Tv9F9Q8mgr569pEl21JV9",
+      "name": "Coins in My Caged Fist",
+      "artists": [
+        "Liars"
+      ]
+    }
+  },
+  {
+    "id": "Liars__The Grand Delusional__2017",
+    "youtubeTrack": {
+      "name": "The Grand Delusional",
+      "artist": "Liars",
+      "link": "https://open.spotify.com/track/2nfrMSGsqtlPrHSjicV2ET",
+      "year": 2017
+    },
+    "spotifyId": "2nfrMSGsqtlPrHSjicV2ET",
+    "spotifyTrack": {
+      "id": "2nfrMSGsqtlPrHSjicV2ET",
+      "uri": "spotify:track:2nfrMSGsqtlPrHSjicV2ET",
+      "name": "The Grand Delusional",
+      "artists": [
+        "Liars"
+      ]
+    }
   },
   {
     "id": "Street Sects__Blacken The Other Eye__2017",
@@ -7687,11 +7836,18 @@
     "youtubeTrack": {
       "name": "ZKITTLES",
       "artist": "Zomby",
-      "link": "https://youtu.be/ZFnPbAzNLSk",
+      "link": "https://open.spotify.com/track/6nxuygxyYOeQiqHbGY7Tzh",
       "year": 2017
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "6nxuygxyYOeQiqHbGY7Tzh",
+    "spotifyTrack": {
+      "id": "6nxuygxyYOeQiqHbGY7Tzh",
+      "uri": "spotify:track:6nxuygxyYOeQiqHbGY7Tzh",
+      "name": "ZKITTLEZ",
+      "artists": [
+        "Zomby"
+      ]
+    }
   },
   {
     "id": "Lone__Looking Glass__2017",
@@ -7786,7 +7942,15 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7C9XoMfFqmYoKQtWN7OCEH",
+      "uri": "spotify:track:7C9XoMfFqmYoKQtWN7OCEH",
+      "name": "Stranger's Kiss (Duet with Angel Olsen)",
+      "artists": [
+        "Alex Cameron",
+        "Angel Olsen"
+      ]
+    }
   },
   {
     "id": "Mogwai__Eternal Panther__2017",
@@ -8477,7 +8641,15 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "004vVYQv7qTUoyzje9AqxY",
+      "uri": "spotify:track:004vVYQv7qTUoyzje9AqxY",
+      "name": "Continental Breakfast",
+      "artists": [
+        "Courtney Barnett",
+        "Kurt Vile"
+      ]
+    }
   },
   {
     "id": "Injury Reserve__Boom (x3)__2017",
@@ -8524,7 +8696,15 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6uJyY7qVPXe4QmWhRbGrhY",
+      "uri": "spotify:track:6uJyY7qVPXe4QmWhRbGrhY",
+      "name": "Gorilla Monsoon",
+      "artists": [
+        "Westside Gunn",
+        "MF DOOM"
+      ]
+    }
   },
   {
     "id": "Jessie Ware__Egoista__2017",
@@ -8589,7 +8769,14 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0HbFgNSVPMfZLXcmkm5Q42",
+      "uri": "spotify:track:0HbFgNSVPMfZLXcmkm5Q42",
+      "name": "Pure Comedy",
+      "artists": [
+        "Father John Misty"
+      ]
+    }
   },
   {
     "id": "Mavis Staples__Little Bit__2017",
@@ -8900,7 +9087,14 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3IuJkBMu3i1yjoXVTu5HLI",
+      "uri": "spotify:track:3IuJkBMu3i1yjoXVTu5HLI",
+      "name": "Rank Mankind",
+      "artists": [
+        "Krallice"
+      ]
+    }
   },
   {
     "id": "Migos__Motorsport ft. Nicki Minaj & Cardi B__2017",
@@ -8967,7 +9161,14 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2rjM7DfNQxVNAE4vy4TK7j",
+      "uri": "spotify:track:2rjM7DfNQxVNAE4vy4TK7j",
+      "name": "Choila",
+      "artists": [
+        "Chepang"
+      ]
+    }
   },
   {
     "id": "N.E.R.D & Rihanna__Lemon__2017",
@@ -9135,15 +9336,40 @@
     }
   },
   {
-    "id": "GFOTY__Poison / Tongue__2017",
+    "id": "GFOTY__Poison__2017",
     "youtubeTrack": {
-      "name": "Poison / Tongue",
+      "name": "Poison",
       "artist": "GFOTY",
       "link": "https://youtu.be/qzo2vvUWLoo",
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3Ruv9GEcztgqxDvbOL3ccT",
+      "uri": "spotify:track:3Ruv9GEcztgqxDvbOL3ccT",
+      "name": "Poison",
+      "artists": [
+        "GFOTY"
+      ]
+    }
+  },
+  {
+    "id": "GFOTY__Tongue__2017",
+    "youtubeTrack": {
+      "name": "Tongue",
+      "artist": "GFOTY",
+      "link": "https://youtu.be/qzo2vvUWLoo",
+      "year": 2017
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "38oHqKpGqxHkl6jR5CTqVT",
+      "uri": "spotify:track:38oHqKpGqxHkl6jR5CTqVT",
+      "name": "Tongue",
+      "artists": [
+        "GFOTY"
+      ]
+    }
   },
   {
     "id": "Rich Chigga__Crisis ft. 21 Savage__2017",
@@ -9191,7 +9417,15 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4iOxSisYnEg9Rke9sY6Bfv",
+      "uri": "spotify:track:4iOxSisYnEg9Rke9sY6Bfv",
+      "name": "HARD TO BE A GOD",
+      "artists": [
+        "HEALTH",
+        "NOLIFE"
+      ]
+    }
   },
   {
     "id": "Chris Stapleton__Tryin' To Untangle My Mind__2017",
@@ -9212,15 +9446,40 @@
     }
   },
   {
-    "id": "Fabiana Palladino__Mystery / Ruthven__2017",
+    "id": "Fabiana Palladino__Mystery__2017",
     "youtubeTrack": {
-      "name": "Mystery / Ruthven",
+      "name": "Mystery",
       "artist": "Fabiana Palladino",
-      "link": "http://www.theneedledrop.com/articles/2017/11/fabiana-palladino-mystery-ruthven-evil",
+      "link": "https://youtu.be/qzo2vvUWLoo",
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1mKnCtcBZHdnbmGcyoO2Vn",
+      "uri": "spotify:track:1mKnCtcBZHdnbmGcyoO2Vn",
+      "name": "Mystery",
+      "artists": [
+        "Fabiana Palladino"
+      ]
+    }
+  },
+  {
+    "id": "Ruthven__Evil__2017",
+    "youtubeTrack": {
+      "name": "Evil",
+      "artist": "Ruthven",
+      "link": "https://youtu.be/qzo2vvUWLoo",
+      "year": 2017
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "1i3l10AupxsauvSd9qmCad",
+      "uri": "spotify:track:1i3l10AupxsauvSd9qmCad",
+      "name": "Evil",
+      "artists": [
+        "Ruthven"
+      ]
+    }
   },
   {
     "id": "Tame Impala__List of People (To Try and Forget About)__2017",
@@ -9268,7 +9527,14 @@
       "year": 2017
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2lhlItQCi2mgtJVl80RPWY",
+      "uri": "spotify:track:2lhlItQCi2mgtJVl80RPWY",
+      "name": "Rudolph The Red Nosed Reindeer",
+      "artists": [
+        "DMX"
+      ]
+    }
   },
   {
     "id": "Ty Segall__The Main Pretender__2017",
@@ -9822,15 +10088,40 @@
     }
   },
   {
-    "id": "The Voidz__Leave It In My Dreams & QYURRYUS__2018",
+    "id": "The Voidz__Leave It In My Dreams__2018",
     "youtubeTrack": {
-      "name": "Leave It In My Dreams & QYURRYUS",
+      "name": "Leave It In My Dreams",
       "artist": "The Voidz",
-      "link": "http://www.theneedledrop.com/articles/2018/1/the-voidz-leave-it-in-my-dreams",
+      "link": "https://youtu.be/qzo2vvUWLoo",
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "31u6rUeIEXGrYVoh10U7eu",
+      "uri": "spotify:track:31u6rUeIEXGrYVoh10U7eu",
+      "name": "Leave It In My Dreams",
+      "artists": [
+        "The Voidz"
+      ]
+    }
+  },
+  {
+    "id": "The Voidz__QYURRYUS__2018",
+    "youtubeTrack": {
+      "name": "QYURRYUS",
+      "artist": "The Voidz",
+      "link": "https://youtu.be/qzo2vvUWLoo",
+      "year": 2018
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "6pMRk6Tr05wmZSSINOqzE3",
+      "uri": "spotify:track:6pMRk6Tr05wmZSSINOqzE3",
+      "name": "QYURRYUS",
+      "artists": [
+        "The Voidz"
+      ]
+    }
   },
   {
     "id": "Dabrye__Lil Mufukuz ft. MF DOOM__2018",
@@ -9878,7 +10169,15 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6dryxLhgEJwiWYt5cDVPEa",
+      "uri": "spotify:track:6dryxLhgEJwiWYt5cDVPEa",
+      "name": "Bloody Mary",
+      "artists": [
+        "Juelz Santana",
+        "Lil Wayne"
+      ]
+    }
   },
   {
     "id": "Joey Bada$$__THUGZ CRY__2018",
@@ -10346,15 +10645,40 @@
     }
   },
   {
-    "id": "Janelle Monae__Make Me Feel / Django Jane__2018",
+    "id": "Janelle Monae__Make Me Feel__2018",
     "youtubeTrack": {
-      "name": "Make Me Feel / Django Jane",
+      "name": "Make Me Feel",
       "artist": "Janelle Monae",
-      "link": "https://www.youtube.com/watch?v=tGRzz0oqgUE",
+      "link": "https://youtu.be/qzo2vvUWLoo",
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5gW5dSy3vXJxgzma4rQuzH",
+      "uri": "spotify:track:5gW5dSy3vXJxgzma4rQuzH",
+      "name": "Make Me Feel",
+      "artists": [
+        "Janelle Monáe"
+      ]
+    }
+  },
+  {
+    "id": "Janelle Monae__Django Jane__2018",
+    "youtubeTrack": {
+      "name": "Django Jane",
+      "artist": "Janelle Monae",
+      "link": "https://youtu.be/qzo2vvUWLoo",
+      "year": 2018
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "56RfNBJGUgL1ZFCB1KEJrQ",
+      "uri": "spotify:track:56RfNBJGUgL1ZFCB1KEJrQ",
+      "name": "Django Jane",
+      "artists": [
+        "Janelle Monáe"
+      ]
+    }
   },
   {
     "id": "Screaming Females__I'll Make You Sorry__2018",
@@ -10527,7 +10851,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "75ZgxZqEiMQaz6lnTdGKSQ",
+      "uri": "spotify:track:75ZgxZqEiMQaz6lnTdGKSQ",
+      "name": "Some Kind of Game",
+      "artists": [
+        "Against All Logic"
+      ]
+    }
   },
   {
     "id": "Everything Everything__Breadwinner__2018",
@@ -10613,7 +10944,15 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0PS5hqGTdCuNaVGfsgy4y8",
+      "uri": "spotify:track:0PS5hqGTdCuNaVGfsgy4y8",
+      "name": "Pain Killer",
+      "artists": [
+        "Iceage",
+        "Sky Ferreira"
+      ]
+    }
   },
   {
     "id": "Young Fathers__Toy__2018",
@@ -11010,7 +11349,15 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4cPC4aQXU3MNTtv7QWvez2",
+      "uri": "spotify:track:4cPC4aQXU3MNTtv7QWvez2",
+      "name": "Boblo Boat (feat. J. Cole)",
+      "artists": [
+        "Royce Da 5'9\"",
+        "J. Cole"
+      ]
+    }
   },
   {
     "id": "BlocBoy JB__Rover 2.0 ft. 21 Savage__2018",
@@ -11040,7 +11387,16 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5T0YyRxyxtLDxLYJhLjqWM",
+      "uri": "spotify:track:5T0YyRxyxtLDxLYJhLjqWM",
+      "name": "33rd Blakk Glass",
+      "artists": [
+        "City Morgue",
+        "ZillaKami",
+        "SosMula"
+      ]
+    }
   },
   {
     "id": "Rico Nasty__Trust Issues__2018",
@@ -11309,26 +11665,76 @@
     }
   },
   {
-    "id": "Kamasi Washington__Fists of Fury / The Space Travelers Lullaby__2018",
+    "id": "Kamasi Washington__Fists of Fury__2018",
     "youtubeTrack": {
-      "name": "Fists of Fury / The Space Travelers Lullaby",
+      "name": "Fists of Fury",
       "artist": "Kamasi Washington",
-      "link": "https://itunes.apple.com/us/album/fists-of-fury/1363033047?i=1363034076",
+      "link": "https://youtu.be/qzo2vvUWLoo",
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "186zi6pmNhtYzHBWUX5Opa",
+      "uri": "spotify:track:186zi6pmNhtYzHBWUX5Opa",
+      "name": "Fists of Fury",
+      "artists": [
+        "Kamasi Washington"
+      ]
+    }
   },
   {
-    "id": "Nicki Minaj__Barbie Tingz / Chun-Li__2018",
+    "id": "Kamasi Washington__The Space Travelers Lullaby__2018",
     "youtubeTrack": {
-      "name": "Barbie Tingz / Chun-Li",
-      "artist": "Nicki Minaj",
-      "link": "https://itunes.apple.com/us/album/chun-li/1371043173?i=1371043175",
+      "name": "The Space Travelers Lullaby",
+      "artist": "Kamasi Washington",
+      "link": "https://youtu.be/qzo2vvUWLoo",
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4ctHuPytDEbjlQEECaXiO5",
+      "uri": "spotify:track:4ctHuPytDEbjlQEECaXiO5",
+      "name": "The Space Travelers Lullaby",
+      "artists": [
+        "Kamasi Washington"
+      ]
+    }
+  },
+  {
+    "id": "Nicki Minaj__Barbie Tingz__2018",
+    "youtubeTrack": {
+      "name": "Barbie Tingz",
+      "artist": "Nicki Minaj",
+      "link": "https://youtu.be/qzo2vvUWLoo",
+      "year": 2018
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "2qsQ8eVDPmobZpvDxQCVQu",
+      "uri": "spotify:track:2qsQ8eVDPmobZpvDxQCVQu",
+      "name": "Barbie Tingz",
+      "artists": [
+        "Nicki Minaj"
+      ]
+    }
+  },
+  {
+    "id": "Nicki Minaj__Chun-Li__2018",
+    "youtubeTrack": {
+      "name": "Chun-Li",
+      "artist": "Nicki Minaj",
+      "link": "https://youtu.be/qzo2vvUWLoo",
+      "year": 2018
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "1e4rwBPVI32vZtTJu7mJ4J",
+      "uri": "spotify:track:1e4rwBPVI32vZtTJu7mJ4J",
+      "name": "Chun-Li",
+      "artists": [
+        "Nicki Minaj"
+      ]
+    }
   },
   {
     "id": "Ails__Dead Metaphors__2018",
@@ -11775,14 +12181,35 @@
       "year": 2018
     },
     "spotifyId": null,
+    "spotifyTrack": {
+      "id": "4xigPf2sigSPmuFH3qCelB",
+      "uri": "spotify:track:4xigPf2sigSPmuFH3qCelB",
+      "name": "Genius (feat. Sia, Diplo, and Labrinth)",
+      "artists": [
+        "Sia",
+        "Diplo",
+        "Labrinth",
+        "LSD"
+      ]
+    }
+  },
+  {
+    "id": "André 3000__Me&My__2018",
+    "youtubeTrack": {
+      "name": "Me&My",
+      "artist": "André 3000",
+      "link": "https://youtu.be/qzo2vvUWLoo",
+      "year": 2018
+    },
+    "spotifyId": null,
     "spotifyTrack": null
   },
   {
-    "id": "André 3000__Me&My / Look Ma No Hands__2018",
+    "id": "André 3000__Look Ma No Hands__2018",
     "youtubeTrack": {
-      "name": "Me&My / Look Ma No Hands",
+      "name": "Look Ma No Hands",
       "artist": "André 3000",
-      "link": "http://www.theneedledrop.com/articles/2018/5/andr-3000-memy-to-bury-your-parents-look-ma-no-hands",
+      "link": "https://youtu.be/qzo2vvUWLoo",
       "year": 2018
     },
     "spotifyId": null,
@@ -11907,7 +12334,15 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2PlrYKsGndAMJ0qqVVPCoV",
+      "uri": "spotify:track:2PlrYKsGndAMJ0qqVVPCoV",
+      "name": "4 Gold Chains - (feat. Clams Casino)",
+      "artists": [
+        "Lil Peep",
+        "Clams Casino"
+      ]
+    }
   },
   {
     "id": "Kero Kero Bonito__Time Today__2018",
@@ -12217,7 +12652,16 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3fNHem4sZnalrreqlqEOrX",
+      "uri": "spotify:track:3fNHem4sZnalrreqlqEOrX",
+      "name": "May I Be the Light",
+      "artists": [
+        "Laura Marling",
+        "LUMP",
+        "Mike Lindsay"
+      ]
+    }
   },
   {
     "id": "Haru Nemuri__Yume wo miyou__2018",
@@ -12228,7 +12672,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4ctHgf9yx0BowMknzlIKoR",
+      "uri": "spotify:track:4ctHgf9yx0BowMknzlIKoR",
+      "name": "yumewomiyou",
+      "artists": [
+        "HARU NEMURI"
+      ]
+    }
   },
   {
     "id": "Father John Misty__Please Don't Die__2018",
@@ -12257,7 +12708,14 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1mYuPWMufX16l1TQWAQmvB",
+      "uri": "spotify:track:1mYuPWMufX16l1TQWAQmvB",
+      "name": "Vleztemtraiv",
+      "artists": [
+        "Koenjihyakkei"
+      ]
+    }
   },
   {
     "id": "Tony Molina__Nothing I Can Say__2018",
@@ -12517,15 +12975,34 @@
     }
   },
   {
-    "id": "Code Orange__3 Knifes / The Hunt ft. Corey Taylor__2018",
+    "id": "Code Orange__3 Knifes__2018",
     "youtubeTrack": {
-      "name": "3 Knifes / The Hunt ft. Corey Taylor",
+      "name": "3 Knifes",
       "artist": "Code Orange",
-      "link": "https://youtu.be/hoE7AISG7Kc",
+      "link": "https://youtu.be/qzo2vvUWLoo",
       "year": 2018
     },
     "spotifyId": null,
     "spotifyTrack": null
+  },
+  {
+    "id": "Code Orange__The Hunt ft. Corey Taylor__2018",
+    "youtubeTrack": {
+      "name": "The Hunt ft. Corey Taylor",
+      "artist": "Code Orange",
+      "link": "https://youtu.be/qzo2vvUWLoo",
+      "year": 2018
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "2XhJpVPyqhDU0EPDAIBpwe",
+      "uri": "spotify:track:2XhJpVPyqhDU0EPDAIBpwe",
+      "name": "The Hunt (feat. Corey Taylor)",
+      "artists": [
+        "Code Orange",
+        "Corey Taylor"
+      ]
+    }
   },
   {
     "id": "IDK__Trippie Redd's Freestyle__2018",
@@ -12664,7 +13141,17 @@
       "year": 2018
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0uuCRDNiNJfn5zu6KMaFpq",
+      "uri": "spotify:track:0uuCRDNiNJfn5zu6KMaFpq",
+      "name": "Death Wish",
+      "artists": [
+        "DJ Muggs",
+        "MF DOOM",
+        "Freddie Gibbs",
+        "Soul Assassins"
+      ]
+    }
   },
   {
     "id": "Mitski__Nobody__2018",
@@ -25065,7 +25552,15 @@
       "year": 2020
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4UH7za7GQyHIAjcWDP3h86",
+      "uri": "spotify:track:4UH7za7GQyHIAjcWDP3h86",
+      "name": "Overcomer",
+      "artists": [
+        "Royce Da 5'9\"",
+        "Westside Gunn"
+      ]
+    }
   },
   {
     "id": "Nap Eyes__Mark Zuckerberg__2020",
