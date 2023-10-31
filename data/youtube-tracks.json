@@ -8855,9 +8855,16 @@
     "videoPublishedDate": "2019-08-19T02:58:34Z"
   },
   {
-    "name": "Southern Sky / Near",
-    "artist": "(Sandy) Alex G",
+    "name": "Southern Sky",
+    "artist": "Alex G",
     "link": "https://youtu.be/louOvBOFPnQ",
+    "year": 2019,
+    "videoPublishedDate": "2019-08-19T02:58:34Z"
+  },
+  {
+    "name": "Near",
+    "artist": "Alex G",
+    "link": "https://youtu.be/T8hhVwIA2d4",
     "year": 2019,
     "videoPublishedDate": "2019-08-19T02:58:34Z"
   },
@@ -9613,7 +9620,7 @@
   {
     "name": "In Good Faith",
     "artist": "Bonnie 'Prince' Billy",
-    "link": "https://youtu.be/q-rLvg1k-Uk",
+    "link": "https://open.spotify.com/track/1VX1v7WIYzEXHne3S4Xee7",
     "year": 2019,
     "videoPublishedDate": "2019-10-21T20:44:16Z"
   },
@@ -16074,7 +16081,7 @@
   {
     "name": "Hikari no Disco",
     "artist": "Capsule",
-    "link": "https://www.youtube.com/watch?v=Hwn49r14nIc",
+    "link": "https://open.spotify.com/track/02lbewNkGqHLr06Irt4wvW",
     "year": 2021,
     "videoPublishedDate": "2021-06-07T04:34:22Z"
   },
@@ -21793,14 +21800,14 @@
   {
     "name": "DOGTOOTH",
     "artist": "Tyler, the Creator",
-    "link": "https://www.youtube.com/watch?v=2TVXi_9Bvlg",
+    "link": "https://open.spotify.com/track/6OfOzTitafSnsaunQLuNFw",
     "year": 2023,
     "videoPublishedDate": "2023-04-03T20:33:18Z"
   },
   {
     "name": "SORRY NOT SORRY",
     "artist": "Tyler, the Creator",
-    "link": "https://www.youtube.com/watch?v=LSIOcCcEVaE",
+    "link": "https://open.spotify.com/track/410ZZP746AQeiywhKvXWCo",
     "year": 2023,
     "videoPublishedDate": "2023-04-03T20:33:18Z"
   },

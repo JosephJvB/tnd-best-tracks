@@ -1,10 +1,5 @@
 # tnd best tracks
 
-resume:
-1. more manual fixes from Hikari no Disco
-2. run extract
-3. run get tracks
-
 https://developers.google.com/youtube/v3/getting-started
 
 1. PlaylistItems API: https://developers.google.com/youtube/v3/docs/playlistItems/list
