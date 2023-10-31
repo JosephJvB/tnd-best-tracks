@@ -925,6 +925,25 @@ describe('spotifyApi.ts', () => {
         expect(normalizeArtistSpy).toBeCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
+
+      it('can find J. Cole__The Climb Back__2020', async () => {
+        const input = {
+          name: 'The Climb Back',
+          artist: 'J. Cole',
+          link: 'https://www.youtube.com/watch?v=oVaBgcJwkI4',
+          year: 2020,
+          videoPublishedDate: '2020-07-27T03:59:17Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+        expect(result.tracks.items[0].artists[0].name).toBe('J. Cole')
+      })
     })
 
     describe.skip('songs are not on spotify!', () => {

@@ -680,6 +680,6 @@ export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
   },
   {
     original: 'https://www.youtube.com/watch?v=oVaBgcJwkI4',
-    corrected: 't h e.c l i m b.b a c k',
+    corrected: 't h e . c l i m b . b a c k',
   },
 ]
