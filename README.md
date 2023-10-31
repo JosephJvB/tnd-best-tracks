@@ -2,6 +2,8 @@
 
 https://developers.google.com/youtube/v3/getting-started
 
+just Quadeca SCRAPYARD I to fix i think
+
 1. PlaylistItems API: https://developers.google.com/youtube/v3/docs/playlistItems/list
   - PLP4CSgl7K7or84AAhr7zlLNpghEnKWu2c
 

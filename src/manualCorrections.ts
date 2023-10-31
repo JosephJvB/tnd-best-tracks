@@ -708,6 +708,10 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
     original: 'Rose Doll',
     corrected: 'Rose Droll',
   },
+  {
+    original: 'TWIABP',
+    corrected: 'The World Is A Beautiful Place & I Am No Longer Afraid To Die',
+  },
 ]
 // link is most reliably unique. less risk of affecting other songs
 export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
