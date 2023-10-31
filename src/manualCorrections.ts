@@ -376,6 +376,22 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
       'Joey Bada$$ - Shine\nhttps://www.youtube.com/watch?v=2b44fOkS53c',
     ].join('\n\n'),
   },
+  {
+    original:
+      'Guitar Songs (Single)Billie Eilish - Guitar Songs (Single)\nhttps://youtu.be/_JGGLJMpVks\nhttps://youtu.be/onT3z0lCZz8',
+    corrected: [
+      'Billie Eilish - TV\nhttps://youtu.be/_JGGLJMpVks',
+      'Billie Eilish - The 30th\nhttps://youtu.be/onT3z0lCZz8',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Fire-Toolz - Soda Lake with Game Genie / Vedic Software ~ Wet Interfacing\nhttps://fire-toolz.bandcamp.com/album/i-will-not-use-the-bodys-eyes-today?from=fanpub_fnb',
+    corrected: [
+      'Fire-Toolz - Soda Lake with Game Genie\nhttps://fire-toolz.bandcamp.com/album/i-will-not-use-the-bodys-eyes-today?from=fanpub_fnb',
+      'Fire-Toolz - Vedic Software ~ Wet Interfacing\nhttps://fire-toolz.bandcamp.com/album/i-will-not-use-the-bodys-eyes-today?from=fanpub_fnb',
+    ].join('\n\n'),
+  },
 ]
 
 export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
@@ -537,6 +553,10 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
     original: 'Aaron Cartier',
     corrected: 'Cali Cartier',
   },
+  {
+    original: 'Osees',
+    corrected: 'Thee Oh Sees',
+  },
 ]
 // link is most reliably unique. less risk of affecting other songs
 export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
@@ -625,6 +645,27 @@ export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
     original: 'https://www.youtube.com/watch?v=LVfBAHB_2hw',
     corrected: 'HEALTH Full of Hell',
   },
+  {
+    original: 'https://www.youtube.com/watch?v=yrq1pVgGkMs',
+    corrected: 'Danger Mouse Black Thought',
+  },
+  {
+    original: 'https://youtu.be/Maa7WVLX2Ts',
+    corrected: 'easy life BENEE',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=NHEoowcxa_I',
+    corrected: 'MIKE Wiki The Alchemist',
+  },
+  {
+    original:
+      'https://primitivemandoom.bandcamp.com/album/suffocating-hallucination',
+    corrected: 'Full Of Hell Primitive Man',
+  },
+  {
+    original: 'https://youtu.be/3lc6nriNBek',
+    corrected: 'Els Michels Affair Black Thought',
+  },
 ]
 export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
   {
@@ -681,5 +722,17 @@ export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
   {
     original: 'https://www.youtube.com/watch?v=oVaBgcJwkI4',
     corrected: 't h e . c l i m b . b a c k',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=NGjzCQHsF4Q',
+    corrected: 'Thermal Runaway',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=09ENJYf_new',
+    corrected: 'Queue',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=PyQI282tOOI',
+    corrected: 'Make U 3 Me',
   },
 ]
