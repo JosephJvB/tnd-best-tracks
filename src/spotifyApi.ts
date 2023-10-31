@@ -226,6 +226,7 @@ export const normalizeArtistName = (track: YoutubeTrack) => {
   let normalized = track.artist
     .replace(/ & /g, ' ')
     .replace(/ and /g, ' ')
+    .replace(/, /g, ' ')
     .replace(/ \/ /gi, ' ')
     .replace(/ \+ /gi, ' ')
     .replace(/ x /gi, ' ')

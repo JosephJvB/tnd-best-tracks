@@ -891,6 +891,40 @@ describe('spotifyApi.ts', () => {
         expect(normalizeArtistSpy).toBeCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
+
+      it('can find Disclosure, Aminé & slowthai__My High__2020', async () => {
+        const input = {
+          name: 'My High',
+          artist: 'Disclosure, Aminé & slowthai',
+          link: 'https://www.youtube.com/watch?v=LKVazT09YQI',
+          year: 2020,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Full of Hell x Health__Full of Health__2020', async () => {
+        const input = {
+          name: 'Full of Health',
+          artist: 'Full of Hell x Health',
+          link: 'https://www.youtube.com/watch?v=LVfBAHB_2hw',
+          year: 2020,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
     })
 
     describe.skip('songs are not on spotify!', () => {

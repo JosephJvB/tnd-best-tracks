@@ -253,6 +253,8 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
   // i could actually handle this by code..
   // if trackname.includes('/') && check that links.length == length of trackname split('/')
   // then combine [artist + trackname[0], artist + trackname[1], ...]
+  // try this in retries - but then issue is that findTrack will then return > 1 track
+  // that's unexpected. requires other refactor also
   {
     original:
       'Clarence Clarity - Anthropic Principles / Telenovela\nhttps://www.youtube.com/watch?v=cn3OMeiYTgk\nhttps://www.youtube.com/watch?v=_fzqIwIdpGk',
@@ -340,6 +342,40 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
       "Bonnie 'Prince' Billy - At the Back of the Pit\nhttps://open.spotify.com/track/5O1apNU3Emu6BkFzIEPiJM?si=4667a6cbddcd4620",
     ].join('\n\n'),
   },
+  {
+    original:
+      'The Weeknd - Heartless & Blinding Lights\nhttps://www.youtube.com/watch?v=1DpH-icPpl0\nhttps://www.youtube.com/watch?v=fHI8X4OXluQ\nReview: https://www.youtube.com/watch?v=ncG-z8ueRJU',
+    corrected: [
+      'The Weeknd - Heartless\nhttps://www.youtube.com/watch?v=1DpH-icPpl0',
+      'The Weeknd - Blinding Lights\nhttps://www.youtube.com/watch?v=fHI8X4OXluQ',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Frank Ocean - Dear April / Cayendo\nhttps://www.youtube.com/watch?v=pvU4b4N1-QU\nReview: https://www.youtube.com/watch?v=fufElO4m8Nw',
+    corrected: [
+      'Frank Ocean - Dear April\nhttps://www.youtube.com/watch?v=pvU4b4N1-QU',
+      'Frank Ocean - Cayendo\nhttps://www.youtube.com/watch?v=pvU4b4N1-QU',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'BROCKHAMPTON - fishbone & chain on / hold me ft. JPEGMAFIA\nhttps://youtu.be/zC0EanEj-_A\nhttps://www.youtube.com/watch?v=t0RmMunFMKM  ',
+    corrected: [
+      'BROCKHAMPTON - fishbone\nhttps://youtu.be/zC0EanEj-_A',
+      'BROCKHAMPTON - chain on\nhttps://www.youtube.com/watch?v=t0RmMunFMKM',
+      'BROCKHAMPTON - hold me ft. JPEGMAFIA\nhttps://www.youtube.com/watch?v=t0RmMunFMKM',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Joey Bada$$ - The Light Pack EP\nhttps://www.youtube.com/watch?v=2b44fOkS53c',
+    corrected: [
+      'Joey Bada$$ - The Light\nhttps://www.youtube.com/watch?v=2b44fOkS53c',
+      'Joey Bada$$ - No Explanation\nhttps://www.youtube.com/watch?v=2b44fOkS53c',
+      'Joey Bada$$ - Shine\nhttps://www.youtube.com/watch?v=2b44fOkS53c',
+    ].join('\n\n'),
+  },
 ]
 
 export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
@@ -406,6 +442,14 @@ export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
   {
     original: 'Blood on the Fang',
     corrected: 'Blood of the Fang',
+  },
+  {
+    original: 'Killerrmajestic',
+    corrected: 'Killermajestic'.toUpperCase(),
+  },
+  {
+    original: 'Grilling N****s',
+    corrected: 'Grilling N',
   },
 ]
 export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
@@ -485,6 +529,14 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
     original: 'The Black Lips',
     corrected: 'Black Lips',
   },
+  {
+    original: 'Dixie Chicks',
+    corrected: 'The Chicks',
+  },
+  {
+    original: 'Aaron Cartier',
+    corrected: 'Cali Cartier',
+  },
 ]
 // link is most reliably unique. less risk of affecting other songs
 export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
@@ -553,6 +605,26 @@ export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
     original: 'https://www.adultswim.com/music/singles-2018/52',
     corrected: 'The Professionals',
   },
+  {
+    original: 'https://youtu.be/4aBKpDNe5eo',
+    corrected: 'Dreamville',
+  },
+  {
+    original: 'https://youtu.be/c1eQOZPt0gw',
+    corrected: 'BABY GRAVY',
+  },
+  {
+    original: 'https://youtu.be/e_zD_w18ysw',
+    corrected: 'Terrace Martin',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=LKVazT09YQI',
+    corrected: 'Disclosure',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=LVfBAHB_2hw',
+    corrected: 'HEALTH Full of Hell',
+  },
 ]
 export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
   {
@@ -592,5 +664,22 @@ export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
   {
     original: 'https://youtu.be/ET0y32ziV_c',
     corrected: 'Easter Sunday',
+  },
+  {
+    original: 'https://youtu.be/axV7NhKArV0',
+    corrected: '真っ黒',
+  },
+  {
+    original:
+      'https://soundcloud.com/tescogermany/prurient-casablanca-flamethrower-day-rape-tesco-140',
+    corrected: 'D-Day Rape',
+  },
+  {
+    original: 'https://youtu.be/JUnc3kl0DcA',
+    corrected: 'Otherside of America',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=oVaBgcJwkI4',
+    corrected: 't h e.c l i m b.b a c k',
   },
 ]
