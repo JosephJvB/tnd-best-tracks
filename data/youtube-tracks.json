@@ -12908,7 +12908,14 @@
     "videoPublishedDate": "2020-08-17T04:19:42Z"
   },
   {
-    "name": "Gentleman / M'Lady",
+    "name": "Gentleman",
+    "artist": "Dorian Electra",
+    "link": "https://www.youtube.com/watch?v=JM1Of_OBUjw",
+    "year": 2020,
+    "videoPublishedDate": "2020-08-17T04:19:42Z"
+  },
+  {
+    "name": "M'Lady",
     "artist": "Dorian Electra",
     "link": "https://www.youtube.com/watch?v=JM1Of_OBUjw",
     "year": 2020,
@@ -12985,9 +12992,16 @@
     "videoPublishedDate": "2020-08-24T03:14:29Z"
   },
   {
-    "name": "Never Get to Hold You / Love Again",
+    "name": "Never Get to Hold You",
     "artist": "Carly Rae Jepsen",
     "link": "https://www.youtube.com/watch?v=nTodM2TJ_s0",
+    "year": 2020,
+    "videoPublishedDate": "2020-08-24T03:14:29Z"
+  },
+  {
+    "name": "Love Again",
+    "artist": "Carly Rae Jepsen",
+    "link": "https://www.youtube.com/watch?v=VNsDcNwr3Qc",
     "year": 2020,
     "videoPublishedDate": "2020-08-24T03:14:29Z"
   },
@@ -17138,7 +17152,7 @@
   {
     "name": "If I Could Breathe Under Water ft. Mary Lattimore",
     "artist": "Marissa Nadler",
-    "link": "https://youtu.be/f4WYnSSw34w",
+    "link": "https://open.spotify.com/track/3SVszc0npnVEfD46DRMDw7",
     "year": 2021,
     "videoPublishedDate": "2021-09-20T03:44:35Z"
   },
@@ -17647,7 +17661,28 @@
     "videoPublishedDate": "2021-11-15T05:12:29Z"
   },
   {
-    "name": "Once Twice Melody, Superstar, Pink Funeral, Through Me",
+    "name": "Once Twice Melody",
+    "artist": "Beach House",
+    "link": "https://www.youtube.com/watch?v=EZ-rR9H5wVI",
+    "year": 2021,
+    "videoPublishedDate": "2021-11-15T05:12:29Z"
+  },
+  {
+    "name": "Superstar",
+    "artist": "Beach House",
+    "link": "https://www.youtube.com/watch?v=EZ-rR9H5wVI",
+    "year": 2021,
+    "videoPublishedDate": "2021-11-15T05:12:29Z"
+  },
+  {
+    "name": "Pink Funeral",
+    "artist": "Beach House",
+    "link": "https://www.youtube.com/watch?v=EZ-rR9H5wVI",
+    "year": 2021,
+    "videoPublishedDate": "2021-11-15T05:12:29Z"
+  },
+  {
+    "name": "Through Me",
     "artist": "Beach House",
     "link": "https://www.youtube.com/watch?v=EZ-rR9H5wVI",
     "year": 2021,
@@ -19635,9 +19670,16 @@
     "videoPublishedDate": "2022-07-25T04:19:43Z"
   },
   {
-    "name": "Guitar Songs (Single)",
+    "name": "TV",
     "artist": "Billie Eilish",
     "link": "https://youtu.be/_JGGLJMpVks",
+    "year": 2022,
+    "videoPublishedDate": "2022-07-25T04:19:43Z"
+  },
+  {
+    "name": "The 30th",
+    "artist": "Billie Eilish",
+    "link": "https://youtu.be/onT3z0lCZz8",
     "year": 2022,
     "videoPublishedDate": "2022-07-25T04:19:43Z"
   },
@@ -21749,9 +21791,16 @@
     "videoPublishedDate": "2023-03-27T04:19:15Z"
   },
   {
-    "name": "DOGTOOTH / SORRY NOT SORRY",
+    "name": "DOGTOOTH",
     "artist": "Tyler, the Creator",
     "link": "https://www.youtube.com/watch?v=2TVXi_9Bvlg",
+    "year": 2023,
+    "videoPublishedDate": "2023-04-03T20:33:18Z"
+  },
+  {
+    "name": "SORRY NOT SORRY",
+    "artist": "Tyler, the Creator",
+    "link": "https://www.youtube.com/watch?v=LSIOcCcEVaE",
     "year": 2023,
     "videoPublishedDate": "2023-04-03T20:33:18Z"
   },
@@ -22260,7 +22309,14 @@
     "videoPublishedDate": "2023-05-15T20:20:22Z"
   },
   {
-    "name": "delusional world champion / youth+",
+    "name": "delusional world champion",
+    "artist": "Jean Dawson",
+    "link": "https://h-r.fans/jean-body",
+    "year": 2023,
+    "videoPublishedDate": "2023-05-15T20:20:22Z"
+  },
+  {
+    "name": "youth+",
     "artist": "Jean Dawson",
     "link": "https://h-r.fans/jean-body",
     "year": 2023,
@@ -23317,9 +23373,16 @@
     "videoPublishedDate": "2023-08-14T06:08:54Z"
   },
   {
-    "name": "Club People & La Madrileña",
+    "name": "Club People",
     "artist": "Alan Palomo",
     "link": "https://www.youtube.com/watch?v=WP4dsq5EuhQ&pp=ygUZQWxhbiBQYWxvbW8gLSBDbHViIFBlb3BsZQ%3D%3D",
+    "year": 2023,
+    "videoPublishedDate": "2023-08-14T06:08:54Z"
+  },
+  {
+    "name": "La Madrileña",
+    "artist": "Alan Palomo",
+    "link": "https://www.youtube.com/watch?v=uNayKm-IF1w&pp=ygUZQWxhbiBQYWxvbW8gLSBDbHViIFBlb3BsZQ%3D%3D",
     "year": 2023,
     "videoPublishedDate": "2023-08-14T06:08:54Z"
   },
