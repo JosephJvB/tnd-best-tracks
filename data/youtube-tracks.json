@@ -10031,9 +10031,16 @@
     "videoPublishedDate": "2019-12-09T04:28:21Z"
   },
   {
-    "name": "Heartless & Blinding Lights",
+    "name": "Heartless",
     "artist": "The Weeknd",
     "link": "https://www.youtube.com/watch?v=1DpH-icPpl0",
+    "year": 2019,
+    "videoPublishedDate": "2019-12-09T04:28:21Z"
+  },
+  {
+    "name": "Blinding Lights",
+    "artist": "The Weeknd",
+    "link": "https://www.youtube.com/watch?v=fHI8X4OXluQ",
     "year": 2019,
     "videoPublishedDate": "2019-12-09T04:28:21Z"
   },
@@ -11186,7 +11193,14 @@
     "videoPublishedDate": "2020-04-06T02:56:44Z"
   },
   {
-    "name": "Dear April / Cayendo",
+    "name": "Dear April",
+    "artist": "Frank Ocean",
+    "link": "https://www.youtube.com/watch?v=pvU4b4N1-QU",
+    "year": 2020,
+    "videoPublishedDate": "2020-04-06T02:56:44Z"
+  },
+  {
+    "name": "Cayendo",
     "artist": "Frank Ocean",
     "link": "https://www.youtube.com/watch?v=pvU4b4N1-QU",
     "year": 2020,
@@ -11739,9 +11753,23 @@
     "videoPublishedDate": "2020-06-01T04:05:56Z"
   },
   {
-    "name": "fishbone & chain on / hold me ft. JPEGMAFIA",
+    "name": "fishbone",
     "artist": "BROCKHAMPTON",
     "link": "https://youtu.be/zC0EanEj-_A",
+    "year": 2020,
+    "videoPublishedDate": "2020-06-01T04:05:56Z"
+  },
+  {
+    "name": "chain on",
+    "artist": "BROCKHAMPTON",
+    "link": "https://www.youtube.com/watch?v=t0RmMunFMKM",
+    "year": 2020,
+    "videoPublishedDate": "2020-06-01T04:05:56Z"
+  },
+  {
+    "name": "hold me ft. JPEGMAFIA",
+    "artist": "BROCKHAMPTON",
+    "link": "https://www.youtube.com/watch?v=t0RmMunFMKM",
     "year": 2020,
     "videoPublishedDate": "2020-06-01T04:05:56Z"
   },
@@ -12446,8 +12474,22 @@
     "videoPublishedDate": "2020-07-20T04:57:51Z"
   },
   {
-    "name": "The Light Pack EP",
-    "artist": "Joey Bada$$",
+    "name": "The Light",
+    "artist": "Joey Bada$",
+    "link": "https://www.youtube.com/watch?v=2b44fOkS53c",
+    "year": 2020,
+    "videoPublishedDate": "2020-07-20T04:57:51Z"
+  },
+  {
+    "name": "No Explanation",
+    "artist": "Joey Bada$",
+    "link": "https://www.youtube.com/watch?v=2b44fOkS53c",
+    "year": 2020,
+    "videoPublishedDate": "2020-07-20T04:57:51Z"
+  },
+  {
+    "name": "Shine",
+    "artist": "Joey Bada$",
     "link": "https://www.youtube.com/watch?v=2b44fOkS53c",
     "year": 2020,
     "videoPublishedDate": "2020-07-20T04:57:51Z"
