@@ -451,6 +451,20 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
       "Quadeca - YOU DON'T KNOW ME LIKE THAT\nhttps://www.youtube.com/playlist?list=OLAK5uy_kvgbNUS-YlV2HxlP2ilchPRciHb4I3p-o",
     ].join('\n\n'),
   },
+  {
+    original:
+      '(Sandy) Alex G - Southern Sky / Near\nhttps://youtu.be/louOvBOFPnQ\nhttps://youtu.be/T8hhVwIA2d4',
+    corrected: [
+      'Alex G - Southern Sky\nhttps://youtu.be/louOvBOFPnQ',
+      'Alex G - Near\nhttps://youtu.be/T8hhVwIA2d4',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      "Bonnie 'Prince' Billy - In Good Faith\nhttps://youtu.be/q-rLvg1k-Uk",
+    corrected:
+      "Bonnie 'Prince' Billy - In Good Faith\nhttps://open.spotify.com/track/1VX1v7WIYzEXHne3S4Xee7",
+  },
 ]
 
 export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
@@ -507,10 +521,6 @@ export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
     corrected: 'Double Negative',
   },
   {
-    original: 'Riding/CUT HER HAIR',
-    corrected: 'Riding',
-  },
-  {
     original: 'Alnair In August',
     corrected: 'Dawn and Gaze',
   },
@@ -549,10 +559,6 @@ export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
   {
     original: 'Quiet on the Set',
     corrected: 'Quiet on Set',
-  },
-  {
-    original: 'SCRAPYARD I',
-    corrected: 'SCRAPYARD',
   },
 ]
 export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
@@ -601,8 +607,8 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
     corrected: 'Sinistarr',
   },
   {
-    original: 'J.I.D, J. Cole',
-    corrected: 'J.I.D J. Cole',
+    original: 'J.I.D',
+    corrected: 'JID',
   },
   {
     original: 'Karen O and Danger Mouse',
@@ -625,7 +631,7 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
     corrected: 'Caroline Polachek',
   },
   {
-    original: "Jeff Lynne's ELO",
+    original: 'Jeff Lynnes ELO',
     corrected: 'Electric Light Orchestra',
   },
   {
@@ -691,6 +697,10 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
   {
     original: 'Flyanna Boss',
     corrected: 'Flyana Boss',
+  },
+  {
+    original: 'Rose Doll',
+    corrected: 'Rose Droll',
   },
 ]
 // link is most reliably unique. less risk of affecting other songs
@@ -833,7 +843,15 @@ export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
   {
     original:
       'https://www.youtube.com/watch?v=AWh9mC3l-m0&pp=ygUjTmljb2xhcyBKYWFyICYgQWxpIFNldGhpIC0gTmF6YXIgU2U%3D',
-    corrected: 'Ali Sethi Sicolas Jaar',
+    corrected: 'Ali Sethi Nicolas Jaar',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=9zJEZEzLZwU',
+    corrected: 'IDK JID Kenny Mason',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=uZ0t9Ks-LPU',
+    corrected: 'Sheff G Sleepy Hallow',
   },
 ]
 export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
@@ -858,10 +876,6 @@ export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
     original:
       'http://www.theneedledrop.com/articles/2016/7/hot-dad-pokmon-go-pok-dont-stop',
     corrected: "Poké Don't Stop",
-  },
-  {
-    original: 'https://soundcloud.com/fatherdaughter/rose-droll-hush',
-    corrected: 'Rose Droll',
   },
   {
     original: 'https://youtu.be/LrVWkW7d1Vs',
@@ -933,5 +947,14 @@ export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
     original:
       'https://www.youtube.com/watch?v=c7fbrtPYPOE&pp=ygUqV2V0IExlZyAtIEMnZXN0IENvbW1lIMOHYSAoUGFyYW1vcmUgQ292ZXIp',
     corrected: "C'est Comme Ca",
+  },
+  {
+    original: 'https://youtu.be/keSiZkWbFJg',
+    corrected: 'Riding',
+  },
+  {
+    original:
+      'http://www.theneedledrop.com/articles/2016/7/schoolboy-q-tookie-knows-ii-part-2',
+    corrected: 'Tookie Knows II',
   },
 ]

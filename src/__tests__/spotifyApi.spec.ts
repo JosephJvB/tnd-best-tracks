@@ -1052,6 +1052,133 @@ describe('spotifyApi.ts', () => {
         expect(normalizeArtistSpy).toBeCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
+
+      it('can find Nicolas Jaar & Ali Sethi__Nazar Se__2023', async () => {
+        const input = {
+          name: 'Nazar Se',
+          artist: 'Nicolas Jaar & Ali Sethi',
+          link: 'https://www.youtube.com/watch?v=AWh9mC3l-m0&pp=ygUjTmljb2xhcyBKYWFyICYgQWxpIFNldGhpIC0gTmF6YXIgU2U%3D',
+          year: 2023,
+          videoPublishedDate: '2023-10-23T04:48:40Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find ScHoolboy Q__Tookie Knows II: Part (2)__2016', async () => {
+        const input = {
+          name: 'Tookie Knows II: Part (2)',
+          artist: 'ScHoolboy Q',
+          link: 'http://www.theneedledrop.com/articles/2016/7/schoolboy-q-tookie-knows-ii-part-2',
+          year: 2016,
+          videoPublishedDate: '2016-07-04T03:26:53Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Tiny Jag__Riding/CUT HER HAIR__2018', async () => {
+        const input = {
+          name: 'Riding/CUT HER HAIR',
+          artist: 'Tiny Jag',
+          link: 'https://youtu.be/keSiZkWbFJg',
+          year: 2018,
+          videoPublishedDate: '2018-10-01T02:15:28Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find J.I.D, J. Cole__Off Deez__2018', async () => {
+        const input = {
+          name: 'Off Deez',
+          artist: 'J.I.D, J. Cole',
+          link: 'https://youtu.be/CzY9Pjorkxs',
+          year: 2018,
+          videoPublishedDate: '2018-11-12T03:57:44Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it("can find Jeff Lynne's ELO__From Out of Nowhere__2019", async () => {
+        const input = {
+          name: 'From Out of Nowhere',
+          artist: "Jeff Lynne's ELO",
+          link: 'https://youtu.be/S5dRg2bq4oc',
+          year: 2019,
+          videoPublishedDate: '2019-09-30T03:24:06Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find JID, IDK, Kenny Mason & DJ Scheme__Cereal__2020', async () => {
+        const input = {
+          name: 'Cereal',
+          artist: 'JID, IDK, Kenny Mason & DJ Scheme',
+          link: 'https://www.youtube.com/watch?v=9zJEZEzLZwU',
+          year: 2020,
+          videoPublishedDate: '2020-08-10T03:40:20Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      // WIP HERE
+      it('can find Capsule__Hikari no Disco__2021', async () => {
+        const input = {
+          name: 'Hikari no Disco',
+          artist: 'Capsule',
+          link: 'https://www.youtube.com/watch?v=Hwn49r14nIc',
+          year: 2021,
+          videoPublishedDate: '2021-06-07T04:34:22Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
     })
 
     describe.skip('songs are not on spotify!', () => {
