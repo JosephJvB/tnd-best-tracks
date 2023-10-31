@@ -35146,16 +35146,42 @@
     }
   },
   {
-    "id": "Dorian Electra__Gentleman / M'Lady__2020",
+    "id": "Dorian Electra__Gentleman__2020",
     "youtubeTrack": {
-      "name": "Gentleman / M'Lady",
+      "name": "Gentleman",
       "artist": "Dorian Electra",
       "link": "https://www.youtube.com/watch?v=JM1Of_OBUjw",
       "year": 2020,
       "videoPublishedDate": "2020-08-17T04:19:42Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5stwYWdRRFmLQ25IbX8kK1",
+      "uri": "spotify:track:5stwYWdRRFmLQ25IbX8kK1",
+      "name": "Gentleman",
+      "artists": [
+        "Dorian Electra"
+      ]
+    }
+  },
+  {
+    "id": "Dorian Electra__M'Lady__2020",
+    "youtubeTrack": {
+      "name": "M'Lady",
+      "artist": "Dorian Electra",
+      "link": "https://www.youtube.com/watch?v=JM1Of_OBUjw",
+      "year": 2020,
+      "videoPublishedDate": "2020-08-17T04:19:42Z"
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "2i9yWmgHVqWW1vmXtxUaN9",
+      "uri": "spotify:track:2i9yWmgHVqWW1vmXtxUaN9",
+      "name": "M'Lady",
+      "artists": [
+        "Dorian Electra"
+      ]
+    }
   },
   {
     "id": "Sufjan Stevens__Video Game ft. Jalaiah__2020",
@@ -35343,16 +35369,42 @@
     }
   },
   {
-    "id": "Carly Rae Jepsen__Never Get to Hold You / Love Again__2020",
+    "id": "Carly Rae Jepsen__Never Get to Hold You__2020",
     "youtubeTrack": {
-      "name": "Never Get to Hold You / Love Again",
+      "name": "Never Get to Hold You",
       "artist": "Carly Rae Jepsen",
       "link": "https://www.youtube.com/watch?v=nTodM2TJ_s0",
       "year": 2020,
       "videoPublishedDate": "2020-08-24T03:14:29Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0rdcXnTVyOEv4bQ0Evua7R",
+      "uri": "spotify:track:0rdcXnTVyOEv4bQ0Evua7R",
+      "name": "Never Get to Hold You - Bonus Track",
+      "artists": [
+        "Carly Rae Jepsen"
+      ]
+    }
+  },
+  {
+    "id": "Carly Rae Jepsen__Love Again__2020",
+    "youtubeTrack": {
+      "name": "Love Again",
+      "artist": "Carly Rae Jepsen",
+      "link": "https://www.youtube.com/watch?v=VNsDcNwr3Qc",
+      "year": 2020,
+      "videoPublishedDate": "2020-08-24T03:14:29Z"
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "6drjmuBGalsmDjMSi7BFAP",
+      "uri": "spotify:track:6drjmuBGalsmDjMSi7BFAP",
+      "name": "Love Again - Bonus Track",
+      "artists": [
+        "Carly Rae Jepsen"
+      ]
+    }
   },
   {
     "id": "Travis Scott__The Plan__2020",
@@ -35479,7 +35531,15 @@
       "videoPublishedDate": "2020-08-24T03:14:29Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7oVDQPi77CXAlWpHxrsnPb",
+      "uri": "spotify:track:7oVDQPi77CXAlWpHxrsnPb",
+      "name": "UNITED GIRLS ROCK'N'ROLL CLUB",
+      "artists": [
+        "CHAI",
+        "Hinds"
+      ]
+    }
   },
   {
     "id": "Mariah Carey & Lauryn Hill__Save the Day__2020",
@@ -35933,7 +35993,17 @@
       "videoPublishedDate": "2020-09-07T03:35:33Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2VUSqPDipxWdfDKSGKQCH5",
+      "uri": "spotify:track:2VUSqPDipxWdfDKSGKQCH5",
+      "name": "Nijiiro Waaludo",
+      "artists": [
+        "Sarah Bonito",
+        "Mnst.",
+        "Manabu Nagayama",
+        "Atsushi Asada"
+      ]
+    }
   },
   {
     "id": "Bumper__You Can Get It__2020",
@@ -36277,7 +36347,14 @@
       "videoPublishedDate": "2020-09-14T03:58:01Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4I4RDB7qNJNF3Yy0EOcsj4",
+      "uri": "spotify:track:4I4RDB7qNJNF3Yy0EOcsj4",
+      "name": "Heaven",
+      "artists": [
+        "Tropical Fuck Storm"
+      ]
+    }
   },
   {
     "id": "Mamamoo__Wanna Be Myself__2020",
@@ -36443,7 +36520,16 @@
       "videoPublishedDate": "2020-09-21T03:46:49Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7H9uaNiV7i4gP8TbKqIisz",
+      "uri": "spotify:track:7H9uaNiV7i4gP8TbKqIisz",
+      "name": "Mongolia [Feat. Hologram & Meyhem Lauren]",
+      "artists": [
+        "Action Bronson",
+        "hologram",
+        "Meyhem Lauren"
+      ]
+    }
   },
   {
     "id": "Sam Smith__Diamonds__2020",
@@ -36574,7 +36660,15 @@
       "videoPublishedDate": "2020-09-21T03:46:49Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2JpMlbYEaradyfx9hraXuZ",
+      "uri": "spotify:track:2JpMlbYEaradyfx9hraXuZ",
+      "name": "I <3 Harajuku",
+      "artists": [
+        "Alice Longyu Gao",
+        "Fraxiom"
+      ]
+    }
   },
   {
     "id": "Shamir__Other Side__2020",
@@ -36901,7 +36995,15 @@
       "videoPublishedDate": "2020-10-12T02:47:39Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5kAm2Y5ygQtsVfE5dQQfGy",
+      "uri": "spotify:track:5kAm2Y5ygQtsVfE5dQQfGy",
+      "name": "Touch Me (feat. Kehlani) - Remix",
+      "artists": [
+        "Victoria Monét",
+        "Kehlani"
+      ]
+    }
   },
   {
     "id": "Bicep__Apricots__2020",
@@ -37265,7 +37367,14 @@
       "videoPublishedDate": "2020-10-26T03:45:48Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0OStKKAuXlxA0fMH54Qs6E",
+      "uri": "spotify:track:0OStKKAuXlxA0fMH54Qs6E",
+      "name": "Halloweenie III: Seven Days",
+      "artists": [
+        "Ashnikko"
+      ]
+    }
   },
   {
     "id": "Bring Me the Horizon__Teardrops__2020",
@@ -37512,7 +37621,14 @@
       "videoPublishedDate": "2020-11-02T04:52:49Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0vZL9FcNTAP75Ai1v4QwZb",
+      "uri": "spotify:track:0vZL9FcNTAP75Ai1v4QwZb",
+      "name": "SOUTHPAW",
+      "artists": [
+        "Ivy Sole"
+      ]
+    }
   },
   {
     "id": "H.E.R.__Hold On__2020",
@@ -38235,7 +38351,14 @@
       "videoPublishedDate": "2020-12-07T04:50:36Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5hYTN5GH1repxwA730JDk3",
+      "uri": "spotify:track:5hYTN5GH1repxwA730JDk3",
+      "name": "Snow Day",
+      "artists": [
+        "shame"
+      ]
+    }
   },
   {
     "id": "Elvis Costello & Iggy Pop__No Flag (In French)__2020",
@@ -38345,7 +38468,14 @@
       "videoPublishedDate": "2020-12-07T04:50:36Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0jmJyRvB77PRLX8pfNQbBB",
+      "uri": "spotify:track:0jmJyRvB77PRLX8pfNQbBB",
+      "name": "sympathy 4 the grinch",
+      "artists": [
+        "100 gecs"
+      ]
+    }
   },
   {
     "id": "The Weeknd__Blinding Lights (Remix) ft. Rosalía__2020",
@@ -38876,7 +39006,16 @@
       "videoPublishedDate": "2021-01-11T04:09:54Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7KXr2yzQ6sl2pXUUFyksFT",
+      "uri": "spotify:track:7KXr2yzQ6sl2pXUUFyksFT",
+      "name": "Ask Anyone",
+      "artists": [
+        "Lice",
+        "Aesop Rock",
+        "Homeboy Sandman"
+      ]
+    }
   },
   {
     "id": "Linkin Park__One Step Closer (100 gecs Reanimation)__2021",
@@ -41381,7 +41520,16 @@
       "videoPublishedDate": "2021-03-22T03:38:19Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3m13AyUmIsxZIB0SV0cS19",
+      "uri": "spotify:track:3m13AyUmIsxZIB0SV0cS19",
+      "name": "Gold Gloves (feat. Open Mike Eagle & The Lasso)",
+      "artists": [
+        "Mello Music Group",
+        "Open Mike Eagle",
+        "The Lasso"
+      ]
+    }
   },
   {
     "id": "bbno$__bad to the bone (prod. lentra)__2021",
@@ -41934,7 +42082,16 @@
       "videoPublishedDate": "2021-04-05T02:46:36Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "35icQsy4R2eIggvPG6Gqej",
+      "uri": "spotify:track:35icQsy4R2eIggvPG6Gqej",
+      "name": "Iron Steel Samurai (feat. Quelle Chris & The Alchemist)",
+      "artists": [
+        "Mello Music Group",
+        "Quelle Chris",
+        "The Alchemist"
+      ]
+    }
   },
   {
     "id": "Olivia Rodrigo__deja vu__2021",
@@ -42758,7 +42915,16 @@
       "videoPublishedDate": "2021-05-03T04:58:27Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7uIrdhnGQw7bZSR2ygopuX",
+      "uri": "spotify:track:7uIrdhnGQw7bZSR2ygopuX",
+      "name": "SIMP",
+      "artists": [
+        "Full Tac",
+        "Lil Mariko",
+        "Rico Nasty"
+      ]
+    }
   },
   {
     "id": "Still Woozy__Kenny__2021",
@@ -42828,7 +42994,14 @@
       "videoPublishedDate": "2021-05-03T04:58:27Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5cShlKEBPTjIaoVGXqtbuh",
+      "uri": "spotify:track:5cShlKEBPTjIaoVGXqtbuh",
+      "name": "Missing Information",
+      "artists": [
+        "Undo K From Hot"
+      ]
+    }
   },
   {
     "id": "TWICE__Kura Kura__2021",
@@ -44076,7 +44249,14 @@
       "videoPublishedDate": "2021-06-14T03:45:01Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4lKg94fHZZ3pozsNFTew2x",
+      "uri": "spotify:track:4lKg94fHZZ3pozsNFTew2x",
+      "name": "How Dare You Want More",
+      "artists": [
+        "Bleachers"
+      ]
+    }
   },
   {
     "id": "Clairo__Blouse__2021",
@@ -44260,7 +44440,14 @@
       "videoPublishedDate": "2021-06-21T03:54:55Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0nys6GusuHnjSYLW0PYYb7",
+      "uri": "spotify:track:0nys6GusuHnjSYLW0PYYb7",
+      "name": "Chaise Longue",
+      "artists": [
+        "Wet Leg"
+      ]
+    }
   },
   {
     "id": "NLE Choppa__Letter to My Daughter__2021",
@@ -45767,7 +45954,14 @@
       "videoPublishedDate": "2021-08-23T03:38:48Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1MayFYhQQvVD4IzD7dqBBj",
+      "uri": "spotify:track:1MayFYhQQvVD4IzD7dqBBj",
+      "name": "Quiet On Set",
+      "artists": [
+        "Remi Wolf"
+      ]
+    }
   },
   {
     "id": "Disclosure__Never Enough__2021",
@@ -46701,12 +46895,20 @@
     "youtubeTrack": {
       "name": "If I Could Breathe Under Water ft. Mary Lattimore",
       "artist": "Marissa Nadler",
-      "link": "https://youtu.be/f4WYnSSw34w",
+      "link": "https://open.spotify.com/track/3SVszc0npnVEfD46DRMDw7",
       "year": 2021,
       "videoPublishedDate": "2021-09-20T03:44:35Z"
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "3SVszc0npnVEfD46DRMDw7",
+    "spotifyTrack": {
+      "id": "3SVszc0npnVEfD46DRMDw7",
+      "uri": "spotify:track:3SVszc0npnVEfD46DRMDw7",
+      "name": "If I Could Breathe Underwater",
+      "artists": [
+        "Marissa Nadler",
+        "Mary Lattimore"
+      ]
+    }
   },
   {
     "id": "James Blake__Famous Last Words__2021",
@@ -47834,7 +48036,16 @@
       "videoPublishedDate": "2021-11-08T05:07:12Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3xVZYkcuWalGudeKl861wb",
+      "uri": "spotify:track:3xVZYkcuWalGudeKl861wb",
+      "name": "Smokin Out The Window",
+      "artists": [
+        "Bruno Mars",
+        "Anderson .Paak",
+        "Silk Sonic"
+      ]
+    }
   },
   {
     "id": "Charli XCX__New Shapes ft. Christine and the Queens & Caroline Polachek__2021",
@@ -48091,16 +48302,80 @@
     }
   },
   {
-    "id": "Beach House__Once Twice Melody, Superstar, Pink Funeral, Through Me__2021",
+    "id": "Beach House__Once Twice Melody__2021",
     "youtubeTrack": {
-      "name": "Once Twice Melody, Superstar, Pink Funeral, Through Me",
+      "name": "Once Twice Melody",
       "artist": "Beach House",
       "link": "https://www.youtube.com/watch?v=EZ-rR9H5wVI",
       "year": 2021,
       "videoPublishedDate": "2021-11-15T05:12:29Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "057rZ21MDp8Ld0TgQndNcv",
+      "uri": "spotify:track:057rZ21MDp8Ld0TgQndNcv",
+      "name": "Once Twice Melody",
+      "artists": [
+        "Beach House"
+      ]
+    }
+  },
+  {
+    "id": "Beach House__Superstar__2021",
+    "youtubeTrack": {
+      "name": "Superstar",
+      "artist": "Beach House",
+      "link": "https://www.youtube.com/watch?v=EZ-rR9H5wVI",
+      "year": 2021,
+      "videoPublishedDate": "2021-11-15T05:12:29Z"
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "6aYG6qnRBbqOMmqh1neJzd",
+      "uri": "spotify:track:6aYG6qnRBbqOMmqh1neJzd",
+      "name": "Superstar",
+      "artists": [
+        "Beach House"
+      ]
+    }
+  },
+  {
+    "id": "Beach House__Pink Funeral__2021",
+    "youtubeTrack": {
+      "name": "Pink Funeral",
+      "artist": "Beach House",
+      "link": "https://www.youtube.com/watch?v=EZ-rR9H5wVI",
+      "year": 2021,
+      "videoPublishedDate": "2021-11-15T05:12:29Z"
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "2bEHweWdjvtHIwIHJfY6IY",
+      "uri": "spotify:track:2bEHweWdjvtHIwIHJfY6IY",
+      "name": "Pink Funeral",
+      "artists": [
+        "Beach House"
+      ]
+    }
+  },
+  {
+    "id": "Beach House__Through Me__2021",
+    "youtubeTrack": {
+      "name": "Through Me",
+      "artist": "Beach House",
+      "link": "https://www.youtube.com/watch?v=EZ-rR9H5wVI",
+      "year": 2021,
+      "videoPublishedDate": "2021-11-15T05:12:29Z"
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "4JG1LMT6g4uoyUxmKoV3mx",
+      "uri": "spotify:track:4JG1LMT6g4uoyUxmKoV3mx",
+      "name": "Through Me",
+      "artists": [
+        "Beach House"
+      ]
+    }
   },
   {
     "id": "Jenny Hval__Jupiter__2021",
@@ -48538,7 +48813,15 @@
       "videoPublishedDate": "2021-12-13T04:55:18Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2Vv2boJ8svGFAOA348ApxQ",
+      "uri": "spotify:track:2Vv2boJ8svGFAOA348ApxQ",
+      "name": "FELL",
+      "artists": [
+        "Varg²™",
+        "Bladee"
+      ]
+    }
   },
   {
     "id": "Boris__Last Christmas__2021",
@@ -48696,7 +48979,15 @@
       "videoPublishedDate": "2022-01-17T04:34:53Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1ZFPf1rgLHVKPqMgR4BqV8",
+      "uri": "spotify:track:1ZFPf1rgLHVKPqMgR4BqV8",
+      "name": "Black Hot Soup - DJ Shadow “My Own Reality” Re-Write",
+      "artists": [
+        "King Gizzard & The Lizard Wizard",
+        "DJ Shadow"
+      ]
+    }
   },
   {
     "id": "Vein.fm__The Killing Womb__2022",
@@ -49821,7 +50112,16 @@
       "videoPublishedDate": "2022-02-21T03:56:35Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "60gTdTwaNtGAzIxKfeGVfJ",
+      "uri": "spotify:track:60gTdTwaNtGAzIxKfeGVfJ",
+      "name": "Love's Train",
+      "artists": [
+        "Bruno Mars",
+        "Anderson .Paak",
+        "Silk Sonic"
+      ]
+    }
   },
   {
     "id": "Tame Impala__The Boat I Row__2022",
@@ -53537,16 +53837,42 @@
     }
   },
   {
-    "id": "Billie Eilish__Guitar Songs (Single)__2022",
+    "id": "Billie Eilish__TV__2022",
     "youtubeTrack": {
-      "name": "Guitar Songs (Single)",
+      "name": "TV",
       "artist": "Billie Eilish",
       "link": "https://youtu.be/_JGGLJMpVks",
       "year": 2022,
       "videoPublishedDate": "2022-07-25T04:19:43Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3GYlZ7tbxLOxe6ewMNVTkw",
+      "uri": "spotify:track:3GYlZ7tbxLOxe6ewMNVTkw",
+      "name": "TV",
+      "artists": [
+        "Billie Eilish"
+      ]
+    }
+  },
+  {
+    "id": "Billie Eilish__The 30th__2022",
+    "youtubeTrack": {
+      "name": "The 30th",
+      "artist": "Billie Eilish",
+      "link": "https://youtu.be/onT3z0lCZz8",
+      "year": 2022,
+      "videoPublishedDate": "2022-07-25T04:19:43Z"
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "5SHpuW2qjkQtFRpE6P9Nks",
+      "uri": "spotify:track:5SHpuW2qjkQtFRpE6P9Nks",
+      "name": "The 30th",
+      "artists": [
+        "Billie Eilish"
+      ]
+    }
   },
   {
     "id": "Jessie Ware__Free Yourself__2022",
@@ -58424,7 +58750,15 @@
       "videoPublishedDate": "2023-02-20T23:48:52Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "30vqNqCDjqQQpPk9xAWNqn",
+      "uri": "spotify:track:30vqNqCDjqQQpPk9xAWNqn",
+      "name": "That Girl",
+      "artists": [
+        "El Michels Affair",
+        "Black Thought"
+      ]
+    }
   },
   {
     "id": "Deerhoof__Wedding, March, Flower__2023",
@@ -58877,7 +59211,14 @@
       "videoPublishedDate": "2023-03-06T23:20:51Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1KVZJr3iEjXFofJmHaMZvU",
+      "uri": "spotify:track:1KVZJr3iEjXFofJmHaMZvU",
+      "name": "Nevolnost je vše, čím jsem",
+      "artists": [
+        "Kostnatění"
+      ]
+    }
   },
   {
     "id": "Water from Your Eyes__Barley__2023",
@@ -59341,11 +59682,30 @@
     }
   },
   {
-    "id": "Tyler, the Creator__DOGTOOTH / SORRY NOT SORRY__2023",
+    "id": "Tyler, the Creator__DOGTOOTH__2023",
     "youtubeTrack": {
-      "name": "DOGTOOTH / SORRY NOT SORRY",
+      "name": "DOGTOOTH",
       "artist": "Tyler, the Creator",
       "link": "https://www.youtube.com/watch?v=2TVXi_9Bvlg",
+      "year": 2023,
+      "videoPublishedDate": "2023-04-03T20:33:18Z"
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "6OfOzTitafSnsaunQLuNFw",
+      "uri": "spotify:track:6OfOzTitafSnsaunQLuNFw",
+      "name": "DOGTOOTH",
+      "artists": [
+        "Tyler, The Creator"
+      ]
+    }
+  },
+  {
+    "id": "Tyler, the Creator__SORRY NOT SORRY__2023",
+    "youtubeTrack": {
+      "name": "SORRY NOT SORRY",
+      "artist": "Tyler, the Creator",
+      "link": "https://www.youtube.com/watch?v=LSIOcCcEVaE",
       "year": 2023,
       "videoPublishedDate": "2023-04-03T20:33:18Z"
     },
@@ -59980,7 +60340,14 @@
       "videoPublishedDate": "2023-04-18T04:23:27Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2cI7ekxAIw6zI5zNiof8RY",
+      "uri": "spotify:track:2cI7ekxAIw6zI5zNiof8RY",
+      "name": "Tiger",
+      "artists": [
+        "Pip Blom"
+      ]
+    }
   },
   {
     "id": "quickly, quickly__Satellite__2023",
@@ -60739,16 +61106,42 @@
     }
   },
   {
-    "id": "Jean Dawson__delusional world champion / youth+__2023",
+    "id": "Jean Dawson__delusional world champion__2023",
     "youtubeTrack": {
-      "name": "delusional world champion / youth+",
+      "name": "delusional world champion",
       "artist": "Jean Dawson",
       "link": "https://h-r.fans/jean-body",
       "year": 2023,
       "videoPublishedDate": "2023-05-15T20:20:22Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5bNVPNDcjcrkIfu1gxI7dw",
+      "uri": "spotify:track:5bNVPNDcjcrkIfu1gxI7dw",
+      "name": "delusional world champion",
+      "artists": [
+        "Jean Dawson"
+      ]
+    }
+  },
+  {
+    "id": "Jean Dawson__youth+__2023",
+    "youtubeTrack": {
+      "name": "youth+",
+      "artist": "Jean Dawson",
+      "link": "https://h-r.fans/jean-body",
+      "year": 2023,
+      "videoPublishedDate": "2023-05-15T20:20:22Z"
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "5mp28cmHRbaFqZI2p7OrVo",
+      "uri": "spotify:track:5mp28cmHRbaFqZI2p7OrVo",
+      "name": "youth+",
+      "artists": [
+        "Jean Dawson"
+      ]
+    }
   },
   {
     "id": "Lil Durk__All My Life ft. J. Cole__2023",
@@ -62074,7 +62467,16 @@
       "videoPublishedDate": "2023-06-28T06:45:49Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3bkpVSoNvBkvt9LJMFT5at",
+      "uri": "spotify:track:3bkpVSoNvBkvt9LJMFT5at",
+      "name": "Doomsday (with Juice WRLD & Cordae)",
+      "artists": [
+        "Lyrical Lemonade",
+        "Juice WRLD",
+        "Cordae"
+      ]
+    }
   },
   {
     "id": "Carly Rae Jepsen__Shy Boy__2023",
@@ -63628,16 +64030,44 @@
     }
   },
   {
-    "id": "Alan Palomo__Club People & La Madrileña__2023",
+    "id": "Alan Palomo__Club People__2023",
     "youtubeTrack": {
-      "name": "Club People & La Madrileña",
+      "name": "Club People",
       "artist": "Alan Palomo",
       "link": "https://www.youtube.com/watch?v=WP4dsq5EuhQ&pp=ygUZQWxhbiBQYWxvbW8gLSBDbHViIFBlb3BsZQ%3D%3D",
       "year": 2023,
       "videoPublishedDate": "2023-08-14T06:08:54Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2wARfOnSOnB4JMRb24UKA1",
+      "uri": "spotify:track:2wARfOnSOnB4JMRb24UKA1",
+      "name": "Club People",
+      "artists": [
+        "Alan Palomo",
+        "Neon Indian"
+      ]
+    }
+  },
+  {
+    "id": "Alan Palomo__La Madrileña__2023",
+    "youtubeTrack": {
+      "name": "La Madrileña",
+      "artist": "Alan Palomo",
+      "link": "https://www.youtube.com/watch?v=uNayKm-IF1w&pp=ygUZQWxhbiBQYWxvbW8gLSBDbHViIFBlb3BsZQ%3D%3D",
+      "year": 2023,
+      "videoPublishedDate": "2023-08-14T06:08:54Z"
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "16ZkPcBM1RjRSY6bVSMIM4",
+      "uri": "spotify:track:16ZkPcBM1RjRSY6bVSMIM4",
+      "name": "La Madrileña",
+      "artists": [
+        "Alan Palomo",
+        "Neon Indian"
+      ]
+    }
   },
   {
     "id": "STUY__What It Feel Like__2023",
@@ -63968,7 +64398,16 @@
       "videoPublishedDate": "2023-08-28T04:49:51Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "7GljOOotaeAc09qrj7ShmP",
+      "uri": "spotify:track:7GljOOotaeAc09qrj7ShmP",
+      "name": "back 2 back 2 back",
+      "artists": [
+        "BABY GRAVY",
+        "Yung Gravy",
+        "bbno$"
+      ]
+    }
   },
   {
     "id": "Mitski__Star__2023",
@@ -64019,7 +64458,14 @@
       "videoPublishedDate": "2023-08-28T04:49:51Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2i90BhQ6Mfvrd8yHRTHyZx",
+      "uri": "spotify:track:2i90BhQ6Mfvrd8yHRTHyZx",
+      "name": "Electric Fish",
+      "artists": [
+        "Ana Frango Elétrico"
+      ]
+    }
   },
   {
     "id": "Hemlock Springs__enknee1__2023",
@@ -64934,7 +65380,16 @@
       "videoPublishedDate": "2023-09-25T03:40:43Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6nmSkbapT1YnObUA8TyF8e",
+      "uri": "spotify:track:6nmSkbapT1YnObUA8TyF8e",
+      "name": "Big Dawg (Moneybagg Yo, Sexyy Red)",
+      "artists": [
+        "Moneybagg Yo",
+        "Sexyy Red",
+        "CMG The Label"
+      ]
+    }
   },
   {
     "id": "CHAI__GAME__2023",
@@ -65101,7 +65556,14 @@
       "videoPublishedDate": "2023-10-02T04:32:37Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6PfFBEztSncke8MSCohK26",
+      "uri": "spotify:track:6PfFBEztSncke8MSCohK26",
+      "name": "Big One",
+      "artists": [
+        "Flyana Boss"
+      ]
+    }
   },
   {
     "id": "Autopsy__Throatsaw__2023",
@@ -65211,7 +65673,15 @@
       "videoPublishedDate": "2023-10-09T05:24:47Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5PA2Q9hBo1gmB3RlA8TZa2",
+      "uri": "spotify:track:5PA2Q9hBo1gmB3RlA8TZa2",
+      "name": "C’est Comme Ça (Re: Wet Leg)",
+      "artists": [
+        "Paramore",
+        "Wet Leg"
+      ]
+    }
   },
   {
     "id": "Mac DeMarco & Ryan Paris__Simply Paradise__2023",
