@@ -3571,5 +3571,49 @@
         "Mary Lattimore"
       ]
     }
+  ],
+  [
+    "1VX1v7WIYzEXHne3S4Xee7",
+    {
+      "id": "1VX1v7WIYzEXHne3S4Xee7",
+      "uri": "spotify:track:1VX1v7WIYzEXHne3S4Xee7",
+      "name": "In Good Faith",
+      "artists": [
+        "Bonnie Prince Billy"
+      ]
+    }
+  ],
+  [
+    "02lbewNkGqHLr06Irt4wvW",
+    {
+      "id": "02lbewNkGqHLr06Irt4wvW",
+      "uri": "spotify:track:02lbewNkGqHLr06Irt4wvW",
+      "name": "ひかりのディスコ",
+      "artists": [
+        "CAPSULE"
+      ]
+    }
+  ],
+  [
+    "6OfOzTitafSnsaunQLuNFw",
+    {
+      "id": "6OfOzTitafSnsaunQLuNFw",
+      "uri": "spotify:track:6OfOzTitafSnsaunQLuNFw",
+      "name": "DOGTOOTH",
+      "artists": [
+        "Tyler, The Creator"
+      ]
+    }
+  ],
+  [
+    "410ZZP746AQeiywhKvXWCo",
+    {
+      "id": "410ZZP746AQeiywhKvXWCo",
+      "uri": "spotify:track:410ZZP746AQeiywhKvXWCo",
+      "name": "SORRY NOT SORRY",
+      "artists": [
+        "Tyler, The Creator"
+      ]
+    }
   ]
 ]

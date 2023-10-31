@@ -277,7 +277,16 @@
       "videoPublishedDate": "2016-07-04T03:26:53Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3mViCAKDSnEoGijjbmcQYA",
+      "uri": "spotify:track:3mViCAKDSnEoGijjbmcQYA",
+      "name": "Tookie Knows II",
+      "artists": [
+        "ScHoolboy Q",
+        "Traffic",
+        "T.F"
+      ]
+    }
   },
   {
     "id": "BADBADNOTGOOD__In Your Eyes ft. Charlotte Day Wilson__2016",
@@ -16299,7 +16308,14 @@
       "videoPublishedDate": "2018-10-01T02:15:28Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3slPD80JFiOHGbFLv4o71i",
+      "uri": "spotify:track:3slPD80JFiOHGbFLv4o71i",
+      "name": "Riding",
+      "artists": [
+        "Tiny Jag"
+      ]
+    }
   },
   {
     "id": "Shad__The Stone Throwers__2018",
@@ -16330,7 +16346,14 @@
       "videoPublishedDate": "2018-10-01T02:15:28Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6K0kYHs1GoBjEmR9f8ZtUG",
+      "uri": "spotify:track:6K0kYHs1GoBjEmR9f8ZtUG",
+      "name": "Hush",
+      "artists": [
+        "Rose Droll"
+      ]
+    }
   },
   {
     "id": "Clarence Clarity__Adam & The Evil__2018",
@@ -17220,7 +17243,15 @@
       "videoPublishedDate": "2018-11-12T03:57:44Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "3JAeYOjyJodI4PRs44lx2l",
+      "uri": "spotify:track:3JAeYOjyJodI4PRs44lx2l",
+      "name": "Off Deez (with J. Cole)",
+      "artists": [
+        "JID",
+        "J. Cole"
+      ]
+    }
   },
   {
     "id": "Anderson .Paak__Who R U?__2018",
@@ -24062,16 +24093,42 @@
     }
   },
   {
-    "id": "(Sandy) Alex G__Southern Sky / Near__2019",
+    "id": "Alex G__Southern Sky__2019",
     "youtubeTrack": {
-      "name": "Southern Sky / Near",
-      "artist": "(Sandy) Alex G",
+      "name": "Southern Sky",
+      "artist": "Alex G",
       "link": "https://youtu.be/louOvBOFPnQ",
       "year": 2019,
       "videoPublishedDate": "2019-08-19T02:58:34Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "022KnoVZaB3IJx21uW5tDH",
+      "uri": "spotify:track:022KnoVZaB3IJx21uW5tDH",
+      "name": "Southern Sky",
+      "artists": [
+        "Alex G"
+      ]
+    }
+  },
+  {
+    "id": "Alex G__Near__2019",
+    "youtubeTrack": {
+      "name": "Near",
+      "artist": "Alex G",
+      "link": "https://youtu.be/T8hhVwIA2d4",
+      "year": 2019,
+      "videoPublishedDate": "2019-08-19T02:58:34Z"
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "2lp6P4JlONz3vwJG9KoKUP",
+      "uri": "spotify:track:2lp6P4JlONz3vwJG9KoKUP",
+      "name": "Near",
+      "artists": [
+        "Alex G"
+      ]
+    }
   },
   {
     "id": "Michael Kiwanuka__You Ain't the Problem__2019",
@@ -25404,7 +25461,14 @@
       "videoPublishedDate": "2019-09-30T03:24:06Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2jHNFC07PKNuiQYsReIs3s",
+      "uri": "spotify:track:2jHNFC07PKNuiQYsReIs3s",
+      "name": "From Out of Nowhere",
+      "artists": [
+        "Electric Light Orchestra"
+      ]
+    }
   },
   {
     "id": "Wiki__Eggs (prod. Madlib)__2019",
@@ -26114,12 +26178,19 @@
     "youtubeTrack": {
       "name": "In Good Faith",
       "artist": "Bonnie 'Prince' Billy",
-      "link": "https://youtu.be/q-rLvg1k-Uk",
+      "link": "https://open.spotify.com/track/1VX1v7WIYzEXHne3S4Xee7",
       "year": 2019,
       "videoPublishedDate": "2019-10-21T20:44:16Z"
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "1VX1v7WIYzEXHne3S4Xee7",
+    "spotifyTrack": {
+      "id": "1VX1v7WIYzEXHne3S4Xee7",
+      "uri": "spotify:track:1VX1v7WIYzEXHne3S4Xee7",
+      "name": "In Good Faith",
+      "artists": [
+        "Bonnie Prince Billy"
+      ]
+    }
   },
   {
     "id": "Ashnikko__STUPID ft. Yung Baby Tate__2019",
@@ -34737,7 +34808,16 @@
       "videoPublishedDate": "2020-08-10T03:40:20Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5aeaaeKp8fY60CVHAzNbwL",
+      "uri": "spotify:track:5aeaaeKp8fY60CVHAzNbwL",
+      "name": "Cereal (feat. Kenny Mason)",
+      "artists": [
+        "IDK",
+        "JID",
+        "Kenny Mason"
+      ]
+    }
   },
   {
     "id": "Lingua Ignota__Wicked Game (Chris Isaak Cover)__2020",
@@ -34946,7 +35026,15 @@
       "videoPublishedDate": "2020-08-17T04:19:42Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6ZPU73akrp4hU6Ua2jSjtI",
+      "uri": "spotify:track:6ZPU73akrp4hU6Ua2jSjtI",
+      "name": "Tip Toe",
+      "artists": [
+        "Sheff G",
+        "Sleepy Hallow"
+      ]
+    }
   },
   {
     "id": "Earthgang__Powered Up__2020",
@@ -43944,12 +44032,19 @@
     "youtubeTrack": {
       "name": "Hikari no Disco",
       "artist": "Capsule",
-      "link": "https://www.youtube.com/watch?v=Hwn49r14nIc",
+      "link": "https://open.spotify.com/track/02lbewNkGqHLr06Irt4wvW",
       "year": 2021,
       "videoPublishedDate": "2021-06-07T04:34:22Z"
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "02lbewNkGqHLr06Irt4wvW",
+    "spotifyTrack": {
+      "id": "02lbewNkGqHLr06Irt4wvW",
+      "uri": "spotify:track:02lbewNkGqHLr06Irt4wvW",
+      "name": "ひかりのディスコ",
+      "artists": [
+        "CAPSULE"
+      ]
+    }
   },
   {
     "id": "LUMP__Climb Every Wall__2021",
@@ -49328,7 +49423,14 @@
       "videoPublishedDate": "2022-01-24T03:31:55Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2CqvXeAza1v6jxhauVxT2k",
+      "uri": "spotify:track:2CqvXeAza1v6jxhauVxT2k",
+      "name": "Judgment Bolt",
+      "artists": [
+        "death's dynamic shroud"
+      ]
+    }
   },
   {
     "id": "Animal Collective__Strung with Everything__2022",
@@ -59686,11 +59788,11 @@
     "youtubeTrack": {
       "name": "DOGTOOTH",
       "artist": "Tyler, the Creator",
-      "link": "https://www.youtube.com/watch?v=2TVXi_9Bvlg",
+      "link": "https://open.spotify.com/track/6OfOzTitafSnsaunQLuNFw",
       "year": 2023,
       "videoPublishedDate": "2023-04-03T20:33:18Z"
     },
-    "spotifyId": null,
+    "spotifyId": "6OfOzTitafSnsaunQLuNFw",
     "spotifyTrack": {
       "id": "6OfOzTitafSnsaunQLuNFw",
       "uri": "spotify:track:6OfOzTitafSnsaunQLuNFw",
@@ -59705,12 +59807,19 @@
     "youtubeTrack": {
       "name": "SORRY NOT SORRY",
       "artist": "Tyler, the Creator",
-      "link": "https://www.youtube.com/watch?v=LSIOcCcEVaE",
+      "link": "https://open.spotify.com/track/410ZZP746AQeiywhKvXWCo",
       "year": 2023,
       "videoPublishedDate": "2023-04-03T20:33:18Z"
     },
-    "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyId": "410ZZP746AQeiywhKvXWCo",
+    "spotifyTrack": {
+      "id": "410ZZP746AQeiywhKvXWCo",
+      "uri": "spotify:track:410ZZP746AQeiywhKvXWCo",
+      "name": "SORRY NOT SORRY",
+      "artists": [
+        "Tyler, The Creator"
+      ]
+    }
   },
   {
     "id": "Metallica__72 Seasons__2023",
@@ -66196,7 +66305,15 @@
       "videoPublishedDate": "2023-10-23T04:48:40Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5BeApeMWZDwQOzRgwuLmBX",
+      "uri": "spotify:track:5BeApeMWZDwQOzRgwuLmBX",
+      "name": "Nazar Se",
+      "artists": [
+        "Ali Sethi",
+        "Nicolas Jaar"
+      ]
+    }
   },
   {
     "id": "IDLES__Dancer ft. LCD Soundsystem__2023",
