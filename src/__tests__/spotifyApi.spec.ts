@@ -1161,7 +1161,6 @@ describe('spotifyApi.ts', () => {
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
-      // WIP HERE
       it('can find Capsule__Hikari no Disco__2021', async () => {
         const input = {
           name: 'Hikari no Disco',

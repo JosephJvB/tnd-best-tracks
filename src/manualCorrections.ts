@@ -392,8 +392,8 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
     original:
       'Tyler, the Creator - DOGTOOTH / SORRY NOT SORRY\nDogtooth: https://www.youtube.com/watch?v=2TVXi_9Bvlg\nDogtooth Track Review: https://www.youtube.com/watch?v=ms4MXpBlmPU\nSorry Not Sorry: https://www.youtube.com/watch?v=LSIOcCcEVaE',
     corrected: [
-      'Tyler, the Creator - DOGTOOTH\nhttps://www.youtube.com/watch?v=2TVXi_9Bvlg',
-      'Tyler, the Creator - SORRY NOT SORRY\nhttps://www.youtube.com/watch?v=LSIOcCcEVaE',
+      'Tyler, the Creator - DOGTOOTH\nhttps://open.spotify.com/track/6OfOzTitafSnsaunQLuNFw',
+      'Tyler, the Creator - SORRY NOT SORRY\nhttps://open.spotify.com/track/410ZZP746AQeiywhKvXWCo',
     ].join('\n\n'),
   },
   {
@@ -464,6 +464,12 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
       "Bonnie 'Prince' Billy - In Good Faith\nhttps://youtu.be/q-rLvg1k-Uk",
     corrected:
       "Bonnie 'Prince' Billy - In Good Faith\nhttps://open.spotify.com/track/1VX1v7WIYzEXHne3S4Xee7",
+  },
+  {
+    original:
+      'Capsule - Hikari no Disco\nhttps://www.youtube.com/watch?v=Hwn49r14nIc',
+    corrected:
+      'Capsule - Hikari no Disco\nhttps://open.spotify.com/track/02lbewNkGqHLr06Irt4wvW',
   },
 ]
 
@@ -683,7 +689,7 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
     corrected: 'Varg²™',
   },
   {
-    original: "death's dynamic shroud.wmv",
+    original: 'deaths dynamic shroud.wmv',
     corrected: "death's dynamic shroud",
   },
   {
