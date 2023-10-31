@@ -128,7 +128,7 @@ export const findTrack = async (
     await new Promise((r) => setTimeout(r, 300))
 
     if (res.data.tracks.items.length === 0 && retry) {
-      return await findTrack(
+      return findTrack(
         {
           name: normalizeTrackName(track as YoutubeTrack),
           artist: normalizeArtistName(track as YoutubeTrack),

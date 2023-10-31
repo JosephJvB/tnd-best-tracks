@@ -49852,7 +49852,15 @@
       "videoPublishedDate": "2022-02-21T03:56:35Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4CBDr82fX76y2sflS6Mb7d",
+      "uri": "spotify:track:4CBDr82fX76y2sflS6Mb7d",
+      "name": "Thermal Runaway",
+      "artists": [
+        "Pupil Slicer",
+        "Cara Drolshagen"
+      ]
+    }
   },
   {
     "id": "Undeath__Head Splattered in Seven Ways__2022",
@@ -51577,7 +51585,15 @@
       "videoPublishedDate": "2022-05-16T04:20:09Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "1t7WfCStM6zgIHWF3koej7",
+      "uri": "spotify:track:1t7WfCStM6zgIHWF3koej7",
+      "name": "No Gold Teeth",
+      "artists": [
+        "Danger Mouse",
+        "Black Thought"
+      ]
+    }
   },
   {
     "id": "Stella Donnelly__Lungs__2022",
@@ -51800,7 +51816,15 @@
       "videoPublishedDate": "2022-05-23T04:31:30Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2MEhrPqCONiJZlYckAry6r",
+      "uri": "spotify:track:2MEhrPqCONiJZlYckAry6r",
+      "name": "Funeral Solution",
+      "artists": [
+        "Thee Oh Sees",
+        "Osees"
+      ]
+    }
   },
   {
     "id": "Wormrot__Behind Closed Doors__2022",
@@ -52087,7 +52111,14 @@
       "videoPublishedDate": "2022-06-06T05:37:40Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "6iwYPonyG57Y7dOEboonuu",
+      "uri": "spotify:track:6iwYPonyG57Y7dOEboonuu",
+      "name": "QUEUE³",
+      "artists": [
+        "SEBii"
+      ]
+    }
   },
   {
     "id": "Yung Gravy__Betty (Get Money)__2022",
@@ -53051,7 +53082,15 @@
       "videoPublishedDate": "2022-07-11T04:28:24Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5vrOwoXILW22WyXkhGLciY",
+      "uri": "spotify:track:5vrOwoXILW22WyXkhGLciY",
+      "name": "OTT",
+      "artists": [
+        "easy life",
+        "BENEE"
+      ]
+    }
   },
   {
     "id": "Alice Longyu Gao & Oli Sykes__Believe the Hype__2022",
@@ -53577,7 +53616,15 @@
       "videoPublishedDate": "2022-07-25T04:19:43Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0dZ3XsTXMOpXE2fMRfV6Ko",
+      "uri": "spotify:track:0dZ3XsTXMOpXE2fMRfV6Ko",
+      "name": "A Foul Form",
+      "artists": [
+        "Thee Oh Sees",
+        "Osees"
+      ]
+    }
   },
   {
     "id": "Polyphia__Neurotica__2022",
@@ -54624,16 +54671,42 @@
     }
   },
   {
-    "id": "Fire-Toolz__Soda Lake with Game Genie / Vedic Software ~ Wet Interfacing__2022",
+    "id": "Fire-Toolz__Soda Lake with Game Genie__2022",
     "youtubeTrack": {
-      "name": "Soda Lake with Game Genie / Vedic Software ~ Wet Interfacing",
+      "name": "Soda Lake with Game Genie",
       "artist": "Fire-Toolz",
       "link": "https://fire-toolz.bandcamp.com/album/i-will-not-use-the-bodys-eyes-today?from=fanpub_fnb",
       "year": 2022,
       "videoPublishedDate": "2022-09-12T03:58:50Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2ZDvuUmprSeFsi3r1Jmrel",
+      "uri": "spotify:track:2ZDvuUmprSeFsi3r1Jmrel",
+      "name": "Soda Lake With Game Genie",
+      "artists": [
+        "Fire-Toolz"
+      ]
+    }
+  },
+  {
+    "id": "Fire-Toolz__Vedic Software ~ Wet Interfacing__2022",
+    "youtubeTrack": {
+      "name": "Vedic Software ~ Wet Interfacing",
+      "artist": "Fire-Toolz",
+      "link": "https://fire-toolz.bandcamp.com/album/i-will-not-use-the-bodys-eyes-today?from=fanpub_fnb",
+      "year": 2022,
+      "videoPublishedDate": "2022-09-12T03:58:50Z"
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "3QR8a7Od6sZBWgX6tfDBDS",
+      "uri": "spotify:track:3QR8a7Od6sZBWgX6tfDBDS",
+      "name": "Vedic Software ~ Wet Interfacing",
+      "artists": [
+        "Fire-Toolz"
+      ]
+    }
   },
   {
     "id": "King Gizzard & The Lizard Wizard__Ice V__2022",
@@ -55166,7 +55239,14 @@
       "videoPublishedDate": "2022-09-26T05:33:02Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "2I8kUUKfC7h0QY3Qpfd0iq",
+      "uri": "spotify:track:2I8kUUKfC7h0QY3Qpfd0iq",
+      "name": "Make U 3 Me",
+      "artists": [
+        "Alice Longyu Gao"
+      ]
+    }
   },
   {
     "id": "Magdalena Bay__Unconditional__2022",
@@ -56609,7 +56689,16 @@
       "videoPublishedDate": "2022-11-28T05:44:08Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0O1IxXTGfQnrr3QAh6iabE",
+      "uri": "spotify:track:0O1IxXTGfQnrr3QAh6iabE",
+      "name": "Be Realistic",
+      "artists": [
+        "MIKE",
+        "Wiki",
+        "The Alchemist"
+      ]
+    }
   },
   {
     "id": "Kimbra__Replay!__2022",
@@ -57543,7 +57632,15 @@
       "videoPublishedDate": "2023-01-24T08:44:18Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "30TWPJIT4zkB9mUrtrsnD5",
+      "uri": "spotify:track:30TWPJIT4zkB9mUrtrsnD5",
+      "name": "Rubble Home",
+      "artists": [
+        "Full Of Hell",
+        "Primitive Man"
+      ]
+    }
   },
   {
     "id": "Jesus Piece__Gates of Horn__2023",
@@ -61652,7 +61749,15 @@
       "videoPublishedDate": "2023-06-19T04:40:48Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "4jEi04uNWEP2JXqmSLvgra",
+      "uri": "spotify:track:4jEi04uNWEP2JXqmSLvgra",
+      "name": "Goon",
+      "artists": [
+        "Thee Oh Sees",
+        "Osees"
+      ]
+    }
   },
   {
     "id": "The Hives__Countdown to Shutdown__2023",
@@ -62934,7 +63039,15 @@
       "videoPublishedDate": "2023-07-31T04:51:07Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "0kMkFIjx2oR5Poc9cFMck2",
+      "uri": "spotify:track:0kMkFIjx2oR5Poc9cFMck2",
+      "name": "Stunner",
+      "artists": [
+        "Thee Oh Sees",
+        "Osees"
+      ]
+    }
   },
   {
     "id": "Jeff Rosenstock__Healmode__2023",
