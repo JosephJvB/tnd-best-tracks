@@ -8,10 +8,6 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
     corrected: 'Brain Tentacles - "The Sadist"',
   },
   {
-    original: 'SORRY NOT SORRY\nDogtooth: https',
-    corrected: 'SORRY NOT SORRY\nhttps',
-  },
-  {
     original: 'Model/Actriz- Damocles',
     corrected: 'Model/Actriz - Damocles',
   },
@@ -378,7 +374,7 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
   },
   {
     original:
-      'Guitar Songs (Single)Billie Eilish - Guitar Songs (Single)\nhttps://youtu.be/_JGGLJMpVks\nhttps://youtu.be/onT3z0lCZz8',
+      'Billie Eilish - Guitar Songs (Single)\nhttps://youtu.be/_JGGLJMpVks\nhttps://youtu.be/onT3z0lCZz8',
     corrected: [
       'Billie Eilish - TV\nhttps://youtu.be/_JGGLJMpVks',
       'Billie Eilish - The 30th\nhttps://youtu.be/onT3z0lCZz8',
@@ -390,6 +386,69 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
     corrected: [
       'Fire-Toolz - Soda Lake with Game Genie\nhttps://fire-toolz.bandcamp.com/album/i-will-not-use-the-bodys-eyes-today?from=fanpub_fnb',
       'Fire-Toolz - Vedic Software ~ Wet Interfacing\nhttps://fire-toolz.bandcamp.com/album/i-will-not-use-the-bodys-eyes-today?from=fanpub_fnb',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Tyler, the Creator - DOGTOOTH / SORRY NOT SORRY\nDogtooth: https://www.youtube.com/watch?v=2TVXi_9Bvlg\nDogtooth Track Review: https://www.youtube.com/watch?v=ms4MXpBlmPU\nSorry Not Sorry: https://www.youtube.com/watch?v=LSIOcCcEVaE',
+    corrected: [
+      'Tyler, the Creator - DOGTOOTH\nhttps://www.youtube.com/watch?v=2TVXi_9Bvlg',
+      'Tyler, the Creator - SORRY NOT SORRY\nhttps://www.youtube.com/watch?v=LSIOcCcEVaE',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Jean Dawson - delusional world champion / youth+\nhttps://h-r.fans/jean-body',
+    corrected: [
+      'Jean Dawson - delusional world champion\nhttps://h-r.fans/jean-body',
+      'Jean Dawson - youth+\nhttps://h-r.fans/jean-body',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Alan Palomo - Club People & La Madrileña\nhttps://www.youtube.com/watch?v=WP4dsq5EuhQ&pp=ygUZQWxhbiBQYWxvbW8gLSBDbHViIFBlb3BsZQ%3D%3D\nhttps://www.youtube.com/watch?v=uNayKm-IF1w&pp=ygUZQWxhbiBQYWxvbW8gLSBDbHViIFBlb3BsZQ%3D%3D',
+    corrected: [
+      'Alan Palomo - Club People\nhttps://www.youtube.com/watch?v=WP4dsq5EuhQ&pp=ygUZQWxhbiBQYWxvbW8gLSBDbHViIFBlb3BsZQ%3D%3D',
+      'Alan Palomo - La Madrileña\nhttps://www.youtube.com/watch?v=uNayKm-IF1w&pp=ygUZQWxhbiBQYWxvbW8gLSBDbHViIFBlb3BsZQ%3D%3D',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      "Dorian Electra - Gentleman / M'Lady\nhttps://www.youtube.com/watch?v=JM1Of_OBUjw",
+    corrected: [
+      'Dorian Electra - Gentleman\nhttps://www.youtube.com/watch?v=JM1Of_OBUjw',
+      "Dorian Electra - M'Lady\nhttps://www.youtube.com/watch?v=JM1Of_OBUjw",
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Carly Rae Jepsen - Never Get to Hold You / Love Again\nhttps://www.youtube.com/watch?v=nTodM2TJ_s0\nhttps://www.youtube.com/watch?v=VNsDcNwr3Qc',
+    corrected: [
+      'Carly Rae Jepsen - Never Get to Hold You\nhttps://www.youtube.com/watch?v=nTodM2TJ_s0',
+      'Carly Rae Jepsen - Love Again\nhttps://www.youtube.com/watch?v=VNsDcNwr3Qc',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Marissa Nadler - If I Could Breathe Under Water ft. Mary Lattimore\nhttps://youtu.be/f4WYnSSw34w',
+    corrected:
+      'Marissa Nadler - If I Could Breathe Under Water ft. Mary Lattimore\nhttps://open.spotify.com/track/3SVszc0npnVEfD46DRMDw7',
+  },
+  {
+    original:
+      'Beach House - Once Twice Melody, Superstar, Pink Funeral, Through Me\nhttps://www.youtube.com/watch?v=EZ-rR9H5wVI',
+    corrected: [
+      'Beach House - Once Twice Melody\nhttps://www.youtube.com/watch?v=EZ-rR9H5wVI',
+      'Beach House - Superstar\nhttps://www.youtube.com/watch?v=EZ-rR9H5wVI',
+      'Beach House - Pink Funeral\nhttps://www.youtube.com/watch?v=EZ-rR9H5wVI',
+      'Beach House - Through Me\nhttps://www.youtube.com/watch?v=EZ-rR9H5wVI',
+    ].join('\n\n'),
+  },
+  {
+    original:
+      'Quadeca - A LA CARTE\nhttps://www.youtube.com/playlist?list=OLAK5uy_kvgbNUS-YlV2HxlP2ilchPRciHb4I3p-o',
+    corrected: [
+      "Quadeca - YOU DON'T KNOW ME LIKE THAT\nhttps://www.youtube.com/playlist?list=OLAK5uy_kvgbNUS-YlV2HxlP2ilchPRciHb4I3p-o",
     ].join('\n\n'),
   },
 ]
@@ -466,6 +525,34 @@ export const TRACK_NAME_CORRECTIONS: ManualCorrection[] = [
   {
     original: 'Grilling N****s',
     corrected: 'Grilling N',
+  },
+  {
+    original: 'United Girls Rock & Roll Club',
+    corrected: "United Girls Rock'n'Roll Club",
+  },
+  {
+    original: 'sympathy for the grinch',
+    corrected: 'sympathy 4 the grinch',
+  },
+  {
+    original: 'Ask Anyone [MF DOOM TRIBUTE]',
+    corrected: 'Ask Anyone',
+  },
+  {
+    original: 'Hikari no Disco',
+    corrected: 'ひかりのディスコ',
+  },
+  {
+    original: 'Chaise Lounge',
+    corrected: 'Chaise Longue',
+  },
+  {
+    original: 'Quiet on the Set',
+    corrected: 'Quiet on Set',
+  },
+  {
+    original: 'SCRAPYARD I',
+    corrected: 'SCRAPYARD',
   },
 ]
 export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
@@ -557,6 +644,54 @@ export const ARTIST_NAME_CORRECTIONS: ManualCorrection[] = [
     original: 'Osees',
     corrected: 'Thee Oh Sees',
   },
+  {
+    original: 'Pip Bolm',
+    corrected: 'Pip Blom',
+  },
+  {
+    original: 'Yung Gravy bbno$',
+    corrected: 'BABY GRAVY',
+  },
+  {
+    original: 'Tropical Frick Storm',
+    corrected: 'Tropical Fuck Storm',
+  },
+  {
+    original: 'Ash Nikko',
+    corrected: 'Ashnikko',
+  },
+  {
+    original: 'Ivysole',
+    corrected: 'Ivy Sole',
+  },
+  {
+    original: 'Lice (Aesop Rock & Homeboy Sandman)',
+    corrected: 'Lice Aesop Rock  Homeboy Sandman',
+  },
+  {
+    original: 'Silk Sonic',
+    corrected: 'Bruno Mars Anderson .Paak',
+  },
+  {
+    original: 'Varg2TM',
+    corrected: 'Varg²™',
+  },
+  {
+    original: "death's dynamic shroud.wmv",
+    corrected: "death's dynamic shroud",
+  },
+  {
+    original: 'Ana Frango Electrico',
+    corrected: 'Ana Frango Elétrico',
+  },
+  {
+    original: 'Sexyy Redd',
+    corrected: 'Sexyy Red',
+  },
+  {
+    original: 'Flyanna Boss',
+    corrected: 'Flyana Boss',
+  },
 ]
 // link is most reliably unique. less risk of affecting other songs
 export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
@@ -630,10 +765,6 @@ export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
     corrected: 'Dreamville',
   },
   {
-    original: 'https://youtu.be/c1eQOZPt0gw',
-    corrected: 'BABY GRAVY',
-  },
-  {
     original: 'https://youtu.be/e_zD_w18ysw',
     corrected: 'Terrace Martin',
   },
@@ -664,7 +795,45 @@ export const FIX_ARTIST_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
   },
   {
     original: 'https://youtu.be/3lc6nriNBek',
-    corrected: 'Els Michels Affair Black Thought',
+    corrected: 'El Michels Affair Black Thought',
+  },
+  {
+    original: 'https://youtu.be/JdXubSf5YUc',
+    corrected: 'Lyrical Lemonade',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=mhcBDu5G3IA',
+    corrected: 'Sarah Bonito',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=NKFXwAWy0og',
+    corrected: 'Mello Music Group',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=N2hwzH8Xob0',
+    corrected: 'Mello Music Group',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=N8kSHeIVYh4',
+    corrected: 'Full Tac Lil Mariko',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=3fZJNsFZWxA',
+    corrected: 'Bleachers',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=MJkbQLVeFPs',
+    corrected: 'King Gizzard & The Lizard Wizard DJ Shadow',
+  },
+  {
+    original:
+      'https://www.youtube.com/watch?v=c7fbrtPYPOE&pp=ygUqV2V0IExlZyAtIEMnZXN0IENvbW1lIMOHYSAoUGFyYW1vcmUgQ292ZXIp',
+    corrected: 'Paramore Wet Leg',
+  },
+  {
+    original:
+      'https://www.youtube.com/watch?v=AWh9mC3l-m0&pp=ygUjTmljb2xhcyBKYWFyICYgQWxpIFNldGhpIC0gTmF6YXIgU2U%3D',
+    corrected: 'Ali Sethi Sicolas Jaar',
   },
 ]
 export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
@@ -734,5 +903,35 @@ export const FIX_TRACK_FROM_LINK_CORRECTIONS: ManualCorrection[] = [
   {
     original: 'https://www.youtube.com/watch?v=PyQI282tOOI',
     corrected: 'Make U 3 Me',
+  },
+  {
+    original:
+      'https://kostnateni.bandcamp.com/track/nevolnost-je-v-e-m-jsem-nausea-is-all-i-am',
+    corrected: 'Nevolnost je vše, čím jsem',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=p_bkpNEiAp8',
+    corrected: 'Mongolia',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=lQZJp1cZvHc',
+    corrected: 'I <3 Harajuku',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=KcoBgdBP-4c',
+    corrected: 'Touch Me',
+  },
+  {
+    original: 'https://www.youtube.com/watch?v=0dVZKosGgUo',
+    corrected: 'Snow Day',
+  },
+  {
+    original: 'https://undokfromhot.bandcamp.com/',
+    corrected: 'Missing Information',
+  },
+  {
+    original:
+      'https://www.youtube.com/watch?v=c7fbrtPYPOE&pp=ygUqV2V0IExlZyAtIEMnZXN0IENvbW1lIMOHYSAoUGFyYW1vcmUgQ292ZXIp',
+    corrected: "C'est Comme Ca",
   },
 ]

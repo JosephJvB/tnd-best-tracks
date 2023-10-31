@@ -103,6 +103,10 @@ export const findTrack = async (
   try {
     const { name, artist, link, year } = track
 
+    // TODO:
+    // Big painful discovery
+    // exluding "track:" broadens the search, ie: less strict matching
+    // probably could just remove "track:" and "artist:" in retries...
     const params: SpotifySearchParams = {
       q: `track:${name} artist:${artist}`,
       type: 'track',

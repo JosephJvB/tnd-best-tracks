@@ -944,6 +944,114 @@ describe('spotifyApi.ts', () => {
         expect(result.tracks.items.length).toBeGreaterThan(0)
         expect(result.tracks.items[0].artists[0].name).toBe('J. Cole')
       })
+
+      it("can find Black Thought & El Michael's Affair__That Girl__2023", async () => {
+        const input = {
+          name: 'That Girl',
+          artist: "Black Thought & El Michael's Affair",
+          link: 'https://youtu.be/3lc6nriNBek',
+          year: 2023,
+          videoPublishedDate: '2023-02-20T23:48:52Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Yung Gravy & bbno$__Off the Goop__2020', async () => {
+        const input = {
+          name: 'Off the Goop',
+          artist: 'Yung Gravy & bbno$',
+          link: 'https://youtu.be/c1eQOZPt0gw',
+          year: 2020,
+          videoPublishedDate: '2020-02-10T04:12:17Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find DJ Shadow & King Gizzard__Black Hot Soup__2022', async () => {
+        const input = {
+          name: 'Black Hot Soup',
+          artist: 'DJ Shadow & King Gizzard',
+          link: 'https://www.youtube.com/watch?v=MJkbQLVeFPs',
+          year: 2022,
+          videoPublishedDate: '2022-01-17T04:34:53Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Moneybagg Yo & Sexyy Redd__Big Dawg__2023', async () => {
+        const input = {
+          name: 'Big Dawg',
+          artist: 'Moneybagg Yo & Sexyy Redd',
+          link: 'https://www.youtube.com/watch?v=8VIXb1fxfIE&pp=ygUkTW9uZXliYWdnIFlvICYgU2V4eXkgUmVkZCAtIEJpZyBEYXdn',
+          year: 2023,
+          videoPublishedDate: '2023-09-25T03:40:43Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it("can find Wet Leg__C'est Comme Ça (Paramore Cover)__2023", async () => {
+        const input = {
+          name: "C'est Comme Ça (Paramore Cover)",
+          artist: 'Wet Leg',
+          link: 'https://www.youtube.com/watch?v=c7fbrtPYPOE&pp=ygUqV2V0IExlZyAtIEMnZXN0IENvbW1lIMOHYSAoUGFyYW1vcmUgQ292ZXIp',
+          year: 2023,
+          videoPublishedDate: '2023-10-09T05:24:47Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Quadeca__SCRAPYARD I__2023', async () => {
+        const input = {
+          name: 'SCRAPYARD I',
+          artist: 'Quadeca',
+          link: 'https://www.youtube.com/playlist?list=OLAK5uy_kvgbNUS-YlV2HxlP2ilchPRciHb4I3p-o',
+          year: 2023,
+          videoPublishedDate: '2023-10-16T07:33:42Z',
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
     })
 
     describe.skip('songs are not on spotify!', () => {
