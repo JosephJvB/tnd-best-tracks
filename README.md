@@ -34,7 +34,7 @@ contentDetails,id,snippet,status
 
 4. Review youtube / spotify pairs
   - case where spotifyTrack is not found
-    - still missing 104 songs... will go through a bunch of them...
+    - 3376 / 3466 spotify tracks found total
   - case where match is bad
 
 4. Do user auth, callback url stuff

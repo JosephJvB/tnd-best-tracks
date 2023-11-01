@@ -446,8 +446,9 @@ export const DESCRIPTION_CORRECTIONS: ManualCorrection[] = [
   },
   {
     original:
-      'Quadeca - A LA CARTE\nhttps://www.youtube.com/playlist?list=OLAK5uy_kvgbNUS-YlV2HxlP2ilchPRciHb4I3p-o',
+      'Quadeca - SCRAPYARD I\nhttps://www.youtube.com/playlist?list=OLAK5uy_kvgbNUS-YlV2HxlP2ilchPRciHb4I3p-o',
     corrected: [
+      'Quadeca - A LA CARTE\nhttps://www.youtube.com/playlist?list=OLAK5uy_kvgbNUS-YlV2HxlP2ilchPRciHb4I3p-o',
       "Quadeca - YOU DON'T KNOW ME LIKE THAT\nhttps://www.youtube.com/playlist?list=OLAK5uy_kvgbNUS-YlV2HxlP2ilchPRciHb4I3p-o",
     ].join('\n\n'),
   },

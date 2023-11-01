@@ -8580,7 +8580,14 @@
       "videoPublishedDate": "2017-09-04T01:23:51Z"
     },
     "spotifyId": null,
-    "spotifyTrack": null
+    "spotifyTrack": {
+      "id": "5qmiLWRQYU9P3Pnu1JWJ9A",
+      "uri": "spotify:track:5qmiLWRQYU9P3Pnu1JWJ9A",
+      "name": "Marine Tigers",
+      "artists": [
+        "The World Is A Beautiful Place & I Am No Longer Afraid To Die"
+      ]
+    }
   },
   {
     "id": "Alex Cameron__Runnin' Outta Luck__2017",
@@ -66049,9 +66056,29 @@
     }
   },
   {
-    "id": "Quadeca__SCRAPYARD I__2023",
+    "id": "Quadeca__A LA CARTE__2023",
     "youtubeTrack": {
-      "name": "SCRAPYARD I",
+      "name": "A LA CARTE",
+      "artist": "Quadeca",
+      "link": "https://www.youtube.com/playlist?list=OLAK5uy_kvgbNUS-YlV2HxlP2ilchPRciHb4I3p-o",
+      "year": 2023,
+      "videoPublishedDate": "2023-10-16T07:33:42Z"
+    },
+    "spotifyId": null,
+    "spotifyTrack": {
+      "id": "5L6F6siaHwwpuR1exuZPnH",
+      "uri": "spotify:track:5L6F6siaHwwpuR1exuZPnH",
+      "name": "A LA CARTE (feat. brakence)",
+      "artists": [
+        "Quadeca",
+        "brakence"
+      ]
+    }
+  },
+  {
+    "id": "Quadeca__YOU DON'T KNOW ME LIKE THAT__2023",
+    "youtubeTrack": {
+      "name": "YOU DON'T KNOW ME LIKE THAT",
       "artist": "Quadeca",
       "link": "https://www.youtube.com/playlist?list=OLAK5uy_kvgbNUS-YlV2HxlP2ilchPRciHb4I3p-o",
       "year": 2023,

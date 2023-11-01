@@ -63,7 +63,7 @@ export default async function () {
     '  >',
     youtubeIdTrackMap.size,
     '/',
-    spotifyIds.length,
+    toSearch.length,
     'spotify tracks found by search'
   )
 
