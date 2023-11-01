@@ -217,10 +217,19 @@ export const setToken = async () => {
   }
 }
 
-export const getMyPlaylists = async (): Promise<SpotifyPlaylist[]> => {}
+// https://github.com/JosephJvB/spotty-likes-mc-chunker/blob/main/src/
+export const getMyPlaylists = async (): Promise<SpotifyPlaylist[]> => {
+  return []
+}
 export const createPlaylist = async (
   year: number
-): Promise<SpotifyPlaylist> => {}
+): Promise<SpotifyPlaylist> => {
+  return {} as SpotifyPlaylist
+}
+export const addPlaylistItems = async (
+  playlistId: string,
+  trackUris: string[]
+) => {}
 
 // https://open.spotify.com/track/1nxudYVyc5RLm8LrSMzeTa?si=-G3WGzRgTDq8OuRa688FMg
 // https://open.spotify.com/album/3BFHembK3fNseQR5kAEE2I
