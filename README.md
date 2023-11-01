@@ -1,8 +1,16 @@
 # tnd best tracks
 
-https://developers.google.com/youtube/v3/getting-started
+### improvement opps
+1. findTrack retry to handle multiple songs per line:
+  - check trackName for "/" or "&"
+  - tricky refactor where findTrack could return more than 1 track
+  - and then main list `youtubeTracks` each item could have more than one spotifyTrack associated to it
+  - I think that's OK!
+2. findTrack, add retry which removes `track:`, `artist:`
+  - reluctant to do this cos accuracy will suffer
+3. keep a list of the youtube tracks without spotifyTracks for posterity
 
-just Quadeca SCRAPYARD I to fix i think
+https://developers.google.com/youtube/v3/getting-started
 
 1. PlaylistItems API: https://developers.google.com/youtube/v3/docs/playlistItems/list
   - PLP4CSgl7K7or84AAhr7zlLNpghEnKWu2c
@@ -41,9 +49,12 @@ contentDetails,id,snippet,status
 
 5. get my existing playlists
   - https://developer.spotify.com/documentation/web-api/reference/get-list-users-playlists
+  - scopes: [playlist-read-private, playlist-read-collaborative]
 
 6. create those playlists that dont exist
   - https://developer.spotify.com/documentation/web-api/reference/create-playlist
+  - scopes: [playlist-modify-private, playlist-modify-public]
 
 7. add songs to playlists
   - https://developer.spotify.com/documentation/web-api/reference/add-tracks-to-playlist
+  - scopes: [playlist-modify-private, playlist-modify-public]

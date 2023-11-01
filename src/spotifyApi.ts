@@ -1,6 +1,10 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
 import { YoutubeTrack } from './tasks/extractYoutubeTracks'
-import { SPOTIFY_DOMAIN, SPOTIFY_ID_LENGTH } from './constants'
+import {
+  PLAYLIST_NAME_PREFIX,
+  SPOTIFY_DOMAIN,
+  SPOTIFY_ID_LENGTH,
+} from './constants'
 import {
   ARTIST_NAME_CORRECTIONS,
   FIX_ARTIST_FROM_LINK_CORRECTIONS,
@@ -55,14 +59,33 @@ export type SpotifyArtist = {
   href: string
   name: string
 }
+export type SpotifyPlaylist = {
+  id: string
+  name: string
+  description: string
+  tracks: {
+    total: number
+    items: Array<{
+      added_at: string
+      track: SpotifyTrack
+    }>
+  }
+}
 
 let TOKEN = ''
+let OAUTH_TOKEN = ''
 
 export const getToken = async () => {
   if (!TOKEN) {
     await setToken()
   }
   return TOKEN
+}
+export const setOAuthToken = (token: string) => {
+  OAUTH_TOKEN = token
+}
+export const getOAuthToken = () => {
+  return OAUTH_TOKEN
 }
 
 export const getTracks = async (trackIds: string[]) => {
@@ -194,6 +217,11 @@ export const setToken = async () => {
   }
 }
 
+export const getMyPlaylists = async (): Promise<SpotifyPlaylist[]> => {}
+export const createPlaylist = async (
+  year: number
+): Promise<SpotifyPlaylist> => {}
+
 // https://open.spotify.com/track/1nxudYVyc5RLm8LrSMzeTa?si=-G3WGzRgTDq8OuRa688FMg
 // https://open.spotify.com/album/3BFHembK3fNseQR5kAEE2I
 export const extractSpotifyId = (link: string, type: 'album' | 'track') => {
@@ -222,6 +250,14 @@ export const extractSpotifyId = (link: string, type: 'album' | 'track') => {
   }
 
   return id
+}
+
+export const getYearFromPlaylist = (p: SpotifyPlaylist) => {
+  if (!p.name.startsWith(PLAYLIST_NAME_PREFIX)) {
+    return null
+  }
+
+  return parseInt(p.name.replace(PLAYLIST_NAME_PREFIX, ''))
 }
 
 // TODO: move this logic to extract step

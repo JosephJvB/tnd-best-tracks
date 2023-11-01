@@ -16,3 +16,5 @@ export const YOUTUBE_ID_MAP_JSON_PATH =
   __dirname + '/../data/youtube-id-map.json'
 export const SPOTIFY_TRACKS_JSON_PATH =
   __dirname + '/../data/spotify-tracks.json'
+
+export const PLAYLIST_NAME_PREFIX = "TONY'S TOP TRACKS "
