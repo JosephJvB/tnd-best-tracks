@@ -1,9 +1,11 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
 import { YoutubeTrack } from './tasks/extractYoutubeTracks'
 import {
+  PLAYLIST_DESCRIPTION,
   PLAYLIST_NAME_PREFIX,
   SPOTIFY_DOMAIN,
   SPOTIFY_ID_LENGTH,
+  SPOTIFY_JVB_USERID,
 } from './constants'
 import {
   ARTIST_NAME_CORRECTIONS,
@@ -12,8 +14,8 @@ import {
   TRACK_NAME_CORRECTIONS,
 } from './manualCorrections'
 
-const API_BASE_URL = 'https://api.spotify.com/v1'
-const ACCOUNTS_BASE_URL = 'https://accounts.spotify.com/api'
+export const API_BASE_URL = 'https://api.spotify.com/v1'
+export const ACCOUNTS_BASE_URL = 'https://accounts.spotify.com/api'
 
 const FEATURE_PREFIXES = [
   ' ft. ',
@@ -59,17 +61,31 @@ export type SpotifyArtist = {
   href: string
   name: string
 }
+export type PlaylistItem = {
+  added_at: string
+  track: SpotifyTrack
+}
 export type SpotifyPlaylist = {
   id: string
   name: string
   description: string
+  public: boolean
+  collaborative: boolean
   tracks: {
     total: number
-    items: Array<{
-      added_at: string
-      track: SpotifyTrack
-    }>
+    items: PlaylistItem[]
   }
+}
+export type PaginatedQuery = {
+  limit: number
+  offset: number
+}
+export type GetPlaylistsQuery = PaginatedQuery & {
+  user_id: string
+}
+export type PaginatedResponse<T> = {
+  items: T[]
+  next?: string
 }
 
 let TOKEN = ''
@@ -217,14 +233,107 @@ export const setToken = async () => {
   }
 }
 
-// https://github.com/JosephJvB/spotty-likes-mc-chunker/blob/main/src/
-export const getMyPlaylists = async (): Promise<SpotifyPlaylist[]> => {
-  return []
+export const getMyPlaylists = async () => {
+  try {
+    const myPlaylists: SpotifyPlaylist[] = []
+
+    let hasMore = false
+    do {
+      const res: AxiosResponse<PaginatedResponse<SpotifyPlaylist>> =
+        await axios({
+          method: 'get',
+          url: `${API_BASE_URL}/me/playlists`,
+          headers: {
+            Authorization: `Bearer ${OAUTH_TOKEN}`,
+          },
+          params: {
+            limit: 50,
+            offset: myPlaylists.length,
+          },
+        })
+
+      myPlaylists.push(...res.data.items)
+      hasMore = !!res.data.next
+    } while (hasMore)
+
+    return myPlaylists
+  } catch (e) {
+    const axError = e as AxiosError
+    if (axError.isAxiosError) {
+      console.error(axError.response?.data)
+      console.error(axError.response?.status)
+      console.error('axios error')
+    } else {
+      console.error(e)
+    }
+    console.error('getMyPlaylists failed')
+    process.exit()
+  }
 }
-export const createPlaylist = async (
-  year: number
-): Promise<SpotifyPlaylist> => {
-  return {} as SpotifyPlaylist
+export const createPlaylist = async (year: number) => {
+  try {
+    const newPlaylist: Omit<SpotifyPlaylist, 'id' | 'tracks'> = {
+      name: `${PLAYLIST_NAME_PREFIX}${year}`,
+      description: PLAYLIST_DESCRIPTION,
+      public: true,
+      collaborative: false,
+    }
+
+    const res: AxiosResponse<SpotifyPlaylist> = await axios({
+      method: 'post',
+      url: `${API_BASE_URL}/users/${SPOTIFY_JVB_USERID}/playlists`,
+      data: newPlaylist,
+    })
+
+    return res.data
+  } catch (e) {
+    const axError = e as AxiosError
+    if (axError.isAxiosError) {
+      console.error(axError.response?.data)
+      console.error(axError.response?.status)
+      console.error('axios error')
+    } else {
+      console.error(e)
+    }
+    console.error('getPlaylistItems failed')
+    process.exit()
+  }
+}
+export const getPlaylistItems = async (playlistId: string) => {
+  try {
+    const playlistItems: PlaylistItem[] = []
+    let hasMore = false
+    do {
+      const res: AxiosResponse<PaginatedResponse<PlaylistItem>> = await axios({
+        method: 'get',
+        url: `${API_BASE_URL}/playlists/${playlistId}/tracks`,
+        headers: {
+          Authorization: `Bearer ${OAUTH_TOKEN}`,
+        },
+        params: {
+          limit: 50,
+          offset: playlistItems.length,
+        },
+      })
+
+      playlistItems.push(...res.data.items)
+      hasMore = !!res.data.next
+    } while (hasMore)
+
+    return playlistItems
+  } catch (e) {
+    const axError = e as AxiosError
+    if (axError.isAxiosError) {
+      console.error(axError.response?.data)
+      console.error(axError.response?.status)
+      console.error('axios error')
+    } else {
+      console.error(e)
+    }
+    console.error('getPlaylistItems failed')
+    process.exit()
+  }
+  return [] as PlaylistItem[]
 }
 export const addPlaylistItems = async (
   playlistId: string,
@@ -300,6 +409,8 @@ export const normalizeTrackName = (track: YoutubeTrack) => {
   let normalized = track.name
     .replace(/"/g, '')
     .replace(/'/g, '')
+    // probably need to review these replacements
+    // likely ["/", ",", "&"] in trackname means tony's linked multiple tracks
     .replace(/\//g, '')
     .replace(/\\/g, '')
   // // https://stackoverflow.com/questions/4292468/javascript-regex-remove-text-between-parentheses#answer-4292483

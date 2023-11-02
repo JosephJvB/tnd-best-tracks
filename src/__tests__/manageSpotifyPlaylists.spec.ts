@@ -8,14 +8,17 @@ describe('manageSpotifyPlaylists.ts', () => {
   const loadJsonSpy = jest
     .spyOn(fsUtil, 'loadJsonFile')
     .mockImplementation(jest.fn())
-  const addPlaylistItemsSpy = jest
-    .spyOn(spotifyApi, 'addPlaylistItems')
+  const getMyPlaylistsSpy = jest
+    .spyOn(spotifyApi, 'getMyPlaylists')
+    .mockImplementation(jest.fn())
+  const getPlaylistItemsSpy = jest
+    .spyOn(spotifyApi, 'getPlaylistItems')
     .mockImplementation(jest.fn())
   const createPlaylistSpy = jest
     .spyOn(spotifyApi, 'createPlaylist')
     .mockImplementation(jest.fn())
-  const getMyPlaylistsSpy = jest
-    .spyOn(spotifyApi, 'getMyPlaylists')
+  const addPlaylistItemsSpy = jest
+    .spyOn(spotifyApi, 'addPlaylistItems')
     .mockImplementation(jest.fn())
   const setOAuthTokenSpy = jest
     .spyOn(spotifyApi, 'setOAuthToken')
@@ -70,10 +73,7 @@ describe('manageSpotifyPlaylists.ts', () => {
           name: `${PLAYLIST_NAME_PREFIX}${year}`,
           tracks: {
             total: 0,
-            items: [] as Array<{
-              added_at: string
-              track: spotifyApi.SpotifyTrack
-            }>,
+            items: [] as spotifyApi.PlaylistItem[],
           },
         } as spotifyApi.SpotifyPlaylist)
       })
@@ -83,6 +83,7 @@ describe('manageSpotifyPlaylists.ts', () => {
       expect(setOAuthTokenSpy).toBeCalledTimes(1)
       expect(loadJsonSpy).toBeCalledTimes(1)
       expect(getYearFromPlaylistSpy).toBeCalledTimes(0)
+      expect(getPlaylistItemsSpy).toBeCalledTimes(0)
       expect(createPlaylistSpy).toBeCalledTimes(3)
       years.forEach((year) => {
         expect(createPlaylistSpy).toBeCalledWith(year)
@@ -101,6 +102,9 @@ describe('manageSpotifyPlaylists.ts', () => {
     it('correctly adds tracks with 2 existing playlists x3songs each', async () => {
       loadJsonSpy.mockReturnValueOnce(input)
       getMyPlaylistsSpy.mockResolvedValueOnce(existingPlaylists)
+      existingPlaylists.forEach((p) => {
+        getPlaylistItemsSpy.mockResolvedValueOnce(p.tracks.items)
+      })
 
       createPlaylistSpy.mockResolvedValueOnce({
         id: `playlist_2`,

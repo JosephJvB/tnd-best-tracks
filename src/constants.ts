@@ -18,3 +18,6 @@ export const SPOTIFY_TRACKS_JSON_PATH =
   __dirname + '/../data/spotify-tracks.json'
 
 export const PLAYLIST_NAME_PREFIX = "TONY'S TOP TRACKS "
+export const PLAYLIST_DESCRIPTION =
+  "Y'all know this is just his opinion, right?"
+export const SPOTIFY_JVB_USERID = 'xnmacgqaaa6a1xi7uy2k1fe7w'

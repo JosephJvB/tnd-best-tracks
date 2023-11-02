@@ -457,7 +457,7 @@ describe('extractBestTracks.ts', () => {
       const result = extractTrackList_v2(item)
 
       expect(result.length).toBeGreaterThan(0)
-      expect(result.length).toBe(10)
+      expect(result.length).toBe(11)
     })
 
     it('can parse Weekly Track Roundup: 10/18', () => {

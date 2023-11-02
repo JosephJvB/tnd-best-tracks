@@ -7,6 +7,7 @@ import {
   addPlaylistItems,
   createPlaylist,
   getMyPlaylists,
+  getPlaylistItems,
   getYearFromPlaylist,
   setOAuthToken,
 } from '../spotifyApi'
@@ -29,7 +30,9 @@ export default async function () {
 
   for (const [year, nextTrackList] of tracksByYear.entries()) {
     let playlist = playlistsByYear.get(year)
-    if (!playlist) {
+    if (playlist) {
+      playlist.tracks.items = await getPlaylistItems(playlist.id)
+    } else {
       playlist = await createPlaylist(year)
     }
 

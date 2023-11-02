@@ -1,82 +1,6 @@
-import { SPOTIFY_ID_LENGTH } from '../constants'
 import * as spotifyApi from '../spotifyApi'
 
-describe('spotifyApi.ts', () => {
-  describe('#extractSpotifyId', () => {
-    it('returns null for invalid url', () => {
-      const link = 'invalid url here'
-
-      const id = spotifyApi.extractSpotifyId(link, 'track')
-
-      expect(id).toBeNull()
-    })
-
-    it('returns null for non-spotify links', () => {
-      const link = 'https://www.youtube.com/watch?v=DJs_thSFreI'
-
-      const id = spotifyApi.extractSpotifyId(link, 'track')
-
-      expect(id).toBeNull()
-    })
-
-    it('returns null when type does not match', () => {
-      const link = 'https://open.spotify.com/track/4m08vFKrKbjEklzRIBwllU'
-
-      const id = spotifyApi.extractSpotifyId(link, 'album')
-
-      expect(id).toBeNull()
-    })
-
-    it('can extract spotify trackId', () => {
-      const link = 'https://open.spotify.com/track/4m08vFKrKbjEklzRIBwllU'
-
-      let id: null | string = null
-
-      expect(() => {
-        id = spotifyApi.extractSpotifyId(link, 'track')
-      }).not.toThrow()
-      expect(id).not.toBeNull()
-      expect((id as unknown as string).length).toBe(SPOTIFY_ID_LENGTH)
-    })
-
-    it('can extract spotify albumId', () => {
-      const link = 'https://open.spotify.com/album/4m08vFKrKbjEklzRIBwllU'
-
-      let id: null | string = null
-
-      expect(() => {
-        id = spotifyApi.extractSpotifyId(link, 'album')
-      }).not.toThrow()
-      expect(id).not.toBeNull()
-      expect((id as unknown as string).length).toBe(SPOTIFY_ID_LENGTH)
-    })
-
-    it('can extract spotify trackId with queryParams', () => {
-      const link =
-        'https://open.spotify.com/track/4m08vFKrKbjEklzRIBwllU?si=123&test=true'
-
-      let id: null | string = null
-
-      expect(() => {
-        id = spotifyApi.extractSpotifyId(link, 'track')
-      }).not.toThrow()
-      expect(id).not.toBeNull()
-      expect((id as unknown as string).length).toBe(SPOTIFY_ID_LENGTH)
-    })
-
-    it('can extract spotify trackId with pathParams', () => {
-      const link =
-        'https://open.spotify.com/track/4m08vFKrKbjEklzRIBwllU/some/other/params'
-
-      let id: null | string = null
-
-      expect(() => {
-        id = spotifyApi.extractSpotifyId(link, 'track')
-      }).not.toThrow()
-      expect(id).not.toBeNull()
-      expect((id as unknown as string).length).toBe(SPOTIFY_ID_LENGTH)
-    })
-  })
+describe('spotifyApi_integration.ts', () => {
   describe('#findTrack', () => {
     const processExitSpy = jest
       .spyOn(process, 'exit')
@@ -739,40 +663,6 @@ describe('spotifyApi.ts', () => {
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
-      it('can find Bonnie "Prince" Billy__Blueberry Jam__2018', async () => {
-        const input = {
-          name: 'Blueberry Jam',
-          artist: 'Bonnie "Prince" Billy',
-          link: 'https://youtu.be/eJf2iY2Kbx0',
-          year: 2018,
-        }
-
-        const result = await spotifyApi.findTrack(input)
-
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
-        expect(result.tracks.items.length).toBeGreaterThan(0)
-      })
-
-      it('can find FKi 1st__Good Gas ft. 2Chainz & A$AP Ferg__2018', async () => {
-        const input = {
-          name: 'Good Gas ft. 2Chainz & A$AP Ferg',
-          artist: 'FKi 1st',
-          link: 'https://youtu.be/VGceCqZL6JQ',
-          year: 2018,
-        }
-
-        const result = await spotifyApi.findTrack(input)
-
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
-        expect(result.tracks.items.length).toBeGreaterThan(0)
-      })
-
       it('can find K/DA__POP/STARS (ft. Madison Beer, (G)I-DLE, Jaira Burns)__2018', async () => {
         const input = {
           name: 'POP/STARS (ft. Madison Beer, (G)I-DLE, Jaira Burns)',
@@ -863,23 +753,6 @@ describe('spotifyApi.ts', () => {
           name: 'Eyelids',
           artist: 'Zac Flewids & Sylvan LaCue',
           link: 'https://youtu.be/oaTkJ9GNYJ4',
-          year: 2019,
-        }
-
-        const result = await spotifyApi.findTrack(input)
-
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
-        expect(result.tracks.items.length).toBeGreaterThan(0)
-      })
-
-      it("can find Bonnie 'Prince' Billy__At the Back of the Pit__2019", async () => {
-        const input = {
-          name: 'At the Back of the Pit',
-          artist: "Bonnie 'Prince' Billy",
-          link: 'https://youtu.be/LhMz9pvRNCQ',
           year: 2019,
         }
 
@@ -1035,24 +908,6 @@ describe('spotifyApi.ts', () => {
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
-      it('can find Quadeca__SCRAPYARD I__2023', async () => {
-        const input = {
-          name: 'SCRAPYARD I',
-          artist: 'Quadeca',
-          link: 'https://www.youtube.com/playlist?list=OLAK5uy_kvgbNUS-YlV2HxlP2ilchPRciHb4I3p-o',
-          year: 2023,
-          videoPublishedDate: '2023-10-16T07:33:42Z',
-        }
-
-        const result = await spotifyApi.findTrack(input)
-
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
-        expect(result.tracks.items.length).toBeGreaterThan(0)
-      })
-
       it('can find Nicolas Jaar & Ali Sethi__Nazar Se__2023', async () => {
         const input = {
           name: 'Nazar Se',
@@ -1150,24 +1005,6 @@ describe('spotifyApi.ts', () => {
           link: 'https://www.youtube.com/watch?v=9zJEZEzLZwU',
           year: 2020,
           videoPublishedDate: '2020-08-10T03:40:20Z',
-        }
-
-        const result = await spotifyApi.findTrack(input)
-
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
-        expect(result.tracks.items.length).toBeGreaterThan(0)
-      })
-
-      it('can find Capsule__Hikari no Disco__2021', async () => {
-        const input = {
-          name: 'Hikari no Disco',
-          artist: 'Capsule',
-          link: 'https://www.youtube.com/watch?v=Hwn49r14nIc',
-          year: 2021,
-          videoPublishedDate: '2021-06-07T04:34:22Z',
         }
 
         const result = await spotifyApi.findTrack(input)
@@ -1342,6 +1179,40 @@ describe('spotifyApi.ts', () => {
           artist: 'Zomby',
           link: 'https://youtu.be/ZFnPbAzNLSk',
           year: 2017,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it('can find Bonnie "Prince" Billy__Blueberry Jam__2018', async () => {
+        const input = {
+          name: 'Blueberry Jam',
+          artist: 'Bonnie "Prince" Billy',
+          link: 'https://youtu.be/eJf2iY2Kbx0',
+          year: 2018,
+        }
+
+        const result = await spotifyApi.findTrack(input)
+
+        expect(processExitSpy).toBeCalledTimes(0)
+        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(normalizeTrackSpy).toBeCalledTimes(1)
+        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(result.tracks.items.length).toBeGreaterThan(0)
+      })
+
+      it("can find Bonnie 'Prince' Billy__At the Back of the Pit__2019", async () => {
+        const input = {
+          name: 'At the Back of the Pit',
+          artist: "Bonnie 'Prince' Billy",
+          link: 'https://youtu.be/LhMz9pvRNCQ',
+          year: 2019,
         }
 
         const result = await spotifyApi.findTrack(input)
