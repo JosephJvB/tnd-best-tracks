@@ -21,3 +21,10 @@ export const PLAYLIST_NAME_PREFIX = "TONY'S TOP TRACKS "
 export const PLAYLIST_DESCRIPTION =
   "Y'all know this is just his opinion, right?"
 export const SPOTIFY_JVB_USERID = 'xnmacgqaaa6a1xi7uy2k1fe7w'
+export const SPOTIFY_REQUIRED_SCOPES = [
+  'playlist-modify-private',
+  'playlist-modify-public',
+  'playlist-read-private',
+  'playlist-read-collaborative',
+].join(' ')
+export const SPOTIFY_CALLBACK_URL = 'http://localhost:3000/tony'

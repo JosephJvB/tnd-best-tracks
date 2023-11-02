@@ -10,8 +10,10 @@ import {
   getPlaylistItems,
   getYearFromPlaylist,
   setOAuthToken,
+  submitCode,
 } from '../spotifyApi'
 import { loadJsonFile } from '../fsUtil'
+import { performServerCallback } from '../server'
 
 export type ValidPrePlaylistItem = Omit<PrePlaylistItem, 'spotifyTrack'> & {
   spotifyTrack: TrimSpotifyTrack
@@ -19,9 +21,10 @@ export type ValidPrePlaylistItem = Omit<PrePlaylistItem, 'spotifyTrack'> & {
 
 // 7. add any missing songs to each playlist
 export default async function () {
-  // TODO:
-  // Server / callback stuff to get token
-  const oauthToken = '' // await performCallbackProcess()
+  const code = await performServerCallback()
+
+  const oauthToken = await submitCode(code)
+
   setOAuthToken(oauthToken)
 
   const tracksByYear = await getTracksByYear()

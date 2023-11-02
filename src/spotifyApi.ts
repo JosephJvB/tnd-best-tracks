@@ -3,9 +3,11 @@ import { YoutubeTrack } from './tasks/extractYoutubeTracks'
 import {
   PLAYLIST_DESCRIPTION,
   PLAYLIST_NAME_PREFIX,
+  SPOTIFY_CALLBACK_URL,
   SPOTIFY_DOMAIN,
   SPOTIFY_ID_LENGTH,
   SPOTIFY_JVB_USERID,
+  SPOTIFY_REQUIRED_SCOPES,
 } from './constants'
 import {
   ARTIST_NAME_CORRECTIONS,
@@ -16,6 +18,20 @@ import {
 
 export const API_BASE_URL = 'https://api.spotify.com/v1'
 export const ACCOUNTS_BASE_URL = 'https://accounts.spotify.com/api'
+export const AUTH_FLOW_INIT_URL =
+  'https://accounts.spotify.com' +
+  new URLSearchParams({
+    response_type: 'code',
+    client_id: process.env.SPOTIFY_CLIENT_ID,
+    client_secret: process.env.SPOTIFY_CLIENT_SECRET,
+    scope: SPOTIFY_REQUIRED_SCOPES,
+    redirect_uri: SPOTIFY_CALLBACK_URL,
+    state: process.env.SPOTIFY_CALLBACK_STATE,
+  }).toString()
+
+export const BASIC_AUTH = Buffer.from(
+  `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`
+).toString('base64')
 
 const FEATURE_PREFIXES = [
   ' ft. ',
@@ -86,6 +102,9 @@ export type GetPlaylistsQuery = PaginatedQuery & {
 export type PaginatedResponse<T> = {
   items: T[]
   next?: string
+}
+export type SubmitCodeResponse = {
+  access_token: string
 }
 
 let TOKEN = ''
@@ -229,6 +248,38 @@ export const setToken = async () => {
       console.error(e)
     }
     console.error('setToken failed')
+    process.exit()
+  }
+}
+
+export const submitCode = async (code: string) => {
+  try {
+    const res: AxiosResponse<SubmitCodeResponse> = await axios({
+      method: 'post',
+      url: `${ACCOUNTS_BASE_URL}`,
+      headers: {
+        Authorization: `Basic ${BASIC_AUTH}`,
+        // axios should set this by default I think!
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      params: {
+        code,
+        grant_type: 'authorization_code',
+        redirect_url: SPOTIFY_CALLBACK_URL,
+      },
+    })
+
+    return res.data.access_token
+  } catch (e) {
+    const axError = e as AxiosError
+    if (axError.isAxiosError) {
+      console.error(axError.response?.data)
+      console.error(axError.response?.status)
+      console.error('axios error')
+    } else {
+      console.error(e)
+    }
+    console.error('submitCode failed')
     process.exit()
   }
 }
