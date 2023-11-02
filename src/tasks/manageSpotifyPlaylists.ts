@@ -54,6 +54,8 @@ export const getTracksByYear = async () => {
     ).getFullYear()
     const soFar = tracksByYear.get(year) ?? []
     soFar.push(validItem)
+
+    tracksByYear.set(year, soFar)
   })
 
   return tracksByYear
