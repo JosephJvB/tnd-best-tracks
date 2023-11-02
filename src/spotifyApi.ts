@@ -282,6 +282,9 @@ export const createPlaylist = async (year: number) => {
     const res: AxiosResponse<SpotifyPlaylist> = await axios({
       method: 'post',
       url: `${API_BASE_URL}/users/${SPOTIFY_JVB_USERID}/playlists`,
+      headers: {
+        Authorization: `Bearer ${OAUTH_TOKEN}`,
+      },
       data: newPlaylist,
     })
 
@@ -295,7 +298,7 @@ export const createPlaylist = async (year: number) => {
     } else {
       console.error(e)
     }
-    console.error('getPlaylistItems failed')
+    console.error('createPlaylist failed')
     process.exit()
   }
 }
@@ -338,7 +341,33 @@ export const getPlaylistItems = async (playlistId: string) => {
 export const addPlaylistItems = async (
   playlistId: string,
   trackUris: string[]
-) => {}
+) => {
+  try {
+    for (let i = 0; i < trackUris.length; i += 100) {
+      const uris = trackUris.slice(i, i + 100)
+
+      await axios({
+        method: 'post',
+        url: `${API_BASE_URL}/playlists/${playlistId}/tracks`,
+        headers: {
+          Authorization: `Bearer ${OAUTH_TOKEN}`,
+        },
+        data: { uris },
+      })
+    }
+  } catch (e) {
+    const axError = e as AxiosError
+    if (axError.isAxiosError) {
+      console.error(axError.response?.data)
+      console.error(axError.response?.status)
+      console.error('axios error')
+    } else {
+      console.error(e)
+    }
+    console.error('addPlaylistItems failed')
+    process.exit()
+  }
+}
 
 // https://open.spotify.com/track/1nxudYVyc5RLm8LrSMzeTa?si=-G3WGzRgTDq8OuRa688FMg
 // https://open.spotify.com/album/3BFHembK3fNseQR5kAEE2I

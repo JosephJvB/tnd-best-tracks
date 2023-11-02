@@ -1,5 +1,10 @@
 import axios from 'axios'
-import { SPOTIFY_ID_LENGTH } from '../constants'
+import {
+  PLAYLIST_DESCRIPTION,
+  PLAYLIST_NAME_PREFIX,
+  SPOTIFY_ID_LENGTH,
+  SPOTIFY_JVB_USERID,
+} from '../constants'
 import * as spotifyApi from '../spotifyApi'
 
 jest.mock('axios')
@@ -123,7 +128,7 @@ describe('spotifyApi_unit.ts', () => {
         data: mockResponse,
       })
 
-      const mockAuthToken = 'token_oauth'
+      const mockAuthToken = 'token_123'
       spotifyApi.setOAuthToken(mockAuthToken)
 
       const results = await spotifyApi.getMyPlaylists()
@@ -164,7 +169,7 @@ describe('spotifyApi_unit.ts', () => {
         })
       }
 
-      const mockAuthToken = 'token_oauth'
+      const mockAuthToken = 'token_123'
       spotifyApi.setOAuthToken(mockAuthToken)
 
       const results = await spotifyApi.getMyPlaylists()
@@ -186,7 +191,188 @@ describe('spotifyApi_unit.ts', () => {
       expect(results).toEqual(myPlaylists)
     })
   })
-  // describe('#createPlaylist', () => {})
-  // describe('#getPlaylistItems', () => {})
-  // describe('#addPlaylistItems', () => {})
+  describe('#createPlaylist', () => {
+    it('calls axios with the correct args', async () => {
+      axiosMock.mockResolvedValueOnce({
+        data: undefined,
+      })
+
+      const mockAuthToken = 'token_123'
+      spotifyApi.setOAuthToken(mockAuthToken)
+
+      const year = 2022
+
+      await spotifyApi.createPlaylist(year)
+
+      expect(axios).toBeCalledTimes(1)
+      expect(axios).toBeCalledWith({
+        method: 'post',
+        url: `${spotifyApi.API_BASE_URL}/users/${SPOTIFY_JVB_USERID}/playlists`,
+        headers: {
+          Authorization: `Bearer ${mockAuthToken}`,
+        },
+        data: {
+          name: `${PLAYLIST_NAME_PREFIX}${year}`,
+          description: PLAYLIST_DESCRIPTION,
+          public: true,
+          collaborative: false,
+        },
+      })
+    })
+  })
+  describe('#getPlaylistItems', () => {
+    it('calls axios with correct args once', async () => {
+      const playlistItems = Array(3)
+        .fill(0)
+        .map(
+          (_, idx) =>
+            ({
+              track: {
+                uri: `spotify:track:id_${idx}`,
+              },
+            } as spotifyApi.PlaylistItem)
+        )
+      const mockResponse: spotifyApi.PaginatedResponse<spotifyApi.PlaylistItem> =
+        {
+          items: playlistItems,
+          next: undefined,
+        }
+      axiosMock.mockResolvedValueOnce({
+        data: mockResponse,
+      })
+
+      const mockAuthToken = 'token_123'
+      spotifyApi.setOAuthToken(mockAuthToken)
+
+      const mockPlaylist = {
+        id: `playlist_0`,
+      }
+
+      const results = await spotifyApi.getPlaylistItems(mockPlaylist.id)
+
+      expect(axiosMock).toBeCalledTimes(1)
+      expect(axiosMock).toBeCalledWith({
+        method: 'get',
+        url: `${spotifyApi.API_BASE_URL}/playlists/${mockPlaylist.id}/tracks`,
+        headers: {
+          Authorization: `Bearer ${mockAuthToken}`,
+        },
+        params: {
+          limit: 50,
+          offset: 0,
+        },
+      })
+      expect(results).toEqual(playlistItems)
+    })
+
+    it('calls axios with correct args three times', async () => {
+      const playlistItems = Array(110)
+        .fill(0)
+        .map(
+          (_, idx) =>
+            ({
+              track: {
+                uri: `spotify:track:id_${idx}`,
+              },
+            } as spotifyApi.PlaylistItem)
+        )
+      for (let i = 0; i < playlistItems.length; i += 50) {
+        const mockResponse: spotifyApi.PaginatedResponse<spotifyApi.PlaylistItem> =
+          {
+            items: playlistItems.slice(i, i + 50),
+            next: i + 50 < playlistItems.length ? 'next url' : undefined,
+          }
+        axiosMock.mockResolvedValueOnce({
+          data: mockResponse,
+        })
+      }
+
+      const mockAuthToken = 'token_123'
+      spotifyApi.setOAuthToken(mockAuthToken)
+
+      const mockPlaylist = {
+        id: 'playlist_0',
+      }
+
+      const results = await spotifyApi.getPlaylistItems(mockPlaylist.id)
+
+      expect(axiosMock).toBeCalledTimes(3)
+      for (let i = 0; i < playlistItems.length; i += 50) {
+        expect(axiosMock).toBeCalledWith({
+          method: 'get',
+          url: `${spotifyApi.API_BASE_URL}/playlists/${mockPlaylist.id}/tracks`,
+          headers: {
+            Authorization: `Bearer ${mockAuthToken}`,
+          },
+          params: {
+            limit: 50,
+            offset: i,
+          },
+        })
+      }
+      expect(results).toEqual(playlistItems)
+    })
+  })
+  describe('#addPlaylistItems', () => {
+    it('calls axios with correct args once', async () => {
+      const urisToAdd = Array(3)
+        .fill(0)
+        .map((_, idx) => `spotify:track:id_${idx}`)
+      axiosMock.mockResolvedValueOnce({
+        data: undefined,
+      })
+
+      const mockAuthToken = 'token_123'
+      spotifyApi.setOAuthToken(mockAuthToken)
+
+      const mockPlaylist = {
+        id: `playlist_0`,
+      }
+
+      await spotifyApi.addPlaylistItems(mockPlaylist.id, urisToAdd)
+
+      expect(axiosMock).toBeCalledTimes(1)
+      expect(axiosMock).toBeCalledWith({
+        method: 'post',
+        url: `${spotifyApi.API_BASE_URL}/playlists/${mockPlaylist.id}/tracks`,
+        headers: {
+          Authorization: `Bearer ${mockAuthToken}`,
+        },
+        data: {
+          uris: urisToAdd,
+        },
+      })
+    })
+
+    it('calls axios with correct args three times', async () => {
+      const urisToAdd = Array(210)
+        .fill(0)
+        .map((_, idx) => `spotify:track:id_${idx}`)
+
+      const mockAuthToken = 'token_123'
+      spotifyApi.setOAuthToken(mockAuthToken)
+
+      const mockPlaylist = {
+        id: 'playlist_0',
+      }
+
+      const results = await spotifyApi.addPlaylistItems(
+        mockPlaylist.id,
+        urisToAdd
+      )
+
+      expect(axiosMock).toBeCalledTimes(3)
+      for (let i = 0; i < urisToAdd.length; i += 100) {
+        const uris = urisToAdd.slice(i, i + 100)
+        expect(axiosMock).toBeCalledWith({
+          method: 'post',
+          url: `${spotifyApi.API_BASE_URL}/playlists/${mockPlaylist.id}/tracks`,
+          headers: {
+            Authorization: `Bearer ${mockAuthToken}`,
+          },
+          data: { uris },
+        })
+      }
+    })
+  })
 })
