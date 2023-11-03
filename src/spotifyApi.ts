@@ -15,12 +15,11 @@ import {
   FIX_TRACK_FROM_LINK_CORRECTIONS,
   TRACK_NAME_CORRECTIONS,
 } from './manualCorrections'
-import { execSync } from 'child_process'
 
 export const API_BASE_URL = 'https://api.spotify.com/v1'
 export const ACCOUNTS_BASE_URL = 'https://accounts.spotify.com/api'
 export const AUTH_FLOW_INIT_URL =
-  'https://accounts.spotify.com?' +
+  'https://accounts.spotify.com/authorize?' +
   new URLSearchParams({
     response_type: 'code',
     client_id: process.env.SPOTIFY_CLIENT_ID,
@@ -253,9 +252,6 @@ export const setToken = async () => {
   }
 }
 
-export const beginSpotifyCallback = () => {
-  execSync(`open ${AUTH_FLOW_INIT_URL} -a Firefox`)
-}
 export const submitCode = async (code: string) => {
   try {
     const res: AxiosResponse<SubmitCodeResponse> = await axios({
@@ -263,13 +259,11 @@ export const submitCode = async (code: string) => {
       url: `${ACCOUNTS_BASE_URL}/token`,
       headers: {
         Authorization: `Basic ${BASIC_AUTH}`,
-        // axios should set this by default I think!
-        // 'Content-Type': 'application/x-www-form-urlencoded',
       },
       params: {
         code,
         grant_type: 'authorization_code',
-        redirect_url: SPOTIFY_CALLBACK_URL,
+        redirect_uri: SPOTIFY_CALLBACK_URL,
       },
     })
 

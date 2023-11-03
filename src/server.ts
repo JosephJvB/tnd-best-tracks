@@ -15,7 +15,7 @@ export const performServerCallback = (onStart: () => void) => {
 
   return new Promise<string>((resolve, reject) => {
     server.get('/tony', async (req: TonysRequest, res) => {
-      res.send(200)
+      res.sendStatus(200)
 
       console.log('performServerCallback', {
         code: req.query.code,

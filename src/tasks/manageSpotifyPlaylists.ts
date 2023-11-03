@@ -106,5 +106,5 @@ export const combine = async (
 }
 
 export const startSpotifyCallback = () => {
-  execSync(`open ${AUTH_FLOW_INIT_URL} -a Firefox`)
+  execSync(`open -a Firefox "${AUTH_FLOW_INIT_URL}"`)
 }
