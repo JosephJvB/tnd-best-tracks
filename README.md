@@ -1,5 +1,14 @@
 # tnd best tracks
 
+### todo
+1. test auth server callback
+  - use token for next tests
+2. test playlist requests on postman
+  - get playlist
+  - get playlist items
+  - create playlist
+  - add playlist items
+
 ### improvement opps
 1. findTrack retry to handle multiple songs per line:
   - check trackName for "/" or "&"
@@ -37,7 +46,7 @@ contentDetails,id,snippet,status
     - considered batching the getById requests, but of 3.4k tracks, >300 of them have a spotify trackId
     - is it really worth it? Probably not but I am doing it
   - if not - search song by name/artist/(album if albumId)
-  - gonna need spotify search api
+  - gonna need spotify search ap
   - https://developer.spotify.com/documentation/web-api/reference/search
 
 4. Review youtube / spotify pairs

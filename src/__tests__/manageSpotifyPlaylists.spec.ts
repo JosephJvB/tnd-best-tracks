@@ -3,8 +3,15 @@ import * as fsUtil from '../fsUtil'
 import * as manageSpotifyPlaylists from '../tasks/manageSpotifyPlaylists'
 import { PrePlaylistItem } from '../tasks/getSpotifyTracks'
 import { PLAYLIST_NAME_PREFIX } from '../constants'
+import * as server from '../server'
 
 describe('manageSpotifyPlaylists.ts', () => {
+  const performCallbackSpy = jest
+    .spyOn(server, 'performServerCallback')
+    .mockImplementation(jest.fn())
+  const submitCodeSpy = jest
+    .spyOn(spotifyApi, 'submitCode')
+    .mockImplementation(jest.fn())
   const loadJsonSpy = jest
     .spyOn(fsUtil, 'loadJsonFile')
     .mockImplementation(jest.fn())
@@ -25,9 +32,15 @@ describe('manageSpotifyPlaylists.ts', () => {
     .mockImplementation(jest.fn())
   const getYearFromPlaylistSpy = jest.spyOn(spotifyApi, 'getYearFromPlaylist')
   const combineSpy = jest.spyOn(manageSpotifyPlaylists, 'combine')
+  const startSpotifyCallbackSpy = jest.spyOn(
+    manageSpotifyPlaylists,
+    'startSpotifyCallback'
+  )
 
   describe('#manageSpotifyPlaylists', () => {
     // 2021, 2022, 2023. 6 items, 5 spotify tracks
+    const mockAuthCode = 'code_123'
+    const mockAuthToken = 'token_123'
     const input: PrePlaylistItem[] = [2021, 2022, 2023].flatMap((year) =>
       Array(6)
         .fill(0)
@@ -63,6 +76,8 @@ describe('manageSpotifyPlaylists.ts', () => {
     ) as spotifyApi.SpotifyPlaylist[]
 
     it('correctly adds tracks with no existing playlists', async () => {
+      performCallbackSpy.mockResolvedValueOnce(mockAuthCode)
+      submitCodeSpy.mockResolvedValueOnce(mockAuthToken)
       loadJsonSpy.mockReturnValueOnce(input)
       getMyPlaylistsSpy.mockResolvedValueOnce([])
 
@@ -80,7 +95,11 @@ describe('manageSpotifyPlaylists.ts', () => {
 
       await manageSpotifyPlaylists.default()
 
+      expect(performCallbackSpy).toBeCalledTimes(1)
+      expect(startSpotifyCallbackSpy).toBeCalledTimes(0)
+      expect(submitCodeSpy).toBeCalledTimes(1)
       expect(setOAuthTokenSpy).toBeCalledTimes(1)
+      expect(setOAuthTokenSpy).toBeCalledWith(mockAuthToken)
       expect(loadJsonSpy).toBeCalledTimes(1)
       expect(getYearFromPlaylistSpy).toBeCalledTimes(0)
       expect(getPlaylistItemsSpy).toBeCalledTimes(0)
@@ -100,6 +119,8 @@ describe('manageSpotifyPlaylists.ts', () => {
     })
 
     it('correctly adds tracks with 2 existing playlists x3songs each', async () => {
+      performCallbackSpy.mockResolvedValueOnce(mockAuthCode)
+      submitCodeSpy.mockResolvedValueOnce(mockAuthToken)
       loadJsonSpy.mockReturnValueOnce(input)
       getMyPlaylistsSpy.mockResolvedValueOnce(existingPlaylists)
       existingPlaylists.forEach((p) => {
@@ -120,7 +141,11 @@ describe('manageSpotifyPlaylists.ts', () => {
 
       await manageSpotifyPlaylists.default()
 
+      expect(performCallbackSpy).toBeCalledTimes(1)
+      expect(startSpotifyCallbackSpy).toBeCalledTimes(0)
+      expect(submitCodeSpy).toBeCalledTimes(1)
       expect(setOAuthTokenSpy).toBeCalledTimes(1)
+      expect(setOAuthTokenSpy).toBeCalledWith(mockAuthToken)
       expect(loadJsonSpy).toBeCalledTimes(1)
       expect(getYearFromPlaylistSpy).toBeCalledTimes(2)
       expect(createPlaylistSpy).toBeCalledTimes(1)

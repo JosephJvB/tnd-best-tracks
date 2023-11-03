@@ -8,7 +8,7 @@ export type TonysRequest = express.Request<
   { code: string; state: string }
 >
 
-export const performServerCallback = () => {
+export const performServerCallback = (onStart: () => void) => {
   const server = express()
 
   let runningServer: Server | undefined
@@ -39,8 +39,14 @@ export const performServerCallback = () => {
     })
 
     const PORT = 3000
-    runningServer = server.listen(PORT, () =>
+    runningServer = server.listen(PORT, () => {
       console.log('server started on', PORT)
-    )
+      onStart()
+      // console.log(
+      //   'please navigate to',
+      //   AUTH_FLOW_INIT_URL,
+      //   'to begin spotify callback'
+      // )
+    })
   })
 }

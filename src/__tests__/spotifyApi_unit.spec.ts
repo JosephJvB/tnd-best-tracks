@@ -2,6 +2,7 @@ import axios from 'axios'
 import {
   PLAYLIST_DESCRIPTION,
   PLAYLIST_NAME_PREFIX,
+  SPOTIFY_CALLBACK_URL,
   SPOTIFY_ID_LENGTH,
   SPOTIFY_JVB_USERID,
 } from '../constants'
@@ -373,6 +374,34 @@ describe('spotifyApi_unit.ts', () => {
           data: { uris },
         })
       }
+    })
+  })
+  describe('#submitCode', () => {
+    it('calls axios with correct args', async () => {
+      const mockAccessToken = 'token_123'
+      axiosMock.mockResolvedValueOnce({
+        data: {
+          access_token: mockAccessToken,
+        },
+      })
+      const mockCode = 'code_123'
+
+      const result = await spotifyApi.submitCode(mockCode)
+
+      expect(axios).toBeCalledTimes(1)
+      expect(axios).toBeCalledWith({
+        method: 'post',
+        url: `${spotifyApi.ACCOUNTS_BASE_URL}/token`,
+        headers: {
+          Authorization: `Basic ${spotifyApi.BASIC_AUTH}`,
+        },
+        params: {
+          code: mockCode,
+          grant_type: 'authorization_code',
+          redirect_url: SPOTIFY_CALLBACK_URL,
+        },
+      })
+      expect(result).toBe(mockAccessToken)
     })
   })
 })

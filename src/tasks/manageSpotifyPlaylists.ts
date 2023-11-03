@@ -1,8 +1,7 @@
-// https://github.com/JosephJvB/spotty-likes-mc-chunker/blob/main/src/
-
 import { PrePlaylistItem, TrimSpotifyTrack } from './getSpotifyTracks'
 import { SPOTIFY_TRACKS_JSON_PATH } from '../constants'
 import {
+  AUTH_FLOW_INIT_URL,
   SpotifyPlaylist,
   addPlaylistItems,
   createPlaylist,
@@ -14,20 +13,20 @@ import {
 } from '../spotifyApi'
 import { loadJsonFile } from '../fsUtil'
 import { performServerCallback } from '../server'
+import { execSync } from 'child_process'
 
 export type ValidPrePlaylistItem = Omit<PrePlaylistItem, 'spotifyTrack'> & {
   spotifyTrack: TrimSpotifyTrack
 }
 
-// 7. add any missing songs to each playlist
 export default async function () {
-  const code = await performServerCallback()
+  const code = await performServerCallback(startSpotifyCallback)
 
   const oauthToken = await submitCode(code)
 
   setOAuthToken(oauthToken)
 
-  const tracksByYear = await getTracksByYear()
+  const tracksByYear = getTracksByYear()
 
   const playlistsByYear = await getPlaylistsByYear()
 
@@ -43,7 +42,7 @@ export default async function () {
   }
 }
 
-export const getTracksByYear = async () => {
+export const getTracksByYear = () => {
   const prePlaylistItems = loadJsonFile<PrePlaylistItem[]>(
     SPOTIFY_TRACKS_JSON_PATH
   )
@@ -104,4 +103,8 @@ export const combine = async (
     .map((t) => t.spotifyTrack.uri)
 
   await addPlaylistItems(playlist.id, toAdd)
+}
+
+export const startSpotifyCallback = () => {
+  execSync(`open ${AUTH_FLOW_INIT_URL} -a Firefox`)
 }
