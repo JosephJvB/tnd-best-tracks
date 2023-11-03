@@ -1,7 +1,7 @@
 import axios from 'axios'
 import * as server from '../server'
 
-describe('server_integration.ts', () => {
+describe('server_unit.ts', () => {
   describe('#performServerCallback', () => {
     it('returns the req.query.code from GET to /tony', async () => {
       const mockCode = 'code_123'
