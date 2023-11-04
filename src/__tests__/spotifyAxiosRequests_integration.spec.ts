@@ -2,7 +2,7 @@ import axios from 'axios'
 import { extractSpotifyId, getToken } from '../spotifyApi'
 import { YoutubeTrack } from '../tasks/extractYoutubeTracks'
 
-describe('spotifyAxiosRequests', () => {
+describe('spotifyAxiosRequests_integration', () => {
   let TOKEN = ''
 
   beforeAll(async () => {

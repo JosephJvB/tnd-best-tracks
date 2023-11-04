@@ -3,19 +3,21 @@ import * as spotifyApi from '../spotifyApi'
 import * as manageSpotifyPlaylists from '../tasks/manageSpotifyPlaylists'
 
 describe('server_integration.ts', () => {
-  describe('#performServerCallback', () => {
-    it('returns the req.query.code from GET to /tony', async () => {
-      const onStart = jest.fn(() => {
-        manageSpotifyPlaylists.startSpotifyCallback()
-      })
+  describe('#performServerCallback alone', () => {
+    it(
+      'returns the req.query.code from GET to /tony',
+      async () => {
+        const onStart = jest.fn(() => {
+          manageSpotifyPlaylists.startSpotifyCallback()
+        })
 
-      const code = await server.performServerCallback(onStart)
+        const code = await server.performServerCallback(onStart)
 
-      console.log({ code })
-
-      expect(onStart).toBeCalledTimes(1)
-      expect(code).toBeDefined()
-    })
+        expect(onStart).toBeCalledTimes(1)
+        expect(code).toBeDefined()
+      },
+      10 * 1000
+    )
   })
 
   describe('#performServerCallback and #submitCode', () => {
@@ -39,7 +41,7 @@ describe('server_integration.ts', () => {
           token,
         })
       },
-      10 * 1000 // increased timeout
+      10 * 1000
     )
   })
 })
