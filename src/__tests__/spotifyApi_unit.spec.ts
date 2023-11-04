@@ -398,7 +398,7 @@ describe('spotifyApi_unit.ts', () => {
         params: {
           code: mockCode,
           grant_type: 'authorization_code',
-          redirect_url: SPOTIFY_CALLBACK_URL,
+          redirect_uri: SPOTIFY_CALLBACK_URL,
         },
       })
       expect(result).toBe(mockAccessToken)
