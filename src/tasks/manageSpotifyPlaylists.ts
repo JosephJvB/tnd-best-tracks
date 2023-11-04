@@ -1,5 +1,8 @@
 import { PrePlaylistItem, TrimSpotifyTrack } from './getSpotifyTracks'
-import { SPOTIFY_TRACKS_JSON_PATH } from '../constants'
+import {
+  SPOTIFY_PLAYLIST_DESCRIPTION_CHAR_LIMIT,
+  SPOTIFY_TRACKS_JSON_PATH,
+} from '../constants'
 import {
   AUTH_FLOW_INIT_URL,
   SpotifyPlaylist,
@@ -10,14 +13,11 @@ import {
   getYearFromPlaylist,
   setOAuthToken,
   submitCode,
+  updatePlaylistDescription,
 } from '../spotifyApi'
 import { loadJsonFile } from '../fsUtil'
 import { performServerCallback } from '../server'
 import { execSync } from 'child_process'
-
-export type ValidPrePlaylistItem = Omit<PrePlaylistItem, 'spotifyTrack'> & {
-  spotifyTrack: TrimSpotifyTrack
-}
 
 export default async function () {
   const code = await performServerCallback(startSpotifyCallback)
@@ -57,26 +57,17 @@ export const getTracksByYear = () => {
   )
   console.log('  >', prePlaylistItems.length, 'youtube tracks from file')
 
-  let missingSpotifyTrack = 0
-
-  const tracksByYear = new Map<number, ValidPrePlaylistItem[]>()
+  const tracksByYear = new Map<number, PrePlaylistItem[]>()
   prePlaylistItems.forEach((item) => {
-    if (!item.spotifyTrack) {
-      missingSpotifyTrack++
-      return
-    }
-    const validItem = item as ValidPrePlaylistItem
-
-    const year = new Date(
-      validItem.youtubeTrack.videoPublishedDate
-    ).getFullYear()
+    const year = new Date(item.youtubeTrack.videoPublishedDate).getFullYear()
     const soFar = tracksByYear.get(year) ?? []
-    soFar.push(validItem)
+    soFar.push(item)
 
     tracksByYear.set(year, soFar)
   })
-
-  console.log('  >', missingSpotifyTrack, 'items missing spotify track')
+  tracksByYear.forEach((trackList, year) => {
+    console.log('  >', year, 'has', trackList.length, 'tracks')
+  })
 
   return tracksByYear
 }
@@ -97,7 +88,7 @@ export const getPlaylistsByYear = async () => {
 
 export const combine = async (
   playlist: SpotifyPlaylist,
-  trackList: ValidPrePlaylistItem[]
+  trackList: PrePlaylistItem[]
 ) => {
   const currentTracksSet = new Set(
     playlist.tracks.items.map((i) => i.track.uri)
@@ -114,14 +105,38 @@ export const combine = async (
    * tricky!
    * Will add them to end of list for now, TODO: handle playlist order
    */
-  const toAdd = trackList
-    .filter((t) => !currentTracksSet.has(t.spotifyTrack.uri))
-    .map((t) => t.spotifyTrack.uri)
+  const toAdd: string[] = []
+  const forbiddenTracks: string[] = []
+  trackList.forEach((t) => {
+    if (!t.spotifyTrack) {
+      forbiddenTracks.push(`${t.youtubeTrack.name} by ${t.youtubeTrack.artist}`)
+      return
+    }
+
+    if (!currentTracksSet.has(t.spotifyTrack.uri)) {
+      toAdd.push(t.spotifyTrack.uri)
+      currentTracksSet.add(t.spotifyTrack.uri)
+    }
+  })
 
   console.log('  > adding', toAdd.length, 'tracks')
 
   if (toAdd.length) {
     await addPlaylistItems(playlist.id, toAdd)
+  }
+
+  const description =
+    `forbidden tracks: ${forbiddenTracks.join(' / ')}`.substring(
+      0,
+      SPOTIFY_PLAYLIST_DESCRIPTION_CHAR_LIMIT - 1
+    ) + '…'
+  if (description != playlist.description) {
+    console.log(
+      ' > updating description with',
+      forbiddenTracks.length,
+      'forbidden tracks'
+    )
+    await updatePlaylistDescription(playlist.id, description)
   }
 }
 

@@ -1,6 +1,5 @@
 import axios from 'axios'
 import {
-  PLAYLIST_DESCRIPTION,
   PLAYLIST_NAME_PREFIX,
   SPOTIFY_CALLBACK_URL,
   SPOTIFY_ID_LENGTH,
@@ -214,7 +213,7 @@ describe('spotifyApi_unit.ts', () => {
         },
         data: {
           name: `${PLAYLIST_NAME_PREFIX}${year}`,
-          description: PLAYLIST_DESCRIPTION,
+          description: '',
           public: true,
           collaborative: false,
         },

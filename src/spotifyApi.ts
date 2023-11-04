@@ -1,7 +1,6 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
 import { YoutubeTrack } from './tasks/extractYoutubeTracks'
 import {
-  PLAYLIST_DESCRIPTION,
   PLAYLIST_NAME_PREFIX,
   SPOTIFY_CALLBACK_URL,
   SPOTIFY_DOMAIN,
@@ -323,7 +322,7 @@ export const createPlaylist = async (year: number) => {
   try {
     const newPlaylist: Omit<SpotifyPlaylist, 'id' | 'tracks'> = {
       name: `${PLAYLIST_NAME_PREFIX}${year}`,
-      description: PLAYLIST_DESCRIPTION,
+      description: '',
       public: true,
       collaborative: false,
     }
@@ -414,6 +413,34 @@ export const addPlaylistItems = async (
       console.error(e)
     }
     console.error('addPlaylistItems failed')
+    process.exit()
+  }
+}
+export const updatePlaylistDescription = async (
+  playlistId: string,
+  description: string
+) => {
+  try {
+    await axios({
+      method: 'put',
+      url: `${API_BASE_URL}/playlists/${playlistId}`,
+      headers: {
+        Authorization: `Bearer ${OAUTH_TOKEN}`,
+      },
+      data: {
+        description,
+      },
+    })
+  } catch (e) {
+    const axError = e as AxiosError
+    if (axError.isAxiosError) {
+      console.error(axError.response?.data)
+      console.error(axError.response?.status)
+      console.error('axios error')
+    } else {
+      console.error(e)
+    }
+    console.error('updatePlaylistDescription failed')
     process.exit()
   }
 }

@@ -1,14 +1,5 @@
 # tnd best tracks
 
-### todo
-1. test auth server callback
-  - use token for next tests
-2. test playlist requests on postman
-  - get playlist
-  - get playlist items
-  - create playlist
-  - add playlist items
-
 ### improvement opps
 1. findTrack retry to handle multiple songs per line:
   - check trackName for "/" or "&"
@@ -18,6 +9,10 @@
 2. findTrack, add retry which removes `track:`, `artist:`
   - reluctant to do this cos accuracy will suffer
 3. keep a list of the youtube tracks without spotifyTracks for posterity
+  - the forbidden playlist
+  - ~~or add them to the playlists description~~
+  - upload a text file of forbidden to s3 bucket with the links tony provided
+  - description links to that text file
 
 https://developers.google.com/youtube/v3/getting-started
 
