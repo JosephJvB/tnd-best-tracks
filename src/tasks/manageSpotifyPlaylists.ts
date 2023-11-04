@@ -28,10 +28,19 @@ export default async function () {
 
   const tracksByYear = getTracksByYear()
 
+  console.log('  >', tracksByYear.size, 'playlists from file')
+
   const playlistsByYear = await getPlaylistsByYear()
+
+  console.log('  >', tracksByYear.size, 'playlists from spotify file')
 
   for (const [year, nextTrackList] of tracksByYear.entries()) {
     let playlist = playlistsByYear.get(year)
+    console.log(
+      '  >',
+      year,
+      !!playlist ? 'exists, loading current tracks' : 'not exists, creating'
+    )
     if (playlist) {
       playlist.tracks.items = await getPlaylistItems(playlist.id)
     } else {
@@ -46,10 +55,14 @@ export const getTracksByYear = () => {
   const prePlaylistItems = loadJsonFile<PrePlaylistItem[]>(
     SPOTIFY_TRACKS_JSON_PATH
   )
+  console.log('  >', prePlaylistItems.length, 'youtube tracks from file')
+
+  let missingSpotifyTrack = 0
 
   const tracksByYear = new Map<number, ValidPrePlaylistItem[]>()
   prePlaylistItems.forEach((item) => {
     if (!item.spotifyTrack) {
+      missingSpotifyTrack++
       return
     }
     const validItem = item as ValidPrePlaylistItem
@@ -62,6 +75,8 @@ export const getTracksByYear = () => {
 
     tracksByYear.set(year, soFar)
   })
+
+  console.log('  >', missingSpotifyTrack, 'items missing spotify track')
 
   return tracksByYear
 }
@@ -87,6 +102,7 @@ export const combine = async (
   const currentTracksSet = new Set(
     playlist.tracks.items.map((i) => i.track.uri)
   )
+  console.log('  >', playlist.name, 'has', currentTracksSet.size, 'tracks')
 
   /**
    * how to combine&order existing tracks with tracks from list
@@ -102,7 +118,11 @@ export const combine = async (
     .filter((t) => !currentTracksSet.has(t.spotifyTrack.uri))
     .map((t) => t.spotifyTrack.uri)
 
-  await addPlaylistItems(playlist.id, toAdd)
+  console.log('  > adding', toAdd.length, 'tracks')
+
+  if (toAdd.length) {
+    await addPlaylistItems(playlist.id, toAdd)
+  }
 }
 
 export const startSpotifyCallback = () => {
