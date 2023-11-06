@@ -1,5 +1,9 @@
 # tnd best tracks
 
+### todo
+- have this run on (webhook ?? cron) and update this years playlist
+  - could have a small playlist just for the current weeks tracks that too
+
 ### improvement opps
 1. findTrack retry to handle multiple songs per line:
   - check trackName for "/" or "&"
