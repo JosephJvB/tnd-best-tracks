@@ -125,11 +125,12 @@ export const combine = async (
     await addPlaylistItems(playlist.id, toAdd)
   }
 
-  const description =
-    `forbidden tracks: ${forbiddenTracks.join(' / ')}`.substring(
-      0,
-      SPOTIFY_PLAYLIST_DESCRIPTION_CHAR_LIMIT - 1
-    ) + '…'
+  let description = `forbidden tracks: ${forbiddenTracks.join(' / ')}`
+  if (description.length > SPOTIFY_PLAYLIST_DESCRIPTION_CHAR_LIMIT) {
+    const max = SPOTIFY_PLAYLIST_DESCRIPTION_CHAR_LIMIT - 1
+    description = description.substring(0, max)
+    description += '…'
+  }
   if (description != playlist.description) {
     console.log(
       ' > updating description with',
