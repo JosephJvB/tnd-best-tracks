@@ -32,10 +32,6 @@ describe('manageSpotifyPlaylists.ts', () => {
     .mockImplementation(jest.fn())
   const getYearFromPlaylistSpy = jest.spyOn(spotifyApi, 'getYearFromPlaylist')
   const combineSpy = jest.spyOn(manageSpotifyPlaylists, 'combine')
-  const startSpotifyCallbackSpy = jest.spyOn(
-    manageSpotifyPlaylists,
-    'startSpotifyCallback'
-  )
 
   describe('#manageSpotifyPlaylists', () => {
     // 2021, 2022, 2023. 6 items, 5 spotify tracks
@@ -96,7 +92,6 @@ describe('manageSpotifyPlaylists.ts', () => {
       await manageSpotifyPlaylists.default()
 
       expect(performCallbackSpy).toBeCalledTimes(1)
-      expect(startSpotifyCallbackSpy).toBeCalledTimes(0)
       expect(submitCodeSpy).toBeCalledTimes(1)
       expect(setOAuthTokenSpy).toBeCalledTimes(1)
       expect(setOAuthTokenSpy).toBeCalledWith(mockAuthToken)
@@ -142,7 +137,6 @@ describe('manageSpotifyPlaylists.ts', () => {
       await manageSpotifyPlaylists.default()
 
       expect(performCallbackSpy).toBeCalledTimes(1)
-      expect(startSpotifyCallbackSpy).toBeCalledTimes(0)
       expect(submitCodeSpy).toBeCalledTimes(1)
       expect(setOAuthTokenSpy).toBeCalledTimes(1)
       expect(setOAuthTokenSpy).toBeCalledWith(mockAuthToken)

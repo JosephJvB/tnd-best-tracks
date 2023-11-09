@@ -1,4 +1,4 @@
-import { PrePlaylistItem, TrimSpotifyTrack } from './getSpotifyTracks'
+import { PrePlaylistItem } from './getSpotifyTracks'
 import {
   SPOTIFY_PLAYLIST_DESCRIPTION_CHAR_LIMIT,
   SPOTIFY_TRACKS_JSON_PATH,
@@ -17,10 +17,9 @@ import {
 } from '../spotifyApi'
 import { loadJsonFile } from '../fsUtil'
 import { performServerCallback } from '../server'
-import { execSync } from 'child_process'
 
 export default async function () {
-  const code = await performServerCallback(startSpotifyCallback)
+  const code = await performServerCallback()
 
   const oauthToken = await submitCode(code)
 
@@ -139,8 +138,4 @@ export const combine = async (
     )
     await updatePlaylistDescription(playlist.id, description)
   }
-}
-
-export const startSpotifyCallback = () => {
-  execSync(`open -a Firefox "${AUTH_FLOW_INIT_URL}"`)
 }
