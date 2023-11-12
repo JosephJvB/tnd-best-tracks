@@ -17,6 +17,9 @@
   - ~~or add them to the playlists description~~
   - upload a text file of forbidden to s3 bucket with the links tony provided
   - description links to that text file
+  - or do it as a google sheet!
+    1. store the missing songs there
+    2. would be cool be able to map missing songs in the spreadsheet so the next run could pick up any manually mapped tracks
 
 https://developers.google.com/youtube/v3/getting-started
 
