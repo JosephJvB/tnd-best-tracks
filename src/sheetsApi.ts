@@ -67,3 +67,21 @@ export const addRow = async (
     },
   })
 }
+
+export const addRows = async (
+  sheetName: string,
+  range: string,
+  rows: string[][]
+) => {
+  await getClient().spreadsheets.values.append({
+    spreadsheetId: process.env.SPREADSHEET_ID,
+    range: `${sheetName}!${range}`,
+    valueInputOption: 'RAW',
+    insertDataOption: 'INSERT_ROWS',
+    includeValuesInResponse: true,
+    requestBody: {
+      majorDimension: 'ROWS',
+      values: rows,
+    },
+  })
+}
