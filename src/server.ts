@@ -40,8 +40,6 @@ export const performServerCallback = () => {
     runningServer = server.listen(PORT, () => {
       console.log('server started on', PORT)
 
-      console.log('calling this fn', execSync)
-
       execSync(`open -a Firefox "${AUTH_FLOW_INIT_URL}"`)
     })
   })
