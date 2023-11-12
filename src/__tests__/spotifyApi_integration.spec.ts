@@ -1,6 +1,7 @@
 import * as spotifyApi from '../spotifyApi'
 
-describe('spotifyApi_integration.ts', () => {
+// long running tests, unskip as needed
+describe.skip('spotifyApi_integration.ts', () => {
   describe('#findTrack', () => {
     const processExitSpy = jest
       .spyOn(process, 'exit')

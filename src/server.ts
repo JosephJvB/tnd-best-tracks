@@ -1,5 +1,7 @@
 import express from 'express'
 import { Server } from 'http'
+import { AUTH_FLOW_INIT_URL } from './spotifyApi'
+import { execSync } from 'child_process'
 
 export type TonysRequest = express.Request<
   any,
@@ -8,7 +10,7 @@ export type TonysRequest = express.Request<
   { code: string; state: string }
 >
 
-export const performServerCallback = (onStart: () => void) => {
+export const performServerCallback = () => {
   const server = express()
 
   let runningServer: Server | undefined
@@ -25,6 +27,7 @@ export const performServerCallback = (onStart: () => void) => {
       }
 
       runningServer.close((err) => {
+        console.log('onClose', err)
         if (err) {
           reject(err)
         } else {
@@ -36,7 +39,8 @@ export const performServerCallback = (onStart: () => void) => {
     const PORT = 3000
     runningServer = server.listen(PORT, () => {
       console.log('server started on', PORT)
-      onStart()
+
+      execSync(`open -a Firefox "${AUTH_FLOW_INIT_URL}"`)
     })
   })
 }

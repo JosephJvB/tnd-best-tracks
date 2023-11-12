@@ -60,7 +60,7 @@ export type SpotifySearchParams = {
 export type SearchResults<T> = {
   tracks: {
     href: string
-    items: SpotifyTrack[]
+    items: T[]
   }
 }
 export type SpotifyTrack = {
@@ -318,6 +318,7 @@ export const getMyPlaylists = async () => {
     process.exit()
   }
 }
+
 export const createPlaylist = async (year: number) => {
   try {
     const newPlaylist: Omit<SpotifyPlaylist, 'id' | 'tracks'> = {
@@ -384,8 +385,8 @@ export const getPlaylistItems = async (playlistId: string) => {
     console.error('getPlaylistItems failed')
     process.exit()
   }
-  return [] as PlaylistItem[]
 }
+
 export const addPlaylistItems = async (
   playlistId: string,
   trackUris: string[]

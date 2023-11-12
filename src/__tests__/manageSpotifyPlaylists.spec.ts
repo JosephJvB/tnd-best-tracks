@@ -27,15 +27,14 @@ describe('manageSpotifyPlaylists.ts', () => {
   const addPlaylistItemsSpy = jest
     .spyOn(spotifyApi, 'addPlaylistItems')
     .mockImplementation(jest.fn())
+  const updatePlaylistDescriptionSpy = jest
+    .spyOn(spotifyApi, 'updatePlaylistDescription')
+    .mockImplementation(jest.fn())
   const setOAuthTokenSpy = jest
     .spyOn(spotifyApi, 'setOAuthToken')
     .mockImplementation(jest.fn())
   const getYearFromPlaylistSpy = jest.spyOn(spotifyApi, 'getYearFromPlaylist')
   const combineSpy = jest.spyOn(manageSpotifyPlaylists, 'combine')
-  const startSpotifyCallbackSpy = jest.spyOn(
-    manageSpotifyPlaylists,
-    'startSpotifyCallback'
-  )
 
   describe('#manageSpotifyPlaylists', () => {
     // 2021, 2022, 2023. 6 items, 5 spotify tracks
@@ -96,7 +95,6 @@ describe('manageSpotifyPlaylists.ts', () => {
       await manageSpotifyPlaylists.default()
 
       expect(performCallbackSpy).toBeCalledTimes(1)
-      expect(startSpotifyCallbackSpy).toBeCalledTimes(0)
       expect(submitCodeSpy).toBeCalledTimes(1)
       expect(setOAuthTokenSpy).toBeCalledTimes(1)
       expect(setOAuthTokenSpy).toBeCalledWith(mockAuthToken)
@@ -116,6 +114,7 @@ describe('manageSpotifyPlaylists.ts', () => {
             .map((_, trackIdx) => `spotify:track:id_${year}_${trackIdx}`)
         )
       })
+      expect(updatePlaylistDescriptionSpy).toBeCalledTimes(3)
     })
 
     it('correctly adds tracks with 2 existing playlists x3songs each', async () => {
@@ -142,7 +141,6 @@ describe('manageSpotifyPlaylists.ts', () => {
       await manageSpotifyPlaylists.default()
 
       expect(performCallbackSpy).toBeCalledTimes(1)
-      expect(startSpotifyCallbackSpy).toBeCalledTimes(0)
       expect(submitCodeSpy).toBeCalledTimes(1)
       expect(setOAuthTokenSpy).toBeCalledTimes(1)
       expect(setOAuthTokenSpy).toBeCalledWith(mockAuthToken)
@@ -167,6 +165,7 @@ describe('manageSpotifyPlaylists.ts', () => {
           .fill(0)
           .map((_, trackIdx) => `spotify:track:id_2023_${trackIdx}`)
       )
+      expect(updatePlaylistDescriptionSpy).toBeCalledTimes(3)
     })
   })
 })
