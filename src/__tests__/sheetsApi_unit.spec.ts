@@ -49,7 +49,7 @@ describe('sheetsApi.ts', () => {
 
       expect(batchUpdateFn).toHaveBeenCalledTimes(1)
       expect(batchUpdateFn).toHaveBeenCalledWith({
-        spreadsheetId: process.env.SPREADSHEET_ID,
+        spreadsheetId: sheetsApi.SHEET_ID,
         requestBody: {
           requests: [
             {
@@ -86,7 +86,7 @@ describe('sheetsApi.ts', () => {
 
       expect(getValuesFn).toHaveBeenCalledTimes(1)
       expect(getValuesFn).toHaveBeenCalledWith({
-        spreadsheetId: process.env.SPREADSHEET_ID,
+        spreadsheetId: sheetsApi.SHEET_ID,
         range: `${sheetName}!${range}`,
       })
     })
@@ -106,7 +106,7 @@ describe('sheetsApi.ts', () => {
 
       expect(appendValuesFn).toHaveBeenCalledTimes(1)
       expect(appendValuesFn).toHaveBeenCalledWith({
-        spreadsheetId: process.env.SPREADSHEET_ID,
+        spreadsheetId: sheetsApi.SHEET_ID,
         range: `${sheetName}!${range}`,
         valueInputOption: 'RAW',
         insertDataOption: 'INSERT_ROWS',
@@ -136,7 +136,7 @@ describe('sheetsApi.ts', () => {
 
       expect(appendValuesFn).toHaveBeenCalledTimes(1)
       expect(appendValuesFn).toHaveBeenCalledWith({
-        spreadsheetId: process.env.SPREADSHEET_ID,
+        spreadsheetId: sheetsApi.SHEET_ID,
         range: `${sheetName}!${range}`,
         valueInputOption: 'RAW',
         insertDataOption: 'INSERT_ROWS',

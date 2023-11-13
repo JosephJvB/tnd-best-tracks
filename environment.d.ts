@@ -1,8 +1,8 @@
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      SPREADSHEET_ID: string
-      GOOGLE_PRIVATE_KEY: string
+      GOOGLE_SA_PRIVATE_KEY: string
+      GOOGLE_SA_CLIENT_EMAIL: string
       YOUTUBE_API_KEY: string
       SPOTIFY_CLIENT_ID: string
       SPOTIFY_CLIENT_SECRET: string
