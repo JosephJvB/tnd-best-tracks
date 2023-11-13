@@ -1,9 +1,8 @@
 import * as sheetsApi from '../sheetsApi'
 
 const SHEET_ID = '17-Vx_oswIG_Rw7S28xfE5TWx2HTJeE2r25zP4CAR5Ko'
-const SHEET_NAME = 'TEST'
-const CELL_RANGE = 'A1:D2'
 sheetsApi.test__setSheetId(SHEET_ID)
+const SHEET_NAME = 'TEST'
 
 describe('sheetsApi_integration.ts', () => {
   describe('#getClient', () => {
@@ -27,7 +26,7 @@ describe('sheetsApi_integration.ts', () => {
 
   describe('#getRows', () => {
     it('returns the test data rows', async () => {
-      const rows = await sheetsApi.getRows(SHEET_NAME, CELL_RANGE)
+      const rows = await sheetsApi.getRows(SHEET_NAME, 'A1:D2')
 
       expect(rows).toBeDefined()
       expect(rows.length).toBe(2)
