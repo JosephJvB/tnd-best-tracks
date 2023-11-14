@@ -27,7 +27,6 @@ export const performServerCallback = () => {
       }
 
       runningServer.close((err) => {
-        console.log('onClose', err)
         if (err) {
           reject(err)
         } else {

@@ -2,6 +2,8 @@ import axios from 'axios'
 import * as server from '../server'
 import ChildProcess from 'child_process'
 
+// this test passes with node -v v16.15.1
+// but fails with node -v v20.8.0
 describe('server_unit.ts', () => {
   describe('#performServerCallback', () => {
     it('returns the req.query.code from GET to /tony', async () => {
@@ -24,8 +26,6 @@ describe('server_unit.ts', () => {
         .mockImplementationOnce(callbackToServer as any)
 
       const code = await server.performServerCallback()
-
-      console.log({ code })
 
       expect(execSyncSpy).toBeCalledTimes(1)
       expect(code).toBe(mockCode)
