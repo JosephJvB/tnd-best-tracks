@@ -17,7 +17,76 @@ jest.mock('googleapis', () => ({
   },
 }))
 
-describe('sheetsApi.ts', () => {
+describe('sheetsApi_unit.ts', () => {
+  describe('#rowToTrack', () => {
+    const input = [
+      'jvb_id',
+      'joes track name',
+      'joe van bo',
+      new Date().toString(),
+      'https://joevanbo.com',
+    ]
+
+    it('turns row to track without spotifyId', () => {
+      const result = sheetsApi.rowToTrack(input)
+
+      expect(result.id).toBe(input[0])
+      expect(result.name).toBe(input[1])
+      expect(result.artist).toBe(input[2])
+      expect(result.video_published_date).toBe(input[3])
+      expect(result.link).toBe(input[4])
+      expect(result.spotify_id).toBe('')
+    })
+
+    it('turns row to track with spotifyId', () => {
+      const spotifyId = 'jvb_spotify_id'
+      const result = sheetsApi.rowToTrack([...input, spotifyId])
+
+      expect(result.id).toBe(input[0])
+      expect(result.name).toBe(input[1])
+      expect(result.artist).toBe(input[2])
+      expect(result.video_published_date).toBe(input[3])
+      expect(result.link).toBe(input[4])
+      expect(result.spotify_id).toBe(spotifyId)
+    })
+  })
+
+  describe('#trackToRow', () => {
+    const input = {
+      id: 'jvb_id',
+      name: 'joes track name',
+      artist: 'joe van bo',
+      video_published_date: new Date().toString(),
+      link: 'https://joevanbo.com',
+      spotify_id: '',
+    }
+
+    it('turns track to row without spotifyId', () => {
+      const result = sheetsApi.trackToRow(input)
+
+      expect(result.length).toBe(6)
+      expect(result[0]).toBe(input.id)
+      expect(result[1]).toBe(input.name)
+      expect(result[2]).toBe(input.artist)
+      expect(result[3]).toBe(input.video_published_date)
+      expect(result[4]).toBe(input.link)
+      expect(result[5]).toBe('')
+    })
+
+    it('turns track to row with spotifyId', () => {
+      const spotifyId = 'jvb_spotify_id'
+      const result = sheetsApi.trackToRow({ ...input, spotify_id: spotifyId })
+
+      expect(result.length).toBe(6)
+      expect(result[0]).toBe(input.id)
+      expect(result[1]).toBe(input.name)
+      expect(result[2]).toBe(input.artist)
+      expect(result[3]).toBe(input.video_published_date)
+      expect(result[4]).toBe(input.link)
+      expect(result[5]).toBe(spotifyId)
+    })
+  })
+
   describe('#getClient', () => {
     it('returns a google client', () => {
       const client = sheetsApi.getClient()
@@ -38,15 +107,10 @@ describe('sheetsApi.ts', () => {
     it('calls batchUpdate with the expected args', async () => {
       const sheetName = 'test-sheet-name'
 
-      await sheetsApi.createSheet(sheetName)
-
       const client = sheetsApi.getClient()
-
       const batchUpdateFn = client.spreadsheets
         .batchUpdate as any as jest.MockedFunction<
-        (
-          ...args: any
-        ) => Promise<{
+        (...args: any) => Promise<{
           data: {
             replies: Array<{ addSheet: { properties: { title: string } } }>
           }
@@ -65,6 +129,8 @@ describe('sheetsApi.ts', () => {
           ],
         },
       })
+
+      await sheetsApi.createSheet(sheetName)
 
       expect(batchUpdateFn).toHaveBeenCalledTimes(1)
       expect(batchUpdateFn).toHaveBeenCalledWith({

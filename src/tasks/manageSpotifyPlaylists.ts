@@ -185,7 +185,7 @@ export const addMissingToSpreadsheet = async (
         artist: t.youtubeTrack.artist,
         link: t.youtubeTrack.link,
         video_published_date: t.youtubeTrack.videoPublishedDate,
-        spotify_id: t.spotifyId,
+        spotify_id: t.spotifyId ?? '',
       })
     )
   })

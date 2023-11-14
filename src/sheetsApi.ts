@@ -30,7 +30,7 @@ export type SheetTrack = {
   artist: string
   video_published_date: string
   link: string
-  spotify_id?: string | null
+  spotify_id: string
 }
 export const rowToTrack = (row: string[]): SheetTrack => ({
   id: row[0],
@@ -38,21 +38,16 @@ export const rowToTrack = (row: string[]): SheetTrack => ({
   artist: row[2],
   video_published_date: row[3],
   link: row[4],
-  spotify_id: row[5],
+  spotify_id: row[5] ?? '',
 })
-export const trackToRow = (track: SheetTrack): string[] => {
-  const row = [
-    track.id,
-    track.name,
-    track.artist,
-    track.video_published_date,
-    track.link,
-  ]
-  if (track.spotify_id) {
-    row.push(track.spotify_id)
-  }
-  return row
-}
+export const trackToRow = (track: SheetTrack): string[] => [
+  track.id,
+  track.name,
+  track.artist,
+  track.video_published_date,
+  track.link,
+  track.spotify_id ?? '',
+]
 
 // https://docs.google.com/spreadsheets/d/17-Vx_oswIG_Rw7S28xfE5TWx2HTJeE2r25zP4CAR5Ko/edit#gid=675094536
 export const getSheetLink = (sheetId?: number | null) => {
