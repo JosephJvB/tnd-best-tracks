@@ -155,7 +155,8 @@ describe('manageSpotifyPlaylists.ts', () => {
       expect(addMissingToSpreadsheetSpy).toBeCalledTimes(3)
       expect(addRowsSpy).toBeCalledTimes(3)
       years.forEach((year, idx) => {
-        expect(addRowsSpy.mock.calls[idx][2].length).toBe(2)
+        expect(addRowSpy.mock.calls[idx][2]).toBe(sheetsApi.HEADERS)
+        expect(addRowsSpy.mock.calls[idx][2].length).toBe(1)
       })
       expect(updatePlaylistDescriptionSpy).toBeCalledTimes(3)
     })
@@ -232,9 +233,7 @@ describe('manageSpotifyPlaylists.ts', () => {
       expect(addRowsSpy).toBeCalledTimes(3)
       expect(addRowsSpy).toBeCalledTimes(3)
       years.forEach((year, idx) => {
-        // first two sheets exist - don't add headers
-        const length = idx < 2 ? 1 : 2
-        expect(addRowsSpy.mock.calls[idx][2].length).toBe(length)
+        expect(addRowsSpy.mock.calls[idx][2].length).toBe(1)
       })
       expect(updatePlaylistDescriptionSpy).toBeCalledTimes(3)
     })
