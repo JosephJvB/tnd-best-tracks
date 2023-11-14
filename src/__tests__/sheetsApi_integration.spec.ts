@@ -16,11 +16,24 @@ describe('sheetsApi_integration.ts', () => {
     })
   })
 
+  describe('#getSpreadsheet', () => {
+    it('returns the whole spreadsheet', async () => {
+      const spreadsheet = await sheetsApi.getSpreadsheet()
+
+      expect(spreadsheet).toBeDefined()
+      expect(spreadsheet.data.properties?.title).toBe('UNIT TEST SPREADSHEET')
+      console.log(spreadsheet.data.sheets?.[0].properties?.gridProperties)
+    })
+  })
+
   describe('#createSheet', () => {
     it('returns a new sheet tab', async () => {
       const sheetName = `test - ${new Date().toLocaleString()}`
 
-      await expect(sheetsApi.createSheet(sheetName)).resolves.toBeUndefined()
+      const sheet = await sheetsApi.createSheet(sheetName)
+
+      expect(sheet).toBeDefined()
+      expect(sheet.properties?.title).toBe(sheetName)
     })
   })
 

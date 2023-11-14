@@ -43,9 +43,28 @@ describe('sheetsApi.ts', () => {
       const client = sheetsApi.getClient()
 
       const batchUpdateFn = client.spreadsheets
-        .batchUpdate as jest.MockedFunction<
-        typeof client.spreadsheets.batchUpdate
+        .batchUpdate as any as jest.MockedFunction<
+        (
+          ...args: any
+        ) => Promise<{
+          data: {
+            replies: Array<{ addSheet: { properties: { title: string } } }>
+          }
+        }>
       >
+      batchUpdateFn.mockResolvedValueOnce({
+        data: {
+          replies: [
+            {
+              addSheet: {
+                properties: {
+                  title: sheetName,
+                },
+              },
+            },
+          ],
+        },
+      })
 
       expect(batchUpdateFn).toHaveBeenCalledTimes(1)
       expect(batchUpdateFn).toHaveBeenCalledWith({

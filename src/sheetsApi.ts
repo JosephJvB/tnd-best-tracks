@@ -11,6 +11,15 @@ export const test__setSheetId = (id: string) => {
 }
 export const SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
+export const HEADERS = [
+  'id',
+  'name',
+  'artist',
+  'video_published_date',
+  'link',
+  'spotify_id',
+] as const
+
 let _client: sheets_v4.Sheets | undefined
 
 export const getClient = () => {
@@ -32,8 +41,14 @@ export const getClient = () => {
   return _client
 }
 
+export const getSpreadsheet = async () => {
+  return await getClient().spreadsheets.get({
+    spreadsheetId: SHEET_ID,
+  })
+}
+
 export const createSheet = async (sheetName: string) => {
-  await getClient().spreadsheets.batchUpdate({
+  const res = await getClient().spreadsheets.batchUpdate({
     spreadsheetId: SHEET_ID,
     requestBody: {
       requests: [
@@ -47,6 +62,8 @@ export const createSheet = async (sheetName: string) => {
       ],
     },
   })
+
+  return res.data.replies?.[0].addSheet!
 }
 
 export const getRows = async (sheetName: string, range: string) => {

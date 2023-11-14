@@ -1,10 +1,6 @@
-import { PrePlaylistItem } from './getSpotifyTracks'
+import { PrePlaylistItem, TrimSpotifyTrack } from './getSpotifyTracks'
+import { SPOTIFY_TRACKS_JSON_PATH } from '../constants'
 import {
-  SPOTIFY_PLAYLIST_DESCRIPTION_CHAR_LIMIT,
-  SPOTIFY_TRACKS_JSON_PATH,
-} from '../constants'
-import {
-  AUTH_FLOW_INIT_URL,
   SpotifyPlaylist,
   addPlaylistItems,
   createPlaylist,
@@ -13,7 +9,6 @@ import {
   getYearFromPlaylist,
   setOAuthToken,
   submitCode,
-  updatePlaylistDescription,
 } from '../spotifyApi'
 import { loadJsonFile } from '../fsUtil'
 import { performServerCallback } from '../server'
@@ -26,12 +21,10 @@ export default async function () {
   setOAuthToken(oauthToken)
 
   const tracksByYear = getTracksByYear()
-
   console.log('  >', tracksByYear.size, 'playlists from file')
 
   const playlistsByYear = await getPlaylistsByYear()
-
-  console.log('  >', tracksByYear.size, 'playlists from spotify file')
+  console.log('  >', playlistsByYear.size, 'playlists from spotify')
 
   for (const [year, nextTrackList] of tracksByYear.entries()) {
     let playlist = playlistsByYear.get(year)
@@ -46,7 +39,7 @@ export default async function () {
       playlist = await createPlaylist(year)
     }
 
-    await combine(playlist, nextTrackList)
+    await addTracksToPlaylist(playlist, nextTrackList)
   }
 }
 
@@ -85,7 +78,7 @@ export const getPlaylistsByYear = async () => {
   return playlistsByYear
 }
 
-export const combine = async (
+export const addTracksToPlaylist = async (
   playlist: SpotifyPlaylist,
   trackList: PrePlaylistItem[]
 ) => {
@@ -104,38 +97,22 @@ export const combine = async (
    * tricky!
    * Will add them to end of list for now, TODO: handle playlist order
    */
+
   const toAdd: string[] = []
-  const forbiddenTracks: string[] = []
   trackList.forEach((t) => {
     if (!t.spotifyTrack) {
-      forbiddenTracks.push(`${t.youtubeTrack.name} by ${t.youtubeTrack.artist}`)
       return
     }
 
-    if (!currentTracksSet.has(t.spotifyTrack.uri)) {
-      toAdd.push(t.spotifyTrack.uri)
-      currentTracksSet.add(t.spotifyTrack.uri)
+    if (currentTracksSet.has(t.spotifyTrack.uri)) {
+      return
     }
-  })
 
+    toAdd.push(t.spotifyTrack.uri)
+  })
   console.log('  > adding', toAdd.length, 'tracks')
 
   if (toAdd.length) {
     await addPlaylistItems(playlist.id, toAdd)
-  }
-
-  let description = `forbidden tracks: ${forbiddenTracks.join(' / ')}`
-  if (description.length > SPOTIFY_PLAYLIST_DESCRIPTION_CHAR_LIMIT) {
-    const max = SPOTIFY_PLAYLIST_DESCRIPTION_CHAR_LIMIT - 1
-    description = description.substring(0, max)
-    description += '…'
-  }
-  if (description != playlist.description) {
-    console.log(
-      ' > updating description with',
-      forbiddenTracks.length,
-      'forbidden tracks'
-    )
-    await updatePlaylistDescription(playlist.id, description)
   }
 }

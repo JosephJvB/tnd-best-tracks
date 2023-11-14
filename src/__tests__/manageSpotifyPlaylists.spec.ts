@@ -4,6 +4,7 @@ import * as manageSpotifyPlaylists from '../tasks/manageSpotifyPlaylists'
 import { PrePlaylistItem } from '../tasks/getSpotifyTracks'
 import { PLAYLIST_NAME_PREFIX } from '../constants'
 import * as server from '../server'
+import * as sheetsApi from '../sheetsApi'
 
 describe('manageSpotifyPlaylists.ts', () => {
   const performCallbackSpy = jest
@@ -33,8 +34,17 @@ describe('manageSpotifyPlaylists.ts', () => {
   const setOAuthTokenSpy = jest
     .spyOn(spotifyApi, 'setOAuthToken')
     .mockImplementation(jest.fn())
+  const getSpreadsheetSpy = jest
+    .spyOn(sheetsApi, 'getSpreadsheet')
+    .mockImplementation(jest.fn())
+  const createSheetSpy = jest
+    .spyOn(sheetsApi, 'createSheet')
+    .mockImplementation(jest.fn())
   const getYearFromPlaylistSpy = jest.spyOn(spotifyApi, 'getYearFromPlaylist')
-  const combineSpy = jest.spyOn(manageSpotifyPlaylists, 'combine')
+  const addTracksToPlaylistSpy = jest.spyOn(
+    manageSpotifyPlaylists,
+    'addTracksToPlaylist'
+  )
 
   describe('#manageSpotifyPlaylists', () => {
     // 2021, 2022, 2023. 6 items, 5 spotify tracks
@@ -105,7 +115,7 @@ describe('manageSpotifyPlaylists.ts', () => {
       years.forEach((year) => {
         expect(createPlaylistSpy).toBeCalledWith(year)
       })
-      expect(combineSpy).toBeCalledTimes(3)
+      expect(addTracksToPlaylistSpy).toBeCalledTimes(3)
       years.forEach((year, playlistIdx) => {
         expect(addPlaylistItemsSpy).toBeCalledWith(
           `playlist_${playlistIdx}`,
@@ -148,7 +158,7 @@ describe('manageSpotifyPlaylists.ts', () => {
       expect(getYearFromPlaylistSpy).toBeCalledTimes(2)
       expect(createPlaylistSpy).toBeCalledTimes(1)
       expect(createPlaylistSpy).toBeCalledWith(2023)
-      expect(combineSpy).toBeCalledTimes(3)
+      expect(addTracksToPlaylistSpy).toBeCalledTimes(3)
 
       const years = [2021, 2022]
       years.forEach((year, playlistIdx) => {
