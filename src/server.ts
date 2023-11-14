@@ -17,6 +17,7 @@ export const performServerCallback = () => {
 
   return new Promise<string>((resolve, reject) => {
     server.get('/tony', async (req: TonysRequest, res) => {
+      res.setHeader('Connection', 'close')
       res.sendStatus(200)
 
       if (!runningServer) {
