@@ -7,6 +7,7 @@ jest.mock('googleapis', () => ({
     },
     sheets: jest.fn(() => ({
       spreadsheets: {
+        get: jest.fn(),
         batchUpdate: jest.fn(),
         values: {
           get: jest.fn(),
@@ -100,6 +101,35 @@ describe('sheetsApi_unit.ts', () => {
       const client2 = sheetsApi.getClient()
 
       expect(client1).toBe(client2)
+    })
+  })
+
+  describe('#getSpreadsheet', () => {
+    it('calls spreadsheets.get with the expected args', async () => {
+      const spreadsheetTitle = 'mock title'
+
+      const client = sheetsApi.getClient()
+      const spreadsheetsGetFn = client.spreadsheets
+        .get as any as jest.MockedFunction<
+        (...args: any) => Promise<{
+          data: sheetsApi.Spreadsheet
+        }>
+      >
+      spreadsheetsGetFn.mockResolvedValueOnce({
+        data: {
+          properties: {
+            title: spreadsheetTitle,
+          },
+        },
+      })
+
+      const result = await sheetsApi.getSpreadsheet()
+
+      expect(spreadsheetsGetFn).toHaveBeenCalledTimes(1)
+      expect(spreadsheetsGetFn).toHaveBeenCalledWith({
+        spreadsheetId: sheetsApi.SHEET_ID,
+      })
+      expect(result.properties?.title).toBe(spreadsheetTitle)
     })
   })
 
