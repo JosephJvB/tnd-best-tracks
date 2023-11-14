@@ -21,8 +21,7 @@ describe('sheetsApi_integration.ts', () => {
       const spreadsheet = await sheetsApi.getSpreadsheet()
 
       expect(spreadsheet).toBeDefined()
-      expect(spreadsheet.data.properties?.title).toBe('UNIT TEST SPREADSHEET')
-      console.log(spreadsheet.data.sheets?.[0].properties?.gridProperties)
+      expect(spreadsheet.properties?.title).toBe('UNIT TEST SPREADSHEET')
     })
   })
 

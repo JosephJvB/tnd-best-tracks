@@ -1,4 +1,4 @@
-import { PrePlaylistItem, TrimSpotifyTrack } from './getSpotifyTracks'
+import { PrePlaylistItem } from './getSpotifyTracks'
 import { SPOTIFY_TRACKS_JSON_PATH } from '../constants'
 import {
   SpotifyPlaylist,
@@ -9,9 +9,23 @@ import {
   getYearFromPlaylist,
   setOAuthToken,
   submitCode,
+  updatePlaylistDescription,
 } from '../spotifyApi'
 import { loadJsonFile } from '../fsUtil'
 import { performServerCallback } from '../server'
+import {
+  ADD_ROWS_RANGE,
+  ALL_ROWS_RANGE,
+  HEADERS,
+  Spreadsheet,
+  addRows,
+  createSheet,
+  getRows,
+  getSheetLink,
+  getSpreadsheet,
+  rowToTrack,
+  trackToRow,
+} from '../sheetsApi'
 
 export default async function () {
   const code = await performServerCallback()
@@ -26,6 +40,8 @@ export default async function () {
   const playlistsByYear = await getPlaylistsByYear()
   console.log('  >', playlistsByYear.size, 'playlists from spotify')
 
+  const spreadsheet = await getSpreadsheet()
+
   for (const [year, nextTrackList] of tracksByYear.entries()) {
     let playlist = playlistsByYear.get(year)
     console.log(
@@ -39,7 +55,29 @@ export default async function () {
       playlist = await createPlaylist(year)
     }
 
-    await addTracksToPlaylist(playlist, nextTrackList)
+    const canAdd: PrePlaylistItem[] = []
+    const forbidden: PrePlaylistItem[] = []
+    nextTrackList.forEach((t) => {
+      if (t.spotifyTrack) {
+        canAdd.push(t)
+      } else {
+        forbidden.push(t)
+      }
+    })
+
+    console.log('  >', canAdd.length, 'tracks to add to playlist')
+    console.log('  >', forbidden.length, 'tracks to add to missing spreadsheet')
+
+    await addTracksToPlaylist(playlist, canAdd)
+    const sheet = await addMissingToSpreadsheet(spreadsheet, year, forbidden)
+
+    const sheetLink = getSheetLink(sheet.properties?.sheetId)
+
+    const description = `missing tracks list: ${sheetLink}`
+    if (playlist.description !== description) {
+      console.log('  > updating playlist description', sheetLink)
+      await updatePlaylistDescription(playlist.id, description)
+    }
   }
 }
 
@@ -80,7 +118,7 @@ export const getPlaylistsByYear = async () => {
 
 export const addTracksToPlaylist = async (
   playlist: SpotifyPlaylist,
-  trackList: PrePlaylistItem[]
+  nextTracks: PrePlaylistItem[]
 ) => {
   const currentTracksSet = new Set(
     playlist.tracks.items.map((i) => i.track.uri)
@@ -98,21 +136,67 @@ export const addTracksToPlaylist = async (
    * Will add them to end of list for now, TODO: handle playlist order
    */
 
-  const toAdd: string[] = []
-  trackList.forEach((t) => {
-    if (!t.spotifyTrack) {
+  const toAdd = new Set<string>()
+  nextTracks.forEach((t) => {
+    if (!t.spotifyTrack || currentTracksSet.has(t.spotifyTrack.uri)) {
       return
     }
 
-    if (currentTracksSet.has(t.spotifyTrack.uri)) {
-      return
-    }
-
-    toAdd.push(t.spotifyTrack.uri)
+    toAdd.add(t.spotifyTrack.uri)
   })
-  console.log('  > adding', toAdd.length, 'tracks')
+  console.log('  > adding', toAdd.size, 'tracks')
 
-  if (toAdd.length) {
-    await addPlaylistItems(playlist.id, toAdd)
+  if (toAdd.size) {
+    await addPlaylistItems(playlist.id, [...toAdd])
   }
+}
+
+export const addMissingToSpreadsheet = async (
+  spreadsheet: Spreadsheet,
+  year: number,
+  tracks: PrePlaylistItem[]
+) => {
+  const sheetName = year.toString()
+  let sheet = spreadsheet.sheets?.find((s) => s.properties?.title === sheetName)
+
+  const rowsToAdd: string[][] = []
+  const existingIds = new Set<string>()
+
+  if (!sheet) {
+    sheet = await createSheet(sheetName)
+    rowsToAdd.push(HEADERS as any as string[])
+  } else {
+    const foundRows = await getRows(sheetName, ALL_ROWS_RANGE)
+    foundRows.slice(1).forEach((r) => {
+      const t = rowToTrack(r)
+      existingIds.add(t.id)
+    })
+  }
+
+  tracks.forEach((t) => {
+    if (existingIds.has(t.id)) {
+      return
+    }
+
+    rowsToAdd.push(
+      trackToRow({
+        id: t.id,
+        name: t.youtubeTrack.name,
+        artist: t.youtubeTrack.artist,
+        link: t.youtubeTrack.link,
+        video_published_date: t.youtubeTrack.videoPublishedDate,
+        spotify_id: t.spotifyId,
+      })
+    )
+  })
+
+  rowsToAdd.sort((a, z) => new Date(a[4]).getTime() - new Date(z[4]).getTime())
+
+  console.log('  > adding', rowsToAdd.length, 'to sheet', sheetName)
+
+  if (rowsToAdd.length) {
+    await addRows(sheetName, ADD_ROWS_RANGE, rowsToAdd)
+  }
+
+  return sheet
 }
