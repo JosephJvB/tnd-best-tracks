@@ -18,6 +18,7 @@ import {
   ALL_ROWS_RANGE,
   HEADERS,
   Spreadsheet,
+  addRow,
   addRows,
   createSheet,
   getRows,
@@ -157,24 +158,23 @@ export const addMissingToSpreadsheet = async (
   tracks: PrePlaylistItem[]
 ) => {
   const sheetName = year.toString()
+
   let sheet = spreadsheet.sheets?.find((s) => s.properties?.title === sheetName)
-
-  const rowsToAdd: string[][] = []
-  const existingIds = new Set<string>()
-
+  const existingSheetIds = new Set<string>()
   if (!sheet) {
     sheet = await createSheet(sheetName)
-    rowsToAdd.push(HEADERS as any as string[])
+    await addRow(sheetName, ALL_ROWS_RANGE, HEADERS as any as string[])
   } else {
     const foundRows = await getRows(sheetName, ALL_ROWS_RANGE)
     foundRows.slice(1).forEach((r) => {
       const t = rowToTrack(r)
-      existingIds.add(t.id)
+      existingSheetIds.add(t.id)
     })
   }
 
+  const rowsToAdd: string[][] = []
   tracks.forEach((t) => {
-    if (existingIds.has(t.id)) {
+    if (existingSheetIds.has(t.id)) {
       return
     }
 
@@ -192,7 +192,7 @@ export const addMissingToSpreadsheet = async (
 
   rowsToAdd.sort((a, z) => new Date(a[4]).getTime() - new Date(z[4]).getTime())
 
-  console.log('  > adding', rowsToAdd.length, 'to sheet', sheetName)
+  console.log('  > adding', rowsToAdd.length, 'rows to sheet', sheetName)
 
   if (rowsToAdd.length) {
     await addRows(sheetName, ADD_ROWS_RANGE, rowsToAdd)
