@@ -12,37 +12,33 @@ import ChildProcess from 'child_process'
 // axios.headers.Connection = node16 && 'close' || node20 ?? 'keep-alive'
 describe('server_unit.ts', () => {
   describe('#performServerCallback', () => {
-    it(
-      'returns the req.query.code from GET to /tony',
-      async () => {
-        const mockCode = 'code_123'
-        const mockState = 'state_123'
+    it('returns the req.query.code from GET to /tony', async () => {
+      const mockCode = 'code_123'
+      const mockState = 'state_123'
 
-        const callbackToServer = jest.fn(async () => {
-          await new Promise((r) => setTimeout(r, 100))
-          await axios({
-            method: 'get',
-            url: 'http://localhost:3000/tony',
-            // fix here
-            headers: {
-              Connection: 'close',
-            },
-            params: {
-              code: mockCode,
-              state: mockState,
-            },
-          })
+      const callbackToServer = jest.fn(async () => {
+        await new Promise((r) => setTimeout(r, 100))
+        await axios({
+          method: 'get',
+          url: 'http://localhost:3000/tony',
+          // fix here
+          headers: {
+            Connection: 'close',
+          },
+          params: {
+            code: mockCode,
+            state: mockState,
+          },
         })
-        const execSyncSpy = jest
-          .spyOn(ChildProcess, 'execSync')
-          .mockImplementationOnce(callbackToServer as any)
+      })
+      const execSyncSpy = jest
+        .spyOn(ChildProcess, 'execSync')
+        .mockImplementationOnce(callbackToServer as any)
 
-        const code = await server.performServerCallback()
+      const code = await server.performServerCallback()
 
-        expect(execSyncSpy).toBeCalledTimes(1)
-        expect(code).toBe(mockCode)
-      },
-      10 * 1000
-    )
+      expect(execSyncSpy).toBeCalledTimes(1)
+      expect(code).toBe(mockCode)
+    })
   })
 })
