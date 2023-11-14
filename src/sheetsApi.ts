@@ -1,26 +1,29 @@
 import { google, sheets_v4 } from 'googleapis'
+import { PrePlaylistItem } from './tasks/getSpotifyTracks'
 
 // https://github.com/JosephJvB/gsheets-api/blob/main/src/database/sheetClient.ts
 
 export const BASE_SHEET_URL = 'https://docs.google.com/spreadsheets/d'
-export let SHEET_ID = '1F5DXCTNZbDy6mFE3Sp1prvU2SfpoqK0dZRsXVHiiOfo'
+export let SPREADSHEET_ID = '1F5DXCTNZbDy6mFE3Sp1prvU2SfpoqK0dZRsXVHiiOfo'
 export const test__setSheetId = (id: string) => {
   if (!process.env.JEST_WORKER_ID) {
     throw new Error('get te fuk u junkie')
   }
-  SHEET_ID = id
+  SPREADSHEET_ID = id
 }
+export const SHEET_NAME = 'MELON'
+export const SHEET_ID = 1814426117
+export const SPREADSHEET_LINK = `${BASE_SHEET_URL}/${SPREADSHEET_ID}/edit#gid=${SHEET_ID}?usp=sharing`
 export const SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-
 export const HEADERS = [
   'id',
   'name',
   'artist',
-  'video_published_date',
+  'date',
   'link',
   'spotify_id',
 ] as const
-export const ALL_ROWS_RANGE = 'A1:F2000'
+export const ALL_DATA_RANGE = 'A2:F'
 export const ADD_ROWS_RANGE = 'A:F'
 
 export type Spreadsheet = Awaited<ReturnType<typeof getSpreadsheet>>
@@ -28,7 +31,7 @@ export type SheetTrack = {
   id: string
   name: string
   artist: string
-  video_published_date: string
+  date: string
   link: string
   spotify_id: string
 }
@@ -36,7 +39,7 @@ export const rowToTrack = (row: string[]): SheetTrack => ({
   id: row[0],
   name: row[1],
   artist: row[2],
-  video_published_date: row[3],
+  date: row[3],
   link: row[4],
   spotify_id: row[5] ?? '',
 })
@@ -44,16 +47,26 @@ export const trackToRow = (track: SheetTrack): string[] => [
   track.id,
   track.name,
   track.artist,
-  track.video_published_date,
+  track.date,
   track.link,
   track.spotify_id ?? '',
 ]
-
-// https://docs.google.com/spreadsheets/d/17-Vx_oswIG_Rw7S28xfE5TWx2HTJeE2r25zP4CAR5Ko/edit#gid=675094536
-export const getSheetLink = (sheetId?: number | null) => {
-  const sheetIdSegment = sheetId ? `#gid=${sheetId}` : ''
-  return `${BASE_SHEET_URL}/${SHEET_ID}/edit${sheetIdSegment}?usp=sharing`
-}
+export const itemToRow = (item: PrePlaylistItem) => [
+  item.id,
+  item.youtubeTrack.name,
+  item.youtubeTrack.artist,
+  item.youtubeTrack.videoPublishedDate,
+  item.youtubeTrack.link,
+  item.spotifyId ?? '',
+]
+export const itemToTrack = (item: PrePlaylistItem): SheetTrack => ({
+  id: item.id,
+  name: item.youtubeTrack.name,
+  artist: item.youtubeTrack.artist,
+  date: item.youtubeTrack.videoPublishedDate,
+  link: item.youtubeTrack.link,
+  spotify_id: item.spotifyId ?? '',
+})
 
 let _client: sheets_v4.Sheets | undefined
 
@@ -78,7 +91,7 @@ export const getClient = () => {
 
 export const getSpreadsheet = async () => {
   const res = await getClient().spreadsheets.get({
-    spreadsheetId: SHEET_ID,
+    spreadsheetId: SPREADSHEET_ID,
   })
 
   return res.data
@@ -86,7 +99,7 @@ export const getSpreadsheet = async () => {
 
 export const createSheet = async (sheetName: string) => {
   const res = await getClient().spreadsheets.batchUpdate({
-    spreadsheetId: SHEET_ID,
+    spreadsheetId: SPREADSHEET_ID,
     requestBody: {
       requests: [
         {
@@ -105,7 +118,7 @@ export const createSheet = async (sheetName: string) => {
 
 export const getRows = async (sheetName: string, range: string) => {
   const res = await getClient().spreadsheets.values.get({
-    spreadsheetId: SHEET_ID,
+    spreadsheetId: SPREADSHEET_ID,
     range: `${sheetName}!${range}`,
   })
 
@@ -118,7 +131,7 @@ export const addRow = async (
   row: string[]
 ) => {
   await getClient().spreadsheets.values.append({
-    spreadsheetId: SHEET_ID,
+    spreadsheetId: SPREADSHEET_ID,
     range: `${sheetName}!${range}`,
     valueInputOption: 'RAW',
     insertDataOption: 'INSERT_ROWS',
@@ -136,10 +149,27 @@ export const addRows = async (
   rows: string[][]
 ) => {
   await getClient().spreadsheets.values.append({
-    spreadsheetId: SHEET_ID,
+    spreadsheetId: SPREADSHEET_ID,
     range: `${sheetName}!${range}`,
     valueInputOption: 'RAW',
-    insertDataOption: 'INSERT_ROWS',
+    insertDataOption: 'IN',
+    includeValuesInResponse: true,
+    requestBody: {
+      majorDimension: 'ROWS',
+      values: rows,
+    },
+  })
+}
+
+export const upsertRows = async (
+  sheetName: string,
+  range: string,
+  rows: string[][]
+) => {
+  await getClient().spreadsheets.values.update({
+    spreadsheetId: SPREADSHEET_ID,
+    range: `${sheetName}!${range}`,
+    valueInputOption: 'RAW',
     includeValuesInResponse: true,
     requestBody: {
       majorDimension: 'ROWS',

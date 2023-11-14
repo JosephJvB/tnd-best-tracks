@@ -34,7 +34,7 @@ describe('unit/sheetsApi_unit.ts', () => {
       expect(result.id).toBe(input[0])
       expect(result.name).toBe(input[1])
       expect(result.artist).toBe(input[2])
-      expect(result.video_published_date).toBe(input[3])
+      expect(result.date).toBe(input[3])
       expect(result.link).toBe(input[4])
       expect(result.spotify_id).toBe('')
     })
@@ -46,7 +46,7 @@ describe('unit/sheetsApi_unit.ts', () => {
       expect(result.id).toBe(input[0])
       expect(result.name).toBe(input[1])
       expect(result.artist).toBe(input[2])
-      expect(result.video_published_date).toBe(input[3])
+      expect(result.date).toBe(input[3])
       expect(result.link).toBe(input[4])
       expect(result.spotify_id).toBe(spotifyId)
     })
@@ -57,7 +57,7 @@ describe('unit/sheetsApi_unit.ts', () => {
       id: 'jvb_id',
       name: 'joes track name',
       artist: 'joe van bo',
-      video_published_date: new Date().toString(),
+      date: new Date().toString(),
       link: 'https://joevanbo.com',
       spotify_id: '',
     }
@@ -69,7 +69,7 @@ describe('unit/sheetsApi_unit.ts', () => {
       expect(result[0]).toBe(input.id)
       expect(result[1]).toBe(input.name)
       expect(result[2]).toBe(input.artist)
-      expect(result[3]).toBe(input.video_published_date)
+      expect(result[3]).toBe(input.date)
       expect(result[4]).toBe(input.link)
       expect(result[5]).toBe('')
     })
@@ -82,7 +82,7 @@ describe('unit/sheetsApi_unit.ts', () => {
       expect(result[0]).toBe(input.id)
       expect(result[1]).toBe(input.name)
       expect(result[2]).toBe(input.artist)
-      expect(result[3]).toBe(input.video_published_date)
+      expect(result[3]).toBe(input.date)
       expect(result[4]).toBe(input.link)
       expect(result[5]).toBe(spotifyId)
     })
@@ -127,7 +127,7 @@ describe('unit/sheetsApi_unit.ts', () => {
 
       expect(spreadsheetsGetFn).toHaveBeenCalledTimes(1)
       expect(spreadsheetsGetFn).toHaveBeenCalledWith({
-        spreadsheetId: sheetsApi.SHEET_ID,
+        spreadsheetId: sheetsApi.SPREADSHEET_ID,
       })
       expect(result.properties?.title).toBe(spreadsheetTitle)
     })
@@ -164,7 +164,7 @@ describe('unit/sheetsApi_unit.ts', () => {
 
       expect(batchUpdateFn).toHaveBeenCalledTimes(1)
       expect(batchUpdateFn).toHaveBeenCalledWith({
-        spreadsheetId: sheetsApi.SHEET_ID,
+        spreadsheetId: sheetsApi.SPREADSHEET_ID,
         requestBody: {
           requests: [
             {
@@ -201,7 +201,7 @@ describe('unit/sheetsApi_unit.ts', () => {
 
       expect(getValuesFn).toHaveBeenCalledTimes(1)
       expect(getValuesFn).toHaveBeenCalledWith({
-        spreadsheetId: sheetsApi.SHEET_ID,
+        spreadsheetId: sheetsApi.SPREADSHEET_ID,
         range: `${sheetName}!${range}`,
       })
     })
@@ -221,7 +221,7 @@ describe('unit/sheetsApi_unit.ts', () => {
 
       expect(appendValuesFn).toHaveBeenCalledTimes(1)
       expect(appendValuesFn).toHaveBeenCalledWith({
-        spreadsheetId: sheetsApi.SHEET_ID,
+        spreadsheetId: sheetsApi.SPREADSHEET_ID,
         range: `${sheetName}!${range}`,
         valueInputOption: 'RAW',
         insertDataOption: 'INSERT_ROWS',
@@ -251,7 +251,7 @@ describe('unit/sheetsApi_unit.ts', () => {
 
       expect(appendValuesFn).toHaveBeenCalledTimes(1)
       expect(appendValuesFn).toHaveBeenCalledWith({
-        spreadsheetId: sheetsApi.SHEET_ID,
+        spreadsheetId: sheetsApi.SPREADSHEET_ID,
         range: `${sheetName}!${range}`,
         valueInputOption: 'RAW',
         insertDataOption: 'INSERT_ROWS',

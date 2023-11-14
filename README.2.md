@@ -41,3 +41,26 @@ I wanna re-write the project for a couple reasons
 2. no more manual fixes / normalizing
 3. pulls from & writes to google sheet
 3. x1 youtube track maps to one or more spotify track(s)
+
+- how can I know if I need to look up a track on repeated run, if run from cron?
+  - currently im using json files in local data folder
+  - maybe I should save these json to s3?
+  - could also save in spreadsheets if i wanted
+1. pull videos & extract tracks
+2. get spreadsheet & all sheet rows
+  - if songs have spotify_id set, we should try get those ones!
+3. lookup all songs with spotifyId
+4. get all playlists & tracks
+
+files I'd need to keep track of
+- ~~processed youtube videos~~
+  - dont extract tracknames from videos we've already done
+  - don't really need this one, it's cheap to get video descriptions at runtime
+- spotifyId to track Map
+  - prevent repeat spotify lookups
+- customId to track Map
+  - prevent repeat spotify lookups
+
+Something I'm worried about is if I move away from this project
+Extracting videos will give a different result - due to my manual fixes
+Will that mean I'll be unable to find songs which actually already exist in the playlists?

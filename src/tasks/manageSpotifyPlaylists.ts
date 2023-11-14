@@ -14,18 +14,15 @@ import {
 import { loadJsonFile } from '../fsUtil'
 import { performServerCallback } from '../server'
 import {
-  ADD_ROWS_RANGE,
-  ALL_ROWS_RANGE,
-  HEADERS,
-  Spreadsheet,
-  addRow,
-  addRows,
-  createSheet,
+  ALL_DATA_RANGE,
+  SHEET_NAME,
+  SPREADSHEET_LINK,
+  SheetTrack,
   getRows,
-  getSheetLink,
-  getSpreadsheet,
+  itemToTrack,
   rowToTrack,
   trackToRow,
+  upsertRows,
 } from '../sheetsApi'
 
 export default async function () {
@@ -41,8 +38,7 @@ export default async function () {
   const playlistsByYear = await getPlaylistsByYear()
   console.log('  >', playlistsByYear.size, 'playlists from spotify')
 
-  const spreadsheet = await getSpreadsheet()
-
+  const missingTracks: PrePlaylistItem[] = []
   for (const [year, nextTrackList] of tracksByYear.entries()) {
     let playlist = playlistsByYear.get(year)
     console.log(
@@ -57,29 +53,26 @@ export default async function () {
     }
 
     const canAdd: PrePlaylistItem[] = []
-    const forbidden: PrePlaylistItem[] = []
     nextTrackList.forEach((t) => {
       if (t.spotifyTrack) {
         canAdd.push(t)
       } else {
-        forbidden.push(t)
+        missingTracks.push(t)
       }
     })
 
     console.log('  >', canAdd.length, 'tracks to add to playlist')
-    console.log('  >', forbidden.length, 'tracks to add to missing spreadsheet')
 
     await addTracksToPlaylist(playlist, canAdd)
-    const sheet = await addMissingToSpreadsheet(spreadsheet, year, forbidden)
 
-    const sheetLink = getSheetLink(sheet.properties?.sheetId)
-
-    const description = `missing tracks list: ${sheetLink}`
+    const description = `missing tracks list: ${SPREADSHEET_LINK}`
     if (playlist.description !== description) {
-      console.log('  > updating playlist description', sheetLink)
+      console.log('  > updating playlist description', SPREADSHEET_LINK)
       await updatePlaylistDescription(playlist.id, description)
     }
   }
+
+  await updateMissingSpreadsheet(missingTracks)
 }
 
 export const getTracksByYear = () => {
@@ -152,51 +145,29 @@ export const addTracksToPlaylist = async (
   }
 }
 
-export const addMissingToSpreadsheet = async (
-  spreadsheet: Spreadsheet,
-  year: number,
-  tracks: PrePlaylistItem[]
-) => {
-  const sheetName = year.toString()
+export const updateMissingSpreadsheet = async (items: PrePlaylistItem[]) => {
+  const foundRows = await getRows(SHEET_NAME, ALL_DATA_RANGE)
 
-  let sheet = spreadsheet.sheets?.find((s) => s.properties?.title === sheetName)
-  const existingSheetIds = new Set<string>()
-  if (!sheet) {
-    sheet = await createSheet(sheetName)
-    await addRow(sheetName, ALL_ROWS_RANGE, HEADERS as any as string[])
-  } else {
-    const foundRows = await getRows(sheetName, ALL_ROWS_RANGE)
-    foundRows.slice(1).forEach((r) => {
-      const t = rowToTrack(r)
-      existingSheetIds.add(t.id)
-    })
-  }
-
-  const rowsToAdd: string[][] = []
-  tracks.forEach((t) => {
-    if (existingSheetIds.has(t.id)) {
-      return
-    }
-
-    rowsToAdd.push(
-      trackToRow({
-        id: t.id,
-        name: t.youtubeTrack.name,
-        artist: t.youtubeTrack.artist,
-        link: t.youtubeTrack.link,
-        video_published_date: t.youtubeTrack.videoPublishedDate,
-        spotify_id: t.spotifyId ?? '',
-      })
-    )
+  const nextTrackMap = new Map<string, SheetTrack>()
+  foundRows.forEach((r) => {
+    const t = rowToTrack(r)
+    nextTrackMap.set(t.id, t)
+  })
+  items.forEach((i) => {
+    const t = itemToTrack(i)
+    nextTrackMap.set(i.id, t)
   })
 
-  rowsToAdd.sort((a, z) => new Date(a[4]).getTime() - new Date(z[4]).getTime())
+  const nextTracks = [...nextTrackMap.values()]
 
-  console.log('  > adding', rowsToAdd.length, 'rows to sheet', sheetName)
+  nextTracks.sort(
+    (a, z) => new Date(a.date).getTime() - new Date(z.date).getTime()
+  )
 
-  if (rowsToAdd.length) {
-    await addRows(sheetName, ADD_ROWS_RANGE, rowsToAdd)
+  const nextRows = nextTracks.map((t) => trackToRow(t))
+  console.log('  > setting', nextRows.length, 'rows in spreadsheet')
+
+  if (nextRows.length) {
+    await upsertRows(SHEET_NAME, ALL_DATA_RANGE, nextRows)
   }
-
-  return sheet
 }
