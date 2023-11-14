@@ -1,5 +1,11 @@
 # tnd best tracks
 
+### testing
+- `npm test unit`
+  - run all unit tests
+- `npm test -- -t '${testname}'`
+  - run all tests where `it('some testname here')` matches segment
+
 ### todo
 - have this run on (webhook ?? cron) and update this years playlist
   - could have a small playlist just for the current weeks tracks that too

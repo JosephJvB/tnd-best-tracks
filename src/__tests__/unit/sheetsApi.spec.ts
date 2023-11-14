@@ -1,4 +1,4 @@
-import * as sheetsApi from '../sheetsApi'
+import * as sheetsApi from '../../sheetsApi'
 
 jest.mock('googleapis', () => ({
   google: {
@@ -18,7 +18,7 @@ jest.mock('googleapis', () => ({
   },
 }))
 
-describe('sheetsApi_unit.ts', () => {
+describe('unit/sheetsApi_unit.ts', () => {
   describe('#rowToTrack', () => {
     const input = [
       'jvb_id',

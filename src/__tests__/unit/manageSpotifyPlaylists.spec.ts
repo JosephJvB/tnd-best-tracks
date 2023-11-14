@@ -1,12 +1,12 @@
-import * as spotifyApi from '../spotifyApi'
-import * as fsUtil from '../fsUtil'
-import * as manageSpotifyPlaylists from '../tasks/manageSpotifyPlaylists'
-import { PrePlaylistItem } from '../tasks/getSpotifyTracks'
-import { PLAYLIST_NAME_PREFIX } from '../constants'
-import * as server from '../server'
-import * as sheetsApi from '../sheetsApi'
+import * as spotifyApi from '../../spotifyApi'
+import * as fsUtil from '../../fsUtil'
+import * as manageSpotifyPlaylists from '../../tasks/manageSpotifyPlaylists'
+import { PrePlaylistItem } from '../../tasks/getSpotifyTracks'
+import { PLAYLIST_NAME_PREFIX } from '../../constants'
+import * as server from '../../server'
+import * as sheetsApi from '../../sheetsApi'
 
-describe('manageSpotifyPlaylists.ts', () => {
+describe('unit/manageSpotifyPlaylists.ts', () => {
   const performCallbackSpy = jest
     .spyOn(server, 'performServerCallback')
     .mockImplementation(jest.fn())

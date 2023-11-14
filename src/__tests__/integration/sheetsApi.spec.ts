@@ -1,10 +1,10 @@
-import * as sheetsApi from '../sheetsApi'
+import * as sheetsApi from '../../sheetsApi'
 
 const SHEET_ID = '17-Vx_oswIG_Rw7S28xfE5TWx2HTJeE2r25zP4CAR5Ko'
 sheetsApi.test__setSheetId(SHEET_ID)
 const SHEET_NAME = 'TEST'
 
-describe('sheetsApi_integration.ts', () => {
+describe('integration/sheetsApi.ts', () => {
   describe('#getClient', () => {
     it('returns the authorized google sheets client', () => {
       const client = sheetsApi.getClient()

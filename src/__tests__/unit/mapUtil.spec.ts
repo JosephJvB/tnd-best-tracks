@@ -1,6 +1,6 @@
-import { mapToString, stringToMap } from '../mapUtil'
+import { mapToString, stringToMap } from '../../mapUtil'
 
-describe('mapUtil.ts', () => {
+describe('unit/mapUtil.ts', () => {
   describe('#mapToString', () => {
     it('throws if the input is not a map', () => {
       const input = {}

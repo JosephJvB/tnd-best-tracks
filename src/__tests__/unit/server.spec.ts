@@ -1,5 +1,5 @@
 import axios from 'axios'
-import * as server from '../server'
+import * as server from '../../server'
 import ChildProcess from 'child_process'
 
 // this test passes with node -v v16.15.1
@@ -10,7 +10,7 @@ import ChildProcess from 'child_process'
 // headers: {Connection: close} fixes issue
 // axios issue
 // axios.headers.Connection = node16 && 'close' || node20 ?? 'keep-alive'
-describe('server_unit.ts', () => {
+describe('unit/server_unit.ts', () => {
   describe('#performServerCallback', () => {
     it('returns the req.query.code from GET to /tony', async () => {
       const mockCode = 'code_123'

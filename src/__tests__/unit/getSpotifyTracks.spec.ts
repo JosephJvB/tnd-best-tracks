@@ -4,17 +4,17 @@ import getSpotifyTracks, {
   searchSpotifyTracks,
   PrePlaylistItem,
   TrimSpotifyTrack,
-} from '../tasks/getSpotifyTracks'
-import * as spotifyApi from '../spotifyApi'
-import * as mapUtil from '../mapUtil'
+} from '../../tasks/getSpotifyTracks'
+import * as spotifyApi from '../../spotifyApi'
+import * as mapUtil from '../../mapUtil'
 import {
   SPOTIFY_TRACKS_JSON_PATH,
   SPOTIFY_TRACK_ID_MAP_JSON_PATH,
   YOUTUBE_ID_MAP_JSON_PATH,
-} from '../constants'
-import { YoutubeTrack } from '../tasks/extractYoutubeTracks'
+} from '../../constants'
+import { YoutubeTrack } from '../../tasks/extractYoutubeTracks'
 
-describe('getSpotifyTracks.ts', () => {
+describe('unit/getSpotifyTracks.ts', () => {
   const loadMapFn = jest.fn()
   const saveMapFn = jest.fn()
   const mapHelperSpy = jest

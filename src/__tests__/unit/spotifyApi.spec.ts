@@ -4,14 +4,14 @@ import {
   SPOTIFY_CALLBACK_URL,
   SPOTIFY_ID_LENGTH,
   SPOTIFY_JVB_USERID,
-} from '../constants'
-import * as spotifyApi from '../spotifyApi'
+} from '../../constants'
+import * as spotifyApi from '../../spotifyApi'
 
 jest.mock('axios')
 
 const axiosMock = axios as jest.MockedFunction<typeof axios>
 
-describe('spotifyApi_unit.ts', () => {
+describe('unit/spotifyApi_unit.ts', () => {
   describe('#extractSpotifyId', () => {
     it('returns null for invalid url', () => {
       const link = 'invalid url here'

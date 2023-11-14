@@ -1,7 +1,7 @@
-import * as server from '../server'
-import * as spotifyApi from '../spotifyApi'
+import * as server from '../../server'
+import * as spotifyApi from '../../spotifyApi'
 
-describe('server_integration.ts', () => {
+describe('integration/server.ts', () => {
   describe('#performServerCallback alone', () => {
     it(
       'returns the req.query.code from GET to /tony',

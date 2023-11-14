@@ -2,11 +2,11 @@ import { readFileSync } from 'fs'
 import {
   containsBestTracks,
   extractTrackList_v2,
-} from '../tasks/extractYoutubeTracks'
-import { PlaylistItem } from '../youtubeApi'
-import { TND_PLAYLIST_ITEMS_JSON_PATH } from '../constants'
+} from '../../tasks/extractYoutubeTracks'
+import { PlaylistItem } from '../../youtubeApi'
+import { TND_PLAYLIST_ITEMS_JSON_PATH } from '../../constants'
 
-describe('extractBestTracks.ts', () => {
+describe('unit/extractBestTracks.ts', () => {
   describe('#extractTrackList_v2 - all videos', () => {
     const allYoutubeVideos = JSON.parse(
       readFileSync(TND_PLAYLIST_ITEMS_JSON_PATH, 'utf8')
