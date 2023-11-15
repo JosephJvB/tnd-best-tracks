@@ -40,11 +40,11 @@ describe('unit/getSpotifyTracks.ts', () => {
 
       const result = await batchGetById(input)
 
-      expect(mapHelperSpy).toBeCalledTimes(1)
-      expect(mapHelperSpy).toBeCalledWith(SPOTIFY_TRACK_ID_MAP_JSON_PATH)
-      expect(loadMapFn).toBeCalledTimes(1)
-      expect(getTracksSpy).toBeCalledTimes(0)
-      expect(saveMapFn).toBeCalledTimes(0)
+      expect(mapHelperSpy).toHaveBeenCalledTimes(1)
+      expect(mapHelperSpy).toHaveBeenCalledWith(SPOTIFY_TRACK_ID_MAP_JSON_PATH)
+      expect(loadMapFn).toHaveBeenCalledTimes(1)
+      expect(getTracksSpy).toHaveBeenCalledTimes(0)
+      expect(saveMapFn).toHaveBeenCalledTimes(0)
       expect(result.size).toBe(0)
     })
 
@@ -77,16 +77,16 @@ describe('unit/getSpotifyTracks.ts', () => {
 
       const result = await batchGetById(input)
 
-      expect(mapHelperSpy).toBeCalledTimes(1)
-      expect(mapHelperSpy).toBeCalledWith(SPOTIFY_TRACK_ID_MAP_JSON_PATH)
-      expect(loadMapFn).toBeCalledTimes(1)
-      expect(loadMapFn).toBeCalledWith()
-      expect(getTracksSpy).toBeCalledTimes(Math.ceil(input.length / 50))
+      expect(mapHelperSpy).toHaveBeenCalledTimes(1)
+      expect(mapHelperSpy).toHaveBeenCalledWith(SPOTIFY_TRACK_ID_MAP_JSON_PATH)
+      expect(loadMapFn).toHaveBeenCalledTimes(1)
+      expect(loadMapFn).toHaveBeenCalledWith()
+      expect(getTracksSpy).toHaveBeenCalledTimes(Math.ceil(input.length / 50))
       for (let i = 0; i < input.length; i += 50) {
-        expect(getTracksSpy).toBeCalledWith(input.slice(i, i + 50))
-        expect(saveMapFn).toBeCalledWith(existingMap)
+        expect(getTracksSpy).toHaveBeenCalledWith(input.slice(i, i + 50))
+        expect(saveMapFn).toHaveBeenCalledWith(existingMap)
       }
-      expect(saveMapFn).toBeCalledTimes(Math.ceil(input.length / 50))
+      expect(saveMapFn).toHaveBeenCalledTimes(Math.ceil(input.length / 50))
       expect(result.size).toBe(NUM_FOUND_TRACKS)
     })
 
@@ -121,14 +121,14 @@ describe('unit/getSpotifyTracks.ts', () => {
 
       const result = await batchGetById(input)
 
-      expect(mapHelperSpy).toBeCalledTimes(1)
-      expect(mapHelperSpy).toBeCalledWith(SPOTIFY_TRACK_ID_MAP_JSON_PATH)
-      expect(loadMapFn).toBeCalledTimes(1)
-      expect(getTracksSpy).toBeCalledTimes(Math.ceil(input.length / 50))
-      expect(saveMapFn).toBeCalledTimes(Math.ceil(input.length / 50))
+      expect(mapHelperSpy).toHaveBeenCalledTimes(1)
+      expect(mapHelperSpy).toHaveBeenCalledWith(SPOTIFY_TRACK_ID_MAP_JSON_PATH)
+      expect(loadMapFn).toHaveBeenCalledTimes(1)
+      expect(getTracksSpy).toHaveBeenCalledTimes(Math.ceil(input.length / 50))
+      expect(saveMapFn).toHaveBeenCalledTimes(Math.ceil(input.length / 50))
       for (let i = 0; i < input.length; i += 50) {
-        expect(getTracksSpy).toBeCalledWith(input.slice(i, i + 50))
-        expect(saveMapFn).toBeCalledWith(existingMap)
+        expect(getTracksSpy).toHaveBeenCalledWith(input.slice(i, i + 50))
+        expect(saveMapFn).toHaveBeenCalledWith(existingMap)
       }
       expect(result.size).toBe(NUM_FOUND_TRACKS)
     })
@@ -164,12 +164,12 @@ describe('unit/getSpotifyTracks.ts', () => {
 
       const result = await batchGetById(input)
 
-      expect(mapHelperSpy).toBeCalledWith(SPOTIFY_TRACK_ID_MAP_JSON_PATH)
-      expect(loadMapFn).toBeCalledTimes(1)
-      expect(getTracksSpy).toBeCalledTimes(Math.ceil(input.length / 50))
+      expect(mapHelperSpy).toHaveBeenCalledWith(SPOTIFY_TRACK_ID_MAP_JSON_PATH)
+      expect(loadMapFn).toHaveBeenCalledTimes(1)
+      expect(getTracksSpy).toHaveBeenCalledTimes(Math.ceil(input.length / 50))
       for (let i = 0; i < input.length; i += 50) {
-        expect(getTracksSpy).toBeCalledWith(input.slice(i, i + 50))
-        expect(saveMapFn).toBeCalledWith(existingMap)
+        expect(getTracksSpy).toHaveBeenCalledWith(input.slice(i, i + 50))
+        expect(saveMapFn).toHaveBeenCalledWith(existingMap)
       }
       expect(result.size).toBe(NUM_FOUND_TRACKS)
     })
@@ -217,17 +217,17 @@ describe('unit/getSpotifyTracks.ts', () => {
 
       const result = await batchGetById(input)
 
-      expect(mapHelperSpy).toBeCalledWith(SPOTIFY_TRACK_ID_MAP_JSON_PATH)
-      expect(loadMapFn).toBeCalledTimes(1)
-      expect(getTracksSpy).toBeCalledTimes(
+      expect(mapHelperSpy).toHaveBeenCalledWith(SPOTIFY_TRACK_ID_MAP_JSON_PATH)
+      expect(loadMapFn).toHaveBeenCalledTimes(1)
+      expect(getTracksSpy).toHaveBeenCalledTimes(
         Math.ceil((input.length - numExistingTracks) / 50)
       )
-      expect(saveMapFn).toBeCalledTimes(
+      expect(saveMapFn).toHaveBeenCalledTimes(
         Math.ceil((input.length - numExistingTracks) / 50)
       )
       for (let i = numExistingTracks; i < input.length; i += 50) {
-        expect(getTracksSpy).toBeCalledWith(input.slice(i, i + 50))
-        expect(saveMapFn).toBeCalledWith(existingMap)
+        expect(getTracksSpy).toHaveBeenCalledWith(input.slice(i, i + 50))
+        expect(saveMapFn).toHaveBeenCalledWith(existingMap)
       }
       expect(result.size).toBe(NUM_FOUND_TRACKS)
     })
@@ -242,11 +242,11 @@ describe('unit/getSpotifyTracks.ts', () => {
 
       const result = await searchSpotifyTracks(input)
 
-      expect(mapHelperSpy).toBeCalledTimes(1)
-      expect(mapHelperSpy).toBeCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
-      expect(loadMapFn).toBeCalledTimes(1)
-      expect(findTrackSpy).toBeCalledTimes(0)
-      expect(saveMapFn).toBeCalledTimes(0)
+      expect(mapHelperSpy).toHaveBeenCalledTimes(1)
+      expect(mapHelperSpy).toHaveBeenCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
+      expect(loadMapFn).toHaveBeenCalledTimes(1)
+      expect(findTrackSpy).toHaveBeenCalledTimes(0)
+      expect(saveMapFn).toHaveBeenCalledTimes(0)
       expect(result.size).toBe(0)
     })
 
@@ -297,16 +297,16 @@ describe('unit/getSpotifyTracks.ts', () => {
 
       const result = await searchSpotifyTracks(input)
 
-      expect(mapHelperSpy).toBeCalledTimes(1)
-      expect(mapHelperSpy).toBeCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
-      expect(loadMapFn).toBeCalledTimes(1)
-      expect(findTrackSpy).toBeCalledTimes(input.length)
-      expect(saveMapFn).toBeCalledTimes(spotifyTracks.length)
+      expect(mapHelperSpy).toHaveBeenCalledTimes(1)
+      expect(mapHelperSpy).toHaveBeenCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
+      expect(loadMapFn).toHaveBeenCalledTimes(1)
+      expect(findTrackSpy).toHaveBeenCalledTimes(input.length)
+      expect(saveMapFn).toHaveBeenCalledTimes(spotifyTracks.length)
       input.forEach((item) => {
-        expect(findTrackSpy).toBeCalledWith(item.youtubeTrack)
+        expect(findTrackSpy).toHaveBeenCalledWith(item.youtubeTrack)
       })
       spotifyTracks.forEach(() => {
-        expect(saveMapFn).toBeCalledWith(existingMap)
+        expect(saveMapFn).toHaveBeenCalledWith(existingMap)
       })
       expect(result.size).toBe(NUM_FOUND_TRACKS)
     })
@@ -358,16 +358,16 @@ describe('unit/getSpotifyTracks.ts', () => {
 
       const result = await searchSpotifyTracks(input)
 
-      expect(mapHelperSpy).toBeCalledTimes(1)
-      expect(mapHelperSpy).toBeCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
-      expect(loadMapFn).toBeCalledTimes(1)
-      expect(findTrackSpy).toBeCalledTimes(input.length)
-      expect(saveMapFn).toBeCalledTimes(spotifyTracks.length)
+      expect(mapHelperSpy).toHaveBeenCalledTimes(1)
+      expect(mapHelperSpy).toHaveBeenCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
+      expect(loadMapFn).toHaveBeenCalledTimes(1)
+      expect(findTrackSpy).toHaveBeenCalledTimes(input.length)
+      expect(saveMapFn).toHaveBeenCalledTimes(spotifyTracks.length)
       input.forEach((item) => {
-        expect(findTrackSpy).toBeCalledWith(item.youtubeTrack)
+        expect(findTrackSpy).toHaveBeenCalledWith(item.youtubeTrack)
       })
       spotifyTracks.forEach(() => {
-        expect(saveMapFn).toBeCalledWith(existingMap)
+        expect(saveMapFn).toHaveBeenCalledWith(existingMap)
       })
       expect(result.size).toBe(NUM_FOUND_TRACKS)
     })
@@ -419,16 +419,16 @@ describe('unit/getSpotifyTracks.ts', () => {
 
       const result = await searchSpotifyTracks(input)
 
-      expect(mapHelperSpy).toBeCalledTimes(1)
-      expect(mapHelperSpy).toBeCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
-      expect(loadMapFn).toBeCalledTimes(1)
-      expect(findTrackSpy).toBeCalledTimes(input.length)
-      expect(saveMapFn).toBeCalledTimes(spotifyTracks.length)
+      expect(mapHelperSpy).toHaveBeenCalledTimes(1)
+      expect(mapHelperSpy).toHaveBeenCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
+      expect(loadMapFn).toHaveBeenCalledTimes(1)
+      expect(findTrackSpy).toHaveBeenCalledTimes(input.length)
+      expect(saveMapFn).toHaveBeenCalledTimes(spotifyTracks.length)
       input.forEach((item) => {
-        expect(findTrackSpy).toBeCalledWith(item.youtubeTrack)
+        expect(findTrackSpy).toHaveBeenCalledWith(item.youtubeTrack)
       })
       spotifyTracks.forEach(() => {
-        expect(saveMapFn).toBeCalledWith(existingMap)
+        expect(saveMapFn).toHaveBeenCalledWith(existingMap)
       })
       expect(result.size).toBe(NUM_FOUND_TRACKS)
     })
@@ -492,18 +492,20 @@ describe('unit/getSpotifyTracks.ts', () => {
 
       const result = await searchSpotifyTracks(input)
 
-      expect(mapHelperSpy).toBeCalledTimes(1)
-      expect(mapHelperSpy).toBeCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
-      expect(loadMapFn).toBeCalledTimes(1)
-      expect(findTrackSpy).toBeCalledTimes(input.length - numExistingTracks)
-      expect(saveMapFn).toBeCalledTimes(
+      expect(mapHelperSpy).toHaveBeenCalledTimes(1)
+      expect(mapHelperSpy).toHaveBeenCalledWith(YOUTUBE_ID_MAP_JSON_PATH)
+      expect(loadMapFn).toHaveBeenCalledTimes(1)
+      expect(findTrackSpy).toHaveBeenCalledTimes(
+        input.length - numExistingTracks
+      )
+      expect(saveMapFn).toHaveBeenCalledTimes(
         spotifyTracks.length - numExistingTracks
       )
       input.slice(numExistingTracks).forEach((item) => {
-        expect(findTrackSpy).toBeCalledWith(item.youtubeTrack)
+        expect(findTrackSpy).toHaveBeenCalledWith(item.youtubeTrack)
       })
       spotifyTracks.slice(numExistingTracks).forEach(() => {
-        expect(saveMapFn).toBeCalledWith(existingMap)
+        expect(saveMapFn).toHaveBeenCalledWith(existingMap)
       })
       expect(result.size).toBe(NUM_FOUND_TRACKS)
     })
@@ -581,29 +583,29 @@ describe('unit/getSpotifyTracks.ts', () => {
 
       await getSpotifyTracks()
 
-      expect(setTokenSpy).toBeCalledTimes(1)
-      expect(extractIdSpy).toBeCalledTimes(input.length)
+      expect(setTokenSpy).toHaveBeenCalledTimes(1)
+      expect(extractIdSpy).toHaveBeenCalledTimes(input.length)
       for (const i of input) {
-        expect(extractIdSpy).toBeCalledWith(i.link, 'track')
+        expect(extractIdSpy).toHaveBeenCalledWith(i.link, 'track')
       }
-      expect(mapHelperSpy).toBeCalledTimes(2)
-      expect(loadMapFn).toBeCalledTimes(2)
-      expect(getTracksSpy).toBeCalledTimes(2)
+      expect(mapHelperSpy).toHaveBeenCalledTimes(2)
+      expect(loadMapFn).toHaveBeenCalledTimes(2)
+      expect(getTracksSpy).toHaveBeenCalledTimes(2)
       for (let i = 0; i < NUM_BY_BATCH; i += 50) {
-        expect(getTracksSpy).toBeCalledWith(
+        expect(getTracksSpy).toHaveBeenCalledWith(
           input.slice(i, i + 50).map((t, idx) => spotifyTracks[idx].id)
         )
       }
-      expect(saveMapFn).toBeCalledTimes(
+      expect(saveMapFn).toHaveBeenCalledTimes(
         Math.ceil(NUM_BY_BATCH / 50) + input.length - NUM_BY_BATCH
       )
-      expect(saveMapFn).toBeCalledWith(trackIdMap)
-      expect(findTrackSpy).toBeCalledTimes(input.length - NUM_BY_BATCH)
+      expect(saveMapFn).toHaveBeenCalledWith(trackIdMap)
+      expect(findTrackSpy).toHaveBeenCalledTimes(input.length - NUM_BY_BATCH)
       input.slice(NUM_BY_BATCH).forEach((i) => {
-        expect(findTrackSpy).toBeCalledWith(i)
+        expect(findTrackSpy).toHaveBeenCalledWith(i)
       })
-      expect(saveMapFn).toBeCalledWith(youtubeIdMap)
-      expect(writeFileSpy).toBeCalledTimes(1)
+      expect(saveMapFn).toHaveBeenCalledWith(youtubeIdMap)
+      expect(writeFileSpy).toHaveBeenCalledTimes(1)
       expect(writeFileSpy.mock.calls[0][0]).toBe(SPOTIFY_TRACKS_JSON_PATH)
       const expectedPayload = input.map((i, idx) => ({
         id: [i.artist, i.name, i.year].join('__'),
@@ -688,29 +690,31 @@ describe('unit/getSpotifyTracks.ts', () => {
 
       await getSpotifyTracks()
 
-      expect(setTokenSpy).toBeCalledTimes(1)
-      expect(extractIdSpy).toBeCalledTimes(input.length)
+      expect(setTokenSpy).toHaveBeenCalledTimes(1)
+      expect(extractIdSpy).toHaveBeenCalledTimes(input.length)
       for (const i of input) {
-        expect(extractIdSpy).toBeCalledWith(i.link, 'track')
+        expect(extractIdSpy).toHaveBeenCalledWith(i.link, 'track')
       }
-      expect(mapHelperSpy).toBeCalledTimes(2)
-      expect(loadMapFn).toBeCalledTimes(2)
-      expect(getTracksSpy).toBeCalledTimes(2)
+      expect(mapHelperSpy).toHaveBeenCalledTimes(2)
+      expect(loadMapFn).toHaveBeenCalledTimes(2)
+      expect(getTracksSpy).toHaveBeenCalledTimes(2)
       for (let i = 0; i < NUM_GET_BY_BATCH; i += 50) {
-        expect(getTracksSpy).toBeCalledWith(
+        expect(getTracksSpy).toHaveBeenCalledWith(
           input.slice(i, i + 50).map((t, idx) => spotifyTracks[idx].id)
         )
       }
-      expect(saveMapFn).toBeCalledTimes(
+      expect(saveMapFn).toHaveBeenCalledTimes(
         Math.ceil(NUM_GET_BY_BATCH / 50) + input.length - NUM_FOUND_BY_BATCH
       )
-      expect(saveMapFn).toBeCalledWith(trackIdMap)
-      expect(findTrackSpy).toBeCalledTimes(input.length - NUM_FOUND_BY_BATCH)
+      expect(saveMapFn).toHaveBeenCalledWith(trackIdMap)
+      expect(findTrackSpy).toHaveBeenCalledTimes(
+        input.length - NUM_FOUND_BY_BATCH
+      )
       input.slice(NUM_GET_BY_BATCH).forEach((i) => {
-        expect(findTrackSpy).toBeCalledWith(i)
+        expect(findTrackSpy).toHaveBeenCalledWith(i)
       })
-      expect(saveMapFn).toBeCalledWith(youtubeIdMap)
-      expect(writeFileSpy).toBeCalledTimes(1)
+      expect(saveMapFn).toHaveBeenCalledWith(youtubeIdMap)
+      expect(writeFileSpy).toHaveBeenCalledTimes(1)
       expect(writeFileSpy.mock.calls[0][0]).toBe(SPOTIFY_TRACKS_JSON_PATH)
       const expectedPayload = input.map((i, idx) => ({
         id: [i.artist, i.name, i.year].join('__'),

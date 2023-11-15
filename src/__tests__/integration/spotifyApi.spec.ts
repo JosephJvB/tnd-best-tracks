@@ -25,8 +25,8 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -40,10 +40,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
     })
@@ -59,10 +59,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -76,10 +76,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
     })
@@ -95,10 +95,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -112,10 +112,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -129,10 +129,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -146,10 +146,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -163,10 +163,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -180,10 +180,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -197,10 +197,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -214,10 +214,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -231,10 +231,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -248,10 +248,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -265,10 +265,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -282,10 +282,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -299,10 +299,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -316,10 +316,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -333,10 +333,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -350,10 +350,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -367,10 +367,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -384,10 +384,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -401,10 +401,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -418,10 +418,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -435,10 +435,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -452,10 +452,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -469,10 +469,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -486,10 +486,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -503,10 +503,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -520,10 +520,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -537,10 +537,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -554,10 +554,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -571,10 +571,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -588,10 +588,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -605,10 +605,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -622,10 +622,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -640,10 +640,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -657,10 +657,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -674,10 +674,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -691,10 +691,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -708,10 +708,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -725,10 +725,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -742,10 +742,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -759,10 +759,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -776,10 +776,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -793,10 +793,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -811,10 +811,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
         expect(result.tracks.items[0].artists[0].name).toBe('J. Cole')
       })
@@ -830,10 +830,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -848,10 +848,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -866,10 +866,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -884,10 +884,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -902,10 +902,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -920,10 +920,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -938,10 +938,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -956,10 +956,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -974,10 +974,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -992,10 +992,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -1010,10 +1010,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
     })
@@ -1029,10 +1029,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -1046,10 +1046,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -1063,10 +1063,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -1080,10 +1080,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -1097,10 +1097,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -1114,10 +1114,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -1131,10 +1131,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
     })
@@ -1150,10 +1150,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -1167,10 +1167,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -1184,10 +1184,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -1201,10 +1201,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
 
@@ -1218,10 +1218,10 @@ describe.skip('integration/spotifyApi.ts', () => {
 
         const result = await spotifyApi.findTrack(input)
 
-        expect(processExitSpy).toBeCalledTimes(0)
-        expect(findTrackSpy).toBeCalledTimes(2)
-        expect(normalizeTrackSpy).toBeCalledTimes(1)
-        expect(normalizeArtistSpy).toBeCalledTimes(1)
+        expect(processExitSpy).toHaveBeenCalledTimes(0)
+        expect(findTrackSpy).toHaveBeenCalledTimes(2)
+        expect(normalizeTrackSpy).toHaveBeenCalledTimes(1)
+        expect(normalizeArtistSpy).toHaveBeenCalledTimes(1)
         expect(result.tracks.items.length).toBeGreaterThan(0)
       })
     })

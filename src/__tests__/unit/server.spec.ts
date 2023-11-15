@@ -37,7 +37,7 @@ describe('unit/server_unit.ts', () => {
 
       const code = await server.performServerCallback()
 
-      expect(execSyncSpy).toBeCalledTimes(1)
+      expect(execSyncSpy).toHaveBeenCalledTimes(1)
       expect(code).toBe(mockCode)
     })
   })

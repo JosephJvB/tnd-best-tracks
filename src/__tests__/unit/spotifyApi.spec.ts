@@ -133,8 +133,8 @@ describe('unit/spotifyApi_unit.ts', () => {
 
       const results = await spotifyApi.getMyPlaylists()
 
-      expect(axiosMock).toBeCalledTimes(1)
-      expect(axiosMock).toBeCalledWith({
+      expect(axiosMock).toHaveBeenCalledTimes(1)
+      expect(axiosMock).toHaveBeenCalledWith({
         method: 'get',
         url: `${spotifyApi.API_BASE_URL}/me/playlists`,
         headers: {
@@ -174,9 +174,9 @@ describe('unit/spotifyApi_unit.ts', () => {
 
       const results = await spotifyApi.getMyPlaylists()
 
-      expect(axiosMock).toBeCalledTimes(3)
+      expect(axiosMock).toHaveBeenCalledTimes(3)
       for (let i = 0; i < myPlaylists.length; i += 50) {
-        expect(axiosMock).toBeCalledWith({
+        expect(axiosMock).toHaveBeenCalledWith({
           method: 'get',
           url: `${spotifyApi.API_BASE_URL}/me/playlists`,
           headers: {
@@ -204,8 +204,8 @@ describe('unit/spotifyApi_unit.ts', () => {
 
       await spotifyApi.createPlaylist(year)
 
-      expect(axios).toBeCalledTimes(1)
-      expect(axios).toBeCalledWith({
+      expect(axios).toHaveBeenCalledTimes(1)
+      expect(axios).toHaveBeenCalledWith({
         method: 'post',
         url: `${spotifyApi.API_BASE_URL}/users/${SPOTIFY_JVB_USERID}/playlists`,
         headers: {
@@ -250,8 +250,8 @@ describe('unit/spotifyApi_unit.ts', () => {
 
       const results = await spotifyApi.getPlaylistItems(mockPlaylist.id)
 
-      expect(axiosMock).toBeCalledTimes(1)
-      expect(axiosMock).toBeCalledWith({
+      expect(axiosMock).toHaveBeenCalledTimes(1)
+      expect(axiosMock).toHaveBeenCalledWith({
         method: 'get',
         url: `${spotifyApi.API_BASE_URL}/playlists/${mockPlaylist.id}/tracks`,
         headers: {
@@ -296,9 +296,9 @@ describe('unit/spotifyApi_unit.ts', () => {
 
       const results = await spotifyApi.getPlaylistItems(mockPlaylist.id)
 
-      expect(axiosMock).toBeCalledTimes(3)
+      expect(axiosMock).toHaveBeenCalledTimes(3)
       for (let i = 0; i < playlistItems.length; i += 50) {
-        expect(axiosMock).toBeCalledWith({
+        expect(axiosMock).toHaveBeenCalledWith({
           method: 'get',
           url: `${spotifyApi.API_BASE_URL}/playlists/${mockPlaylist.id}/tracks`,
           headers: {
@@ -331,8 +331,8 @@ describe('unit/spotifyApi_unit.ts', () => {
 
       await spotifyApi.addPlaylistItems(mockPlaylist.id, urisToAdd)
 
-      expect(axiosMock).toBeCalledTimes(1)
-      expect(axiosMock).toBeCalledWith({
+      expect(axiosMock).toHaveBeenCalledTimes(1)
+      expect(axiosMock).toHaveBeenCalledWith({
         method: 'post',
         url: `${spotifyApi.API_BASE_URL}/playlists/${mockPlaylist.id}/tracks`,
         headers: {
@@ -361,10 +361,10 @@ describe('unit/spotifyApi_unit.ts', () => {
         urisToAdd
       )
 
-      expect(axiosMock).toBeCalledTimes(3)
+      expect(axiosMock).toHaveBeenCalledTimes(3)
       for (let i = 0; i < urisToAdd.length; i += 100) {
         const uris = urisToAdd.slice(i, i + 100)
-        expect(axiosMock).toBeCalledWith({
+        expect(axiosMock).toHaveBeenCalledWith({
           method: 'post',
           url: `${spotifyApi.API_BASE_URL}/playlists/${mockPlaylist.id}/tracks`,
           headers: {
@@ -387,8 +387,8 @@ describe('unit/spotifyApi_unit.ts', () => {
 
       const result = await spotifyApi.submitCode(mockCode)
 
-      expect(axios).toBeCalledTimes(1)
-      expect(axios).toBeCalledWith({
+      expect(axios).toHaveBeenCalledTimes(1)
+      expect(axios).toHaveBeenCalledWith({
         method: 'post',
         url: `${spotifyApi.ACCOUNTS_BASE_URL}/token`,
         headers: {
