@@ -2,9 +2,9 @@ import * as spotifyApi from '../../spotifyApi'
 import * as fsUtil from '../../fsUtil'
 import * as manageSpotifyPlaylists from '../../tasks/manageSpotifyPlaylists'
 import { PrePlaylistItem } from '../../tasks/getSpotifyTracks'
-import { PLAYLIST_NAME_PREFIX } from '../../constants'
+import { MISSING_TRACKS_JSON_PATH, PLAYLIST_NAME_PREFIX } from '../../constants'
 import * as server from '../../server'
-import * as sheetsApi from '../../sheetsApi'
+import fs from 'fs'
 
 describe('unit/manageSpotifyPlaylists.ts', () => {
   const performCallbackSpy = jest
@@ -34,26 +34,15 @@ describe('unit/manageSpotifyPlaylists.ts', () => {
   const setOAuthTokenSpy = jest
     .spyOn(spotifyApi, 'setOAuthToken')
     .mockImplementation(jest.fn())
-  const getRowsSpy = jest
-    .spyOn(sheetsApi, 'getRows')
-    .mockImplementation(jest.fn())
-  const upsertRowsSpy = jest
-    .spyOn(sheetsApi, 'upsertRows')
-    .mockImplementation(jest.fn())
   const getYearFromPlaylistSpy = jest.spyOn(spotifyApi, 'getYearFromPlaylist')
   const addTracksToPlaylistSpy = jest.spyOn(
     manageSpotifyPlaylists,
     'addTracksToPlaylist'
   )
-  const updateMissingSpreadsheetSpy = jest.spyOn(
-    manageSpotifyPlaylists,
-    'updateMissingSpreadsheet'
-  )
-  const trackToRowSpy = jest.spyOn(sheetsApi, 'trackToRow')
-  const rowToTrackSpy = jest.spyOn(sheetsApi, 'rowToTrack')
-  const itemToTrackSpy = jest.spyOn(sheetsApi, 'itemToTrack')
+  const writeFileSpy = jest
+    .spyOn(fs, 'writeFileSync')
+    .mockImplementation(jest.fn())
 
-  // TODO: fix these tests with updated sheets flow
   describe('#manageSpotifyPlaylists', () => {
     // 2021, 2022, 2023. 6 items, 5 spotify tracks
     const mockAuthCode = 'code_123'
@@ -113,33 +102,32 @@ describe('unit/manageSpotifyPlaylists.ts', () => {
 
       await manageSpotifyPlaylists.default()
 
-      expect(performCallbackSpy).toBeCalledTimes(1)
-      expect(submitCodeSpy).toBeCalledTimes(1)
-      expect(setOAuthTokenSpy).toBeCalledTimes(1)
-      expect(setOAuthTokenSpy).toBeCalledWith(mockAuthToken)
-      expect(loadJsonSpy).toBeCalledTimes(1)
-      expect(getYearFromPlaylistSpy).toBeCalledTimes(0)
-      expect(getPlaylistItemsSpy).toBeCalledTimes(0)
-      expect(createPlaylistSpy).toBeCalledTimes(3)
+      expect(performCallbackSpy).toHaveBeenCalledTimes(1)
+      expect(submitCodeSpy).toHaveBeenCalledTimes(1)
+      expect(setOAuthTokenSpy).toHaveBeenCalledTimes(1)
+      expect(setOAuthTokenSpy).toHaveBeenCalledWith(mockAuthToken)
+      expect(loadJsonSpy).toHaveBeenCalledTimes(1)
+      expect(getYearFromPlaylistSpy).toHaveBeenCalledTimes(0)
+      expect(getPlaylistItemsSpy).toHaveBeenCalledTimes(0)
+      expect(createPlaylistSpy).toHaveBeenCalledTimes(3)
       years.forEach((year) => {
-        expect(createPlaylistSpy).toBeCalledWith(year)
+        expect(createPlaylistSpy).toHaveBeenCalledWith(year)
       })
-      expect(addTracksToPlaylistSpy).toBeCalledTimes(3)
+      expect(addTracksToPlaylistSpy).toHaveBeenCalledTimes(3)
       years.forEach((year, playlistIdx) => {
-        expect(addPlaylistItemsSpy).toBeCalledWith(
+        expect(addPlaylistItemsSpy).toHaveBeenCalledWith(
           `playlist_${playlistIdx}`,
           Array(5)
             .fill(0)
             .map((_, trackIdx) => `spotify:track:id_${year}_${trackIdx}`)
         )
       })
-      expect(getRowsSpy).toBeCalledTimes(0)
-      expect(updateMissingSpreadsheetSpy).toBeCalledTimes(3)
-      expect(upsertRowsSpy).toBeCalledTimes(3)
-      years.forEach((year, idx) => {
-        expect(upsertRowsSpy.mock.calls[idx][2].length).toBe(1)
-      })
-      expect(updatePlaylistDescriptionSpy).toBeCalledTimes(3)
+      expect(updatePlaylistDescriptionSpy).toHaveBeenCalledTimes(3)
+      expect(writeFileSpy).toHaveBeenCalledTimes(1)
+      expect(writeFileSpy.mock.calls[0][0]).toBe(MISSING_TRACKS_JSON_PATH)
+      const jsonString = writeFileSpy.mock.calls[0][1]
+      const missingItems = JSON.parse(jsonString.toString())
+      expect(missingItems.length).toBe(3)
     })
 
     it('correctly adds tracks with 2 existing playlists x3songs each', async () => {
@@ -162,44 +150,40 @@ describe('unit/manageSpotifyPlaylists.ts', () => {
           }>,
         },
       } as spotifyApi.SpotifyPlaylist)
-      existingYears.forEach((year) => {
-        getRowsSpy.mockResolvedValueOnce([sheetsApi.HEADERS as any as string[]])
-      })
 
       await manageSpotifyPlaylists.default()
 
-      expect(performCallbackSpy).toBeCalledTimes(1)
-      expect(submitCodeSpy).toBeCalledTimes(1)
-      expect(setOAuthTokenSpy).toBeCalledTimes(1)
-      expect(setOAuthTokenSpy).toBeCalledWith(mockAuthToken)
-      expect(loadJsonSpy).toBeCalledTimes(1)
-      expect(getYearFromPlaylistSpy).toBeCalledTimes(2)
-      expect(createPlaylistSpy).toBeCalledTimes(1)
-      expect(createPlaylistSpy).toBeCalledWith(2023)
-      expect(addTracksToPlaylistSpy).toBeCalledTimes(3)
+      expect(performCallbackSpy).toHaveBeenCalledTimes(1)
+      expect(submitCodeSpy).toHaveBeenCalledTimes(1)
+      expect(setOAuthTokenSpy).toHaveBeenCalledTimes(1)
+      expect(setOAuthTokenSpy).toHaveBeenCalledWith(mockAuthToken)
+      expect(loadJsonSpy).toHaveBeenCalledTimes(1)
+      expect(getYearFromPlaylistSpy).toHaveBeenCalledTimes(2)
+      expect(createPlaylistSpy).toHaveBeenCalledTimes(1)
+      expect(createPlaylistSpy).toHaveBeenCalledWith(2023)
+      expect(addTracksToPlaylistSpy).toHaveBeenCalledTimes(3)
 
       const years = [2021, 2022]
       years.forEach((year, playlistIdx) => {
-        expect(addPlaylistItemsSpy).toBeCalledWith(
+        expect(addPlaylistItemsSpy).toHaveBeenCalledWith(
           `playlist_${playlistIdx}`,
           Array(2)
             .fill(0)
             .map((_, trackIdx) => `spotify:track:id_${year}_${trackIdx + 3}`)
         )
       })
-      expect(addPlaylistItemsSpy).toBeCalledWith(
+      expect(addPlaylistItemsSpy).toHaveBeenCalledWith(
         `playlist_2`,
         Array(5)
           .fill(0)
           .map((_, trackIdx) => `spotify:track:id_2023_${trackIdx}`)
       )
-      expect(getRowsSpy).toBeCalledTimes(2)
-      expect(upsertRowsSpy).toBeCalledTimes(3)
-      expect(upsertRowsSpy).toBeCalledTimes(3)
-      years.forEach((year, idx) => {
-        expect(upsertRowsSpy.mock.calls[idx][2].length).toBe(1)
-      })
-      expect(updatePlaylistDescriptionSpy).toBeCalledTimes(3)
+      expect(updatePlaylistDescriptionSpy).toHaveBeenCalledTimes(3)
+      expect(writeFileSpy).toHaveBeenCalledTimes(1)
+      expect(writeFileSpy.mock.calls[0][0]).toBe(MISSING_TRACKS_JSON_PATH)
+      const jsonString = writeFileSpy.mock.calls[0][1]
+      const missingItems = JSON.parse(jsonString.toString())
+      expect(missingItems.length).toBe(3)
     })
   })
 
@@ -207,90 +191,4 @@ describe('unit/manageSpotifyPlaylists.ts', () => {
   // describe('#getTracksByYear', () => {})
   // describe('#getPlaylistsByYear', () => {})
   // describe('#addTracksToPlaylist', () => {})
-
-  describe('#updateMissingSpreadsheet', () => {
-    it('adds all tracks to an empty sheet', async () => {
-      const date = new Date().toString()
-      const items = Array(5)
-        .fill(0)
-        .map((_, idx) => ({
-          id: `id_${idx}`,
-          youtubeTrack: {
-            name: `name_${idx}`,
-            artist: `artist_${idx}`,
-            link: `link_${idx}`,
-            videoPublishedDate: date,
-          },
-        })) as PrePlaylistItem[]
-
-      getRowsSpy.mockResolvedValueOnce([])
-
-      await manageSpotifyPlaylists.updateMissingSpreadsheet(items)
-
-      expect(rowToTrackSpy).toHaveBeenCalledTimes(0)
-      expect(itemToTrackSpy).toHaveBeenCalledTimes(items.length)
-      expect(trackToRowSpy).toHaveBeenCalledTimes(items.length)
-      items.forEach((i) => {
-        expect(trackToRowSpy).toHaveBeenCalledWith({
-          id: i.id,
-          name: i.youtubeTrack.name,
-          artist: i.youtubeTrack.artist,
-          link: i.youtubeTrack.link,
-          date: i.youtubeTrack.videoPublishedDate,
-          spotify_id: '',
-        })
-      })
-      expect(getRowsSpy).toHaveBeenCalledTimes(1)
-      expect(upsertRowsSpy).toHaveBeenCalledTimes(1)
-      expect(upsertRowsSpy.mock.calls[0][2].length).toBe(items.length)
-    })
-
-    it('adds all tracks to an existing sheet with some rows', async () => {
-      const numExistingRows = 2
-      const date = new Date().toString()
-      const items = Array(5)
-        .fill(0)
-        .map((_, idx) => ({
-          id: `id_${idx}`,
-          youtubeTrack: {
-            name: `name_${idx}`,
-            artist: `artist_${idx}`,
-            link: `link_${idx}`,
-            videoPublishedDate: date,
-          },
-        })) as PrePlaylistItem[]
-
-      getRowsSpy.mockResolvedValueOnce(
-        items
-          .slice(0, numExistingRows)
-          .map((i) => [
-            i.id,
-            i.youtubeTrack.name,
-            i.youtubeTrack.artist,
-            i.youtubeTrack.videoPublishedDate,
-            i.youtubeTrack.link,
-            '',
-          ])
-      )
-
-      await manageSpotifyPlaylists.updateMissingSpreadsheet(items)
-
-      expect(rowToTrackSpy).toHaveBeenCalledTimes(numExistingRows)
-      expect(itemToTrackSpy).toHaveBeenCalledTimes(items.length)
-      expect(trackToRowSpy).toHaveBeenCalledTimes(items.length)
-      items.forEach((i) => {
-        expect(trackToRowSpy).toHaveBeenCalledWith({
-          id: i.id,
-          name: i.youtubeTrack.name,
-          artist: i.youtubeTrack.artist,
-          link: i.youtubeTrack.link,
-          date: i.youtubeTrack.videoPublishedDate,
-          spotify_id: '',
-        })
-      })
-      expect(getRowsSpy).toHaveBeenCalledTimes(1)
-      expect(upsertRowsSpy).toHaveBeenCalledTimes(1)
-      expect(upsertRowsSpy.mock.calls[0][2].length).toBe(items.length)
-    })
-  })
 })

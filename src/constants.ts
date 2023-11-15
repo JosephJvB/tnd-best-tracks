@@ -16,6 +16,8 @@ export const YOUTUBE_ID_MAP_JSON_PATH =
   __dirname + '/../data/youtube-id-map.json'
 export const SPOTIFY_TRACKS_JSON_PATH =
   __dirname + '/../data/spotify-tracks.json'
+export const MISSING_TRACKS_JSON_PATH =
+  __dirname + '/../data/missing-tracks.json'
 
 export const PLAYLIST_NAME_PREFIX = "TONY'S TOP TRACKS "
 export const SPOTIFY_JVB_USERID = 'xnmacgqaaa6a1xi7uy2k1fe7w'

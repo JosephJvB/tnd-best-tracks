@@ -1,5 +1,8 @@
 import { PrePlaylistItem } from './getSpotifyTracks'
-import { SPOTIFY_TRACKS_JSON_PATH } from '../constants'
+import {
+  MISSING_TRACKS_JSON_PATH,
+  SPOTIFY_TRACKS_JSON_PATH,
+} from '../constants'
 import {
   SpotifyPlaylist,
   addPlaylistItems,
@@ -13,17 +16,8 @@ import {
 } from '../spotifyApi'
 import { loadJsonFile } from '../fsUtil'
 import { performServerCallback } from '../server'
-import {
-  ALL_DATA_RANGE,
-  SHEET_NAME,
-  SPREADSHEET_LINK,
-  SheetTrack,
-  getRows,
-  itemToTrack,
-  rowToTrack,
-  trackToRow,
-  upsertRows,
-} from '../sheetsApi'
+import { SPREADSHEET_LINK } from '../sheetsApi'
+import { writeFileSync } from 'fs'
 
 export default async function () {
   const code = await performServerCallback()
@@ -72,7 +66,11 @@ export default async function () {
     }
   }
 
-  await updateMissingSpreadsheet(missingTracks)
+  console.log('  > write', missingTracks.length, 'missing tracks to file')
+  writeFileSync(
+    MISSING_TRACKS_JSON_PATH,
+    JSON.stringify(missingTracks, null, 2)
+  )
 }
 
 export const getTracksByYear = () => {
@@ -142,32 +140,5 @@ export const addTracksToPlaylist = async (
 
   if (toAdd.size) {
     await addPlaylistItems(playlist.id, [...toAdd])
-  }
-}
-
-export const updateMissingSpreadsheet = async (items: PrePlaylistItem[]) => {
-  const foundRows = await getRows(SHEET_NAME, ALL_DATA_RANGE)
-
-  const nextTrackMap = new Map<string, SheetTrack>()
-  foundRows.forEach((r) => {
-    const t = rowToTrack(r)
-    nextTrackMap.set(t.id, t)
-  })
-  items.forEach((i) => {
-    const t = itemToTrack(i)
-    nextTrackMap.set(i.id, t)
-  })
-
-  const nextTracks = [...nextTrackMap.values()]
-
-  nextTracks.sort(
-    (a, z) => new Date(a.date).getTime() - new Date(z.date).getTime()
-  )
-
-  const nextRows = nextTracks.map((t) => trackToRow(t))
-  console.log('  > setting', nextRows.length, 'rows in spreadsheet')
-
-  if (nextRows.length) {
-    await upsertRows(SHEET_NAME, ALL_DATA_RANGE, nextRows)
   }
 }
