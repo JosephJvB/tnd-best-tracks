@@ -152,7 +152,7 @@ export const addRows = async (
     spreadsheetId: SPREADSHEET_ID,
     range: `${sheetName}!${range}`,
     valueInputOption: 'RAW',
-    insertDataOption: 'IN',
+    insertDataOption: 'INSERT_ROWS',
     includeValuesInResponse: true,
     requestBody: {
       majorDimension: 'ROWS',
