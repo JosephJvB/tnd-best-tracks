@@ -15,6 +15,8 @@ import {
 import { YoutubeTrack } from '../../tasks/extractYoutubeTracks'
 
 describe('unit/getSpotifyTracks.ts', () => {
+  // hide logs
+  const consoleLogSpy = jest.spyOn(console, 'log').mockImplementation(jest.fn())
   const loadMapFn = jest.fn()
   const saveMapFn = jest.fn()
   const mapHelperSpy = jest

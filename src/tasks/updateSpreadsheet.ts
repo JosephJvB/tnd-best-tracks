@@ -26,10 +26,20 @@ export default async function () {
     const t = rowToTrack(r)
     nextTrackMap.set(t.id, t)
   })
+  let numNewRows = 0
   items.forEach((i) => {
+    if (nextTrackMap.has(i.id)) {
+      return
+    }
+    numNewRows++
     const t = itemToTrack(i)
     nextTrackMap.set(i.id, t)
   })
+
+  console.log('  >', numNewRows, 'new rows to add to spreadsheet')
+  if (numNewRows === 0) {
+    return
+  }
 
   const nextTracks = [...nextTrackMap.values()]
 
@@ -38,9 +48,7 @@ export default async function () {
   )
 
   const nextRows = nextTracks.map((t) => trackToRow(t))
-  console.log('  > upserting', nextRows.length, 'rows in spreadsheet')
 
-  if (nextRows.length) {
-    await upsertRows(SHEET_NAME, ALL_DATA_RANGE, nextRows)
-  }
+  console.log('  > upserting', nextRows.length, 'rows in spreadsheet')
+  await upsertRows(SHEET_NAME, ALL_DATA_RANGE, nextRows)
 }

@@ -11,6 +11,8 @@ import ChildProcess from 'child_process'
 // axios issue
 // axios.headers.Connection = node16 && 'close' || node20 ?? 'keep-alive'
 describe('unit/server_unit.ts', () => {
+  // hide logs
+  const consoleLogSpy = jest.spyOn(console, 'log').mockImplementation(jest.fn())
   describe('#performServerCallback', () => {
     it('returns the req.query.code from GET to /tony', async () => {
       const mockCode = 'code_123'

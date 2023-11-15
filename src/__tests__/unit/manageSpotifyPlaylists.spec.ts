@@ -7,6 +7,8 @@ import * as server from '../../server'
 import fs from 'fs'
 
 describe('unit/manageSpotifyPlaylists.ts', () => {
+  // hide logs
+  const consoleLogSpy = jest.spyOn(console, 'log').mockImplementation(jest.fn())
   const performCallbackSpy = jest
     .spyOn(server, 'performServerCallback')
     .mockImplementation(jest.fn())
