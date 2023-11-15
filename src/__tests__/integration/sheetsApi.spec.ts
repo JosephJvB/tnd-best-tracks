@@ -141,4 +141,12 @@ describe('integration/sheetsApi.ts', () => {
       ).resolves.toBeUndefined()
     })
   })
+
+  describe('#clearRows', () => {
+    it('clearRows A6:F10', async () => {
+      await expect(
+        sheetsApi.clearRows(SHEET_NAME, 'A6:F10')
+      ).resolves.toBeUndefined()
+    })
+  })
 })
