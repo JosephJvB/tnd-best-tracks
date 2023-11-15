@@ -2,65 +2,35 @@
 
 1. Make forbidden tracks public:
   - save forbidden tracks to spreadsheet. that's all.
+  - done
 
-2. Use spreadsheet as source for handling manual fixes to missing tracks. Also run it on CRON? I think I'm trying to add too much at once
-  1. want it running on cron to update:
-    1. current year playlist with latest youtube tracks
-    2. any playlists which have had tracks manually mapped in spreadsheet
-      - I want to move away from the manual fixing I did originally
+2. Run on Cloud on regular Cron interval
+  - x2 input sources to lookup in Spotify
+    1. NEW youtube video descriptions
+      - do not parse old descriptions, track video IDs that have already been parsed
+    2. Missing spreadsheet rows with spotifyId
+      - look up spotifyId
+      - I guess, if it succeeds, I'll need to update that row somehow. So next run doesn't repeat the same
 
-It shouldn't ever remove tracks from playlists if
-1. youtube video gets removed
-2. spotify song gets removed
-Code won't care / handle these cases
-
-
-### Flow
-
-1. pull youtube videos
-2. parse descriptions
-  - but no more manual fixing / normalizing
-3. pull spreadsheet
-4. lookup spotify tracks
-  - each youtube track can map to more than one spotify track in cases where Tony lists more than one
-  1. those with spotify ids, we get those tracks by batch
-    - spotify ids can come from youtube track.link
-    - or from spreadsheet
-  2. those without, we search for 1 by 1
-    - still do retry logic
-    - but no more manual fixing / normalizing
-5. For youtube tracks by year
-  1. for each youtube track, try to map to spotify track
-  2. lookup existing playlists
-
-
-### Rewrite
-
-I wanna re-write the project for a couple reasons
-1. run it from cloud on CRON
-2. no more manual fixes / normalizing
-3. pulls from & writes to google sheet
-3. x1 youtube track maps to one or more spotify track(s)
-
-- how can I know if I need to look up a track on repeated run, if run from cron?
-  - currently im using json files in local data folder
-  - maybe I should save these json to s3?
-  - could also save in spreadsheets if i wanted
-1. pull videos & extract tracks
-2. get spreadsheet & all sheet rows
-  - if songs have spotify_id set, we should try get those ones!
-3. lookup all songs with spotifyId
-4. get all playlists & tracks
-
-files I'd need to keep track of
-- ~~processed youtube videos~~
-  - dont extract tracknames from videos we've already done
-  - don't really need this one, it's cheap to get video descriptions at runtime
-- spotifyId to track Map
-  - prevent repeat spotify lookups
-- customId to track Map
-  - prevent repeat spotify lookups
-
-Something I'm worried about is if I move away from this project
-Extracting videos will give a different result - due to my manual fixes
-Will that mean I'll be unable to find songs which actually already exist in the playlists?
+### deployed lambda
+1. get all playlist videos
+  - stretch: if possible, run on webhook when a video is added
+  - Array<{id, name, artist, date, link}>
+2. get parsedVideoIds list
+  - Set<string>
+3. get missingspreadsheet rows - filter for where SpotifyId is set
+  - Map<string, {rowNum: string} & SheetTrack>
+4. lookup in Spotify
+  - batch lookup by spotifyId
+    - Map<spotifyId, Track>
+  - 1 by 1 lookup by properties
+    - Map<id, Track>
+5. Sort tracks by year
+  - Map<year, Track[]>
+6. For each year, get playlist, diff, add songs
+  - track songs that weren't found: Array<Track>
+7. filter all missingSpreadsheet rows, if the track was found, exclude
+8. add missing from current batch TO spreadsheet rows
+9. remove all data from spreadsheet, and set next rows
+  - excluding those we found by spotifyId
+  - including those not found in latest check
