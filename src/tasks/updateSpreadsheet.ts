@@ -14,11 +14,9 @@ import { PrePlaylistItem } from './getSpotifyTracks'
 
 export default async function () {
   const items = loadJsonFile<PrePlaylistItem[]>(MISSING_TRACKS_JSON_PATH)
-
   console.log('  > loaded', items.length, 'missing tracks from file')
 
   const foundRows = await getRows(SHEET_NAME, ALL_DATA_RANGE)
-
   console.log('  >', foundRows.length, 'existing missing tracks in spreadsheet')
 
   const nextTrackMap = new Map<string, SheetTrack>()
@@ -44,7 +42,7 @@ export default async function () {
   const nextTracks = [...nextTrackMap.values()]
 
   nextTracks.sort(
-    (a, z) => new Date(a.date).getTime() - new Date(z.date).getTime()
+    (a, z) => new Date(z.date).getTime() - new Date(a.date).getTime()
   )
 
   const nextRows = nextTracks.map((t) => trackToRow(t))
