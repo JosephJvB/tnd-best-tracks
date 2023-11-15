@@ -177,3 +177,10 @@ export const upsertRows = async (
     },
   })
 }
+
+export const clearRows = async (sheetName: string, range: string) => {
+  await getClient().spreadsheets.values.clear({
+    spreadsheetId: SPREADSHEET_ID,
+    range: `${sheetName}!${range}`,
+  })
+}

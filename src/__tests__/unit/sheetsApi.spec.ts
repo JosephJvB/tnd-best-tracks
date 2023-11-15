@@ -12,6 +12,7 @@ jest.mock('googleapis', () => ({
         values: {
           get: jest.fn(),
           append: jest.fn(),
+          clear: jest.fn(),
         },
       },
     })),
@@ -260,6 +261,25 @@ describe('unit/sheetsApi_unit.ts', () => {
           majorDimension: 'ROWS',
           values: rows,
         },
+      })
+    })
+  })
+
+  describe('#clearRows', () => {
+    it('calls values.clear with the expected args', async () => {
+      const sheetName = 'test-sheet-name'
+      const range = 'A1:B2'
+
+      const client = sheetsApi.getClient()
+      const clearValuesFn = client.spreadsheets.values
+        .clear as any as jest.MockedFunction<(...args: any) => Promise<any>>
+
+      await sheetsApi.clearRows(sheetName, range)
+
+      expect(clearValuesFn).toHaveBeenCalledTimes(1)
+      expect(clearValuesFn).toHaveBeenCalledWith({
+        spreadsheetId: sheetsApi.SPREADSHEET_ID,
+        range: `${sheetName}!${range}`,
       })
     })
   })

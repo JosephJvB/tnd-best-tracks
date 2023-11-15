@@ -34,3 +34,12 @@
 9. remove all data from spreadsheet, and set next rows
   - excluding those we found by spotifyId
   - including those not found in latest check
+
+- Steps 7+ feels a bit yuck
+- adding & removing in the same action
+- ie: bulk rewriting all the rows...
+- kind of thing you want a backup, sql transaction for
+
+Probably I will need to clear all the rows first
+then rewrite them
+in case i end up with fewer rows in the next set
