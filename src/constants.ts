@@ -7,6 +7,9 @@ export const TND_PLAYLIST_ITEMS_JSON_PATH =
 export const YOUTUBE_TRACKS_JSON_PATH =
   __dirname + '/../data/youtube-tracks.json'
 
+export const PARSED_YOUTUBE_VIDEOS_JSON_PATH =
+  __dirname + '/../data/parsed-youtube-videos.json'
+
 export const SPOTIFY_ID_LENGTH = 22
 export const SPOTIFY_DOMAIN = 'open.spotify.com'
 

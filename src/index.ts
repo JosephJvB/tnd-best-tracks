@@ -6,6 +6,7 @@ import extractYoutubeTracks from './tasks/extractYoutubeTracks'
 import saveWeeklyPlaylistItems from './tasks/saveWeeklyPlaylistItems'
 import manageSpotifyPlaylists from './tasks/manageSpotifyPlaylists'
 import updateSpreadsheet from './tasks/updateSpreadsheet'
+import createVideoSheet from './tasks/createVideoSheet'
 
 void (async function () {
   // await saveWeeklyPlaylistItems()
@@ -13,4 +14,5 @@ void (async function () {
   // await getSpotifyTracks()
   // await manageSpotifyPlaylists()
   // await updateSpreadsheet()
+  // await createVideoSheet()
 })()

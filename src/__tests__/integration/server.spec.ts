@@ -2,6 +2,14 @@ import * as server from '../../server'
 import * as spotifyApi from '../../spotifyApi'
 
 describe('integration/server.ts', () => {
+  describe('#BASIC_AUTH', () => {
+    it('can create basic auth string', () => {
+      expect(spotifyApi.BASIC_AUTH.length).toBeGreaterThan(10)
+
+      console.log(spotifyApi.BASIC_AUTH)
+    })
+  })
+
   describe('#performServerCallback alone', () => {
     it(
       'returns the req.query.code from GET to /tony',
